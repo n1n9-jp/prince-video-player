@@ -132,60 +132,52 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
             {video ? (
               <>
                 <img src={video.thumbnailUrl} alt="" className="player-poster" />
-                <div className="player-overlay-copy">
-                  <p className="now-kicker">{autoplayBlocked ? "再生がブロックされました" : "Now playing"}</p>
-                  <h2>
-                    <a
-                      href={`https://www.youtube.com/watch?v=${video.id}`}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      {video.title}
-                    </a>
-                  </h2>
-                  <p className="channel">{video.channelTitle}</p>
-                  <button type="button" className="btn-gold" onClick={handleStart}>
-                    {autoplayBlocked ? "再開" : "再生開始"}
-                  </button>
-                </div>
+                <button type="button" className="yt-play" onClick={handleStart}>
+                  <span className="yt-play-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                      <path fill="currentColor" d="M8 5.1v13.8L20 12z" />
+                    </svg>
+                  </span>
+                  {autoplayBlocked ? "再開" : "再生"}
+                </button>
               </>
             ) : (
-              <div className="player-overlay-copy">
-                <p className="now-kicker">Empty lounge</p>
-                <h2>まだ曲がありません</h2>
-                <p className="channel">{emptyHint}</p>
-              </div>
+              <p className="player-empty">{emptyHint}</p>
             )}
           </div>
         )}
       </div>
-      <div className="transport">
-        <button type="button" className="btn-ghost" onClick={onPrev} disabled={!video}>
-          前へ
-        </button>
-        <div className="now-text">
-          {video ? (
-            <>
-              <strong>
-                <a
-                  href={`https://www.youtube.com/watch?v=${video.id}`}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  {video.title}
-                </a>
-              </strong>
-              <span>{video.channelTitle}</span>
-            </>
-          ) : (
-            <strong>待機中</strong>
-          )}
-        </div>
-        <button type="button" className="btn-ghost" onClick={onNext} disabled={!video}>
-          次へ
-        </button>
+      <div className="video-below">
+        {video ? (
+          <>
+            <h1 className="video-title">
+              <a href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noreferrer noopener">
+                {video.title}
+              </a>
+            </h1>
+            <div className="video-owner">
+              <div className="channel-avatar" aria-hidden="true">
+                {video.channelTitle.slice(0, 1).toUpperCase()}
+              </div>
+              <div>
+                <p className="channel-name">{video.channelTitle}</p>
+                <p className="channel-sub">PrinceTube</p>
+              </div>
+              <div className="video-owner-actions">
+                <button type="button" className="btn-ghost" onClick={onPrev} disabled={!video}>
+                  前へ
+                </button>
+                <button type="button" className="btn-ghost" onClick={onNext} disabled={!video}>
+                  次へ
+                </button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <h1 className="video-title muted">再生する動画を選んでください</h1>
+        )}
+        {skipNotice && <p className="skip-notice">{skipNotice}</p>}
       </div>
-      {skipNotice && <p className="skip-notice">{skipNotice}</p>}
     </section>
   );
 });

@@ -1,0 +1,121 @@
+import { useState, type FormEvent } from "react";
+import type { Video } from "../storage/types";
+import { hasApiKey } from "../youtube/dataApi";
+import { VideoCard } from "./VideoCard";
+
+type Props = {
+  libraryIds: Set<string>;
+  results: Video[];
+  searched: boolean;
+  searchError: string | null;
+  onAddByInput: (input: string) => Promise<void>;
+  onAddChannel: (input: string) => Promise<string>;
+  onAddToLibrary: (video: Video) => void;
+  onPlay: (video: Video) => void;
+};
+
+export function AddPanel({
+  libraryIds,
+  results,
+  searched,
+  searchError,
+  onAddByInput,
+  onAddChannel,
+  onAddToLibrary,
+  onPlay,
+}: Props) {
+  const [idInput, setIdInput] = useState("");
+  const [channelInput, setChannelInput] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  async function handleAddId(event: FormEvent) {
+    event.preventDefault();
+    setBusy(true);
+    setError(null);
+    setNotice(null);
+    try {
+      await onAddByInput(idInput);
+      setIdInput("");
+      setNotice("ライブラリに追加しました。");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "追加に失敗しました");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function handleAddChannel(event: FormEvent) {
+    event.preventDefault();
+    setBusy(true);
+    setError(null);
+    setNotice(null);
+    try {
+      setNotice(await onAddChannel(channelInput));
+      setChannelInput("");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "チャンネルの追加に失敗しました");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <section className="shelf">
+      <header className="shelf-head">
+        <h2>{results.length > 0 || searched ? "検索結果" : "追加"}</h2>
+        {!hasApiKey() && <p className="warn">APIキー未設定。ID追加は使えます。</p>}
+      </header>
+      <div className="add-row">
+        <form className="row-form" onSubmit={handleAddId}>
+          <input
+            value={idInput}
+            onChange={(e) => setIdInput(e.target.value)}
+            placeholder="動画ID / URL"
+            aria-label="動画IDまたはURL"
+          />
+          <button type="submit" className="btn-ghost" disabled={busy}>
+            追加
+          </button>
+        </form>
+        <form className="row-form" onSubmit={handleAddChannel}>
+          <input
+            value={channelInput}
+            onChange={(e) => setChannelInput(e.target.value)}
+            placeholder="@handle / チャンネルURL"
+            aria-label="チャンネルURLまたはハンドル"
+          />
+          <button type="submit" className="btn-ghost" disabled={busy}>
+            {busy ? "取得中…" : "チャンネル全件"}
+          </button>
+        </form>
+      </div>
+      {(error || searchError) && <p className="warn">{error ?? searchError}</p>}
+      {notice && <p className="empty">{notice}</p>}
+      {results.length > 0 ? (
+        <div className="video-grid">
+          {results.map((video) => {
+            const saved = libraryIds.has(video.id);
+            return (
+              <VideoCard
+                key={video.id}
+                video={video}
+                onOpen={() => onPlay(video)}
+                actions={
+                  <button type="button" className="btn-text" disabled={saved} onClick={() => onAddToLibrary(video)}>
+                    {saved ? "保存済" : "ライブラリへ"}
+                  </button>
+                }
+              />
+            );
+          })}
+        </div>
+      ) : searched && !error && !searchError && !notice ? (
+        <p className="empty">
+          埋め込める動画がありません。公式MVや Topic の音源は YouTube が埋め込みを禁止していることが多いです。
+        </p>
+      ) : null}
+    </section>
+  );
+}

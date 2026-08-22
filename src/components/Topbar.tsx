@@ -1,0 +1,65 @@
+import { useState, type FormEvent, type ReactNode } from "react";
+import type { Page } from "../page";
+
+type Props = {
+  page: Page;
+  busy: boolean;
+  onSearch: (query: string) => Promise<void>;
+  children?: ReactNode;
+};
+
+export function Topbar({ page, busy, onSearch, children }: Props) {
+  const [query, setQuery] = useState("Prince live");
+
+  async function handleSearch(event: FormEvent) {
+    event.preventDefault();
+    await onSearch(query);
+  }
+
+  return (
+    <header className="topbar">
+      <a className="wordmark" href="#/" aria-label="PrinceTube">
+        <span className="mark" aria-hidden="true">
+          <svg viewBox="0 0 30 20" width="36" height="24">
+            <rect width="30" height="20" rx="5.5" />
+            <path d="M12.2 5.1v9.8L22.2 10z" />
+          </svg>
+        </span>
+        <span className="wordmark-text">
+          Prince<span>Tube</span>
+        </span>
+      </a>
+      <form className="yt-search" onSubmit={handleSearch}>
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="検索"
+          aria-label="検索語"
+        />
+        <button type="submit" disabled={busy} aria-label="検索">
+          {busy ? (
+            "…"
+          ) : (
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M17.7 16.3 21 19.6l-1.4 1.4-3.3-3.3A7.9 7.9 0 1 1 18 10a7.9 7.9 0 0 1-.3 6.3ZM10 16.5A6.5 6.5 0 1 0 10 3.5a6.5 6.5 0 0 0 0 13Z"
+              />
+            </svg>
+          )}
+        </button>
+      </form>
+      <div className="topbar-end">
+        <nav className="page-nav" aria-label="ページ">
+          <a href="#/" aria-current={page === "watch" ? "page" : undefined}>
+            閲覧
+          </a>
+          <a href="#/library" aria-current={page === "library" ? "page" : undefined}>
+            追加
+          </a>
+        </nav>
+        {children}
+      </div>
+    </header>
+  );
+}

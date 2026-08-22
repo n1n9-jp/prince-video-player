@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import { AddPanel } from "./components/AddPanel";
 import { LibraryPanel } from "./components/LibraryPanel";
 import { ModeToggle } from "./components/ModeToggle";
 import { PlayerStage, type PlayerHandle } from "./components/PlayerStage";
 import { PlaylistPanel } from "./components/PlaylistPanel";
-import { SearchPanel } from "./components/SearchPanel";
+import { PlaylistTabs } from "./components/PlaylistTabs";
+import { Topbar } from "./components/Topbar";
+import { goToPage, pageFromHash, type Page } from "./page";
 import { nextVideo, previousVideo, shuffledCopy, startVideo } from "./playback/nextVideo";
 import { localStore } from "./storage/localStore";
 import { activePlaylist, dropFromPlaylists, emptyState, type AppState, type PlayMode, type Video } from "./storage/types";
@@ -16,6 +19,11 @@ export function App() {
   const [sessionActive, setSessionActive] = useState(false);
   const [autoplayBlocked, setAutoplayBlocked] = useState(false);
   const [skipNotice, setSkipNotice] = useState<string | null>(null);
+  const [searchResults, setSearchResults] = useState<Video[]>([]);
+  const [searchError, setSearchError] = useState<string | null>(null);
+  const [searched, setSearched] = useState(false);
+  const [searchBusy, setSearchBusy] = useState(false);
+  const [page, setPage] = useState<Page>(pageFromHash);
 
   const stateRef = useRef(state);
   const shuffleRef = useRef(shuffleOrder);
@@ -26,6 +34,12 @@ export function App() {
 
   useEffect(() => {
     void loadYoutubeApi();
+  }, []);
+
+  useEffect(() => {
+    const onHash = () => setPage(pageFromHash());
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
   useEffect(() => {
@@ -41,6 +55,11 @@ export function App() {
 
   const playlist = activePlaylist(state);
   const currentVideo = state.currentVideoId ? (state.videos[state.currentVideoId] ?? null) : null;
+
+  function commit(next: AppState) {
+    stateRef.current = next;
+    setState(next);
+  }
 
   function patchShuffle(order: string[]) {
     shuffleRef.current = order;
@@ -69,10 +88,25 @@ export function App() {
       shuffleOrder: order,
     });
     patchShuffle(result.shuffleOrder);
-    setState({ ...s, currentVideoId: result.videoId });
+    commit({ ...s, currentVideoId: result.videoId });
     setAutoplayBlocked(false);
     setSessionActive(Boolean(result.videoId));
     if (result.videoId) playerRef.current?.loadAndPlay(result.videoId);
+  }
+
+  function ingestAndPlay(video: Video) {
+    const s = stateRef.current;
+    const videos = { ...s.videos, [video.id]: video };
+    const current = activePlaylist(s);
+    let playlists = s.playlists;
+    if (current && !current.videoIds.includes(video.id) && !s.unplayableIds.includes(video.id)) {
+      playlists = s.playlists.map((p) =>
+        p.id === current.id ? { ...p, videoIds: [...p.videoIds, video.id] } : p,
+      );
+    }
+    commit({ ...s, videos, playlists });
+    goToPage("watch");
+    start(video.id);
   }
 
   function advance(kind: "next" | "prev" | "ended" | "error") {
@@ -95,14 +129,14 @@ export function App() {
         ? { ...s.watchCounts, [s.currentVideoId]: (s.watchCounts[s.currentVideoId] ?? 0) + 1 }
         : s.watchCounts;
     if (kind === "ended" && !s.autoplayNext) {
-      setState({ ...s, watchCounts });
+      commit({ ...s, watchCounts });
       setSessionActive(false);
       return;
     }
     const input = { ...playbackInput(s), watchCounts };
     const result = kind === "prev" ? previousVideo(input) : nextVideo(input);
     patchShuffle(result.shuffleOrder);
-    setState({ ...s, watchCounts, currentVideoId: result.videoId });
+    commit({ ...s, watchCounts, currentVideoId: result.videoId });
     if (!result.videoId) setSessionActive(false);
     else playerRef.current?.loadAndPlay(result.videoId);
   }
@@ -136,6 +170,20 @@ export function App() {
     if (videos.length === 0) return `${title} に、埋め込める公開動画がありませんでした。`;
     if (fresh.length === 0) return `${title} の動画はすでにライブラリに入っています。`;
     return `${title} から ${fresh.length} 本をライブラリに入れました。`;
+  }
+
+  async function runSearch(query: string) {
+    goToPage("library");
+    setSearchBusy(true);
+    setSearchError(null);
+    try {
+      setSearchResults(await searchVideos(query, stateRef.current.unplayableIds));
+      setSearched(true);
+    } catch (err) {
+      setSearchError(err instanceof Error ? err.message : "検索に失敗しました");
+    } finally {
+      setSearchBusy(false);
+    }
   }
 
   function addToPlaylist(videoId: string) {
@@ -197,6 +245,21 @@ export function App() {
     });
   }
 
+  function movePlaylist(direction: -1 | 1) {
+    setState((s) => {
+      const index = s.playlists.findIndex((p) => p.id === s.activePlaylistId);
+      const nextIndex = index + direction;
+      if (index < 0 || nextIndex < 0 || nextIndex >= s.playlists.length) return s;
+      const playlists = [...s.playlists];
+      const a = playlists[index];
+      const b = playlists[nextIndex];
+      if (a === undefined || b === undefined) return s;
+      playlists[index] = b;
+      playlists[nextIndex] = a;
+      return { ...s, playlists };
+    });
+  }
+
   function createPlaylist() {
     const id = crypto.randomUUID();
     setState((s) => ({
@@ -237,29 +300,19 @@ export function App() {
   const playlistIds = new Set(playlist?.videoIds ?? []);
 
   return (
-    <div className="page">
-      <header className="masthead">
-        <div>
-          <p className="eyebrow">Paisley Park · private booth</p>
-          <h1>Prince</h1>
-        </div>
-      </header>
+    <div className="app">
+      <Topbar page={page} busy={searchBusy} onSearch={runSearch}>
+        {page === "watch" ? <ModeToggle value={state.playMode} onChange={changeMode} /> : null}
+      </Topbar>
 
-      <ModeToggle
-        value={state.playMode}
-        autoplayNext={state.autoplayNext}
-        onChange={changeMode}
-        onAutoplayNextChange={(value) => setState((s) => ({ ...s, autoplayNext: value }))}
-      />
-
-      <div className="stage">
+      <div className="watch-page" hidden={page !== "watch"}>
         <PlayerStage
           ref={playerRef}
           video={currentVideo}
           sessionActive={sessionActive}
           autoplayBlocked={autoplayBlocked}
           skipNotice={skipNotice}
-          emptyHint="右で検索し、プレイリストへ入れてから再生開始。"
+          emptyHint="追加ページでリストに入れると、ここで再生できます。"
           onStart={() => start()}
           onPrev={() => advance("prev")}
           onNext={() => advance("next")}
@@ -277,7 +330,7 @@ export function App() {
               const next = { ...dropped, currentVideoId: nextId };
               stateRef.current = next;
               patchShuffle(shuffleRef.current.filter((videoId) => videoId !== id));
-              setSkipNotice("埋め込みできない動画をプレイリストから外しました。");
+              setSkipNotice("埋め込みできない動画をプレイリストから削除しました。");
               setState(next);
               errorStreakRef.current = 0;
               if (nextId) playerRef.current?.loadAndPlay(nextId);
@@ -292,37 +345,55 @@ export function App() {
           }}
           onAutoplayBlocked={() => setAutoplayBlocked(true)}
         />
+        <PlaylistPanel
+          playlists={state.playlists}
+          activePlaylistId={state.activePlaylistId}
+          videos={state.videos}
+          watchCounts={state.watchCounts}
+          currentVideoId={state.currentVideoId}
+          autoplayNext={state.autoplayNext}
+          onSelectPlaylist={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
+          onCreatePlaylist={createPlaylist}
+          onMovePlaylist={movePlaylist}
+          onRenamePlaylist={renamePlaylist}
+          onDeletePlaylist={deletePlaylist}
+          onMove={moveInPlaylist}
+          onRemove={removeFromPlaylist}
+          onPlay={(id) => start(id)}
+          onAutoplayNextChange={(value) => setState((s) => ({ ...s, autoplayNext: value }))}
+        />
+      </div>
 
-        <aside className="desk">
-          <SearchPanel
-            libraryIds={new Set(Object.keys(state.videos))}
-            onSearch={(query) => searchVideos(query, state.unplayableIds)}
-            onAddByInput={addByInput}
-            onAddChannel={addChannel}
-            onAddToLibrary={addToLibrary}
-          />
-          <LibraryPanel
-            videos={libraryVideos}
-            playlistIds={playlistIds}
-            unplayableIds={state.unplayableIds}
-            onAddToPlaylist={addToPlaylist}
-            onRemoveFromLibrary={removeFromLibrary}
-          />
-          <PlaylistPanel
+      <div className="library-page" hidden={page !== "library"}>
+        <div className="shelf add-target">
+          <span>追加先</span>
+          <PlaylistTabs
             playlists={state.playlists}
             activePlaylistId={state.activePlaylistId}
-            videos={state.videos}
-            watchCounts={state.watchCounts}
-            currentVideoId={state.currentVideoId}
-            onSelectPlaylist={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
-            onCreatePlaylist={createPlaylist}
-            onRenamePlaylist={renamePlaylist}
-            onDeletePlaylist={deletePlaylist}
-            onMove={moveInPlaylist}
-            onRemove={removeFromPlaylist}
-            onPlay={(id) => start(id)}
+            onSelect={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
+            onCreate={createPlaylist}
+            onMove={movePlaylist}
           />
-        </aside>
+        </div>
+        <AddPanel
+          libraryIds={new Set(Object.keys(state.videos))}
+          results={searchResults}
+          searched={searched}
+          searchError={searchError}
+          onAddByInput={addByInput}
+          onAddChannel={addChannel}
+          onAddToLibrary={addToLibrary}
+          onPlay={ingestAndPlay}
+        />
+        <LibraryPanel
+          videos={libraryVideos}
+          playlistIds={playlistIds}
+          unplayableIds={state.unplayableIds}
+          watchCounts={state.watchCounts}
+          onPlay={ingestAndPlay}
+          onAddToPlaylist={addToPlaylist}
+          onRemoveFromLibrary={removeFromLibrary}
+        />
       </div>
     </div>
   );
