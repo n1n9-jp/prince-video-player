@@ -7,9 +7,9 @@ Prince の YouTube 動画を、このページ側のプレイリスト・視聴�
 1. [Google Cloud Console](https://console.cloud.google.com/) でプロジェクトを作り、**YouTube Data API v3** を有効にする。
 2. 認証情報から API キーを発行する。
 3. キーの制限:
-   - API の制限: YouTube Data API v3 のみ
-   - ウェブサイトの制限: `http://127.0.0.1:5173/*`
-4. リポジトリ直下に `.env.local` を作り、`.env.example` を参考にキーを書く。
+    - API の制限: YouTube Data API v3 のみ
+    - ウェブサイトの制限: `http://127.0.0.1:5173/*` と `https://prince-tube.tokyo-air.workers.dev/*`
+4. リポジトリ直下に `.env.local` を作り、`.env.example` を参考にキーを書く。 Cloudflare の本番ビルドでは、Workers Builds の環境変数に同じ `VITE_YOUTUBE_API_KEY` を入れる。
 
 ```
 VITE_YOUTUBE_API_KEY=your_key_here
@@ -60,5 +60,13 @@ npm run catalog:build
 
 ```
 npm test
+```
+
+## Cloudflare
+
+本番は Cloudflare Workers の静的アセットとして出しています。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。`main` への push で Workers Builds がビルドしてデプロイします。
+
+```
+npm run deploy
 ```
 
