@@ -4,26 +4,28 @@ import { ModeToggle } from "./ModeToggle";
 import { PlaylistTabs } from "./PlaylistTabs";
 
 type Props = {
+  variant: "watch" | "edit";
   playlists: Playlist[];
   activePlaylistId: string | null;
   videos: Record<string, Video>;
   watchCounts: Record<string, number>;
   currentVideoId: string | null;
-  autoplayNext: boolean;
-  playMode: PlayMode;
+  autoplayNext?: boolean;
+  playMode?: PlayMode;
   onSelectPlaylist: (id: string) => void;
-  onCreatePlaylist: () => void;
-  onMovePlaylist: (direction: -1 | 1) => void;
-  onRenamePlaylist: (name: string) => void;
-  onDeletePlaylist: () => void;
-  onMove: (index: number, direction: -1 | 1) => void;
-  onRemove: (videoId: string) => void;
+  onCreatePlaylist?: () => void;
+  onMovePlaylist?: (direction: -1 | 1) => void;
+  onRenamePlaylist?: (name: string) => void;
+  onDeletePlaylist?: () => void;
+  onMove?: (index: number, direction: -1 | 1) => void;
+  onRemove?: (videoId: string) => void;
   onPlay: (videoId: string) => void;
-  onAutoplayNextChange: (value: boolean) => void;
-  onPlayModeChange: (mode: PlayMode) => void;
+  onAutoplayNextChange?: (value: boolean) => void;
+  onPlayModeChange?: (mode: PlayMode) => void;
 };
 
 export function PlaylistPanel({
+  variant,
   playlists,
   activePlaylistId,
   videos,
@@ -42,6 +44,7 @@ export function PlaylistPanel({
   onAutoplayNextChange,
   onPlayModeChange,
 }: Props) {
+  const editable = variant === "edit";
   const active = playlists.find((p) => p.id === activePlaylistId) ?? null;
   const total = active?.videoIds.length ?? 0;
   const position = currentVideoId && active ? active.videoIds.indexOf(currentVideoId) + 1 : 0;
@@ -50,32 +53,34 @@ export function PlaylistPanel({
     event.preventDefault();
     const form = event.currentTarget;
     const input = form.elements.namedItem("name");
-    if (!(input instanceof HTMLInputElement)) return;
+    if (!(input instanceof HTMLInputElement) || !onRenamePlaylist) return;
     onRenamePlaylist(input.value);
   }
 
   return (
-    <section className="playlist-dock">
+    <section className={editable ? "playlist-dock playlist-editor" : "playlist-dock"}>
       <header className="playlist-dock-head">
         <div>
           <h2>{active?.name ?? "プレイリスト"}</h2>
-          <p>
-            {total === 0 ? "0 本" : `${Math.max(position, 1)} / ${total} 本`}
-          </p>
-          <ModeToggle value={playMode} onChange={onPlayModeChange} />
+          <p>{total === 0 ? "0 本" : `${Math.max(position, 1)} / ${total} 本`}</p>
+          {!editable && playMode && onPlayModeChange ? (
+            <ModeToggle value={playMode} onChange={onPlayModeChange} />
+          ) : null}
         </div>
-        <button
-          type="button"
-          className={autoplayNext ? "switch on" : "switch"}
-          role="switch"
-          aria-checked={autoplayNext}
-          onClick={() => onAutoplayNextChange(!autoplayNext)}
-        >
-          <span className="switch-track" aria-hidden="true">
-            <span className="switch-knob" />
-          </span>
-          連続再生
-        </button>
+        {!editable && onAutoplayNextChange ? (
+          <button
+            type="button"
+            className={autoplayNext ? "switch on" : "switch"}
+            role="switch"
+            aria-checked={Boolean(autoplayNext)}
+            onClick={() => onAutoplayNextChange(!autoplayNext)}
+          >
+            <span className="switch-track" aria-hidden="true">
+              <span className="switch-knob" />
+            </span>
+            連続再生
+          </button>
+        ) : null}
       </header>
       <PlaylistTabs
         playlists={playlists}
@@ -83,8 +88,9 @@ export function PlaylistPanel({
         onSelect={onSelectPlaylist}
         onCreate={onCreatePlaylist}
         onMove={onMovePlaylist}
+        editable={editable}
       />
-      {active && (
+      {editable && active && onRenamePlaylist && onDeletePlaylist ? (
         <form className="row-form quiet" onSubmit={handleRename}>
           <input name="name" defaultValue={active.name} key={active.id} aria-label="プレイリスト名" />
           <button type="submit" className="btn-text">
@@ -94,9 +100,13 @@ export function PlaylistPanel({
             削除
           </button>
         </form>
-      )}
+      ) : null}
       {!active || active.videoIds.length === 0 ? (
-        <p className="empty">追加ページのライブラリから「リストへ」を押すと、ここに並びます。</p>
+        <p className="empty">
+          {editable
+            ? "ライブラリから「リストへ」を押すと、このプレイリストに入ります。"
+            : "編集ページでリストに入れると、ここで再生できます。"}
+        </p>
       ) : (
         <ol className="queue">
           {active.videoIds.map((id, index) => {
@@ -116,22 +126,24 @@ export function PlaylistPanel({
                     </span>
                   </span>
                 </button>
-                <div className="queue-actions">
-                  <button type="button" className="btn-text" onClick={() => onMove(index, -1)} disabled={index === 0}>
-                    上へ
-                  </button>
-                  <button
-                    type="button"
-                    className="btn-text"
-                    onClick={() => onMove(index, 1)}
-                    disabled={index === active.videoIds.length - 1}
-                  >
-                    下へ
-                  </button>
-                  <button type="button" className="btn-text" onClick={() => onRemove(id)}>
-                    削除
-                  </button>
-                </div>
+                {editable && onMove && onRemove ? (
+                  <div className="queue-actions">
+                    <button type="button" className="btn-text" onClick={() => onMove(index, -1)} disabled={index === 0}>
+                      上へ
+                    </button>
+                    <button
+                      type="button"
+                      className="btn-text"
+                      onClick={() => onMove(index, 1)}
+                      disabled={index === active.videoIds.length - 1}
+                    >
+                      下へ
+                    </button>
+                    <button type="button" className="btn-text" onClick={() => onRemove(id)}>
+                      削除
+                    </button>
+                  </div>
+                ) : null}
               </li>
             );
           })}

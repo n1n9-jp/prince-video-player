@@ -3,7 +3,6 @@ import { AddPanel } from "./components/AddPanel";
 import { LibraryPanel } from "./components/LibraryPanel";
 import { PlayerStage, type PlayerHandle } from "./components/PlayerStage";
 import { PlaylistPanel } from "./components/PlaylistPanel";
-import { PlaylistTabs } from "./components/PlaylistTabs";
 import { Topbar } from "./components/Topbar";
 import { goToPage, pageFromHash, type Page } from "./page";
 import { applyAutoTags, addManualSong, removeManualSong } from "./catalog/tagging";
@@ -374,7 +373,7 @@ export function App() {
           </button>
         </div>
       ) : null}
-      <Topbar busy={searchBusy} onSearch={runSearch} />
+      <Topbar page={page} busy={searchBusy} onSearch={runSearch} />
 
       <div className="watch-page" hidden={page !== "watch"}>
         <PlayerStage
@@ -384,7 +383,7 @@ export function App() {
           sessionActive={sessionActive}
           autoplayBlocked={autoplayBlocked}
           skipNotice={skipNotice}
-          emptyHint="追加ページでリストに入れると、ここで再生できます。"
+          emptyHint="編集ページでリストに入れると、ここで再生できます。"
           onStart={() => start()}
           onPrev={() => advance("prev")}
           onNext={() => advance("next")}
@@ -418,6 +417,7 @@ export function App() {
           onAutoplayBlocked={() => setAutoplayBlocked(true)}
         />
         <PlaylistPanel
+          variant="watch"
           playlists={state.playlists}
           activePlaylistId={state.activePlaylistId}
           videos={state.videos}
@@ -426,12 +426,6 @@ export function App() {
           autoplayNext={state.autoplayNext}
           playMode={state.playMode}
           onSelectPlaylist={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
-          onCreatePlaylist={createPlaylist}
-          onMovePlaylist={movePlaylist}
-          onRenamePlaylist={renamePlaylist}
-          onDeletePlaylist={deletePlaylist}
-          onMove={moveInPlaylist}
-          onRemove={removeFromPlaylist}
           onPlay={(id) => start(id)}
           onAutoplayNextChange={(value) => setState((s) => ({ ...s, autoplayNext: value }))}
           onPlayModeChange={changeMode}
@@ -439,16 +433,25 @@ export function App() {
       </div>
 
       <div className="library-page" hidden={page !== "library"}>
-        <div className="shelf add-target">
-          <span>追加先</span>
-          <PlaylistTabs
-            playlists={state.playlists}
-            activePlaylistId={state.activePlaylistId}
-            onSelect={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
-            onCreate={createPlaylist}
-            onMove={movePlaylist}
-          />
-        </div>
+        <PlaylistPanel
+          variant="edit"
+          playlists={state.playlists}
+          activePlaylistId={state.activePlaylistId}
+          videos={state.videos}
+          watchCounts={state.watchCounts}
+          currentVideoId={state.currentVideoId}
+          onSelectPlaylist={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
+          onCreatePlaylist={createPlaylist}
+          onMovePlaylist={movePlaylist}
+          onRenamePlaylist={renamePlaylist}
+          onDeletePlaylist={deletePlaylist}
+          onMove={moveInPlaylist}
+          onRemove={removeFromPlaylist}
+          onPlay={(id) => {
+            goToPage("watch");
+            start(id);
+          }}
+        />
         <AddPanel
           libraryIds={new Set(Object.keys(state.videos))}
           results={searchResults}
