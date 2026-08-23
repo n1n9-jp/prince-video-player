@@ -639,11 +639,11 @@ button:disabled {
   font-weight: 700;
 }
 
-.library-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-left: auto;
+.library-loading {
+  margin: 4rem auto;
+  width: min(40rem, calc(100% - 3rem));
+  color: var(--ink-soft);
+  text-align: center;
 }
 
 .restore-banner {
