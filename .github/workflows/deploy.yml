@@ -26,14 +26,23 @@ jobs:
       - run: npm run typecheck
       - run: npm run test
       - run: npm run build
-      # secrets は deploy の前に載せると、PR の versions upload が
-      # 「最新バージョンが未デプロイ」で失敗する（Cloudflare 10215）。
+      # Do not pass `secrets:` here. wrangler-action uploads secrets before
+      # the command, and Cloudflare 10215 rejects that when a PR left an
+      # undeployed latest version.
       - name: Deploy
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: ${{ github.event_name == 'pull_request' && 'versions upload' || 'deploy' }}
-          postCommands: bash .github/scripts/put-youtube-secret.sh
+      - name: Put YouTube API key
+        if: github.event_name != 'pull_request' && (secrets.YOUTUBE_API_KEY != '' || secrets.VITE_YOUTUBE_API_KEY != '')
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: whoami
+          secrets: |
+            YOUTUBE_API_KEY
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY || secrets.VITE_YOUTUBE_API_KEY }}
