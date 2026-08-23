@@ -32,7 +32,7 @@ export type AppState = {
 
 export type Store = {
   load(): AppState;
-  save(state: AppState): void;
+  save(state: AppState, options?: { force?: boolean }): void;
 };
 
 export function emptyState(): AppState {

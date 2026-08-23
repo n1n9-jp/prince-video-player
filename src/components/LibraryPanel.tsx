@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { catalogIndex } from "../catalog";
 import { foldTitle } from "../catalog/normalize";
 import type { VideoTagging } from "../catalog/types";
@@ -6,6 +6,7 @@ import type { Video } from "../storage/types";
 import { VideoCard } from "./VideoCard";
 
 type KindFilter = "all" | "official" | "live" | "unreleased" | "cover";
+type ImportMode = "merge" | "replace";
 
 type Props = {
   videos: Video[];
@@ -18,6 +19,8 @@ type Props = {
   onRemoveFromLibrary: (videoId: string) => void;
   onAddSongTag: (videoId: string, songId: string) => void;
   onRemoveSongTag: (videoId: string, songId: string) => void;
+  onExport: () => void;
+  onImport: (text: string, mode: ImportMode) => void;
 };
 
 function matchesFilter(tagging: VideoTagging | undefined, kind: KindFilter): boolean {
@@ -56,11 +59,15 @@ export function LibraryPanel({
   onRemoveFromLibrary,
   onAddSongTag,
   onRemoveSongTag,
+  onExport,
+  onImport,
 }: Props) {
   const blocked = new Set(unplayableIds);
   const [kind, setKind] = useState<KindFilter>("all");
   const [query, setQuery] = useState("");
   const foldedQuery = foldTitle(query);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const importModeRef = useRef<ImportMode>("merge");
 
   const visible = useMemo(
     () =>
@@ -79,6 +86,43 @@ export function LibraryPanel({
           {visible.length}
           {visible.length !== videos.length ? ` / ${videos.length}` : ""} 本
         </p>
+        <div className="library-tools">
+          <button type="button" className="btn-ghost" onClick={onExport}>
+            書き出す
+          </button>
+          <button
+            type="button"
+            className="btn-ghost"
+            onClick={() => {
+              importModeRef.current = "merge";
+              fileRef.current?.click();
+            }}
+          >
+            読み込んでマージ
+          </button>
+          <button
+            type="button"
+            className="btn-ghost"
+            onClick={() => {
+              importModeRef.current = "replace";
+              fileRef.current?.click();
+            }}
+          >
+            読み込んで置き換え
+          </button>
+          <input
+            ref={fileRef}
+            type="file"
+            accept="application/json,.json"
+            hidden
+            onChange={(event) => {
+              const file = event.target.files?.[0];
+              event.target.value = "";
+              if (!file) return;
+              void file.text().then((text) => onImport(text, importModeRef.current));
+            }}
+          />
+        </div>
       </header>
       <div className="library-filters">
         <input

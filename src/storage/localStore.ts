@@ -1,125 +1,260 @@
-import { applyStarterIfNeeded } from "./seed";
 import { applyAutoTags } from "../catalog/tagging";
-import type { VideoTagging } from "../catalog/types";
-import { emptyState, stripUnplayableFromPlaylists, type AppState, type PlayMode, type Playlist, type Store, type Video } from "./types";
+import {
+  isDangerousReplace,
+  isStarterShaped,
+  mergeStates,
+  parseState,
+  pickCanonical,
+  richness,
+  withPlaylist,
+} from "./parse";
+import { applyStarterIfNeeded } from "./seed";
+import { emptyState, stripUnplayableFromPlaylists, type AppState, type Store } from "./types";
 
-const KEY = "prince-video-player";
+export const STORAGE_KEY = "prince-video-player";
+export const BACKUP_KEY = "prince-video-player:backup";
+export const CORRUPT_KEY = "prince-video-player:corrupt";
+const IDB_NAME = "prince-video-player";
+const IDB_STORE = "kv";
+const IDB_KEY = "state";
 
-function isPlayMode(value: unknown): value is PlayMode {
-  return value === "sequential" || value === "shuffle" || value === "leastPlayed";
-}
+let restoredNotice: string | null = null;
 
-function isVideo(value: unknown): value is Video {
-  if (!value || typeof value !== "object") return false;
-  const v = value as Record<string, unknown>;
-  return (
-    typeof v.id === "string" &&
-    typeof v.title === "string" &&
-    typeof v.channelTitle === "string" &&
-    typeof v.thumbnailUrl === "string"
-  );
-}
-
-function isPlaylist(value: unknown): value is Playlist {
-  if (!value || typeof value !== "object") return false;
-  const p = value as Record<string, unknown>;
-  return (
-    typeof p.id === "string" &&
-    typeof p.name === "string" &&
-    Array.isArray(p.videoIds) &&
-    p.videoIds.every((id) => typeof id === "string")
-  );
-}
-
-function parseState(raw: unknown): AppState | null {
-  if (!raw || typeof raw !== "object") return null;
-  const s = raw as Record<string, unknown>;
-  if (!s.videos || typeof s.videos !== "object") return null;
-  const videos: Record<string, Video> = {};
-  for (const [id, video] of Object.entries(s.videos as Record<string, unknown>)) {
-    if (!isVideo(video) || video.id !== id) return null;
-    videos[id] = video;
-  }
-  if (!Array.isArray(s.playlists) || !s.playlists.every(isPlaylist)) return null;
-  if (s.activePlaylistId !== null && typeof s.activePlaylistId !== "string") return null;
-  if (!s.watchCounts || typeof s.watchCounts !== "object") return null;
-  const watchCounts: Record<string, number> = {};
-  for (const [id, count] of Object.entries(s.watchCounts as Record<string, unknown>)) {
-    if (typeof count !== "number" || !Number.isFinite(count) || count < 0) return null;
-    watchCounts[id] = count;
-  }
-  if (!isPlayMode(s.playMode)) return null;
-  if (s.currentVideoId !== null && typeof s.currentVideoId !== "string") return null;
-  const unplayableIds =
-    Array.isArray(s.unplayableIds) && s.unplayableIds.every((id) => typeof id === "string") ? s.unplayableIds : [];
-  const autoplayNext = s.autoplayNext === false ? false : true;
-  const starterVersion = typeof s.starterVersion === "number" && Number.isFinite(s.starterVersion) ? s.starterVersion : 0;
-  const videoTags: Record<string, VideoTagging> = {};
-  if (s.videoTags && typeof s.videoTags === "object") {
-    for (const [id, tagging] of Object.entries(s.videoTags as Record<string, unknown>)) {
-      if (isTagging(tagging)) videoTags[id] = tagging;
-    }
-  }
-  return {
-    videos,
-    playlists: s.playlists,
-    activePlaylistId: s.activePlaylistId,
-    watchCounts,
-    playMode: s.playMode,
-    currentVideoId: s.currentVideoId,
-    unplayableIds,
-    autoplayNext,
-    starterVersion,
-    videoTags,
-  };
-}
-
-function isTagging(value: unknown): value is VideoTagging {
-  if (!value || typeof value !== "object") return false;
-  const t = value as Record<string, unknown>;
-  return (
-    Array.isArray(t.songIds) &&
-    t.songIds.every((id) => typeof id === "string") &&
-    Array.isArray(t.releaseIds) &&
-    t.releaseIds.every((id) => typeof id === "string") &&
-    (t.source === "auto" || t.source === "manual") &&
-    (t.confidence === "high" || t.confidence === "medium" || t.confidence === "low") &&
-    (t.concertId === undefined || typeof t.concertId === "string")
-  );
-}
-
-function withPlaylist(state: AppState): AppState {
-  if (state.playlists.length === 0) {
-    const fresh = emptyState();
-    return {
-      ...state,
-      playlists: fresh.playlists,
-      activePlaylistId: fresh.activePlaylistId,
-    };
-  }
-  if (!state.activePlaylistId || !state.playlists.some((p) => p.id === state.activePlaylistId)) {
-    return { ...state, activePlaylistId: state.playlists[0]?.id ?? null };
-  }
-  return state;
-}
+export {
+  isDangerousReplace,
+  isStarterShaped,
+  mergeStates,
+  parseState,
+  pickCanonical,
+  playlistItemCount,
+  richness,
+  videoCount,
+} from "./parse";
 
 function withAutoTags(state: AppState): AppState {
-  return { ...state, videoTags: applyAutoTags(state.videos, state.videoTags) };
+  try {
+    return { ...state, videoTags: applyAutoTags(state.videos, state.videoTags) };
+  } catch {
+    return state;
+  }
 }
 
-export const localStore: Store = {
-  load() {
-    try {
-      const raw = localStorage.getItem(KEY);
-      if (!raw) return withAutoTags(applyStarterIfNeeded(emptyState()));
-      const parsed = parseState(JSON.parse(raw) as unknown);
-      if (!parsed) return withAutoTags(applyStarterIfNeeded(emptyState()));
-      return withAutoTags(applyStarterIfNeeded(stripUnplayableFromPlaylists(withPlaylist(parsed))));
-    } catch {
-      return withAutoTags(applyStarterIfNeeded(emptyState()));
+export function hydrateState(parsed: AppState): AppState {
+  return withAutoTags(stripUnplayableFromPlaylists(withPlaylist(parsed)));
+}
+
+function safeGet(key: string): string | null {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function safeSet(key: string, value: string): boolean {
+  try {
+    localStorage.setItem(key, value);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function parseRaw(raw: string | null): AppState | null {
+  if (!raw) return null;
+  try {
+    return parseState(JSON.parse(raw) as unknown);
+  } catch {
+    return null;
+  }
+}
+
+type Candidate = { source: string; state: AppState; raw: string };
+
+function readStorageCandidates(): Candidate[] {
+  const out: Candidate[] = [];
+  if (typeof localStorage === "undefined") return out;
+  try {
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (!key) continue;
+      const raw = safeGet(key);
+      if (!raw || raw.length < 20 || raw[0] !== "{") continue;
+      const parsed = parseRaw(raw);
+      if (!parsed) continue;
+      if (Object.keys(parsed.videos).length === 0 && parsed.playlists.every((p) => p.videoIds.length === 0)) continue;
+      out.push({ source: key, state: parsed, raw });
     }
-  },
-  save(state) {
-    localStorage.setItem(KEY, JSON.stringify(state));
-  },
+  } catch {
+    return out;
+  }
+  return out;
+}
+
+function pickRichest(candidates: Candidate[]): Candidate | null {
+  let best: Candidate | null = null;
+  for (const candidate of candidates) {
+    if (!best || richness(candidate.state) > richness(best.state)) best = candidate;
+  }
+  return best;
+}
+
+function openIdb(): Promise<IDBDatabase | null> {
+  return new Promise((resolve) => {
+    if (typeof indexedDB === "undefined") {
+      resolve(null);
+      return;
+    }
+    const req = indexedDB.open(IDB_NAME, 1);
+    req.onerror = () => resolve(null);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains(IDB_STORE)) db.createObjectStore(IDB_STORE);
+    };
+    req.onsuccess = () => resolve(req.result);
+  });
+}
+
+async function readIndexedDb(): Promise<AppState | null> {
+  const db = await openIdb();
+  if (!db) return null;
+  return new Promise((resolve) => {
+    try {
+      const tx = db.transaction(IDB_STORE, "readonly");
+      const get = tx.objectStore(IDB_STORE).get(IDB_KEY);
+      get.onsuccess = () => {
+        const parsed = parseState(get.result);
+        db.close();
+        resolve(parsed);
+      };
+      get.onerror = () => {
+        db.close();
+        resolve(null);
+      };
+    } catch {
+      db.close();
+      resolve(null);
+    }
+  });
+}
+
+async function writeIndexedDb(state: AppState): Promise<void> {
+  const db = await openIdb();
+  if (!db) return;
+  try {
+    const tx = db.transaction(IDB_STORE, "readwrite");
+    tx.objectStore(IDB_STORE).put(state, IDB_KEY);
+    tx.oncomplete = () => db.close();
+    tx.onerror = () => db.close();
+  } catch {
+    db.close();
+  }
+}
+
+function persistPrimary(state: AppState): void {
+  const raw = JSON.stringify(state);
+  safeSet(STORAGE_KEY, raw);
+  void writeIndexedDb(state);
+}
+
+export function takeRestoredNotice(): string | null {
+  const notice = restoredNotice;
+  restoredNotice = null;
+  return notice;
+}
+
+export function exportJson(state: AppState): string {
+  return `${JSON.stringify(state, null, 2)}\n`;
+}
+
+function loadFromStorage(): AppState {
+  const primaryRaw = safeGet(STORAGE_KEY);
+  const backupRaw = safeGet(BACKUP_KEY);
+  const candidates = readStorageCandidates();
+  const richest = pickRichest(candidates);
+  const primary = parseRaw(primaryRaw);
+
+  if (richest && (!primary || richness(richest.state) > richness(primary))) {
+    restoredNotice =
+      richest.source === BACKUP_KEY
+        ? "バックアップからライブラリを復元しました。"
+        : "このブラウザに残っていた以前のライブラリを復元しました。";
+    if (primaryRaw && primary && richest.source !== BACKUP_KEY && !isStarterShaped(primary)) {
+      safeSet(BACKUP_KEY, primaryRaw);
+    }
+    persistPrimary(hydrateState(richest.state));
+    return hydrateState(richest.state);
+  }
+
+  if (primary) return hydrateState(primary);
+  if (primaryRaw) safeSet(CORRUPT_KEY, primaryRaw);
+
+  const backup = parseRaw(backupRaw);
+  if (backup) {
+    restoredNotice = "バックアップからライブラリを復元しました。";
+    persistPrimary(hydrateState(backup));
+    return hydrateState(backup);
+  }
+
+  return hydrateState(emptyState());
+}
+
+function saveState(state: AppState, options?: { force?: boolean }): void {
+  const primaryRaw = safeGet(STORAGE_KEY);
+  const existing = parseRaw(primaryRaw);
+
+  if (primaryRaw && !existing && isStarterShaped(state) && !options?.force) {
+    safeSet(BACKUP_KEY, primaryRaw);
+    return;
+  }
+
+  if (existing && isDangerousReplace(existing, state) && !options?.force) {
+    if (primaryRaw) safeSet(BACKUP_KEY, primaryRaw);
+    return;
+  }
+
+  if (primaryRaw && existing && richness(existing) >= richness(state)) {
+    safeSet(BACKUP_KEY, primaryRaw);
+  } else if (primaryRaw && existing) {
+    const backup = parseRaw(safeGet(BACKUP_KEY));
+    if (!backup || richness(existing) >= richness(backup)) safeSet(BACKUP_KEY, primaryRaw);
+  }
+
+  persistPrimary(state);
+}
+
+export async function loadDurableBackup(): Promise<AppState | null> {
+  const parsed = await readIndexedDb();
+  return parsed ? hydrateState(parsed) : null;
+}
+
+export function seedEmptyLibrary(state: AppState): AppState {
+  if (!isStarterShaped(state) || Object.keys(state.videos).length > 0) return hydrateState(state);
+  return hydrateState(applyStarterIfNeeded(state));
+}
+
+export const localStore: Store & {
+  parse: typeof parseState;
+  merge: typeof mergeStates;
+  exportJson: typeof exportJson;
+  richness: typeof richness;
+  isStarterShaped: typeof isStarterShaped;
+  isDangerousReplace: typeof isDangerousReplace;
+  pickCanonical: typeof pickCanonical;
+  takeRestoredNotice: typeof takeRestoredNotice;
+  loadDurableBackup: typeof loadDurableBackup;
+  seedEmptyLibrary: typeof seedEmptyLibrary;
+} = {
+  load: loadFromStorage,
+  save: saveState,
+  parse: parseState,
+  merge: mergeStates,
+  exportJson,
+  richness,
+  isStarterShaped,
+  isDangerousReplace,
+  pickCanonical,
+  takeRestoredNotice,
+  loadDurableBackup,
+  seedEmptyLibrary,
 };

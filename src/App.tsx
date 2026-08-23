@@ -9,7 +9,9 @@ import { Topbar } from "./components/Topbar";
 import { goToPage, pageFromHash, type Page } from "./page";
 import { applyAutoTags, addManualSong, removeManualSong } from "./catalog/tagging";
 import { nextVideo, previousVideo, shuffledCopy, startVideo } from "./playback/nextVideo";
-import { localStore } from "./storage/localStore";
+import { hydrateState, localStore } from "./storage/localStore";
+import { pullLibrary, pushLibrary } from "./storage/remoteStore";
+import { pickCanonical } from "./storage/parse";
 import { activePlaylist, dropFromPlaylists, emptyState, type AppState, type PlayMode, type Video } from "./storage/types";
 import { fetchChannelUploads, fetchVideoById, parseVideoId, searchVideos } from "./youtube/dataApi";
 import { loadYoutubeApi } from "./youtube/iframePlayer";
@@ -25,6 +27,7 @@ export function App() {
   const [searched, setSearched] = useState(false);
   const [searchBusy, setSearchBusy] = useState(false);
   const [page, setPage] = useState<Page>(pageFromHash);
+  const [libraryNotice, setLibraryNotice] = useState<string | null>(() => localStore.takeRestoredNotice());
 
   const stateRef = useRef(state);
   const shuffleRef = useRef(shuffleOrder);
@@ -32,6 +35,11 @@ export function App() {
   const playerRef = useRef<PlayerHandle>(null);
   stateRef.current = state;
   shuffleRef.current = shuffleOrder;
+
+  function commit(next: AppState) {
+    stateRef.current = next;
+    setState(next);
+  }
 
   useEffect(() => {
     void loadYoutubeApi();
@@ -45,7 +53,61 @@ export function App() {
 
   useEffect(() => {
     localStore.save(state);
+    if (localStore.isStarterShaped(state)) return;
+    const timer = window.setTimeout(() => {
+      void pushLibrary(state).then((result) => {
+        if (result.ok || !result.kept) return;
+        if (localStore.richness(result.kept) <= localStore.richness(stateRef.current)) return;
+        commit(hydrateState(result.kept));
+        setLibraryNotice("サーバー上のライブラリを正として戻しました。");
+      });
+    }, 400);
+    return () => window.clearTimeout(timer);
   }, [state]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function reconcile() {
+      const remote = await pullLibrary();
+      const durable = await localStore.loadDurableBackup();
+      if (cancelled) return;
+      const local = stateRef.current;
+      const canonical = pickCanonical(local, remote, durable);
+      if (!canonical) return;
+      const next = localStore.isStarterShaped(canonical) && Object.keys(canonical.videos).length === 0
+        ? localStore.seedEmptyLibrary(canonical)
+        : hydrateState(canonical);
+      const richer = localStore.richness(next) > localStore.richness(local);
+      const recovered = localStore.isStarterShaped(local) && !localStore.isStarterShaped(next);
+      if (richer || recovered) {
+        commit(next);
+        if (recovered || (remote && localStore.richness(next) > localStore.richness(local))) {
+          setLibraryNotice("共有ライブラリを同期しました。");
+        }
+      }
+      if (!localStore.isStarterShaped(next)) {
+        const pushed = await pushLibrary(next);
+        if (cancelled) return;
+        if (!pushed.ok && pushed.kept && localStore.richness(pushed.kept) > localStore.richness(stateRef.current)) {
+          commit(hydrateState(pushed.kept));
+        }
+      }
+    }
+
+    void reconcile();
+    const onFocus = () => {
+      if (document.visibilityState === "hidden") return;
+      void reconcile();
+    };
+    window.addEventListener("focus", onFocus);
+    document.addEventListener("visibilitychange", onFocus);
+    return () => {
+      cancelled = true;
+      window.removeEventListener("focus", onFocus);
+      document.removeEventListener("visibilitychange", onFocus);
+    };
+  }, []);
 
   useEffect(() => {
     const list = activePlaylist(state);
@@ -56,11 +118,6 @@ export function App() {
 
   const playlist = activePlaylist(state);
   const currentVideo = state.currentVideoId ? (state.videos[state.currentVideoId] ?? null) : null;
-
-  function commit(next: AppState) {
-    stateRef.current = next;
-    setState(next);
-  }
 
   function patchShuffle(order: string[]) {
     shuffleRef.current = order;
@@ -303,11 +360,47 @@ export function App() {
     setState({ ...state, playMode: mode });
   }
 
+  function exportLibrary() {
+    const blob = new Blob([localStore.exportJson(stateRef.current)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `prince-tube-library-${new Date().toISOString().slice(0, 10)}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function importLibrary(text: string, mode: "merge" | "replace") {
+    let parsed = null;
+    try {
+      parsed = localStore.parse(JSON.parse(text) as unknown);
+    } catch {
+      parsed = null;
+    }
+    if (!parsed || (Object.keys(parsed.videos).length === 0 && parsed.playlists.every((p) => p.videoIds.length === 0))) {
+      setLibraryNotice("読み込めるライブラリが見つかりませんでした。JSON を確認してください。");
+      return;
+    }
+    const next = hydrateState(mode === "replace" ? parsed : localStore.merge(stateRef.current, parsed));
+    commit(next);
+    localStore.save(next, { force: mode === "replace" });
+    void pushLibrary(next, { force: mode === "replace" });
+    setLibraryNotice(mode === "replace" ? "ライブラリを置き換えました。" : "ライブラリをマージしました。");
+  }
+
   const libraryVideos = Object.values(state.videos);
   const playlistIds = new Set(playlist?.videoIds ?? []);
 
   return (
     <div className="app">
+      {libraryNotice ? (
+        <div className="restore-banner" role="status">
+          <p>{libraryNotice}</p>
+          <button type="button" className="btn-text" onClick={() => setLibraryNotice(null)}>
+            閉じる
+          </button>
+        </div>
+      ) : null}
       <Topbar page={page} busy={searchBusy} onSearch={runSearch}>
         {page === "watch" ? <ModeToggle value={state.playMode} onChange={changeMode} /> : null}
       </Topbar>
@@ -417,6 +510,8 @@ export function App() {
               return { ...s, videoTags };
             });
           }}
+          onExport={exportLibrary}
+          onImport={importLibrary}
         />
       </div>
     </div>

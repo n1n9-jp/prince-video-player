@@ -6,3 +6,4 @@ dist
 scripts/.cache
 .wrangler
 .dev.vars*
+worker-configuration.d.ts
