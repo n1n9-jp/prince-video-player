@@ -4,6 +4,7 @@ import { LibraryPanel } from "./components/LibraryPanel";
 import { PlayerStage, type PlayerHandle } from "./components/PlayerStage";
 import { PlaylistPanel } from "./components/PlaylistPanel";
 import { Topbar } from "./components/Topbar";
+import { WatchTagList } from "./components/WatchTagList";
 import { goToPage, pageFromHash, type Page } from "./page";
 import { applyAutoTags, addManualSong, removeManualSong } from "./catalog/tagging";
 import { nextVideo, previousVideo, shuffledCopy, startVideo } from "./playback/nextVideo";
@@ -466,6 +467,7 @@ export function App() {
           onAutoplayNextChange={(value) => patch((s) => ({ ...s, autoplayNext: value }))}
           onPlayModeChange={changeMode}
         />
+        <WatchTagList videoIds={playlist?.videoIds ?? []} videoTags={state.videoTags} />
       </div>
 
       <div className="library-page" hidden={page !== "library"}>
