@@ -9,11 +9,15 @@ Prince の YouTube 動画を、このページ側のプレイリスト・視聴�
 3. キーの制限:
     - API の制限: YouTube Data API v3 のみ
     - ウェブサイトの制限: `http://127.0.0.1:5173/*` と `https://prince-tube.tokyo-air.workers.dev/*`
-4. リポジトリ直下に `.env.local` を作り、`.env.example` を参考にキーを書く。 Cloudflare の本番ビルドでは、Workers Builds の環境変数に同じ `VITE_YOUTUBE_API_KEY` を入れる。
+4. ローカル検索だけなら、リポジトリ直下に `.env.local` を作り、`.env.example` を参考にキーを書く。このファイルは git に入らないし、本番の JS にも入らない。
 
 ```
 VITE_YOUTUBE_API_KEY=your_key_here
 ```
+
+本番の検索はフロントにキーを埋め込まない。Worker が `/api/youtube/*` で YouTube Data API を代理し、秘密変数 `YOUTUBE_API_KEY` を付ける。GitHub Secrets に同じ名前で `.env.local` のキーを入れれば、`main` へのデプロイ時に Cloudflare へ載る。手元から出す場合は `npx wrangler secret put YOUTUBE_API_KEY`。`wrangler dev` なら `.dev.vars`（`.dev.vars.example` 参照）。
+
+Worker は Google へ `Referer: https://prince-tube.tokyo-air.workers.dev/` を付ける。キーのウェブサイト制限にこの URL が入っていること。
 
 検索は 1 日 100 回までです。同じ検索語はブラウザにキャッシュし、リロードでは再検索しません。
 
@@ -66,7 +70,7 @@ npm test
 
 ## Cloudflare
 
-本番は Cloudflare Workers です。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。静的アセットに加え、ライブラリ用の KV を `/api/library` で読み書きします。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。
+本番は Cloudflare Workers です。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。静的アセットに加え、ライブラリ用の KV を `/api/library` で読み書きし、YouTube 検索は `/api/youtube/*` がキーを付けて代理します。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。
 
 `main` への push は GitHub Actions（[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)）がビルドしてデプロイします。PR ではプレビュー版を upload します。
 
@@ -76,7 +80,8 @@ npm test
 2. リポジトリ **Settings → Secrets and variables → Actions** に入れる
     - `CLOUDFLARE_API_TOKEN`（必須）
     - `CLOUDFLARE_ACCOUNT_ID`（ダッシュボード右サイドバーの Account ID）
-    - `VITE_YOUTUBE_API_KEY`（任意。検索を本番でも使う場合）
+    - `YOUTUBE_API_KEY`（検索用。`.env.local` のキーをコピー。フロントの JS には出さない）
+    - `VITE_YOUTUBE_API_KEY`（後方互換。`YOUTUBE_API_KEY` が空のときだけ Worker secret に使う。新規は前者）
 
 手元から出す場合:
 

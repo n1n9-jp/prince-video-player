@@ -1,6 +1,8 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "prince-tube",
+  // YouTube Data API key is a Worker secret: YOUTUBE_API_KEY
+  // wrangler secret put YOUTUBE_API_KEY   (never vars, never VITE_*)
   "main": "./worker/index.ts",
   "compatibility_date": "2026-08-23",
   "workers_dev": true,
