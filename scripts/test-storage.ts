@@ -4,10 +4,12 @@ import {
   BACKUP_KEY,
   STORAGE_KEY,
   hydrateState,
+  isDangerousReplace,
   isStarterShaped,
   localStore,
   mergeStates,
   parseState,
+  pickCanonical,
   richness,
 } from "../src/storage/localStore.ts";
 import type { AppState, Video } from "../src/storage/types.ts";
@@ -147,7 +149,17 @@ localStore.save(hydrateState(parseState({ videos: {}, playlists: [] })!));
 assert.equal(localStorage.getItem(STORAGE_KEY), "{not-json");
 console.log("ok save keeps unreadable storage instead of writing starter data");
 
-const starter = hydrateState(parseState({ videos: {}, playlists: [], starterVersion: 0 })!);
-assert.ok(isStarterShaped(starter));
-assert.ok(STARTER_VIDEOS.every((item) => starter.videos[item.id]));
-console.log("ok starter-shaped detection");
+const empty = hydrateState(parseState({ videos: {}, playlists: [], starterVersion: 0 })!);
+assert.equal(Object.keys(empty.videos).length, 0);
+assert.ok(isStarterShaped(empty));
+const seeded = localStore.seedEmptyLibrary(empty);
+assert.ok(STARTER_VIDEOS.every((item) => seeded.videos[item.id]));
+console.log("ok empty libraries are not auto-seeded until sync says they are empty");
+
+const starter = localStore.seedEmptyLibrary(empty);
+assert.ok(isDangerousReplace(rich, starter));
+assert.ok(isDangerousReplace(sample(20), sample(5)));
+assert.equal(isDangerousReplace(sample(3), sample(2)), false);
+assert.equal(pickCanonical(starter, rich)?.playlists[0]?.id, "p1");
+assert.equal(Object.keys(pickCanonical(starter, rich)?.videos ?? {}).length, 12);
+console.log("ok canonical pick ignores starter data when a real library exists");

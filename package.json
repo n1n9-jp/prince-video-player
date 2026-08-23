@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && wrangler types && tsc --noEmit -p worker/tsconfig.json",
     "catalog:import": "node scripts/import-musicbrainz.mjs && node scripts/build-catalog.mjs",
     "catalog:build": "node scripts/build-catalog.mjs",
     "test": "npx --yes tsx scripts/test-match.ts && npx --yes tsx scripts/test-storage.ts"

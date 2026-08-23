@@ -34,7 +34,7 @@ npm run dev
 4. 最後まで見た動画だけ、このページの視聴回数が 1 増える。
 5. ライブラリ追加時に、タイトルから曲・アルバム・公演を自動タグ付けする。ライブラリでは曲名・公式/ライブ/未発表/カバーで絞れる。タグは手で足したり外したりできる。
 
-プレイリスト、視聴回数、タグはブラウザの `localStorage` に保存されます。URL が違うと別物です（`http://127.0.0.1:5173` と本番は共有しません）。追加ページの「書き出す / 読み込む」で移せます。壊れかけたデータは捨てずに読み、スターター状態で上書きしないようにしています。
+プレイリスト、視聴回数、タグの正本は Cloudflare KV（`/api/library`）です。ブラウザの `localStorage` はキャッシュです。`npm run dev` も本番の API に繋ぐので、ローカル確認と本番閲覧は同じライブラリになります。壊れたデータやスターター 5 本では実データを上書きしません。追加ページの「書き出す / 読み込む」は保険です。
 
 ## 楽曲カタログ
 
@@ -64,13 +64,13 @@ npm test
 
 ## Cloudflare
 
-本番は Cloudflare Workers の静的アセットです。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。
+本番は Cloudflare Workers です。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。静的アセットに加え、ライブラリ用の KV を `/api/library` で読み書きします。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。
 
 `main` への push は GitHub Actions（[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)）がビルドしてデプロイします。PR ではプレビュー版を upload します。
 
 必要な GitHub Secrets:
 
-1. Cloudflare で [API トークン](https://dash.cloudflare.com/profile/api-tokens) を作る（テンプレート **Edit Cloudflare Workers**）
+1. Cloudflare で [API トークン](https://dash.cloudflare.com/profile/api-tokens) を作る（テンプレート **Edit Cloudflare Workers**。KV を自動作成するため **Workers KV Storage Edit** も付ける）
 2. リポジトリ **Settings → Secrets and variables → Actions** に入れる
     - `CLOUDFLARE_API_TOKEN`（必須）
     - `CLOUDFLARE_ACCOUNT_ID`（ダッシュボード右サイドバーの Account ID）
