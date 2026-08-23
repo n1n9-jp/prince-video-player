@@ -1,5 +1,8 @@
 import { isDangerousReplace, isStarterShaped, parseState } from "../src/storage/parse";
 import type { AppState } from "../src/storage/types";
+import { handleYoutube, type YoutubeEnv } from "./youtube";
+
+type WorkerEnv = Env & YoutubeEnv;
 
 const KEY = "library";
 const PREV_KEY = "library:prev";
@@ -47,11 +50,14 @@ async function readLibrary(env: Env): Promise<AppState | null> {
 export default {
   async fetch(request, env): Promise<Response> {
     const url = new URL(request.url);
-    if (url.pathname !== "/api/library") {
-      return new Response("Not found", { status: 404, headers: corsHeaders(request) });
-    }
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: corsHeaders(request) });
+    }
+    if (url.pathname === "/api/youtube/status" || url.pathname.startsWith("/api/youtube/")) {
+      return handleYoutube(request, env, url, corsHeaders);
+    }
+    if (url.pathname !== "/api/library") {
+      return new Response("Not found", { status: 404, headers: corsHeaders(request) });
     }
     if (request.method === "GET") {
       const existing = await readLibrary(env);
@@ -92,4 +98,4 @@ export default {
     await env.LIBRARY.put(KEY, JSON.stringify(incoming));
     return json(request, incoming);
   },
-} satisfies ExportedHandler<Env>;
+} satisfies ExportedHandler<WorkerEnv>;

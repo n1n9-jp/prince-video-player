@@ -1,6 +1,6 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import type { Video } from "../storage/types";
-import { hasApiKey } from "../youtube/dataApi";
+import { youtubeConfigured } from "../youtube/dataApi";
 import { VideoCard } from "./VideoCard";
 
 type Props = {
@@ -29,6 +29,11 @@ export function AddPanel({
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [youtubeReady, setYoutubeReady] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    void youtubeConfigured().then(setYoutubeReady);
+  }, []);
 
   async function handleAddId(event: FormEvent) {
     event.preventDefault();
@@ -65,7 +70,9 @@ export function AddPanel({
     <section className="shelf">
       <header className="shelf-head">
         <h2>{results.length > 0 || searched ? "検索結果" : "追加"}</h2>
-        {!hasApiKey() && <p className="warn">APIキー未設定。ID追加は使えます。</p>}
+        {youtubeReady === false && (
+          <p className="warn">YouTube検索キー未設定。ID追加は使えます。</p>
+        )}
       </header>
       <div className="add-row">
         <form className="row-form" onSubmit={handleAddId}>

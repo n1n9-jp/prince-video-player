@@ -3,15 +3,79 @@ import { keepCueable } from "./iframePlayer";
 
 const SEARCH_CACHE_KEY = "prince-video-player:search:v4";
 const VIDEO_ID_RE = /^[a-zA-Z0-9_-]{11}$/;
+const YOUTUBE_API_BASE = "/api/youtube";
 
 type SearchCache = Record<string, Video[]>;
 
-function apiKey(): string {
-  return import.meta.env.VITE_YOUTUBE_API_KEY?.trim() ?? "";
+const localApiKey = import.meta.env.DEV ? (import.meta.env.VITE_YOUTUBE_API_KEY?.trim() ?? "") : "";
+
+export function hasLocalApiKey(): boolean {
+  return localApiKey.length > 0;
 }
 
+let configuredCache: boolean | null = hasLocalApiKey() ? true : null;
+let configuredInflight: Promise<boolean> | null = null;
+
 export function hasApiKey(): boolean {
-  return apiKey().length > 0;
+  return hasLocalApiKey() || configuredCache === true;
+}
+
+export async function youtubeConfigured(): Promise<boolean> {
+  if (hasLocalApiKey()) return true;
+  if (configuredCache !== null) return configuredCache;
+  if (!configuredInflight) {
+    configuredInflight = fetch(`${YOUTUBE_API_BASE}/status`)
+      .then(async (res) => {
+        if (!res.ok) return false;
+        const body = (await res.json()) as { configured?: boolean };
+        return Boolean(body.configured);
+      })
+      .catch(() => false)
+      .then((value) => {
+        configuredCache = value;
+        return value;
+      });
+  }
+  return configuredInflight;
+}
+
+type YoutubeErrorBody = {
+  error?: { message?: string } | string;
+};
+
+function youtubeErrorMessage(body: YoutubeErrorBody, status: number, fallback: string): string {
+  const error = body.error;
+  if (typeof error === "string" && error.trim()) return error;
+  if (error && typeof error === "object" && error.message?.trim()) return error.message;
+  return `${fallback}（${status}）`;
+}
+
+async function fetchYoutube(resource: string, params: Record<string, string>): Promise<unknown> {
+  const search = new URLSearchParams();
+  for (const [key, value] of Object.entries(params)) {
+    if (value) search.set(key, value);
+  }
+
+  if (hasLocalApiKey()) {
+    search.set("key", localApiKey);
+    return fetchJson(`https://www.googleapis.com/youtube/v3/${resource}?${search.toString()}`);
+  }
+  return fetchJson(`${YOUTUBE_API_BASE}/${resource}?${search.toString()}`);
+}
+
+async function fetchJson(url: string): Promise<unknown> {
+  const res = await fetch(url);
+  let body: unknown = null;
+  try {
+    body = await res.json();
+  } catch {
+    body = null;
+  }
+  if (!res.ok) {
+    const parsed = (body && typeof body === "object" ? body : {}) as YoutubeErrorBody;
+    throw new Error(youtubeErrorMessage(parsed, res.status, "YouTube API の呼び出しに失敗しました"));
+  }
+  return body;
 }
 
 export function thumbnailUrl(videoId: string): string {
@@ -138,25 +202,19 @@ type SearchPage = {
 };
 
 async function searchPage(query: string, pageToken?: string): Promise<SearchPage> {
-  const params = new URLSearchParams({
+  const params: Record<string, string> = {
     part: "snippet",
     type: "video",
     videoEmbeddable: "true",
     videoSyndicated: "true",
     maxResults: "50",
     q: query,
-    key: apiKey(),
-  });
-  if (pageToken) params.set("pageToken", pageToken);
-  const res = await fetch(`https://www.googleapis.com/youtube/v3/search?${params.toString()}`);
-  const body = (await res.json()) as {
-    error?: { message?: string };
+  };
+  if (pageToken) params.pageToken = pageToken;
+  const body = (await fetchYoutube("search", params)) as {
     items?: SearchItem[];
     nextPageToken?: string;
   };
-  if (!res.ok) {
-    throw new Error(body.error?.message ?? `検索に失敗しました（${res.status}）`);
-  }
   return {
     videos: (body.items ?? []).map(videoFromSearchItem).filter((v): v is Video => v !== null),
     nextPageToken: body.nextPageToken,
@@ -192,9 +250,6 @@ export async function searchVideos(query: string, unplayableIds: string[] = []):
   const cached = cache[key];
   const blocked = new Set(unplayableIds);
   if (cached) return cached.filter((video) => !blocked.has(video.id));
-  if (!hasApiKey()) {
-    throw new Error("APIキーがありません。.env.local に VITE_YOUTUBE_API_KEY を設定してください。");
-  }
 
   const videos = await collectPlayable(query.trim());
   cache[key] = videos;
@@ -208,25 +263,22 @@ type StatusItem = {
 };
 
 async function keepEmbeddable(videos: Video[]): Promise<Video[]> {
-  if (!hasApiKey() || videos.length === 0) return videos;
+  if (videos.length === 0) return videos;
   const kept: Video[] = [];
   for (let i = 0; i < videos.length; i += 50) {
     const group = videos.slice(i, i + 50);
-    const params = new URLSearchParams({
-      part: "status",
-      id: group.map((video) => video.id).join(","),
-      key: apiKey(),
-    });
-    const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?${params.toString()}`);
-    const body = (await res.json()) as { items?: StatusItem[] };
-    if (!res.ok) {
+    try {
+      const body = (await fetchYoutube("videos", {
+        part: "status",
+        id: group.map((video) => video.id).join(","),
+      })) as { items?: StatusItem[] };
+      const allowed = new Set(
+        (body.items ?? []).filter((item) => item.id && item.status?.embeddable).map((item) => item.id as string),
+      );
+      kept.push(...group.filter((video) => allowed.has(video.id)));
+    } catch {
       kept.push(...group);
-      continue;
     }
-    const allowed = new Set(
-      (body.items ?? []).filter((item) => item.id && item.status?.embeddable).map((item) => item.id as string),
-    );
-    kept.push(...group.filter((video) => allowed.has(video.id)));
   }
   return kept;
 }
@@ -247,15 +299,15 @@ export async function fetchVideoById(videoId: string): Promise<Video> {
     channelTitle: "",
     thumbnailUrl: thumbnailUrl(videoId),
   };
-  if (!hasApiKey()) return fallback;
-
-  const params = new URLSearchParams({
-    part: "snippet,status",
-    id: videoId,
-    key: apiKey(),
-  });
-  const res = await fetch(`https://www.googleapis.com/youtube/v3/videos?${params.toString()}`);
-  const body = (await res.json()) as { items?: (VideosListItem & { status?: { embeddable?: boolean } })[] };
+  let body: { items?: (VideosListItem & { status?: { embeddable?: boolean } })[] };
+  try {
+    body = (await fetchYoutube("videos", {
+      part: "snippet,status",
+      id: videoId,
+    })) as { items?: (VideosListItem & { status?: { embeddable?: boolean } })[] };
+  } catch {
+    return fallback;
+  }
   const item = body.items?.[0];
   if (!item?.id) return fallback;
   if (item.status && item.status.embeddable === false) {
@@ -276,19 +328,12 @@ type ChannelListItem = {
 };
 
 async function resolveUploads(ref: ChannelRef): Promise<{ title: string; uploadsId: string }> {
-  const params = new URLSearchParams({
-    part: "snippet,contentDetails",
-    key: apiKey(),
-  });
-  if (ref.type === "id") params.set("id", ref.value);
-  if (ref.type === "handle") params.set("forHandle", ref.value);
-  if (ref.type === "username") params.set("forUsername", ref.value);
+  const params: Record<string, string> = { part: "snippet,contentDetails" };
+  if (ref.type === "id") params.id = ref.value;
+  if (ref.type === "handle") params.forHandle = ref.value;
+  if (ref.type === "username") params.forUsername = ref.value;
 
-  const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?${params.toString()}`);
-  const body = (await res.json()) as { error?: { message?: string }; items?: ChannelListItem[] };
-  if (!res.ok) {
-    throw new Error(body.error?.message ?? `チャンネルの取得に失敗しました（${res.status}）`);
-  }
+  const body = (await fetchYoutube("channels", params)) as { items?: ChannelListItem[] };
   const channel = body.items?.[0];
   const uploadsId = channel?.contentDetails?.relatedPlaylists?.uploads;
   if (!uploadsId) {
@@ -323,22 +368,16 @@ async function listUploads(uploadsId: string): Promise<Video[]> {
   const videos: Video[] = [];
   let pageToken: string | undefined;
   for (let page = 0; page < 100; page += 1) {
-    const params = new URLSearchParams({
+    const params: Record<string, string> = {
       part: "snippet",
       playlistId: uploadsId,
       maxResults: "50",
-      key: apiKey(),
-    });
-    if (pageToken) params.set("pageToken", pageToken);
-    const res = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?${params.toString()}`);
-    const body = (await res.json()) as {
-      error?: { message?: string };
+    };
+    if (pageToken) params.pageToken = pageToken;
+    const body = (await fetchYoutube("playlistItems", params)) as {
       items?: PlaylistItem[];
       nextPageToken?: string;
     };
-    if (!res.ok) {
-      throw new Error(body.error?.message ?? `チャンネルの動画一覧の取得に失敗しました（${res.status}）`);
-    }
     for (const item of body.items ?? []) {
       const video = videoFromPlaylistItem(item);
       if (video) videos.push(video);
@@ -356,9 +395,6 @@ export async function fetchChannelUploads(
   const ref = parseChannelRef(input);
   if (!ref) {
     throw new Error("チャンネルの URL、@handle、またはチャンネルIDを入力してください。");
-  }
-  if (!hasApiKey()) {
-    throw new Error("APIキーがありません。.env.local に VITE_YOUTUBE_API_KEY を設定してください。");
   }
   const { title, uploadsId } = await resolveUploads(ref);
   const blocked = new Set(unplayableIds);
