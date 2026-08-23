@@ -1,0 +1,254 @@
+[
+  {
+    "id": "creep",
+    "title": "Creep",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2008,
+    "sourceUrl": "https://princevault.com/index.php/Creep",
+    "confidence": "high"
+  },
+  {
+    "id": "while-my-guitar-gently-weeps",
+    "title": "While My Guitar Gently Weeps",
+    "aliases": ["While My Guitar Gently Weeps"],
+    "kind": "cover",
+    "year": 2004,
+    "sourceUrl": "https://princevault.com/index.php/While_My_Guitar_Gently_Weeps",
+    "confidence": "high"
+  },
+  {
+    "id": "we-will-rock-you",
+    "title": "We Will Rock You",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2007,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show",
+    "confidence": "high"
+  },
+  {
+    "id": "proud-mary",
+    "title": "Proud Mary",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2007,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show",
+    "confidence": "high"
+  },
+  {
+    "id": "all-along-the-watchtower",
+    "title": "All Along the Watchtower",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2007,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show",
+    "confidence": "high"
+  },
+  {
+    "id": "best-of-you",
+    "title": "Best of You",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2007,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show",
+    "confidence": "high"
+  },
+  {
+    "id": "come-together",
+    "title": "Come Together",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2008,
+    "sourceUrl": "https://princevault.com/index.php/Come_Together",
+    "confidence": "high"
+  },
+  {
+    "id": "rock-lobster",
+    "title": "Rock Lobster",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2008,
+    "sourceUrl": "https://princevault.com/index.php/26_April_2008",
+    "confidence": "high"
+  },
+  {
+    "id": "the-bird",
+    "title": "The Bird",
+    "aliases": [],
+    "kind": "official",
+    "year": 1984,
+    "sourceUrl": "https://princevault.com/index.php/The_Bird",
+    "confidence": "high"
+  },
+  {
+    "id": "jungle-love",
+    "title": "Jungle Love",
+    "aliases": [],
+    "kind": "official",
+    "year": 1984,
+    "sourceUrl": "https://princevault.com/index.php/Jungle_Love",
+    "confidence": "high"
+  },
+  {
+    "id": "the-glamorous-life",
+    "title": "The Glamorous Life",
+    "aliases": ["Glamorous Life"],
+    "kind": "official",
+    "year": 1984,
+    "sourceUrl": "https://princevault.com/index.php/The_Glamorous_Life",
+    "confidence": "high"
+  },
+  {
+    "id": "wonderful-ass",
+    "title": "Wonderful Ass",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1983,
+    "sourceUrl": "https://princevault.com/index.php/Wonderful_Ass",
+    "confidence": "high"
+  },
+  {
+    "id": "wally",
+    "title": "Wally",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1986,
+    "sourceUrl": "https://princevault.com/index.php/Wally",
+    "confidence": "high"
+  },
+  {
+    "id": "empty-room",
+    "title": "Empty Room",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1985,
+    "sourceUrl": "https://princevault.com/index.php/Empty_Room",
+    "confidence": "high"
+  },
+  {
+    "id": "marvelous",
+    "title": "Marvelous",
+    "aliases": ["Marvellous"],
+    "kind": "unreleased",
+    "year": 1986,
+    "sourceUrl": "https://princevault.com/index.php/Marvelous",
+    "confidence": "high"
+  },
+  {
+    "id": "splash",
+    "title": "Splash",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1985,
+    "sourceUrl": "https://princevault.com/index.php/Splash",
+    "confidence": "high"
+  },
+  {
+    "id": "extra-loveable",
+    "title": "Extra Loveable",
+    "aliases": ["Extraloveable", "Extra Lovable"],
+    "kind": "laterReleased",
+    "year": 1982,
+    "sourceUrl": "https://princevault.com/index.php/Extraloveable",
+    "confidence": "high"
+  },
+  {
+    "id": "in-a-large-room-with-no-light",
+    "title": "In a Large Room with No Light",
+    "aliases": ["In A Large Room With No Light"],
+    "kind": "unreleased",
+    "year": 1986,
+    "sourceUrl": "https://princevault.com/index.php/In_A_Large_Room_With_No_Light",
+    "confidence": "high"
+  },
+  {
+    "id": "velvet-kitty-cat",
+    "title": "Velvet Kitty Cat",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1983,
+    "sourceUrl": "https://princevault.com/index.php/Velvet_Kitty_Cat",
+    "confidence": "high"
+  },
+  {
+    "id": "moral-majority",
+    "title": "Moral Majority",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1981,
+    "sourceUrl": "https://princevault.com/index.php/Moral_Majority",
+    "confidence": "high"
+  },
+  {
+    "id": "my-tender-heart",
+    "title": "My Tender Heart",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1986,
+    "sourceUrl": "https://princevault.com/index.php/My_Tender_Heart",
+    "confidence": "high"
+  },
+  {
+    "id": "nothin-but-love",
+    "title": "Nothin' but Love",
+    "aliases": ["Nothing But Love", "Nothin But Love"],
+    "kind": "unreleased",
+    "year": 1988,
+    "sourceUrl": "https://princevault.com/index.php/Nothin%27_But_Love",
+    "confidence": "high"
+  },
+  {
+    "id": "possessed",
+    "title": "Possessed",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1983,
+    "sourceUrl": "https://princevault.com/index.php/Possessed",
+    "confidence": "high"
+  },
+  {
+    "id": "can-i-play-with-u",
+    "title": "Can I Play with U",
+    "aliases": ["Can I Play With U?"],
+    "kind": "laterReleased",
+    "year": 1985,
+    "sourceUrl": "https://princevault.com/index.php/Can_I_Play_With_U",
+    "confidence": "high"
+  },
+  {
+    "id": "the-second-coming",
+    "title": "The Second Coming",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1982,
+    "sourceUrl": "https://princevault.com/index.php/The_Second_Coming",
+    "confidence": "high"
+  },
+  {
+    "id": "electric-intercourse",
+    "title": "Electric Intercourse",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1983,
+    "sourceUrl": "https://princevault.com/index.php/Electric_Intercourse",
+    "confidence": "high"
+  },
+  {
+    "id": "moonbeam-levels",
+    "title": "Moonbeam Levels",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1982,
+    "sourceUrl": "https://princevault.com/index.php/Moonbeam_Levels",
+    "confidence": "high"
+  },
+  {
+    "id": "all-my-dreams",
+    "title": "All My Dreams",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1985,
+    "sourceUrl": "https://princevault.com/index.php/All_My_Dreams",
+    "confidence": "high"
+  }
+]

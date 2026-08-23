@@ -8,7 +8,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "catalog:import": "node scripts/import-musicbrainz.mjs && node scripts/build-catalog.mjs",
+    "catalog:build": "node scripts/build-catalog.mjs",
+    "test": "npx --yes tsx scripts/test-match.ts"
   },
   "license": "ISC",
   "dependencies": {

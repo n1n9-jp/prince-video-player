@@ -1,6 +1,8 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from "react";
+import type { VideoTagging } from "../catalog/types";
 import { createPlayer, loadYoutubeApi } from "../youtube/iframePlayer";
 import type { Video } from "../storage/types";
+import { TagRow } from "./TagRow";
 
 export type PlayerHandle = {
   play: () => void;
@@ -9,6 +11,7 @@ export type PlayerHandle = {
 
 type Props = {
   video: Video | null;
+  tagging?: VideoTagging;
   sessionActive: boolean;
   autoplayBlocked: boolean;
   skipNotice: string | null;
@@ -25,6 +28,7 @@ type Props = {
 export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
   {
     video,
+    tagging,
     sessionActive,
     autoplayBlocked,
     skipNotice,
@@ -155,6 +159,7 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
                 {video.title}
               </a>
             </h1>
+            <TagRow tagging={tagging} />
             <div className="video-owner">
               <div className="channel-avatar" aria-hidden="true">
                 {video.channelTitle.slice(0, 1).toUpperCase()}

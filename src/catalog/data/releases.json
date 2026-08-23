@@ -1,0 +1,5421 @@
+[
+  {
+    "id": "for-you",
+    "title": "For You",
+    "type": "album",
+    "date": "1978-04-07",
+    "tracks": [
+      {
+        "songId": "for-you",
+        "position": 1
+      },
+      {
+        "songId": "in-love",
+        "position": 2
+      },
+      {
+        "songId": "soft-and-wet",
+        "position": 3
+      },
+      {
+        "songId": "crazy-you",
+        "position": 4
+      },
+      {
+        "songId": "just-as-long-as-were-together",
+        "position": 5
+      },
+      {
+        "songId": "baby",
+        "position": 6
+      },
+      {
+        "songId": "my-love-is-forever",
+        "position": 7
+      },
+      {
+        "songId": "so-blue",
+        "position": 8
+      },
+      {
+        "songId": "im-yours",
+        "position": 9
+      }
+    ],
+    "mbid": "4860f60c-17bf-49f2-a327-8568a889dc69"
+  },
+  {
+    "id": "soft-and-wet",
+    "title": "Soft and Wet",
+    "type": "single",
+    "date": "1978-06-07",
+    "tracks": [
+      {
+        "songId": "soft-and-wet",
+        "position": 1
+      },
+      {
+        "songId": "so-blue",
+        "position": 2
+      }
+    ],
+    "mbid": "349a524f-c865-46ca-9b99-5f9b21e92ba0"
+  },
+  {
+    "id": "just-as-long-as-were-together",
+    "title": "Just as Long as We’re Together",
+    "type": "single",
+    "date": "1978-11-21",
+    "tracks": [
+      {
+        "songId": "just-as-long-as-were-together",
+        "position": 1
+      },
+      {
+        "songId": "in-love",
+        "position": 2
+      }
+    ],
+    "mbid": "0a74992d-c403-489e-b10f-37a5ea14bd7f"
+  },
+  {
+    "id": "i-wanna-be-your-lover",
+    "title": "I Wanna Be Your Lover",
+    "type": "single",
+    "date": "1979-08-24",
+    "tracks": [
+      {
+        "songId": "i-wanna-be-your-lover",
+        "position": 1
+      },
+      {
+        "songId": "my-love-is-forever",
+        "position": 2
+      }
+    ],
+    "mbid": "5bc23ed2-a2a6-4496-9266-bf5114347214"
+  },
+  {
+    "id": "prince",
+    "title": "Prince",
+    "type": "album",
+    "date": "1979-10-19",
+    "tracks": [
+      {
+        "songId": "i-wanna-be-your-lover",
+        "position": 1
+      },
+      {
+        "songId": "why-you-wanna-treat-me-so-bad",
+        "position": 2
+      },
+      {
+        "songId": "sexy-dancer",
+        "position": 3
+      },
+      {
+        "songId": "when-were-dancing-close-and-slow",
+        "position": 4
+      },
+      {
+        "songId": "with-you",
+        "position": 5
+      },
+      {
+        "songId": "bambi",
+        "position": 6
+      },
+      {
+        "songId": "still-waiting",
+        "position": 7
+      },
+      {
+        "songId": "i-feel-for-you",
+        "position": 8
+      },
+      {
+        "songId": "its-gonna-be-lonely",
+        "position": 9
+      }
+    ],
+    "mbid": "2a3315ce-1c7a-409a-90f6-21524beac74b"
+  },
+  {
+    "id": "head",
+    "title": "Head",
+    "type": "single",
+    "date": "1980",
+    "tracks": [
+      {
+        "songId": "head",
+        "position": 1
+      },
+      {
+        "songId": "uptown",
+        "position": 2
+      }
+    ],
+    "mbid": "2f9477f3-93e3-4cf8-bb05-02446034c1ac"
+  },
+  {
+    "id": "why-you-wanna-treat-me-so-bad",
+    "title": "Why You Wanna Treat Me So Bad?",
+    "type": "single",
+    "date": "1980-01-23",
+    "tracks": [
+      {
+        "songId": "why-you-wanna-treat-me-so-bad",
+        "position": 1
+      },
+      {
+        "songId": "baby",
+        "position": 2
+      }
+    ],
+    "mbid": "44030207-144c-4448-9e89-894a05d32ef1"
+  },
+  {
+    "id": "still-waiting",
+    "title": "Still Waiting",
+    "type": "single",
+    "date": "1980-03-25",
+    "tracks": [
+      {
+        "songId": "still-waiting",
+        "position": 1
+      },
+      {
+        "songId": "bambi",
+        "position": 2
+      }
+    ],
+    "mbid": "665da492-0518-4355-ae99-a926692c565b"
+  },
+  {
+    "id": "sexy-dancer",
+    "title": "Sexy Dancer",
+    "type": "single",
+    "date": "1980-04-11",
+    "tracks": [
+      {
+        "songId": "sexy-dancer",
+        "position": 1
+      },
+      {
+        "songId": "bambi",
+        "position": 2
+      }
+    ],
+    "mbid": "540b1ff7-3254-4355-a954-0a2a26ca15e4"
+  },
+  {
+    "id": "uptown",
+    "title": "Uptown",
+    "type": "single",
+    "date": "1980-09-10",
+    "tracks": [
+      {
+        "songId": "uptown",
+        "position": 1
+      },
+      {
+        "songId": "crazy-you",
+        "position": 2
+      }
+    ],
+    "mbid": "3d0d00b6-a4f9-4345-8220-4ed41150a81f"
+  },
+  {
+    "id": "bambi",
+    "title": "Bambi",
+    "type": "single",
+    "date": "1980-09-16",
+    "tracks": [
+      {
+        "songId": "bambi",
+        "position": 1
+      },
+      {
+        "songId": "still-waiting",
+        "position": 2
+      }
+    ],
+    "mbid": "d61a4dae-097d-4845-a8f4-017a9b4f34a8"
+  },
+  {
+    "id": "dirty-mind",
+    "title": "Dirty Mind",
+    "type": "album",
+    "date": "1980-10-08",
+    "tracks": [
+      {
+        "songId": "dirty-mind",
+        "position": 1
+      },
+      {
+        "songId": "when-you-were-mine",
+        "position": 2
+      },
+      {
+        "songId": "do-it-all-night",
+        "position": 3
+      },
+      {
+        "songId": "gotta-broken-heart-again",
+        "position": 4
+      },
+      {
+        "songId": "uptown",
+        "position": 5
+      },
+      {
+        "songId": "head",
+        "position": 6
+      },
+      {
+        "songId": "sister",
+        "position": 7
+      },
+      {
+        "songId": "partyup",
+        "position": 8
+      }
+    ],
+    "mbid": "281e42d6-389e-4224-9bc6-84220a62d50f"
+  },
+  {
+    "id": "dirty-mind-2",
+    "title": "Dirty Mind",
+    "type": "single",
+    "date": "1980-11-26",
+    "tracks": [
+      {
+        "songId": "dirty-mind",
+        "position": 1
+      },
+      {
+        "songId": "when-were-dancing-close-and-slow",
+        "position": 2
+      }
+    ],
+    "mbid": "0ce49161-d8d2-4f28-992e-afd41d736e32"
+  },
+  {
+    "id": "do-it-all-night",
+    "title": "Do It All Night",
+    "type": "single",
+    "date": "1981-03-06",
+    "tracks": [
+      {
+        "songId": "do-it-all-night",
+        "position": 1
+      },
+      {
+        "songId": "head",
+        "position": 2
+      }
+    ],
+    "mbid": "03c043ba-6451-4ab8-9c7b-c8c28d76024c"
+  },
+  {
+    "id": "gotta-stop-messin-about",
+    "title": "Gotta Stop (Messin’ About)",
+    "type": "single",
+    "date": "1981-05-29",
+    "tracks": [
+      {
+        "songId": "gotta-stop-messin-about",
+        "position": 1
+      },
+      {
+        "songId": "uptown",
+        "position": 2
+      },
+      {
+        "songId": "head",
+        "position": 3
+      }
+    ],
+    "mbid": "9dd9f42c-611a-4fd2-b8b5-9077a032cfff"
+  },
+  {
+    "id": "controversy-2",
+    "title": "Controversy",
+    "type": "single",
+    "date": "1981-09-02",
+    "tracks": [
+      {
+        "songId": "controversy",
+        "position": 1
+      },
+      {
+        "songId": "when-you-were-mine",
+        "position": 2
+      }
+    ],
+    "mbid": "6a82795a-f4fb-4293-b4e3-8df0b078747b"
+  },
+  {
+    "id": "controversy",
+    "title": "Controversy",
+    "type": "album",
+    "date": "1981-10-14",
+    "tracks": [
+      {
+        "songId": "controversy",
+        "position": 1
+      },
+      {
+        "songId": "sexuality",
+        "position": 2
+      },
+      {
+        "songId": "do-me-baby",
+        "position": 3
+      },
+      {
+        "songId": "private-joy",
+        "position": 4
+      },
+      {
+        "songId": "ronnie-talk-to-russia",
+        "position": 5
+      },
+      {
+        "songId": "lets-work",
+        "position": 6
+      },
+      {
+        "songId": "annie-christian",
+        "position": 7
+      },
+      {
+        "songId": "jack-u-off",
+        "position": 8
+      }
+    ],
+    "mbid": "171f2863-6be8-4828-bbd8-1cfbf7ab7911"
+  },
+  {
+    "id": "sexuality",
+    "title": "Sexuality",
+    "type": "single",
+    "date": "1981-10-16",
+    "tracks": [
+      {
+        "songId": "sexuality",
+        "position": 1
+      },
+      {
+        "songId": "controversy",
+        "position": 2
+      }
+    ],
+    "mbid": "55560423-53d1-49b7-b3b2-9200217121b9"
+  },
+  {
+    "id": "little-red-corvette",
+    "title": "Little Red Corvette",
+    "type": "single",
+    "date": "1982",
+    "tracks": [
+      {
+        "songId": "little-red-corvette",
+        "position": 1
+      },
+      {
+        "songId": "all-the-critics-love-u-in-new-york",
+        "position": 2
+      }
+    ],
+    "mbid": "7e7ab39b-4d35-481b-906c-6ecf4e5d99d9"
+  },
+  {
+    "id": "lets-work",
+    "title": "Let’s Work",
+    "type": "single",
+    "date": "1982-02-17",
+    "tracks": [
+      {
+        "songId": "lets-work",
+        "position": 1
+      },
+      {
+        "songId": "gotta-stop-messin-about",
+        "position": 2
+      }
+    ],
+    "mbid": "09b9a7fa-28b5-40df-ab81-f7c88c84b318"
+  },
+  {
+    "id": "do-me-baby",
+    "title": "Do Me, Baby",
+    "type": "single",
+    "date": "1982-07-16",
+    "tracks": [
+      {
+        "songId": "do-me-baby",
+        "position": 1
+      },
+      {
+        "songId": "private-joy",
+        "position": 2
+      }
+    ],
+    "mbid": "3a975565-1249-43de-9fd1-0afc54694df8"
+  },
+  {
+    "id": "1999-2",
+    "title": "1999",
+    "type": "single",
+    "date": "1982-09-24",
+    "tracks": [
+      {
+        "songId": "1999",
+        "position": 1
+      },
+      {
+        "songId": "how-come-u-dont-call-me-anymore",
+        "position": 2
+      }
+    ],
+    "mbid": "d196f192-9a05-4289-bee3-704307c41f90"
+  },
+  {
+    "id": "1999",
+    "title": "1999",
+    "type": "album",
+    "date": "1982-10-27",
+    "tracks": [
+      {
+        "songId": "1999",
+        "position": 1
+      },
+      {
+        "songId": "little-red-corvette",
+        "position": 2
+      },
+      {
+        "songId": "delirious",
+        "position": 3
+      },
+      {
+        "songId": "lets-pretend-were-married",
+        "position": 4
+      },
+      {
+        "songId": "d-m-s-r",
+        "position": 5
+      },
+      {
+        "songId": "automatic",
+        "position": 6
+      },
+      {
+        "songId": "something-in-the-water-does-not-compute",
+        "position": 7
+      },
+      {
+        "songId": "free",
+        "position": 8
+      },
+      {
+        "songId": "lady-cab-driver",
+        "position": 9
+      },
+      {
+        "songId": "all-the-critics-love-u-in-new-york",
+        "position": 10
+      },
+      {
+        "songId": "international-lover",
+        "position": 11
+      }
+    ],
+    "mbid": "ab9aa125-6f26-4145-879c-f0c05ff6ac60"
+  },
+  {
+    "id": "dirty-mind-controversy",
+    "title": "Dirty Mind / Controversy",
+    "type": "compilation",
+    "date": "1983",
+    "tracks": [
+      {
+        "songId": "dirty-mind",
+        "position": 1
+      },
+      {
+        "songId": "when-you-were-mine",
+        "position": 2
+      },
+      {
+        "songId": "do-it-all-night",
+        "position": 3
+      },
+      {
+        "songId": "gotta-broken-heart-again",
+        "position": 4
+      },
+      {
+        "songId": "uptown",
+        "position": 5
+      },
+      {
+        "songId": "head",
+        "position": 6
+      },
+      {
+        "songId": "sister",
+        "position": 7
+      },
+      {
+        "songId": "partyup",
+        "position": 8
+      },
+      {
+        "songId": "controversy",
+        "position": 9
+      },
+      {
+        "songId": "sexuality",
+        "position": 10
+      },
+      {
+        "songId": "do-me-baby",
+        "position": 11
+      },
+      {
+        "songId": "private-joy",
+        "position": 12
+      },
+      {
+        "songId": "ronnie-talk-to-russia",
+        "position": 13
+      },
+      {
+        "songId": "lets-work",
+        "position": 14
+      },
+      {
+        "songId": "annie-christian",
+        "position": 15
+      },
+      {
+        "songId": "jack-u-off",
+        "position": 16
+      }
+    ],
+    "mbid": "2a697be8-192f-4a02-9053-0e9e45096d9d"
+  },
+  {
+    "id": "dance-music-sex-romance",
+    "title": "Dance Music Sex Romance",
+    "type": "single",
+    "date": "1983-01",
+    "tracks": [
+      {
+        "songId": "dance-music-sex-romance",
+        "position": 1
+      },
+      {
+        "songId": "dance-music-sex-romance",
+        "position": 2
+      }
+    ],
+    "mbid": "2e026904-84f4-4705-bb61-fd5b37007add"
+  },
+  {
+    "id": "delirious",
+    "title": "Delirious",
+    "type": "single",
+    "date": "1983-08-17",
+    "tracks": [
+      {
+        "songId": "delirious",
+        "position": 1
+      },
+      {
+        "songId": "horny-toad",
+        "position": 2
+      }
+    ],
+    "mbid": "61cef014-d98a-438d-9a36-fd20c799dab5"
+  },
+  {
+    "id": "lets-pretend-were-married",
+    "title": "Let’s Pretend We’re Married",
+    "type": "single",
+    "date": "1983-11-16",
+    "tracks": [
+      {
+        "songId": "lets-pretend-were-married",
+        "position": 1
+      },
+      {
+        "songId": "irresistible-bitch",
+        "position": 2
+      }
+    ],
+    "mbid": "d4d9f69f-214a-46a2-8d15-5b0dcce35d99"
+  },
+  {
+    "id": "when-doves-cry",
+    "title": "When Doves Cry",
+    "type": "single",
+    "date": "1984-05-16",
+    "tracks": [
+      {
+        "songId": "when-doves-cry",
+        "position": 1
+      },
+      {
+        "songId": "17-days-the-rain-will-come-down-then-u-will-have-2-choose-if-u-believe-look-2-the-dawn-and-u-shall-never-lose",
+        "position": 2
+      }
+    ],
+    "mbid": "2c264dc5-3819-4b14-8c63-bf65ca50a6e8"
+  },
+  {
+    "id": "purple-rain",
+    "title": "Purple Rain",
+    "type": "soundtrack",
+    "date": "1984-06-25",
+    "tracks": [
+      {
+        "songId": "lets-go-crazy",
+        "position": 1
+      },
+      {
+        "songId": "take-me-with-u",
+        "position": 2
+      },
+      {
+        "songId": "the-beautiful-ones",
+        "position": 3
+      },
+      {
+        "songId": "computer-blue",
+        "position": 4
+      },
+      {
+        "songId": "darling-nikki",
+        "position": 5
+      },
+      {
+        "songId": "when-doves-cry",
+        "position": 6
+      },
+      {
+        "songId": "i-would-die-4-u",
+        "position": 7
+      },
+      {
+        "songId": "baby-im-a-star",
+        "position": 8
+      },
+      {
+        "songId": "purple-rain",
+        "position": 9
+      }
+    ],
+    "mbid": "3b55bf62-83b6-41bc-90d9-6421cdd0c67e"
+  },
+  {
+    "id": "lets-go-crazy",
+    "title": "Let’s Go Crazy",
+    "type": "single",
+    "date": "1984-07-18",
+    "tracks": [
+      {
+        "songId": "lets-go-crazy",
+        "position": 1
+      },
+      {
+        "songId": "erotic-city-make-love-not-war-erotic-city-come-alive",
+        "position": 2
+      }
+    ],
+    "mbid": "5be99d1b-129e-403c-87a9-1d4da72cf8fe"
+  },
+  {
+    "id": "purple-rain-2",
+    "title": "Purple Rain",
+    "type": "single",
+    "date": "1984-09-26",
+    "tracks": [
+      {
+        "songId": "purple-rain",
+        "position": 1
+      },
+      {
+        "songId": "god",
+        "position": 2
+      }
+    ],
+    "mbid": "212b183d-b821-48c4-8759-4df1adddbb36"
+  },
+  {
+    "id": "i-would-die-4-u",
+    "title": "I Would Die 4 U",
+    "type": "single",
+    "date": "1984-11-28",
+    "tracks": [
+      {
+        "songId": "i-would-die-4-u",
+        "position": 1
+      },
+      {
+        "songId": "another-lonely-christmas",
+        "position": 2
+      }
+    ],
+    "mbid": "45db49f3-d994-4121-9b0b-0175c9cf356f"
+  },
+  {
+    "id": "take-me-with-u",
+    "title": "Take Me With U",
+    "type": "single",
+    "date": "1985-01-25",
+    "tracks": [
+      {
+        "songId": "take-me-with-u",
+        "position": 1
+      },
+      {
+        "songId": "baby-im-a-star",
+        "position": 2
+      }
+    ],
+    "mbid": "f6050e21-edfe-4800-80ad-df5d598bd4f1"
+  },
+  {
+    "id": "paisley-park",
+    "title": "Paisley Park",
+    "type": "single",
+    "date": "1985-05",
+    "tracks": [
+      {
+        "songId": "paisley-park",
+        "position": 1
+      },
+      {
+        "songId": "shes-always-in-my-hair",
+        "position": 2
+      }
+    ],
+    "mbid": "e61bb4ab-9342-420f-a7dc-8cc315b0c14b"
+  },
+  {
+    "id": "raspberry-beret",
+    "title": "Raspberry Beret",
+    "type": "single",
+    "date": "1985-05-15",
+    "tracks": [
+      {
+        "songId": "raspberry-beret",
+        "position": 1
+      },
+      {
+        "songId": "shes-always-in-my-hair",
+        "position": 2
+      }
+    ],
+    "mbid": "9a2fa034-6680-40a2-979b-2e391c867517"
+  },
+  {
+    "id": "pop-life",
+    "title": "Pop Life",
+    "type": "single",
+    "date": "1985-07-10",
+    "tracks": [
+      {
+        "songId": "pop-life",
+        "position": 1
+      },
+      {
+        "songId": "hello",
+        "position": 2
+      }
+    ],
+    "mbid": "27aef009-74e0-46f7-9ac8-3ae54fad752d"
+  },
+  {
+    "id": "america",
+    "title": "America",
+    "type": "single",
+    "date": "1985-10-02",
+    "tracks": [
+      {
+        "songId": "america",
+        "position": 1
+      },
+      {
+        "songId": "girl",
+        "position": 2
+      }
+    ],
+    "mbid": "b85d8fd1-2fb4-4dee-a7c7-c22420ce9fd2"
+  },
+  {
+    "id": "mountains",
+    "title": "Mountains",
+    "type": "single",
+    "date": "1986",
+    "tracks": [
+      {
+        "songId": "mountains",
+        "position": 1
+      },
+      {
+        "songId": "alexa-de-paris",
+        "position": 2
+      }
+    ],
+    "mbid": "5af1741d-536a-4eeb-aeef-d1d9af4482dc"
+  },
+  {
+    "id": "kiss",
+    "title": "Kiss",
+    "type": "single",
+    "date": "1986-02-05",
+    "tracks": [
+      {
+        "songId": "kiss",
+        "position": 1
+      },
+      {
+        "songId": "or",
+        "position": 2
+      }
+    ],
+    "mbid": "07e35c87-5227-47e4-9b33-f3ed04c67f4e"
+  },
+  {
+    "id": "anotherloverholenyohead",
+    "title": "Anotherloverholenyohead",
+    "type": "single",
+    "date": "1986-07-02",
+    "tracks": [
+      {
+        "songId": "anotherloverholenyohead",
+        "position": 1
+      },
+      {
+        "songId": "girls-and-boys",
+        "position": 2
+      }
+    ],
+    "mbid": "dbfca084-6dee-41c1-ba5a-487e1644063f"
+  },
+  {
+    "id": "girls-and-boys",
+    "title": "Girls & Boys",
+    "type": "single",
+    "date": "1986-08-01",
+    "tracks": [
+      {
+        "songId": "girls-and-boys",
+        "position": 1
+      },
+      {
+        "songId": "under-the-cherry-moon",
+        "position": 2
+      }
+    ],
+    "mbid": "6958a7f7-9174-438d-b431-61ef31647fc5"
+  },
+  {
+    "id": "hot-thing",
+    "title": "Hot Thing",
+    "type": "single",
+    "date": "1987",
+    "tracks": [
+      {
+        "songId": "hot-thing",
+        "position": 1
+      },
+      {
+        "songId": "hot-thing",
+        "position": 2
+      }
+    ],
+    "mbid": "2c265539-e212-4278-811e-f0e601fc08f9"
+  },
+  {
+    "id": "parade",
+    "title": "Parade",
+    "type": "soundtrack",
+    "date": "1987",
+    "tracks": [
+      {
+        "songId": "christopher-tracys-parade",
+        "position": 1
+      },
+      {
+        "songId": "new-position",
+        "position": 2
+      },
+      {
+        "songId": "i-wonder-u",
+        "position": 3
+      },
+      {
+        "songId": "under-the-cherry-moon",
+        "position": 4
+      },
+      {
+        "songId": "girls-and-boys",
+        "position": 5
+      },
+      {
+        "songId": "life-can-be-so-nice",
+        "position": 6
+      },
+      {
+        "songId": "venus-de-milo",
+        "position": 7
+      },
+      {
+        "songId": "mountains",
+        "position": 8
+      },
+      {
+        "songId": "do-u-lie",
+        "position": 9
+      },
+      {
+        "songId": "kiss",
+        "position": 10
+      },
+      {
+        "songId": "anotherloverholenyohead",
+        "position": 11
+      },
+      {
+        "songId": "sometimes-it-snows-in-april",
+        "position": 12
+      }
+    ],
+    "mbid": "2b8dacc9-0404-4c40-a21d-9c7ad49657d9"
+  },
+  {
+    "id": "sign-o-the-times",
+    "title": "Sign “☮︎” the Times",
+    "type": "album",
+    "date": "1987",
+    "tracks": [
+      {
+        "songId": "sign-o-the-times",
+        "position": 1
+      },
+      {
+        "songId": "play-in-the-sunshine",
+        "position": 2
+      },
+      {
+        "songId": "housequake",
+        "position": 3
+      },
+      {
+        "songId": "the-ballad-of-dorothy-parker",
+        "position": 4
+      },
+      {
+        "songId": "it",
+        "position": 5
+      },
+      {
+        "songId": "starfish-and-coffee",
+        "position": 6
+      },
+      {
+        "songId": "slow-love",
+        "position": 7
+      },
+      {
+        "songId": "hot-thing",
+        "position": 8
+      },
+      {
+        "songId": "forever-in-my-life",
+        "position": 9
+      },
+      {
+        "songId": "u-got-the-look",
+        "position": 10
+      },
+      {
+        "songId": "if-i-was-your-girlfriend",
+        "position": 11
+      },
+      {
+        "songId": "strange-relationship",
+        "position": 12
+      },
+      {
+        "songId": "i-could-never-take-the-place-of-your-man",
+        "position": 13
+      },
+      {
+        "songId": "the-cross",
+        "position": 14
+      },
+      {
+        "songId": "its-gonna-be-a-beautiful-night",
+        "position": 15
+      },
+      {
+        "songId": "adore",
+        "position": 16
+      }
+    ],
+    "mbid": "3e0c67c5-5fbe-45cf-be8f-774bbe4139c0"
+  },
+  {
+    "id": "sign-o-the-times-2",
+    "title": "Sign “☮︎” the Times",
+    "type": "single",
+    "date": "1987-02-18",
+    "tracks": [
+      {
+        "songId": "sign-o-the-times",
+        "position": 1
+      },
+      {
+        "songId": "la-la-la-he-he-hee",
+        "position": 2
+      },
+      {
+        "songId": "sign-o-the-times",
+        "position": 3
+      },
+      {
+        "songId": "la-la-la-he-he-hee",
+        "position": 4
+      }
+    ],
+    "mbid": "2fe99d26-2727-42e8-8c8e-610f5e4da231"
+  },
+  {
+    "id": "if-i-was-your-girlfriend",
+    "title": "If I Was Your Girlfriend",
+    "type": "single",
+    "date": "1987-05-06",
+    "tracks": [
+      {
+        "songId": "if-i-was-your-girlfriend",
+        "position": 1
+      },
+      {
+        "songId": "shockadelica",
+        "position": 2
+      }
+    ],
+    "mbid": "471d23fb-fb2e-42fc-956c-976654410b2c"
+  },
+  {
+    "id": "u-got-the-look",
+    "title": "U Got the Look",
+    "type": "single",
+    "date": "1987-07-14",
+    "tracks": [
+      {
+        "songId": "u-got-the-look",
+        "position": 1
+      },
+      {
+        "songId": "housequake",
+        "position": 2
+      }
+    ],
+    "mbid": "0359e989-83f6-4ded-b138-70bad4e04605"
+  },
+  {
+    "id": "i-could-never-take-the-place-of-your-man",
+    "title": "I Could Never Take the Place of Your Man",
+    "type": "single",
+    "date": "1987-11-03",
+    "tracks": [
+      {
+        "songId": "i-could-never-take-the-place-of-your-man",
+        "position": 1
+      },
+      {
+        "songId": "hot-thing",
+        "position": 2
+      },
+      {
+        "songId": "hot-thing",
+        "position": 3
+      },
+      {
+        "songId": "hot-thing",
+        "position": 4
+      }
+    ],
+    "mbid": "4689f5d6-2df5-437c-bb46-eea2ca1869ef"
+  },
+  {
+    "id": "alphabet-st",
+    "title": "Alphabet St.",
+    "type": "single",
+    "date": "1988",
+    "tracks": [
+      {
+        "songId": "alphabet-st",
+        "position": 1
+      },
+      {
+        "songId": "alphabet-st-cont",
+        "position": 2
+      }
+    ],
+    "mbid": "953397fc-f626-43d7-aecd-3b1b37487a81"
+  },
+  {
+    "id": "lovesexy",
+    "title": "Lovesexy",
+    "type": "album",
+    "date": "1988-05-06",
+    "tracks": [
+      {
+        "songId": "no",
+        "position": 1
+      },
+      {
+        "songId": "alphabet-st",
+        "position": 2
+      },
+      {
+        "songId": "glam-slam",
+        "position": 3
+      },
+      {
+        "songId": "anna-stesia",
+        "position": 4
+      },
+      {
+        "songId": "dance-on",
+        "position": 5
+      },
+      {
+        "songId": "lovesexy",
+        "position": 6
+      },
+      {
+        "songId": "when-2-r-in-love",
+        "position": 7
+      },
+      {
+        "songId": "i-wish-u-heaven",
+        "position": 8
+      },
+      {
+        "songId": "positivity",
+        "position": 9
+      }
+    ],
+    "mbid": "78464603-11bf-41f6-8335-694121582aac"
+  },
+  {
+    "id": "glam-slam",
+    "title": "Glam Slam",
+    "type": "single",
+    "date": "1988-07-11",
+    "tracks": [
+      {
+        "songId": "glam-slam",
+        "position": 1
+      },
+      {
+        "songId": "escape",
+        "position": 2
+      }
+    ],
+    "mbid": "43087b8a-bca9-41cb-8f1b-34734efcb922"
+  },
+  {
+    "id": "i-wish-u-heaven",
+    "title": "I Wish U Heaven",
+    "type": "single",
+    "date": "1988-09-20",
+    "tracks": [
+      {
+        "songId": "i-wish-u-heaven-part-1-2-and-3",
+        "position": 1
+      },
+      {
+        "songId": "scarlet-pussy",
+        "position": 2
+      }
+    ],
+    "mbid": "1397a03a-7aec-4137-a278-ba669f05a36f"
+  },
+  {
+    "id": "batdance",
+    "title": "Batdance",
+    "type": "single",
+    "date": "1989",
+    "tracks": [
+      {
+        "songId": "batdance-the-batmix",
+        "position": 1
+      },
+      {
+        "songId": "batdance",
+        "position": 2
+      },
+      {
+        "songId": "200-balloons",
+        "position": 3
+      }
+    ],
+    "mbid": "2cf6e999-6024-4563-bd6d-0ddb5b0d35e8"
+  },
+  {
+    "id": "batman",
+    "title": "Batman",
+    "type": "soundtrack",
+    "date": "1989",
+    "tracks": [
+      {
+        "songId": "the-future",
+        "position": 1
+      },
+      {
+        "songId": "electric-chair",
+        "position": 2
+      },
+      {
+        "songId": "the-arms-of-orion",
+        "position": 3
+      },
+      {
+        "songId": "partyman",
+        "position": 4
+      },
+      {
+        "songId": "vicki-waiting",
+        "position": 5
+      },
+      {
+        "songId": "trust",
+        "position": 6
+      },
+      {
+        "songId": "lemon-crush",
+        "position": 7
+      },
+      {
+        "songId": "scandalous",
+        "position": 8
+      },
+      {
+        "songId": "batdance",
+        "position": 9
+      }
+    ],
+    "mbid": "62f651a7-f99f-470b-b005-b88966cff2ea"
+  },
+  {
+    "id": "erotic-city",
+    "title": "Erotic City",
+    "type": "single",
+    "date": "1989",
+    "tracks": [
+      {
+        "songId": "erotic-city",
+        "position": 1
+      },
+      {
+        "songId": "i-would-die-4-u",
+        "position": 2
+      }
+    ],
+    "mbid": "173dab3f-79d9-4151-822a-4b0044eb23fc"
+  },
+  {
+    "id": "scandalous",
+    "title": "Scandalous!",
+    "type": "single",
+    "date": "1989",
+    "tracks": [
+      {
+        "songId": "scandalous-the-crime",
+        "position": 1
+      },
+      {
+        "songId": "scandalous-the-passion",
+        "position": 2
+      },
+      {
+        "songId": "scandalous-the-rapture",
+        "position": 3
+      },
+      {
+        "songId": "sex",
+        "position": 4
+      },
+      {
+        "songId": "when-2-r-in-love",
+        "position": 5
+      },
+      {
+        "songId": "partyman",
+        "position": 6
+      },
+      {
+        "songId": "partyman",
+        "position": 7
+      },
+      {
+        "songId": "partyman",
+        "position": 8
+      },
+      {
+        "songId": "feel-u-up-short-stroke",
+        "position": 9
+      }
+    ],
+    "mbid": "6e3dba85-1f3b-4bd8-bc3d-c75c26e838fe"
+  },
+  {
+    "id": "the-future",
+    "title": "The Future",
+    "type": "single",
+    "date": "1989",
+    "tracks": [
+      {
+        "songId": "the-future",
+        "position": 1
+      },
+      {
+        "songId": "electric-chair",
+        "position": 2
+      }
+    ],
+    "mbid": "4dc886a0-f7bf-44d6-92ae-39f6504b0805"
+  },
+  {
+    "id": "partyman",
+    "title": "Partyman",
+    "type": "single",
+    "date": "1989-08-25",
+    "tracks": [
+      {
+        "songId": "partyman",
+        "position": 1
+      },
+      {
+        "songId": "partyman",
+        "position": 2
+      },
+      {
+        "songId": "partyman",
+        "position": 3
+      },
+      {
+        "songId": "feel-u-up-short-stroke",
+        "position": 4
+      }
+    ],
+    "mbid": "1772aaec-4473-4367-a780-2f54cf6e0fa9"
+  },
+  {
+    "id": "the-arms-of-orion",
+    "title": "The Arms of Orion",
+    "type": "single",
+    "date": "1989-10-16",
+    "tracks": [
+      {
+        "songId": "the-arms-of-orion",
+        "position": 1
+      },
+      {
+        "songId": "i-love-u-in-me",
+        "position": 2
+      }
+    ],
+    "mbid": "3473e4fe-c256-4be6-a4f8-2feb10a903db"
+  },
+  {
+    "id": "around-the-world-in-a-day",
+    "title": "Around the World in a Day",
+    "type": "album",
+    "date": "1990",
+    "tracks": [
+      {
+        "songId": "around-the-world-in-a-day",
+        "position": 1
+      },
+      {
+        "songId": "paisley-park",
+        "position": 2
+      },
+      {
+        "songId": "condition-of-the-heart",
+        "position": 3
+      },
+      {
+        "songId": "raspberry-beret",
+        "position": 4
+      },
+      {
+        "songId": "tamborine",
+        "position": 5
+      },
+      {
+        "songId": "america",
+        "position": 6
+      },
+      {
+        "songId": "pop-life",
+        "position": 7
+      },
+      {
+        "songId": "the-ladder",
+        "position": 8
+      },
+      {
+        "songId": "temptation",
+        "position": 9
+      }
+    ],
+    "mbid": "028d4ab6-9b3d-4185-8a39-accca9fbac85"
+  },
+  {
+    "id": "cant-stop-this-feeling-i-got",
+    "title": "Can’t Stop This Feeling I Got",
+    "type": "single",
+    "date": "1990",
+    "tracks": [
+      {
+        "songId": "cant-stop-this-feeling-i-got",
+        "position": 1
+      },
+      {
+        "songId": "cant-stop-this-feeling-i-got",
+        "position": 2
+      }
+    ],
+    "mbid": "923ed5b5-d061-41e7-a0ce-2eb4c60b1f08"
+  },
+  {
+    "id": "new-power-generation",
+    "title": "New Power Generation",
+    "type": "single",
+    "date": "1990",
+    "tracks": [
+      {
+        "songId": "n-p-g",
+        "position": 1
+      },
+      {
+        "songId": "t-c-s-rap",
+        "position": 2
+      },
+      {
+        "songId": "brother-with-a-purpose",
+        "position": 3
+      },
+      {
+        "songId": "get-off",
+        "position": 4
+      },
+      {
+        "songId": "the-lubricated-lady",
+        "position": 5
+      },
+      {
+        "songId": "loveleft-loveright",
+        "position": 6
+      }
+    ],
+    "mbid": "5663e55e-9e6f-4fa9-b575-c0c0aa53c6d1"
+  },
+  {
+    "id": "thieves-in-the-temple",
+    "title": "Thieves in the Temple",
+    "type": "single",
+    "date": "1990",
+    "tracks": [
+      {
+        "songId": "thieves-in-the-temple",
+        "position": 1
+      },
+      {
+        "songId": "thieves-in-the-house-mix",
+        "position": 2
+      },
+      {
+        "songId": "temple-house-dub",
+        "position": 3
+      }
+    ],
+    "mbid": "a99b8a1e-0523-4188-9810-494cb864c524"
+  },
+  {
+    "id": "graffiti-bridge",
+    "title": "Graffiti Bridge",
+    "type": "soundtrack",
+    "date": "1990-08-13",
+    "tracks": [
+      {
+        "songId": "cant-stop-this-feeling-i-got",
+        "position": 1
+      },
+      {
+        "songId": "new-power-generation",
+        "position": 2
+      },
+      {
+        "songId": "release-it",
+        "position": 3
+      },
+      {
+        "songId": "the-question-of-u",
+        "position": 4
+      },
+      {
+        "songId": "elephants-and-flowers",
+        "position": 5
+      },
+      {
+        "songId": "round-and-round",
+        "position": 6
+      },
+      {
+        "songId": "we-can-funk",
+        "position": 7
+      },
+      {
+        "songId": "joy-in-repetition",
+        "position": 8
+      },
+      {
+        "songId": "love-machine",
+        "position": 9
+      },
+      {
+        "songId": "tick-tick-bang",
+        "position": 10
+      },
+      {
+        "songId": "shake",
+        "position": 11
+      },
+      {
+        "songId": "thieves-in-the-temple",
+        "position": 12
+      },
+      {
+        "songId": "the-latest-fashion",
+        "position": 13
+      },
+      {
+        "songId": "melody-cool",
+        "position": 14
+      },
+      {
+        "songId": "still-would-stand-all-time",
+        "position": 15
+      },
+      {
+        "songId": "graffiti-bridge",
+        "position": 16
+      },
+      {
+        "songId": "new-power-generation-part-ii",
+        "position": 17
+      }
+    ],
+    "mbid": "7632a372-24fb-41ac-8af1-c8c9e3850f5b"
+  },
+  {
+    "id": "gett-off",
+    "title": "Gett Off",
+    "type": "single",
+    "date": "1991-06-07",
+    "tracks": [
+      {
+        "songId": "gett-off-damn-near-10-min",
+        "position": 1
+      }
+    ],
+    "mbid": "9719af90-78d8-4db9-831b-088b96cfe3f4"
+  },
+  {
+    "id": "cream",
+    "title": "Cream",
+    "type": "single",
+    "date": "1991-09-09",
+    "tracks": [
+      {
+        "songId": "cream",
+        "position": 1
+      },
+      {
+        "songId": "horny-pony",
+        "position": 2
+      }
+    ],
+    "mbid": "8ec1c639-7b5d-4282-a991-adff287bf807"
+  },
+  {
+    "id": "insatiable",
+    "title": "Insatiable",
+    "type": "single",
+    "date": "1991-11-04",
+    "tracks": [
+      {
+        "songId": "insatiable",
+        "position": 1
+      },
+      {
+        "songId": "i-love-u-in-me",
+        "position": 2
+      }
+    ],
+    "mbid": "6dd8f004-9fbd-4d7a-b853-7353f515a81b"
+  },
+  {
+    "id": "diamonds-and-pearls-2",
+    "title": "Diamonds and Pearls",
+    "type": "single",
+    "date": "1991-11-25",
+    "tracks": [
+      {
+        "songId": "diamonds-and-pearls",
+        "position": 1
+      },
+      {
+        "songId": "x-cerpts-from-the-songs-thunder-daddy-pop-strollin-jughead-money-dont-matter-2-night-push-live-4-love",
+        "position": 2
+      }
+    ],
+    "mbid": "62494ef1-85e8-4e50-a88f-6e7a0b17ab51"
+  },
+  {
+    "id": "gett-off-remix-ep",
+    "title": "Gett Off Remix EP",
+    "type": "ep",
+    "date": "1991-12-21",
+    "tracks": [
+      {
+        "songId": "gett-off",
+        "position": 1
+      },
+      {
+        "songId": "gett-off-houstyle",
+        "position": 2
+      },
+      {
+        "songId": "violet-the-organ-grinder",
+        "position": 3
+      },
+      {
+        "songId": "gangster-glam",
+        "position": 4
+      },
+      {
+        "songId": "cream",
+        "position": 5
+      },
+      {
+        "songId": "things-have-gotta-change-tony-m-rap",
+        "position": 6
+      },
+      {
+        "songId": "2-the-wire",
+        "position": 7
+      },
+      {
+        "songId": "get-some-solo",
+        "position": 8
+      },
+      {
+        "songId": "do-your-dance",
+        "position": 9
+      },
+      {
+        "songId": "housebangers",
+        "position": 10
+      },
+      {
+        "songId": "q-in-doubt",
+        "position": 11
+      },
+      {
+        "songId": "etheral-mix",
+        "position": 12
+      }
+    ],
+    "mbid": "f86179cb-04e3-423d-b4df-9a6cc52ed4fa"
+  },
+  {
+    "id": "damn-u",
+    "title": "Damn U",
+    "type": "single",
+    "date": "1992",
+    "tracks": [
+      {
+        "songId": "damn-u",
+        "position": 1
+      },
+      {
+        "songId": "2-whom-it-may-concern",
+        "position": 2
+      }
+    ],
+    "mbid": "882bb1bb-9f46-4f04-9df4-5412ae4e1238"
+  },
+  {
+    "id": "money-dont-matter-2-night",
+    "title": "Money Don’t Matter 2 Night",
+    "type": "single",
+    "date": "1992",
+    "tracks": [
+      {
+        "songId": "money-dont-matter-2-night",
+        "position": 1
+      },
+      {
+        "songId": "call-the-law",
+        "position": 2
+      }
+    ],
+    "mbid": "cd6f0cf2-2610-4e2e-a2a8-c01030e55ce1"
+  },
+  {
+    "id": "my-name-is-prince",
+    "title": "My Name Is Prince",
+    "type": "single",
+    "date": "1992",
+    "tracks": [
+      {
+        "songId": "my-name-is-prince",
+        "position": 1
+      },
+      {
+        "songId": "my-name-is-prince",
+        "position": 2
+      },
+      {
+        "songId": "my-name-is-prince",
+        "position": 3
+      },
+      {
+        "songId": "my-name-is-prince",
+        "position": 4
+      },
+      {
+        "songId": "sexy-m-f",
+        "position": 5
+      }
+    ],
+    "mbid": "55c01eb3-ade9-4a0f-b5f9-c655a2a4e39a"
+  },
+  {
+    "id": "thunder",
+    "title": "Thunder",
+    "type": "single",
+    "date": "1992-06-15",
+    "tracks": [
+      {
+        "songId": "thunder",
+        "position": 1
+      },
+      {
+        "songId": "violet-the-organ-grinder",
+        "position": 2
+      },
+      {
+        "songId": "gett-off-thrust-dub",
+        "position": 3
+      }
+    ],
+    "mbid": "1a2b1515-10a0-49f0-927b-b432efe97271"
+  },
+  {
+    "id": "sexy-m-f",
+    "title": "Sexy M.F.",
+    "type": "single",
+    "date": "1992-06-30",
+    "tracks": [
+      {
+        "songId": "sexy-m-f",
+        "position": 1
+      },
+      {
+        "songId": "strollin",
+        "position": 2
+      }
+    ],
+    "mbid": "30d5ddd8-5c68-4164-96f6-33d179d03e28"
+  },
+  {
+    "id": "love-symbol",
+    "title": "[Love Symbol]",
+    "type": "album",
+    "date": "1992-10-05",
+    "tracks": [
+      {
+        "songId": "my-name-is-prince",
+        "position": 1
+      },
+      {
+        "songId": "sexy-m-f",
+        "position": 2
+      },
+      {
+        "songId": "love-2-the-9s",
+        "position": 3
+      },
+      {
+        "songId": "the-morning-papers",
+        "position": 4
+      },
+      {
+        "songId": "the-max",
+        "position": 5
+      },
+      {
+        "songId": "segue-i",
+        "position": 6
+      },
+      {
+        "songId": "blue-light",
+        "position": 7
+      },
+      {
+        "songId": "i-wanna-melt-with-u",
+        "position": 8
+      },
+      {
+        "songId": "sweet-baby",
+        "position": 9
+      },
+      {
+        "songId": "the-continental",
+        "position": 10
+      },
+      {
+        "songId": "damn-u",
+        "position": 11
+      },
+      {
+        "songId": "arrogance",
+        "position": 12
+      },
+      {
+        "songId": "the-flow",
+        "position": 13
+      },
+      {
+        "songId": "7",
+        "position": 14
+      },
+      {
+        "songId": "and-god-created-woman",
+        "position": 15
+      },
+      {
+        "songId": "3-chains-o-gold",
+        "position": 16
+      },
+      {
+        "songId": "segue-ii",
+        "position": 17
+      },
+      {
+        "songId": "the-sacrifice-of-victor",
+        "position": 18
+      }
+    ],
+    "mbid": "76a378e6-f85b-48d4-98b6-457cd726c51b"
+  },
+  {
+    "id": "7",
+    "title": "7",
+    "type": "single",
+    "date": "1992-11-19",
+    "tracks": [
+      {
+        "songId": "7",
+        "position": 1
+      },
+      {
+        "songId": "7",
+        "position": 2
+      }
+    ],
+    "mbid": "1fb19d7c-2659-4a33-b266-4ca99b6c5b59"
+  },
+  {
+    "id": "pink-cashmere",
+    "title": "Pink Cashmere",
+    "type": "single",
+    "date": "1993",
+    "tracks": [
+      {
+        "songId": "pink-cashmere",
+        "position": 1
+      },
+      {
+        "songId": "pink-cashmere",
+        "position": 2
+      },
+      {
+        "songId": "paisley-park",
+        "position": 3
+      },
+      {
+        "songId": "glam-slam",
+        "position": 4
+      }
+    ],
+    "mbid": "52069c5b-91dc-4cde-b358-30f2b3f82dde"
+  },
+  {
+    "id": "the-morning-papers",
+    "title": "The Morning Papers",
+    "type": "single",
+    "date": "1993-02-26",
+    "tracks": [
+      {
+        "songId": "the-morning-papers",
+        "position": 1
+      },
+      {
+        "songId": "live-4-love",
+        "position": 2
+      },
+      {
+        "songId": "love-2-the-9s",
+        "position": 3
+      }
+    ],
+    "mbid": "bcf1341a-c15c-40e1-81cd-c3685abe4ec6"
+  },
+  {
+    "id": "the-hits-1",
+    "title": "The Hits 1",
+    "type": "compilation",
+    "date": "1993-09-13",
+    "tracks": [
+      {
+        "songId": "when-doves-cry",
+        "position": 1
+      },
+      {
+        "songId": "pop-life",
+        "position": 2
+      },
+      {
+        "songId": "soft-and-wet",
+        "position": 3
+      },
+      {
+        "songId": "i-feel-for-you",
+        "position": 4
+      },
+      {
+        "songId": "why-you-wanna-treat-me-so-bad",
+        "position": 5
+      },
+      {
+        "songId": "when-you-were-mine",
+        "position": 6
+      },
+      {
+        "songId": "uptown",
+        "position": 7
+      },
+      {
+        "songId": "lets-go-crazy",
+        "position": 8
+      },
+      {
+        "songId": "1999",
+        "position": 9
+      },
+      {
+        "songId": "i-could-never-take-the-place-of-your-man",
+        "position": 10
+      },
+      {
+        "songId": "nothing-compares-2-u-feat-rosie-gaines-live",
+        "position": 11
+      },
+      {
+        "songId": "adore",
+        "position": 12
+      },
+      {
+        "songId": "pink-cashmere",
+        "position": 13
+      },
+      {
+        "songId": "alphabet-st",
+        "position": 14
+      },
+      {
+        "songId": "sign-o-the-times",
+        "position": 15
+      },
+      {
+        "songId": "thieves-in-the-temple",
+        "position": 16
+      },
+      {
+        "songId": "diamonds-and-pearls",
+        "position": 17
+      },
+      {
+        "songId": "7",
+        "position": 18
+      }
+    ],
+    "mbid": "1f467d4c-ad50-41f6-8690-baedd2474c76"
+  },
+  {
+    "id": "peach",
+    "title": "Peach",
+    "type": "single",
+    "date": "1993-11-18",
+    "tracks": [
+      {
+        "songId": "peach",
+        "position": 1
+      },
+      {
+        "songId": "nothing-compares-2-u",
+        "position": 2
+      }
+    ],
+    "mbid": "6efb7b6c-8f84-4ab0-9cb5-d0bcb5f34f81"
+  },
+  {
+    "id": "the-most-beautiful-girl-in-the-world",
+    "title": "The Most Beautiful Girl in the World",
+    "type": "single",
+    "date": "1994-02-09",
+    "tracks": [
+      {
+        "songId": "the-most-beautiful-girl-in-the-world",
+        "position": 1
+      },
+      {
+        "songId": "beautiful",
+        "position": 2
+      }
+    ],
+    "mbid": "31c3b761-d5ef-41e9-909a-78de38dfc84d"
+  },
+  {
+    "id": "letitgo",
+    "title": "Letitgo",
+    "type": "single",
+    "date": "1994-08-09",
+    "tracks": [
+      {
+        "songId": "letitgo",
+        "position": 1
+      },
+      {
+        "songId": "solo",
+        "position": 2
+      }
+    ],
+    "mbid": "1a4d1a4e-ec3a-4a55-851a-9914736d859c"
+  },
+  {
+    "id": "space",
+    "title": "Space",
+    "type": "single",
+    "date": "1994-11-04",
+    "tracks": [
+      {
+        "songId": "space",
+        "position": 1
+      },
+      {
+        "songId": "space",
+        "position": 2
+      }
+    ],
+    "mbid": "542d5464-a2b2-4a50-965d-a89bde1e1602"
+  },
+  {
+    "id": "gold",
+    "title": "Gold",
+    "type": "single",
+    "date": "1995",
+    "tracks": [
+      {
+        "songId": "gold",
+        "position": 1
+      },
+      {
+        "songId": "rock-n-roll-is-alive-and-it-lives-in-minneapolis",
+        "position": 2
+      }
+    ],
+    "mbid": "b1ef77a7-83b2-4a3a-94ff-230dd705a627"
+  },
+  {
+    "id": "purple-medley",
+    "title": "Purple Medley",
+    "type": "single",
+    "date": "1995",
+    "tracks": [
+      {
+        "songId": "purple-medley",
+        "position": 1
+      },
+      {
+        "songId": "purple-medley",
+        "position": 2
+      },
+      {
+        "songId": "kirk-js-b-sides-remix",
+        "position": 3
+      }
+    ],
+    "mbid": "74326955-c062-4a61-8c29-6a365f57b4a8"
+  },
+  {
+    "id": "symbolic-beginning",
+    "title": "Symbolic Beginning",
+    "type": "album",
+    "date": "1995",
+    "tracks": [
+      {
+        "songId": "just-another-sucker",
+        "position": 1
+      },
+      {
+        "songId": "if-you-feel-like-dancin",
+        "position": 2
+      },
+      {
+        "songId": "lovin-cup",
+        "position": 3
+      },
+      {
+        "songId": "games",
+        "position": 4
+      },
+      {
+        "songId": "dance-to-the-music-of-the-world",
+        "position": 5
+      },
+      {
+        "songId": "one-man-jam",
+        "position": 6
+      },
+      {
+        "songId": "if-you-see-me",
+        "position": 7
+      },
+      {
+        "songId": "games",
+        "position": 8
+      },
+      {
+        "songId": "ill-always-love-you",
+        "position": 9
+      },
+      {
+        "songId": "better-than-you-think",
+        "position": 10
+      },
+      {
+        "songId": "if-we-dont",
+        "position": 11
+      },
+      {
+        "songId": "you-can-be-my-teacher",
+        "position": 12
+      },
+      {
+        "songId": "love-love-love",
+        "position": 13
+      },
+      {
+        "songId": "dance-to-the-music-of-the-world-practice-session",
+        "position": 14
+      },
+      {
+        "songId": "if-you-see-me",
+        "position": 15
+      },
+      {
+        "songId": "games",
+        "position": 16
+      },
+      {
+        "songId": "better-than-you-think",
+        "position": 17
+      }
+    ],
+    "mbid": "273be592-25bb-436d-a092-7a4af51590bc"
+  },
+  {
+    "id": "the-gold-experience",
+    "title": "The Gold Experience",
+    "type": "album",
+    "date": "1995",
+    "tracks": [
+      {
+        "songId": "p-control",
+        "position": 1
+      },
+      {
+        "songId": "npg-operator",
+        "position": 2
+      },
+      {
+        "songId": "endorphinmachine",
+        "position": 3
+      },
+      {
+        "songId": "shhh",
+        "position": 4
+      },
+      {
+        "songId": "we-march",
+        "position": 5
+      },
+      {
+        "songId": "npg-operator",
+        "position": 6
+      },
+      {
+        "songId": "the-most-beautiful-girl-in-the-world",
+        "position": 7
+      },
+      {
+        "songId": "dolphin",
+        "position": 8
+      },
+      {
+        "songId": "npg-operator",
+        "position": 9
+      },
+      {
+        "songId": "now",
+        "position": 10
+      },
+      {
+        "songId": "npg-operator",
+        "position": 11
+      },
+      {
+        "songId": "319",
+        "position": 12
+      },
+      {
+        "songId": "npg-operator",
+        "position": 13
+      },
+      {
+        "songId": "shy",
+        "position": 14
+      },
+      {
+        "songId": "billy-jack-bitch",
+        "position": 15
+      },
+      {
+        "songId": "i-hate-u",
+        "position": 16
+      },
+      {
+        "songId": "npg-operator",
+        "position": 17
+      },
+      {
+        "songId": "gold",
+        "position": 18
+      }
+    ],
+    "mbid": "1a79dbb9-727b-45c1-8c3a-24dcea0eb23b"
+  },
+  {
+    "id": "eye-hate-u",
+    "title": "Eye Hate U",
+    "type": "single",
+    "date": "1995-09-12",
+    "tracks": [
+      {
+        "songId": "eye-hate-u",
+        "position": 1
+      },
+      {
+        "songId": "eye-hate-u",
+        "position": 2
+      }
+    ],
+    "mbid": "5e91823f-801a-49a5-afd3-a59d4439115c"
+  },
+  {
+    "id": "betcha-by-golly-wow",
+    "title": "Betcha by Golly Wow!",
+    "type": "single",
+    "date": "1996",
+    "tracks": [
+      {
+        "songId": "betcha-by-golly-wow",
+        "position": 1
+      },
+      {
+        "songId": "right-back-here-in-my-arms",
+        "position": 2
+      }
+    ],
+    "mbid": "667acb39-ff58-4086-8408-95e35ac5f044"
+  },
+  {
+    "id": "dinner-with-delores",
+    "title": "Dinner With Delores",
+    "type": "single",
+    "date": "1996",
+    "tracks": [
+      {
+        "songId": "dinner-with-delores",
+        "position": 1
+      },
+      {
+        "songId": "had-u",
+        "position": 2
+      },
+      {
+        "songId": "right-the-wrong",
+        "position": 3
+      }
+    ],
+    "mbid": "3b5326bd-5898-422a-8cf2-390268a29bc1"
+  },
+  {
+    "id": "girl-6",
+    "title": "Girl 6",
+    "type": "soundtrack",
+    "date": "1996-03-19",
+    "tracks": [
+      {
+        "songId": "she-spoke-2-me",
+        "position": 1
+      },
+      {
+        "songId": "pink-cashmere",
+        "position": 2
+      },
+      {
+        "songId": "count-the-days",
+        "position": 3
+      },
+      {
+        "songId": "girls-and-boys",
+        "position": 4
+      },
+      {
+        "songId": "the-screams-of-passion",
+        "position": 5
+      },
+      {
+        "songId": "nasty-girl",
+        "position": 6
+      },
+      {
+        "songId": "erotic-city",
+        "position": 7
+      },
+      {
+        "songId": "hot-thing",
+        "position": 8
+      },
+      {
+        "songId": "adore",
+        "position": 9
+      },
+      {
+        "songId": "the-cross",
+        "position": 10
+      },
+      {
+        "songId": "how-come-u-dont-call-me-anymore",
+        "position": 11
+      },
+      {
+        "songId": "dont-talk-2-strangers",
+        "position": 12
+      },
+      {
+        "songId": "girl-6",
+        "position": 13
+      }
+    ],
+    "mbid": "2a56077f-c25c-4c3f-905b-29be115f7ec8"
+  },
+  {
+    "id": "chaos-and-disorder",
+    "title": "Chaos and Disorder",
+    "type": "album",
+    "date": "1996-07-09",
+    "tracks": [
+      {
+        "songId": "chaos-and-disorder",
+        "position": 1
+      },
+      {
+        "songId": "i-like-it-there",
+        "position": 2
+      },
+      {
+        "songId": "dinner-with-delores",
+        "position": 3
+      },
+      {
+        "songId": "the-same-december",
+        "position": 4
+      },
+      {
+        "songId": "right-the-wrong",
+        "position": 5
+      },
+      {
+        "songId": "zannalee",
+        "position": 6
+      },
+      {
+        "songId": "i-rock-therefore-i-am",
+        "position": 7
+      },
+      {
+        "songId": "into-the-light",
+        "position": 8
+      },
+      {
+        "songId": "i-will",
+        "position": 9
+      },
+      {
+        "songId": "dig-u-better-dead",
+        "position": 10
+      },
+      {
+        "songId": "had-u",
+        "position": 11
+      }
+    ],
+    "mbid": "89252a07-6b72-4d54-b7b6-ae5dfb603279"
+  },
+  {
+    "id": "emancipation",
+    "title": "Emancipation",
+    "type": "album",
+    "date": "1996-11-19",
+    "tracks": [
+      {
+        "songId": "jam-of-the-year",
+        "position": 1
+      },
+      {
+        "songId": "right-back-here-in-my-arms",
+        "position": 2
+      },
+      {
+        "songId": "somebodys-somebody",
+        "position": 3
+      },
+      {
+        "songId": "get-yo-groove-on",
+        "position": 4
+      },
+      {
+        "songId": "courtin-time",
+        "position": 5
+      },
+      {
+        "songId": "betcha-by-golly-wow",
+        "position": 6
+      },
+      {
+        "songId": "we-gets-up",
+        "position": 7
+      },
+      {
+        "songId": "white-mansion",
+        "position": 8
+      },
+      {
+        "songId": "damned-if-i-do",
+        "position": 9
+      },
+      {
+        "songId": "i-cant-make-u-love-me",
+        "position": 10
+      },
+      {
+        "songId": "mr-happy",
+        "position": 11
+      },
+      {
+        "songId": "in-this-bed-i-scream",
+        "position": 12
+      },
+      {
+        "songId": "sex-in-the-summer",
+        "position": 13
+      },
+      {
+        "songId": "one-kiss-at-a-time",
+        "position": 14
+      },
+      {
+        "songId": "soul-sanctuary",
+        "position": 15
+      },
+      {
+        "songId": "emale",
+        "position": 16
+      },
+      {
+        "songId": "curious-child",
+        "position": 17
+      },
+      {
+        "songId": "dreamin-about-u",
+        "position": 18
+      },
+      {
+        "songId": "joint-2-joint",
+        "position": 19
+      },
+      {
+        "songId": "the-holy-river",
+        "position": 20
+      },
+      {
+        "songId": "lets-have-a-baby",
+        "position": 21
+      },
+      {
+        "songId": "saviour",
+        "position": 22
+      },
+      {
+        "songId": "the-plan",
+        "position": 23
+      },
+      {
+        "songId": "friend-lover-sister-mother-wife",
+        "position": 24
+      },
+      {
+        "songId": "slave",
+        "position": 25
+      },
+      {
+        "songId": "new-world",
+        "position": 26
+      },
+      {
+        "songId": "the-human-body",
+        "position": 27
+      },
+      {
+        "songId": "face-down",
+        "position": 28
+      },
+      {
+        "songId": "la-la-la-means-i-love-u",
+        "position": 29
+      },
+      {
+        "songId": "style",
+        "position": 30
+      },
+      {
+        "songId": "sleep-around",
+        "position": 31
+      },
+      {
+        "songId": "da-da-da",
+        "position": 32
+      },
+      {
+        "songId": "my-computer",
+        "position": 33
+      },
+      {
+        "songId": "one-of-us",
+        "position": 34
+      },
+      {
+        "songId": "the-love-we-make",
+        "position": 35
+      },
+      {
+        "songId": "emancipation",
+        "position": 36
+      }
+    ],
+    "mbid": "517a1c5b-e3ba-4e4b-991a-fe107702e6c9"
+  },
+  {
+    "id": "the-holy-river",
+    "title": "The Holy River",
+    "type": "single",
+    "date": "1997",
+    "tracks": [
+      {
+        "songId": "the-holy-river",
+        "position": 1
+      },
+      {
+        "songId": "welcome-2-the-dawn",
+        "position": 2
+      },
+      {
+        "songId": "the-holy-river",
+        "position": 3
+      },
+      {
+        "songId": "welcome-2-the-dawn",
+        "position": 4
+      }
+    ],
+    "mbid": "09f7dc3e-d6de-40bb-ba00-b44adc9a49b1"
+  },
+  {
+    "id": "the-truth-2",
+    "title": "The Truth",
+    "type": "single",
+    "date": "1997",
+    "tracks": [
+      {
+        "songId": "the-truth",
+        "position": 1
+      },
+      {
+        "songId": "dont-play-me",
+        "position": 2
+      }
+    ],
+    "mbid": "9a4ae715-551b-4bff-90d2-dfe600338b5f"
+  },
+  {
+    "id": "crystal-ball",
+    "title": "Crystal Ball",
+    "type": "album",
+    "date": "1998-01-29",
+    "tracks": [
+      {
+        "songId": "crystal-ball",
+        "position": 1
+      },
+      {
+        "songId": "dream-factory",
+        "position": 2
+      },
+      {
+        "songId": "acknowledge-me",
+        "position": 3
+      },
+      {
+        "songId": "ripopgodazippa",
+        "position": 4
+      },
+      {
+        "songId": "love-sign",
+        "position": 5
+      },
+      {
+        "songId": "hide-the-bone",
+        "position": 6
+      },
+      {
+        "songId": "2morrow",
+        "position": 7
+      },
+      {
+        "songId": "so-dark",
+        "position": 8
+      },
+      {
+        "songId": "movie-star",
+        "position": 9
+      },
+      {
+        "songId": "tell-me-how-u-wanna-b-done",
+        "position": 10
+      },
+      {
+        "songId": "interactive",
+        "position": 11
+      },
+      {
+        "songId": "da-bang",
+        "position": 12
+      },
+      {
+        "songId": "calhoun-square",
+        "position": 13
+      },
+      {
+        "songId": "whats-my-name",
+        "position": 14
+      },
+      {
+        "songId": "crucial",
+        "position": 15
+      },
+      {
+        "songId": "an-honest-man",
+        "position": 16
+      },
+      {
+        "songId": "sexual-suicide",
+        "position": 17
+      },
+      {
+        "songId": "cloreen-bacon-skin",
+        "position": 18
+      },
+      {
+        "songId": "good-love",
+        "position": 19
+      },
+      {
+        "songId": "strays-of-the-world",
+        "position": 20
+      },
+      {
+        "songId": "days-of-wild-free-the-slave",
+        "position": 21
+      },
+      {
+        "songId": "last-heart",
+        "position": 22
+      },
+      {
+        "songId": "poom-poom",
+        "position": 23
+      },
+      {
+        "songId": "she-gave-her-angels",
+        "position": 24
+      },
+      {
+        "songId": "18-and-over",
+        "position": 25
+      },
+      {
+        "songId": "the-ride",
+        "position": 26
+      },
+      {
+        "songId": "get-loose",
+        "position": 27
+      },
+      {
+        "songId": "p-control",
+        "position": 28
+      },
+      {
+        "songId": "make-yo-mama-happy",
+        "position": 29
+      },
+      {
+        "songId": "goodbye",
+        "position": 30
+      },
+      {
+        "songId": "the-truth",
+        "position": 31
+      },
+      {
+        "songId": "dont-play-me",
+        "position": 32
+      },
+      {
+        "songId": "circle-of-amour",
+        "position": 33
+      },
+      {
+        "songId": "3rd-o",
+        "position": 34
+      },
+      {
+        "songId": "dionne",
+        "position": 35
+      },
+      {
+        "songId": "man-in-a-uniform",
+        "position": 36
+      },
+      {
+        "songId": "animal-kingdom",
+        "position": 37
+      },
+      {
+        "songId": "the-other-side-of-the-pillow",
+        "position": 38
+      },
+      {
+        "songId": "fascination",
+        "position": 39
+      },
+      {
+        "songId": "one-of-your-tears",
+        "position": 40
+      },
+      {
+        "songId": "comeback",
+        "position": 41
+      },
+      {
+        "songId": "welcome-2-the-dawn",
+        "position": 42
+      },
+      {
+        "songId": "the-plan",
+        "position": 43
+      },
+      {
+        "songId": "kamasutra",
+        "position": 44
+      },
+      {
+        "songId": "at-last-the-lost-is-found",
+        "position": 45
+      },
+      {
+        "songId": "the-ever-changing-light",
+        "position": 46
+      },
+      {
+        "songId": "cutz",
+        "position": 47
+      },
+      {
+        "songId": "serotonin",
+        "position": 48
+      },
+      {
+        "songId": "promise-broken",
+        "position": 49
+      },
+      {
+        "songId": "barcelona",
+        "position": 50
+      },
+      {
+        "songId": "kamasutra-overture-8",
+        "position": 51
+      },
+      {
+        "songId": "coincidence-or-fate",
+        "position": 52
+      },
+      {
+        "songId": "kamasutra-eternal-embrace",
+        "position": 53
+      }
+    ],
+    "mbid": "2b5ff740-1c41-4836-8bdc-47b6491a8f9d"
+  },
+  {
+    "id": "1999-the-new-master",
+    "title": "1999: The New Master",
+    "type": "single",
+    "date": "1999-02-02",
+    "tracks": [
+      {
+        "songId": "1999-the-new-master",
+        "position": 1
+      },
+      {
+        "songId": "1999-rosario",
+        "position": 2
+      },
+      {
+        "songId": "1999",
+        "position": 3
+      },
+      {
+        "songId": "1999-keep-steppin",
+        "position": 4
+      },
+      {
+        "songId": "1999-rosie-and-doug-e-fresh-in-a-deep-house",
+        "position": 5
+      },
+      {
+        "songId": "1999",
+        "position": 6
+      },
+      {
+        "songId": "1999-a-cappella",
+        "position": 7
+      }
+    ],
+    "mbid": "630eecef-148e-4289-9c2e-e6e6cbf1e18f"
+  },
+  {
+    "id": "the-vault-old-friends-4-sale",
+    "title": "The Vault… Old Friends 4 Sale",
+    "type": "album",
+    "date": "1999-08-24",
+    "tracks": [
+      {
+        "songId": "the-rest-of-my-life",
+        "position": 1
+      },
+      {
+        "songId": "its-about-that-walk",
+        "position": 2
+      },
+      {
+        "songId": "she-spoke-2-me",
+        "position": 3
+      },
+      {
+        "songId": "5-women",
+        "position": 4
+      },
+      {
+        "songId": "when-the-lights-go-down",
+        "position": 5
+      },
+      {
+        "songId": "my-little-pill",
+        "position": 6
+      },
+      {
+        "songId": "there-is-lonely",
+        "position": 7
+      },
+      {
+        "songId": "old-friends-4-sale",
+        "position": 8
+      },
+      {
+        "songId": "sarah",
+        "position": 9
+      },
+      {
+        "songId": "extraordinary",
+        "position": 10
+      }
+    ],
+    "mbid": "a1132459-bae6-49a1-b0fd-75692a5c59bd"
+  },
+  {
+    "id": "the-greatest-romance-ever-sold",
+    "title": "The Greatest Romance Ever Sold",
+    "type": "single",
+    "date": "1999-11-23",
+    "tracks": [
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 1
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 2
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 3
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 4
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 5
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 6
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 7
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 8
+      }
+    ],
+    "mbid": "6cdb7dbb-588e-48b6-b8a0-ec7944fbb46f"
+  },
+  {
+    "id": "u-make-my-sun-shine",
+    "title": "U Make My Sun Shine",
+    "type": "single",
+    "date": "2000-04-10",
+    "tracks": [
+      {
+        "songId": "u-make-my-sun-shine",
+        "position": 1
+      },
+      {
+        "songId": "when-will-we-b-paid",
+        "position": 2
+      }
+    ],
+    "mbid": "fa283e4f-d3b4-47c2-8c75-6e78a6cdfb4c"
+  },
+  {
+    "id": "cybersingle",
+    "title": "Cybersingle",
+    "type": "single",
+    "date": "2000-07-14",
+    "tracks": [
+      {
+        "songId": "cybersingle",
+        "position": 1
+      }
+    ],
+    "mbid": "5d567e6d-2aba-4b60-98d5-8a7d23c9400b"
+  },
+  {
+    "id": "supercute",
+    "title": "Supercute",
+    "type": "single",
+    "date": "2001-04-14",
+    "tracks": [
+      {
+        "songId": "supercute",
+        "position": 1
+      },
+      {
+        "songId": "underneath-the-cream",
+        "position": 2
+      }
+    ],
+    "mbid": "fb4c7034-6933-481d-b0d3-af82d4534645"
+  },
+  {
+    "id": "the-very-best-of-prince",
+    "title": "The Very Best of Prince",
+    "type": "compilation",
+    "date": "2001-07-30",
+    "tracks": [
+      {
+        "songId": "i-wanna-be-your-lover",
+        "position": 1
+      },
+      {
+        "songId": "1999",
+        "position": 2
+      },
+      {
+        "songId": "little-red-corvette",
+        "position": 3
+      },
+      {
+        "songId": "when-doves-cry",
+        "position": 4
+      },
+      {
+        "songId": "lets-go-crazy",
+        "position": 5
+      },
+      {
+        "songId": "purple-rain",
+        "position": 6
+      },
+      {
+        "songId": "i-would-die-4-u",
+        "position": 7
+      },
+      {
+        "songId": "raspberry-beret",
+        "position": 8
+      },
+      {
+        "songId": "kiss",
+        "position": 9
+      },
+      {
+        "songId": "sign-o-the-times",
+        "position": 10
+      },
+      {
+        "songId": "u-got-the-look",
+        "position": 11
+      },
+      {
+        "songId": "alphabet-st",
+        "position": 12
+      },
+      {
+        "songId": "thieves-in-the-temple",
+        "position": 13
+      },
+      {
+        "songId": "gett-off",
+        "position": 14
+      },
+      {
+        "songId": "cream-without-rap-monologue",
+        "position": 15
+      },
+      {
+        "songId": "diamonds-and-pearls",
+        "position": 16
+      },
+      {
+        "songId": "money-dont-matter-2-nite",
+        "position": 17
+      }
+    ],
+    "mbid": "a793b658-bb7a-47e3-9959-0d1e38ab5a1b"
+  },
+  {
+    "id": "the-rainbow-children",
+    "title": "The Rainbow Children",
+    "type": "album",
+    "date": "2001-10-16",
+    "tracks": [
+      {
+        "songId": "rainbow-children",
+        "position": 1
+      },
+      {
+        "songId": "muse-2-the-pharaoh",
+        "position": 2
+      },
+      {
+        "songId": "digital-garden",
+        "position": 3
+      },
+      {
+        "songId": "the-work-pt-1",
+        "position": 4
+      },
+      {
+        "songId": "everywhere",
+        "position": 5
+      },
+      {
+        "songId": "the-sensual-everafter",
+        "position": 6
+      },
+      {
+        "songId": "mellow",
+        "position": 7
+      },
+      {
+        "songId": "1-1-1-is-3",
+        "position": 8
+      },
+      {
+        "songId": "deconstruction",
+        "position": 9
+      },
+      {
+        "songId": "wedding-feast",
+        "position": 10
+      },
+      {
+        "songId": "she-loves-me-4-me",
+        "position": 11
+      },
+      {
+        "songId": "family-name",
+        "position": 12
+      },
+      {
+        "songId": "the-everlasting-now",
+        "position": 13
+      },
+      {
+        "songId": "last-december",
+        "position": 14
+      },
+      {
+        "songId": "last-december-reprise",
+        "position": 15
+      }
+    ],
+    "mbid": "2a65c056-8e62-4d76-8703-4a8dffe18e40"
+  },
+  {
+    "id": "n-e-w-s",
+    "title": "N.E.W.S.",
+    "type": "album",
+    "date": "2003-07-22",
+    "tracks": [
+      {
+        "songId": "north",
+        "position": 1
+      },
+      {
+        "songId": "east",
+        "position": 2
+      },
+      {
+        "songId": "west",
+        "position": 3
+      },
+      {
+        "songId": "south",
+        "position": 4
+      }
+    ],
+    "mbid": "b1508f58-4791-459b-844f-7baee7e8aef8"
+  },
+  {
+    "id": "musicology-2",
+    "title": "Musicology",
+    "type": "single",
+    "date": "2004-05-03",
+    "tracks": [
+      {
+        "songId": "musicology",
+        "position": 1
+      },
+      {
+        "songId": "on-the-couch",
+        "position": 2
+      }
+    ],
+    "mbid": "ab6d742f-6ee0-4223-903f-a56bbe7c6391"
+  },
+  {
+    "id": "cinnamon-girl",
+    "title": "Cinnamon Girl",
+    "type": "single",
+    "date": "2004-12",
+    "tracks": [
+      {
+        "songId": "cinnamon-girl",
+        "position": 1
+      }
+    ],
+    "mbid": "432762e9-7533-4ab0-9d9f-8ea5a95148fc"
+  },
+  {
+    "id": "s-s-t",
+    "title": "S.S.T.",
+    "type": "single",
+    "date": "2005-09-05",
+    "tracks": [
+      {
+        "songId": "s-s-t",
+        "position": 1
+      }
+    ],
+    "mbid": "f6e4197f-75ea-4b7f-b3da-e882e971b66b"
+  },
+  {
+    "id": "te-amo-corazon",
+    "title": "Te Amo Corazón",
+    "type": "single",
+    "date": "2005-12-20",
+    "tracks": [
+      {
+        "songId": "te-amo-corazon",
+        "position": 1
+      }
+    ],
+    "mbid": "8c51f926-eea1-45c4-bee3-932d091d9c35"
+  },
+  {
+    "id": "black-sweat",
+    "title": "Black Sweat",
+    "type": "single",
+    "date": "2006",
+    "tracks": [
+      {
+        "songId": "black-sweat",
+        "position": 1
+      },
+      {
+        "songId": "beautiful-loved-and-blessed",
+        "position": 2
+      }
+    ],
+    "mbid": "e7ed408f-236e-47ab-babf-928c77eb83e6"
+  },
+  {
+    "id": "fury",
+    "title": "Fury",
+    "type": "single",
+    "date": "2006",
+    "tracks": [
+      {
+        "songId": "fury",
+        "position": 1
+      },
+      {
+        "songId": "te-amo-corazon-fury-brit-awards-2006",
+        "position": 2
+      }
+    ],
+    "mbid": "c6887847-4007-4047-87a7-44446f0f908b"
+  },
+  {
+    "id": "guitar",
+    "title": "Guitar",
+    "type": "single",
+    "date": "2007-07-09",
+    "tracks": [
+      {
+        "songId": "guitar",
+        "position": 1
+      },
+      {
+        "songId": "somewhere-here-on-earth",
+        "position": 2
+      }
+    ],
+    "mbid": "fca30daf-ffd3-4016-9cd1-4cc53f117165"
+  },
+  {
+    "id": "f-u-n-k",
+    "title": "F.U.N.K.",
+    "type": "single",
+    "date": "2007-11-20",
+    "tracks": [
+      {
+        "songId": "f-u-n-k",
+        "position": 1
+      }
+    ],
+    "mbid": "da4af9bc-5e0c-4ce5-be83-9fb2e49695cd"
+  },
+  {
+    "id": "ultimate",
+    "title": "Ultimate",
+    "type": "compilation",
+    "date": "2008",
+    "tracks": [
+      {
+        "songId": "i-wanna-be-your-lover",
+        "position": 1
+      },
+      {
+        "songId": "uptown",
+        "position": 2
+      },
+      {
+        "songId": "controversy",
+        "position": 3
+      },
+      {
+        "songId": "1999",
+        "position": 4
+      },
+      {
+        "songId": "delirious",
+        "position": 5
+      },
+      {
+        "songId": "when-doves-cry",
+        "position": 6
+      },
+      {
+        "songId": "i-would-die-4-u",
+        "position": 7
+      },
+      {
+        "songId": "purple-rain",
+        "position": 8
+      },
+      {
+        "songId": "sign-o-the-times",
+        "position": 9
+      },
+      {
+        "songId": "i-could-never-take-the-place-of-your-man",
+        "position": 10
+      },
+      {
+        "songId": "alphabet-st",
+        "position": 11
+      },
+      {
+        "songId": "diamonds-and-pearls",
+        "position": 12
+      },
+      {
+        "songId": "gett-off",
+        "position": 13
+      },
+      {
+        "songId": "money-dont-matter-2-night",
+        "position": 14
+      },
+      {
+        "songId": "7",
+        "position": 15
+      },
+      {
+        "songId": "nothing-compares-2-u",
+        "position": 16
+      },
+      {
+        "songId": "my-name-is-prince",
+        "position": 17
+      },
+      {
+        "songId": "lets-go-crazy",
+        "position": 18
+      },
+      {
+        "songId": "little-red-corvette",
+        "position": 19
+      },
+      {
+        "songId": "lets-work",
+        "position": 20
+      },
+      {
+        "songId": "pop-life",
+        "position": 21
+      },
+      {
+        "songId": "shes-always-in-my-hair",
+        "position": 22
+      },
+      {
+        "songId": "raspberry-beret",
+        "position": 23
+      },
+      {
+        "songId": "kiss",
+        "position": 24
+      },
+      {
+        "songId": "u-got-the-look-long-look",
+        "position": 25
+      },
+      {
+        "songId": "hot-thing",
+        "position": 26
+      },
+      {
+        "songId": "thieves-in-the-temple",
+        "position": 27
+      },
+      {
+        "songId": "cream",
+        "position": 28
+      }
+    ],
+    "mbid": "0d25df9f-048d-4ecc-af78-7c80d52e31b9"
+  },
+  {
+    "id": "come",
+    "title": "Come",
+    "type": "album",
+    "date": "2008-09-30",
+    "tracks": [
+      {
+        "songId": "come",
+        "position": 1
+      },
+      {
+        "songId": "space",
+        "position": 2
+      },
+      {
+        "songId": "pheromone",
+        "position": 3
+      },
+      {
+        "songId": "loose",
+        "position": 4
+      },
+      {
+        "songId": "papa",
+        "position": 5
+      },
+      {
+        "songId": "race",
+        "position": 6
+      },
+      {
+        "songId": "dark",
+        "position": 7
+      },
+      {
+        "songId": "solo",
+        "position": 8
+      },
+      {
+        "songId": "letitgo",
+        "position": 9
+      },
+      {
+        "songId": "orgasm",
+        "position": 10
+      }
+    ],
+    "mbid": "b18dabe4-fed0-4c62-ab27-b30bdb1655ce"
+  },
+  {
+    "id": "diamonds-and-pearls",
+    "title": "Diamonds and Pearls",
+    "type": "album",
+    "date": "2009-01-24",
+    "tracks": [
+      {
+        "songId": "thunder",
+        "position": 1
+      },
+      {
+        "songId": "daddy-pop",
+        "position": 2
+      },
+      {
+        "songId": "diamonds-and-pearls",
+        "position": 3
+      },
+      {
+        "songId": "cream-without-rap-monologue",
+        "position": 4
+      },
+      {
+        "songId": "strollin",
+        "position": 5
+      },
+      {
+        "songId": "willing-and-able",
+        "position": 6
+      },
+      {
+        "songId": "gett-off",
+        "position": 7
+      },
+      {
+        "songId": "walk-dont-walk",
+        "position": 8
+      },
+      {
+        "songId": "jughead",
+        "position": 9
+      },
+      {
+        "songId": "money-dont-matter-2-night",
+        "position": 10
+      },
+      {
+        "songId": "push",
+        "position": 11
+      },
+      {
+        "songId": "insatiable",
+        "position": 12
+      },
+      {
+        "songId": "live-4-love",
+        "position": 13
+      }
+    ],
+    "mbid": "452e4d34-281e-4533-8ade-81c232d31e84"
+  },
+  {
+    "id": "lotusflow3r",
+    "title": "Lotusflow3r",
+    "type": "album",
+    "date": "2009-03-24",
+    "tracks": [
+      {
+        "songId": "from-the-lotus",
+        "position": 1
+      },
+      {
+        "songId": "boom",
+        "position": 2
+      },
+      {
+        "songId": "the-morning-after",
+        "position": 3
+      },
+      {
+        "songId": "4ever",
+        "position": 4
+      },
+      {
+        "songId": "colonized-mind",
+        "position": 5
+      },
+      {
+        "songId": "feel-good-feel-better-feel-wonderful",
+        "position": 6
+      },
+      {
+        "songId": "love-like-jazz",
+        "position": 7
+      },
+      {
+        "songId": "77-beverly-park",
+        "position": 8
+      },
+      {
+        "songId": "wall-of-berlin",
+        "position": 9
+      },
+      {
+        "songId": "dreamer",
+        "position": 11
+      },
+      {
+        "songId": "back-2-the-lotus",
+        "position": 12
+      }
+    ],
+    "mbid": "30227c12-c95a-4ca8-8a7f-f2e0fbfb595f"
+  },
+  {
+    "id": "dance-4-me",
+    "title": "Dance 4 Me",
+    "type": "single",
+    "date": "2009-08-31",
+    "tracks": [
+      {
+        "songId": "dance-4-me",
+        "position": 1
+      }
+    ],
+    "mbid": "00cbf94e-45ea-4e48-96da-8373792c8c88"
+  },
+  {
+    "id": "20ten",
+    "title": "20Ten",
+    "type": "album",
+    "date": "2010-07-10",
+    "tracks": [
+      {
+        "songId": "compassion",
+        "position": 1
+      },
+      {
+        "songId": "beginning-endlessly",
+        "position": 2
+      },
+      {
+        "songId": "future-soul-song",
+        "position": 3
+      },
+      {
+        "songId": "sticky-like-glue",
+        "position": 4
+      },
+      {
+        "songId": "act-of-god",
+        "position": 5
+      },
+      {
+        "songId": "lavaux",
+        "position": 6
+      },
+      {
+        "songId": "walk-in-sand",
+        "position": 7
+      },
+      {
+        "songId": "sea-of-everything",
+        "position": 8
+      },
+      {
+        "songId": "everybody-loves-me",
+        "position": 9
+      },
+      {
+        "songId": "laydown",
+        "position": 10
+      }
+    ],
+    "mbid": "af937421-7417-43a5-9737-613a971bd7b0"
+  },
+  {
+    "id": "the-cookhouse-five",
+    "title": "The Cookhouse Five",
+    "type": "album",
+    "date": "2011-04",
+    "tracks": [
+      {
+        "songId": "if-we-dont",
+        "position": 1
+      },
+      {
+        "songId": "if-you-see-me",
+        "position": 2
+      },
+      {
+        "songId": "ill-always-love-you",
+        "position": 3
+      },
+      {
+        "songId": "games",
+        "position": 4
+      },
+      {
+        "songId": "better-than-you-think",
+        "position": 5
+      }
+    ],
+    "mbid": "6b75fc5e-4d2c-4271-a400-bb756405182e"
+  },
+  {
+    "id": "extraloveable",
+    "title": "Extraloveable",
+    "type": "single",
+    "date": "2011-11-24",
+    "tracks": [
+      {
+        "songId": "extraloveable",
+        "position": 1
+      }
+    ],
+    "mbid": "17e479be-2d22-4eb9-908e-6c6a86d7e4ee"
+  },
+  {
+    "id": "original-album-series",
+    "title": "Original Album Series",
+    "type": "compilation",
+    "date": "2012",
+    "tracks": [
+      {
+        "songId": "1999",
+        "position": 1
+      },
+      {
+        "songId": "little-red-corvette",
+        "position": 2
+      },
+      {
+        "songId": "delirious",
+        "position": 3
+      },
+      {
+        "songId": "lets-pretend-were-married",
+        "position": 4
+      },
+      {
+        "songId": "d-m-s-r",
+        "position": 5
+      },
+      {
+        "songId": "automatic",
+        "position": 6
+      },
+      {
+        "songId": "something-in-the-water-does-not-compute",
+        "position": 7
+      },
+      {
+        "songId": "free",
+        "position": 8
+      },
+      {
+        "songId": "lady-cab-driver",
+        "position": 9
+      },
+      {
+        "songId": "all-the-critics-love-u-in-new-york",
+        "position": 10
+      },
+      {
+        "songId": "international-lover",
+        "position": 11
+      },
+      {
+        "songId": "lets-go-crazy",
+        "position": 12
+      },
+      {
+        "songId": "take-me-with-u",
+        "position": 13
+      },
+      {
+        "songId": "the-beautiful-ones",
+        "position": 14
+      },
+      {
+        "songId": "computer-blue",
+        "position": 15
+      },
+      {
+        "songId": "darling-nikki",
+        "position": 16
+      },
+      {
+        "songId": "when-doves-cry",
+        "position": 17
+      },
+      {
+        "songId": "i-would-die-4-u",
+        "position": 18
+      },
+      {
+        "songId": "baby-im-a-star",
+        "position": 19
+      },
+      {
+        "songId": "purple-rain",
+        "position": 20
+      },
+      {
+        "songId": "christopher-tracys-parade",
+        "position": 21
+      },
+      {
+        "songId": "new-position",
+        "position": 22
+      },
+      {
+        "songId": "i-wonder-u",
+        "position": 23
+      },
+      {
+        "songId": "under-the-cherry-moon",
+        "position": 24
+      },
+      {
+        "songId": "girls-and-boys",
+        "position": 25
+      },
+      {
+        "songId": "life-can-be-so-nice",
+        "position": 26
+      },
+      {
+        "songId": "venus-de-milo",
+        "position": 27
+      },
+      {
+        "songId": "mountains",
+        "position": 28
+      },
+      {
+        "songId": "do-u-lie",
+        "position": 29
+      },
+      {
+        "songId": "kiss",
+        "position": 30
+      },
+      {
+        "songId": "anotherloverholenyohead",
+        "position": 31
+      },
+      {
+        "songId": "sometimes-it-snows-in-april",
+        "position": 32
+      },
+      {
+        "songId": "no",
+        "position": 33
+      },
+      {
+        "songId": "alphabet-st",
+        "position": 34
+      },
+      {
+        "songId": "glam-slam",
+        "position": 35
+      },
+      {
+        "songId": "anna-stesia",
+        "position": 36
+      },
+      {
+        "songId": "dance-on",
+        "position": 37
+      },
+      {
+        "songId": "lovesexy",
+        "position": 38
+      },
+      {
+        "songId": "when-2-r-in-love",
+        "position": 39
+      },
+      {
+        "songId": "i-wish-u-heaven",
+        "position": 40
+      },
+      {
+        "songId": "positivity",
+        "position": 41
+      },
+      {
+        "songId": "thunder",
+        "position": 42
+      },
+      {
+        "songId": "daddy-pop",
+        "position": 43
+      },
+      {
+        "songId": "diamonds-and-pearls",
+        "position": 44
+      },
+      {
+        "songId": "cream",
+        "position": 45
+      },
+      {
+        "songId": "strollin",
+        "position": 46
+      },
+      {
+        "songId": "willing-and-able",
+        "position": 47
+      },
+      {
+        "songId": "gett-off",
+        "position": 48
+      },
+      {
+        "songId": "walk-dont-walk",
+        "position": 49
+      },
+      {
+        "songId": "jughead",
+        "position": 50
+      },
+      {
+        "songId": "money-dont-matter-2-night",
+        "position": 51
+      },
+      {
+        "songId": "push",
+        "position": 52
+      },
+      {
+        "songId": "insatiable",
+        "position": 53
+      },
+      {
+        "songId": "live-4-love",
+        "position": 54
+      }
+    ],
+    "mbid": "1d318c3b-01e4-46ae-9aac-840c6970b38b"
+  },
+  {
+    "id": "rock-and-roll-love-affair",
+    "title": "Rock and Roll Love Affair",
+    "type": "single",
+    "date": "2012-11-23",
+    "tracks": [
+      {
+        "songId": "rock-and-roll-love-affair",
+        "position": 1
+      },
+      {
+        "songId": "rock-and-roll-love-affair",
+        "position": 2
+      },
+      {
+        "songId": "rock-and-roll-love-affair",
+        "position": 3
+      },
+      {
+        "songId": "rock-and-roll-love-affair",
+        "position": 4
+      },
+      {
+        "songId": "rock-and-roll-love-affair",
+        "position": 5
+      },
+      {
+        "songId": "rock-and-roll-love-affair",
+        "position": 6
+      }
+    ],
+    "mbid": "4e89eba1-a81a-48d7-8827-2087348a8d2e"
+  },
+  {
+    "id": "screwdriver",
+    "title": "Screwdriver",
+    "type": "single",
+    "date": "2013-02-04",
+    "tracks": [
+      {
+        "songId": "screwdriver",
+        "position": 1
+      }
+    ],
+    "mbid": "a38f66e0-14a8-4725-a8fb-e45c8b2023d6"
+  },
+  {
+    "id": "breakfast-can-wait",
+    "title": "Breakfast Can Wait",
+    "type": "single",
+    "date": "2013-02-05",
+    "tracks": [
+      {
+        "songId": "breakfast-can-wait",
+        "position": 1
+      }
+    ],
+    "mbid": "c6219086-e6b3-4fe3-9db3-78affc78043c"
+  },
+  {
+    "id": "fixurlifeup",
+    "title": "Fixurlifeup",
+    "type": "single",
+    "date": "2013-05-16",
+    "tracks": [
+      {
+        "songId": "fixurlifeup",
+        "position": 1
+      }
+    ],
+    "mbid": "d9f98af8-49c9-4a73-b204-565c577bf414"
+  },
+  {
+    "id": "aint-gonna-miss-u-when-ure-gone",
+    "title": "Ain’t Gonna Miss U When U’re Gone",
+    "type": "single",
+    "date": "2013-06-12",
+    "tracks": [
+      {
+        "songId": "aint-gonna-miss-u-when-ure-gone",
+        "position": 1
+      }
+    ],
+    "mbid": "8e862f4e-58ec-41e9-8370-970f645c9e03"
+  },
+  {
+    "id": "extraloveable-reloaded",
+    "title": "Extraloveable Reloaded",
+    "type": "single",
+    "date": "2013-06-26",
+    "tracks": [
+      {
+        "songId": "extraloveable-reloaded",
+        "position": 1
+      }
+    ],
+    "mbid": "36fc9c61-f0d3-485e-9f36-229037492255"
+  },
+  {
+    "id": "da-bourgeoisie",
+    "title": "Da Bourgeoisie",
+    "type": "single",
+    "date": "2013-11-18",
+    "tracks": [
+      {
+        "songId": "da-bourgeoisie",
+        "position": 1
+      }
+    ],
+    "mbid": "1df77571-7bee-46be-a687-f62a3e49e390"
+  },
+  {
+    "id": "pretzelbodylogic",
+    "title": "Pretzelbodylogic",
+    "type": "single",
+    "date": "2014-02-03",
+    "tracks": [
+      {
+        "songId": "pretzelbodylogic",
+        "position": 1
+      }
+    ],
+    "mbid": "b3250a9a-4c56-4fc3-893f-1a0f065b0c96"
+  },
+  {
+    "id": "fallinlove2nite",
+    "title": "FALLINLOVE2NITE",
+    "type": "single",
+    "date": "2014-03-17",
+    "tracks": [
+      {
+        "songId": "fallinlove2nite",
+        "position": 1
+      }
+    ],
+    "mbid": "07cfe731-58b2-4cac-8c2b-12bc5e5756fc"
+  },
+  {
+    "id": "the-breakdown",
+    "title": "The Breakdown",
+    "type": "single",
+    "date": "2014-04-18",
+    "tracks": [
+      {
+        "songId": "the-breakdown",
+        "position": 1
+      }
+    ],
+    "mbid": "c8e73c9e-7351-49e8-8275-0b5205c26528"
+  },
+  {
+    "id": "baltimore",
+    "title": "Baltimore",
+    "type": "single",
+    "date": "2015-05-26",
+    "tracks": [
+      {
+        "songId": "baltimore",
+        "position": 1
+      }
+    ],
+    "mbid": "8a8fe7a9-9691-4796-bb0e-da8e2da38190"
+  },
+  {
+    "id": "hardrocklover",
+    "title": "Hardrocklover",
+    "type": "single",
+    "date": "2015-07-07",
+    "tracks": [
+      {
+        "songId": "hardrocklover",
+        "position": 1
+      }
+    ],
+    "mbid": "a4bd27cf-a2f2-4071-9704-21149069608c"
+  },
+  {
+    "id": "stare",
+    "title": "Stare",
+    "type": "single",
+    "date": "2015-07-30",
+    "tracks": [
+      {
+        "songId": "stare",
+        "position": 1
+      }
+    ],
+    "mbid": "c22b5516-ff7e-47e6-83ca-be474de0059f"
+  },
+  {
+    "id": "this-could-b-us",
+    "title": "This Could B Us",
+    "type": "single",
+    "date": "2015-08-28",
+    "tracks": [
+      {
+        "songId": "this-could-b-us",
+        "position": 1
+      }
+    ],
+    "mbid": "bf421343-6047-4c9b-85d2-46b9856332f9"
+  },
+  {
+    "id": "free-urself",
+    "title": "Free Urself",
+    "type": "single",
+    "date": "2015-09-30",
+    "tracks": [
+      {
+        "songId": "free-urself",
+        "position": 1
+      }
+    ],
+    "mbid": "60142862-bbc7-42aa-a9c6-c0d81dbb4005"
+  },
+  {
+    "id": "if-eye-could-get-ur-attention",
+    "title": "If Eye Could Get Ur Attention",
+    "type": "single",
+    "date": "2015-11-09",
+    "tracks": [
+      {
+        "songId": "if-eye-could-get-ur-attention",
+        "position": 1
+      }
+    ],
+    "mbid": "be2c584c-2c40-4ba6-af41-df3379a01de6"
+  },
+  {
+    "id": "our-destiny-roadhouse-garden",
+    "title": "Our Destiny / Roadhouse Garden",
+    "type": "single",
+    "date": "2017-05-12",
+    "tracks": [
+      {
+        "songId": "our-destiny-roadhouse-garden",
+        "position": 1
+      }
+    ],
+    "mbid": "0bd66173-8780-4e0b-98c0-3be632d4e993"
+  },
+  {
+    "id": "nothing-compares-2-u",
+    "title": "Nothing Compares 2 U",
+    "type": "single",
+    "date": "2018-04-20",
+    "tracks": [
+      {
+        "songId": "nothing-compares-2-u",
+        "position": 1
+      },
+      {
+        "songId": "nothing-compares-2-u",
+        "position": 2
+      }
+    ],
+    "mbid": "b78b9dc2-a80d-4e73-8a32-8dfbc64374d5"
+  },
+  {
+    "id": "mary-dont-you-weep",
+    "title": "Mary Don’t You Weep",
+    "type": "single",
+    "date": "2018-06-07",
+    "tracks": [
+      {
+        "songId": "mary-dont-you-weep",
+        "position": 1
+      }
+    ],
+    "mbid": "fd8be7d2-b79e-45e7-ba24-f7f04a8e62d7"
+  },
+  {
+    "id": "anthology-1995-2010",
+    "title": "Anthology: 1995-2010",
+    "type": "compilation",
+    "date": "2018-08-17",
+    "tracks": [
+      {
+        "songId": "emancipation",
+        "position": 1
+      },
+      {
+        "songId": "black-sweat",
+        "position": 2
+      },
+      {
+        "songId": "p-control",
+        "position": 3
+      },
+      {
+        "songId": "crucial",
+        "position": 4
+      },
+      {
+        "songId": "the-love-we-make",
+        "position": 5
+      },
+      {
+        "songId": "eye-hate-u",
+        "position": 6
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 7
+      },
+      {
+        "songId": "eye-love-u-but-eye-dont-trust-u-anymore",
+        "position": 8
+      },
+      {
+        "songId": "gold",
+        "position": 9
+      },
+      {
+        "songId": "guitar",
+        "position": 10
+      },
+      {
+        "songId": "dream-factory",
+        "position": 11
+      },
+      {
+        "songId": "the-work-pt-1",
+        "position": 12
+      },
+      {
+        "songId": "call-my-name",
+        "position": 13
+      },
+      {
+        "songId": "strays-of-the-world",
+        "position": 14
+      },
+      {
+        "songId": "shhh",
+        "position": 15
+      },
+      {
+        "songId": "dreamer",
+        "position": 16
+      },
+      {
+        "songId": "chaos-and-disorder",
+        "position": 17
+      },
+      {
+        "songId": "endorphinmachine",
+        "position": 18
+      },
+      {
+        "songId": "musicology",
+        "position": 19
+      },
+      {
+        "songId": "northside",
+        "position": 20
+      },
+      {
+        "songId": "when-eye-lay-my-hands-on-u",
+        "position": 21
+      },
+      {
+        "songId": "beautiful-strange",
+        "position": 22
+      },
+      {
+        "songId": "future-soul-song",
+        "position": 23
+      },
+      {
+        "songId": "empty-room",
+        "position": 24
+      },
+      {
+        "songId": "3rd-eye",
+        "position": 25
+      },
+      {
+        "songId": "ure-gonna-c-me",
+        "position": 26
+      },
+      {
+        "songId": "dinner-with-delores",
+        "position": 27
+      },
+      {
+        "songId": "ol-skool-company",
+        "position": 28
+      },
+      {
+        "songId": "4ever",
+        "position": 29
+      },
+      {
+        "songId": "west",
+        "position": 30
+      },
+      {
+        "songId": "xpedition",
+        "position": 31
+      },
+      {
+        "songId": "muse-2-the-pharaoh",
+        "position": 32
+      },
+      {
+        "songId": "somewhere-here-on-earth",
+        "position": 33
+      },
+      {
+        "songId": "u-make-my-sun-shine",
+        "position": 34
+      },
+      {
+        "songId": "1-1-1-is-3",
+        "position": 35
+      },
+      {
+        "songId": "chelsea-rodgers",
+        "position": 36
+      },
+      {
+        "songId": "we-march",
+        "position": 37
+      }
+    ],
+    "mbid": "0b159090-400b-49fe-8388-ba87dfa54e2e"
+  },
+  {
+    "id": "the-truth",
+    "title": "The Truth",
+    "type": "album",
+    "date": "2018-08-17",
+    "tracks": [
+      {
+        "songId": "the-truth",
+        "position": 1
+      },
+      {
+        "songId": "dont-play-me",
+        "position": 2
+      },
+      {
+        "songId": "circle-of-amour",
+        "position": 3
+      },
+      {
+        "songId": "3rd-eye",
+        "position": 4
+      },
+      {
+        "songId": "dionne",
+        "position": 5
+      },
+      {
+        "songId": "man-in-a-uniform",
+        "position": 6
+      },
+      {
+        "songId": "animal-kingdom",
+        "position": 7
+      },
+      {
+        "songId": "the-other-side-of-the-pillow",
+        "position": 8
+      },
+      {
+        "songId": "fascination",
+        "position": 9
+      },
+      {
+        "songId": "one-of-your-tears",
+        "position": 10
+      },
+      {
+        "songId": "comeback",
+        "position": 11
+      },
+      {
+        "songId": "welcome-2-the-dawn",
+        "position": 12
+      }
+    ],
+    "mbid": "4a19a9d7-fd51-4148-bb14-e011f66fc775"
+  },
+  {
+    "id": "17-days",
+    "title": "17 Days",
+    "type": "single",
+    "date": "2018-09-06",
+    "tracks": [
+      {
+        "songId": "17-days",
+        "position": 1
+      }
+    ],
+    "mbid": "cc4b955b-97ce-4c7f-9bec-02d02ee03925"
+  },
+  {
+    "id": "hitnrun-phase-two",
+    "title": "HITnRUN Phase Two",
+    "type": "album",
+    "date": "2018-10-10",
+    "tracks": [
+      {
+        "songId": "baltimore",
+        "position": 1
+      },
+      {
+        "songId": "rocknroll-loveaffair",
+        "position": 2
+      },
+      {
+        "songId": "2-y-2-d",
+        "position": 3
+      },
+      {
+        "songId": "look-at-me-look-at-u",
+        "position": 4
+      },
+      {
+        "songId": "stare",
+        "position": 5
+      },
+      {
+        "songId": "xtralovable",
+        "position": 6
+      },
+      {
+        "songId": "groovy-potential",
+        "position": 7
+      },
+      {
+        "songId": "when-she-comes",
+        "position": 8
+      },
+      {
+        "songId": "screwdriver",
+        "position": 9
+      },
+      {
+        "songId": "black-muse",
+        "position": 10
+      },
+      {
+        "songId": "revelation",
+        "position": 11
+      },
+      {
+        "songId": "big-city",
+        "position": 12
+      }
+    ],
+    "mbid": "44163017-6159-4868-af4d-d7c19cb94347"
+  },
+  {
+    "id": "3121",
+    "title": "3121",
+    "type": "album",
+    "date": "2019-02-08",
+    "tracks": [
+      {
+        "songId": "3121",
+        "position": 1
+      },
+      {
+        "songId": "lolita",
+        "position": 2
+      },
+      {
+        "songId": "te-amo-corazon",
+        "position": 3
+      },
+      {
+        "songId": "black-sweat",
+        "position": 4
+      },
+      {
+        "songId": "incense-and-candles",
+        "position": 5
+      },
+      {
+        "songId": "love",
+        "position": 6
+      },
+      {
+        "songId": "satisfied",
+        "position": 7
+      },
+      {
+        "songId": "fury",
+        "position": 8
+      },
+      {
+        "songId": "the-word",
+        "position": 9
+      },
+      {
+        "songId": "beautiful-loved-and-blessed",
+        "position": 10
+      },
+      {
+        "songId": "the-dance",
+        "position": 11
+      },
+      {
+        "songId": "get-on-the-boat",
+        "position": 12
+      }
+    ],
+    "mbid": "7b8e684a-bea1-4491-a21e-bc7ce8ad6096"
+  },
+  {
+    "id": "musicology",
+    "title": "Musicology",
+    "type": "album",
+    "date": "2019-02-08",
+    "tracks": [
+      {
+        "songId": "musicology",
+        "position": 1
+      },
+      {
+        "songId": "illusion-coma-pimp-and-circumstance",
+        "position": 2
+      },
+      {
+        "songId": "a-million-days",
+        "position": 3
+      },
+      {
+        "songId": "life-o-the-party",
+        "position": 4
+      },
+      {
+        "songId": "call-my-name",
+        "position": 5
+      },
+      {
+        "songId": "cinnamon-girl",
+        "position": 6
+      },
+      {
+        "songId": "what-do-u-want-me-2-do",
+        "position": 7
+      },
+      {
+        "songId": "the-marrying-kind",
+        "position": 8
+      },
+      {
+        "songId": "if-eye-was-the-man-in-ur-life",
+        "position": 9
+      },
+      {
+        "songId": "on-the-couch",
+        "position": 10
+      },
+      {
+        "songId": "dear-mr-man",
+        "position": 11
+      },
+      {
+        "songId": "reflection",
+        "position": 12
+      }
+    ],
+    "mbid": "a52c7352-2ed3-4d9c-864e-ae82a144b8a3"
+  },
+  {
+    "id": "planet-earth",
+    "title": "Planet Earth",
+    "type": "album",
+    "date": "2019-02-08",
+    "tracks": [
+      {
+        "songId": "planet-earth",
+        "position": 1
+      },
+      {
+        "songId": "guitar",
+        "position": 2
+      },
+      {
+        "songId": "somewhere-here-on-earth",
+        "position": 3
+      },
+      {
+        "songId": "the-one-u-wanna-c",
+        "position": 4
+      },
+      {
+        "songId": "future-baby-mama",
+        "position": 5
+      },
+      {
+        "songId": "mr-goodnight",
+        "position": 6
+      },
+      {
+        "songId": "all-the-midnights-in-the-world",
+        "position": 7
+      },
+      {
+        "songId": "chelsea-rodgers",
+        "position": 8
+      },
+      {
+        "songId": "lion-of-judah",
+        "position": 9
+      },
+      {
+        "songId": "resolution",
+        "position": 10
+      }
+    ],
+    "mbid": "26f82ab4-d0e5-4a77-b75f-a46e7b47ee7a"
+  },
+  {
+    "id": "rock-n-roll-is-alive-and-it-lives-in-minneapolis",
+    "title": "Rock ’n’ Roll Is Alive! (And It Lives in Minneapolis)",
+    "type": "single",
+    "date": "2019-04-05",
+    "tracks": [
+      {
+        "songId": "rock-n-roll-is-alive-and-it-lives-in-minneapolis",
+        "position": 1
+      },
+      {
+        "songId": "calhoun-square",
+        "position": 2
+      }
+    ],
+    "mbid": "72814077-8ace-4991-bb2c-85636cca5af3"
+  },
+  {
+    "id": "his-majestys-pop-life-the-purple-mix-club",
+    "title": "His Majesty’s Pop Life / The Purple Mix Club",
+    "type": "ep",
+    "date": "2019-04-13",
+    "tracks": [
+      {
+        "songId": "pop-life",
+        "position": 1
+      },
+      {
+        "songId": "america",
+        "position": 2
+      },
+      {
+        "songId": "raspberry-beret",
+        "position": 3
+      },
+      {
+        "songId": "paisley-park",
+        "position": 4
+      },
+      {
+        "songId": "lets-go-crazy",
+        "position": 5
+      },
+      {
+        "songId": "little-red-corvette",
+        "position": 6
+      },
+      {
+        "songId": "1999",
+        "position": 7
+      },
+      {
+        "songId": "i-would-die-4-u",
+        "position": 8
+      },
+      {
+        "songId": "erotic-city-make-love-not-war-erotic-city-come-alive",
+        "position": 9
+      },
+      {
+        "songId": "when-doves-cry",
+        "position": 10
+      }
+    ],
+    "mbid": "88477652-0d9a-4f6c-af86-893e6a6395f2"
+  },
+  {
+    "id": "rave-un2-the-joy-fantastic",
+    "title": "Rave Un2 the Joy Fantastic",
+    "type": "album",
+    "date": "2019-04-26",
+    "tracks": [
+      {
+        "songId": "rave-un2-the-joy-fantastic",
+        "position": 1
+      },
+      {
+        "songId": "undisputed",
+        "position": 2
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 3
+      },
+      {
+        "songId": "segue",
+        "position": 4
+      },
+      {
+        "songId": "hot-wit-u",
+        "position": 5
+      },
+      {
+        "songId": "tangerine",
+        "position": 6
+      },
+      {
+        "songId": "so-far-so-pleased",
+        "position": 7
+      },
+      {
+        "songId": "the-sun-the-moon-and-stars",
+        "position": 8
+      },
+      {
+        "songId": "everyday-is-a-winding-road",
+        "position": 9
+      },
+      {
+        "songId": "segue-instrumental",
+        "position": 10
+      },
+      {
+        "songId": "manowar",
+        "position": 11
+      },
+      {
+        "songId": "baby-knows",
+        "position": 12
+      },
+      {
+        "songId": "eye-love-u-but-eye-dont-trust-u-anymore",
+        "position": 13
+      },
+      {
+        "songId": "silly-game",
+        "position": 14
+      },
+      {
+        "songId": "strange-but-true",
+        "position": 15
+      },
+      {
+        "songId": "wherever-u-go-whatever-u-do",
+        "position": 16
+      },
+      {
+        "songId": "1800-new-funk-ad",
+        "position": 17
+      },
+      {
+        "songId": "prettyman",
+        "position": 18
+      }
+    ],
+    "mbid": "66443df4-9781-4a06-8f9f-085d9da5c1e9"
+  },
+  {
+    "id": "ultimate-rave",
+    "title": "Ultimate Rave",
+    "type": "compilation",
+    "date": "2019-04-26",
+    "tracks": [
+      {
+        "songId": "rave-un2-the-joy-fantastic",
+        "position": 1
+      },
+      {
+        "songId": "undisputed",
+        "position": 2
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 3
+      },
+      {
+        "songId": "segue",
+        "position": 4
+      },
+      {
+        "songId": "hot-wit-u",
+        "position": 5
+      },
+      {
+        "songId": "tangerine",
+        "position": 6
+      },
+      {
+        "songId": "so-far-so-pleased",
+        "position": 7
+      },
+      {
+        "songId": "the-sun-the-moon-and-stars",
+        "position": 8
+      },
+      {
+        "songId": "everyday-is-a-winding-road",
+        "position": 9
+      },
+      {
+        "songId": "segue",
+        "position": 10
+      },
+      {
+        "songId": "manowar",
+        "position": 11
+      },
+      {
+        "songId": "baby-knows",
+        "position": 12
+      },
+      {
+        "songId": "i-love-u-but-i-dont-trust-u-anymore",
+        "position": 13
+      },
+      {
+        "songId": "silly-game",
+        "position": 14
+      },
+      {
+        "songId": "strange-but-true",
+        "position": 15
+      },
+      {
+        "songId": "wherever-u-go-whatever-u-do",
+        "position": 16
+      },
+      {
+        "songId": "prettyman",
+        "position": 17
+      },
+      {
+        "songId": "rave-in2-the-joy-fantastic",
+        "position": 18
+      },
+      {
+        "songId": "undisputed",
+        "position": 19
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 20
+      },
+      {
+        "songId": "hot-wit-u",
+        "position": 21
+      },
+      {
+        "songId": "tangerine",
+        "position": 22
+      },
+      {
+        "songId": "so-far-so-pleased",
+        "position": 23
+      },
+      {
+        "songId": "the-sun-the-moon-and-stars",
+        "position": 24
+      },
+      {
+        "songId": "manowar",
+        "position": 25
+      },
+      {
+        "songId": "baby-knows",
+        "position": 26
+      },
+      {
+        "songId": "i-love-u-but-i-dont-trust-u-anymore",
+        "position": 27
+      },
+      {
+        "songId": "beautiful-strange",
+        "position": 28
+      },
+      {
+        "songId": "silly-game",
+        "position": 29
+      },
+      {
+        "songId": "wherever-u-go-whatever-u-do",
+        "position": 30
+      },
+      {
+        "songId": "prettyman",
+        "position": 31
+      },
+      {
+        "songId": "lets-go-crazy",
+        "position": 32
+      },
+      {
+        "songId": "shes-always-in-my-hair",
+        "position": 33
+      },
+      {
+        "songId": "u-got-the-look",
+        "position": 34
+      },
+      {
+        "songId": "kiss",
+        "position": 35
+      },
+      {
+        "songId": "jungle-love",
+        "position": 36
+      },
+      {
+        "songId": "the-bird",
+        "position": 37
+      },
+      {
+        "songId": "american-woman",
+        "position": 38
+      },
+      {
+        "songId": "fly-away",
+        "position": 39
+      },
+      {
+        "songId": "gett-off",
+        "position": 40
+      },
+      {
+        "songId": "medley",
+        "position": 41
+      },
+      {
+        "songId": "its-alright",
+        "position": 42
+      },
+      {
+        "songId": "everyday-people",
+        "position": 43
+      },
+      {
+        "songId": "i-want-to-take-you-higher",
+        "position": 44
+      },
+      {
+        "songId": "purple-rain",
+        "position": 45
+      },
+      {
+        "songId": "the-christ",
+        "position": 46
+      },
+      {
+        "songId": "blues-medley",
+        "position": 47
+      },
+      {
+        "songId": "nothing-compares-2-u",
+        "position": 48
+      },
+      {
+        "songId": "take-me-with-u-raspberry-beret",
+        "position": 49
+      },
+      {
+        "songId": "the-greatest-romance-ever-sold",
+        "position": 50
+      },
+      {
+        "songId": "baby-knows",
+        "position": 51
+      },
+      {
+        "songId": "1999-sample-intro",
+        "position": 52
+      },
+      {
+        "songId": "baby-im-a-star",
+        "position": 53
+      },
+      {
+        "songId": "1999",
+        "position": 54
+      },
+      {
+        "songId": "flashlight",
+        "position": 55
+      },
+      {
+        "songId": "the-undertaker-sax-solo",
+        "position": 56
+      },
+      {
+        "songId": "the-undertaker-harmonica-solo",
+        "position": 57
+      },
+      {
+        "songId": "release-urself",
+        "position": 58
+      }
+    ],
+    "mbid": "c9260a27-002a-4ccc-9919-e5e35ce6e330"
+  },
+  {
+    "id": "holly-rock",
+    "title": "Holly Rock",
+    "type": "soundtrack",
+    "date": "2019-07-25",
+    "tracks": [
+      {
+        "songId": "holly-rock",
+        "position": 1
+      }
+    ],
+    "mbid": "84e6bf12-81c3-44f9-a3bc-386d1f0d6992"
+  },
+  {
+    "id": "my-computer-shhh",
+    "title": "My Computer / Shhh",
+    "type": "single",
+    "date": "2019-09-12",
+    "tracks": [
+      {
+        "songId": "my-computer",
+        "position": 1
+      },
+      {
+        "songId": "shhh-x-cerpt",
+        "position": 2
+      }
+    ],
+    "mbid": "5936c34d-5dcd-41af-8f02-63f0355ef58b"
+  },
+  {
+    "id": "i-feel-for-you",
+    "title": "I Feel for You",
+    "type": "single",
+    "date": "2019-10-18",
+    "tracks": [
+      {
+        "songId": "i-feel-for-you",
+        "position": 1
+      },
+      {
+        "songId": "i-feel-for-you",
+        "position": 2
+      }
+    ],
+    "mbid": "f4dddc0a-f4af-4ede-a1e4-b50ae972dbe7"
+  },
+  {
+    "id": "dont-let-him-fool-ya",
+    "title": "Don’t Let Him Fool Ya",
+    "type": "single",
+    "date": "2019-11-08",
+    "tracks": [
+      {
+        "songId": "dont-let-him-fool-ya",
+        "position": 1
+      }
+    ],
+    "mbid": "3096165e-3f57-4de1-945b-7bc716d832f7"
+  },
+  {
+    "id": "witness-4-the-prosecution",
+    "title": "Witness 4 the Prosecution",
+    "type": "single",
+    "date": "2020-06-25",
+    "tracks": [
+      {
+        "songId": "witness-4-the-prosecution",
+        "position": 1
+      }
+    ],
+    "mbid": "ff8d5776-60ad-4d82-8b97-de22bbdb6e97"
+  },
+  {
+    "id": "cosmic-day",
+    "title": "Cosmic Day",
+    "type": "single",
+    "date": "2020-08-06",
+    "tracks": [
+      {
+        "songId": "cosmic-day",
+        "position": 1
+      },
+      {
+        "songId": "i-could-never-take-the-place-of-your-man",
+        "position": 2
+      },
+      {
+        "songId": "witness-4-the-prosecution",
+        "position": 3
+      }
+    ],
+    "mbid": "dca9ce46-8497-47be-a2f0-08710f1c9540"
+  },
+  {
+    "id": "welcome-2-america",
+    "title": "Welcome 2 America",
+    "type": "single",
+    "date": "2021-07-30",
+    "tracks": [
+      {
+        "songId": "welcome-2-america",
+        "position": 1
+      },
+      {
+        "songId": "dreamer-welcome-2-america",
+        "position": 2
+      }
+    ],
+    "mbid": "db32c70c-0fcf-43a2-85ef-4011f242c777"
+  },
+  {
+    "id": "one-nite-alone",
+    "title": "One Nite Alone…",
+    "type": "album",
+    "date": "2023",
+    "tracks": [
+      {
+        "songId": "one-nite-alone",
+        "position": 1
+      },
+      {
+        "songId": "ure-gonna-c-me",
+        "position": 2
+      },
+      {
+        "songId": "here-on-earth",
+        "position": 3
+      },
+      {
+        "songId": "a-case-of-u",
+        "position": 4
+      },
+      {
+        "songId": "have-a-heart",
+        "position": 5
+      },
+      {
+        "songId": "objects-in-the-mirror",
+        "position": 6
+      },
+      {
+        "songId": "avalanche",
+        "position": 7
+      },
+      {
+        "songId": "pearls-b4-the-swine",
+        "position": 8
+      },
+      {
+        "songId": "young-and-beautiful",
+        "position": 9
+      },
+      {
+        "songId": "arboretum",
+        "position": 10
+      }
+    ],
+    "mbid": "479e9604-a141-4cf2-b097-518e9e778ce4"
+  },
+  {
+    "id": "vault-series-vol-1",
+    "title": "Vault Series Vol. 1",
+    "type": "single",
+    "date": "2023-06-10",
+    "tracks": [
+      {
+        "songId": "all-a-share-together-now",
+        "position": 1
+      },
+      {
+        "songId": "7",
+        "position": 2
+      }
+    ],
+    "mbid": "ca17e10a-44c4-4923-b70c-fbafbb75b032"
+  },
+  {
+    "id": "all-a-share-together-now",
+    "title": "All a Share Together Now",
+    "type": "single",
+    "date": "2023-07-07",
+    "tracks": [
+      {
+        "songId": "all-a-share-together-now",
+        "position": 1
+      }
+    ],
+    "mbid": "a03ed847-6f77-466b-847b-076db57f393f"
+  },
+  {
+    "id": "alice-through-the-looking-glass",
+    "title": "Alice Through the Looking Glass",
+    "type": "single",
+    "date": "2023-08-24",
+    "tracks": [
+      {
+        "songId": "alice-through-the-looking-glass",
+        "position": 1
+      }
+    ],
+    "mbid": "0528bf3c-4cf1-414f-99ed-fba49730ca9e"
+  },
+  {
+    "id": "get-blue",
+    "title": "Get Blue",
+    "type": "single",
+    "date": "2023-09-28",
+    "tracks": [
+      {
+        "songId": "get-blue",
+        "position": 1
+      }
+    ],
+    "mbid": "d719dc1a-e1ba-4603-a6db-039405c90765"
+  },
+  {
+    "id": "darkside",
+    "title": "Darkside",
+    "type": "single",
+    "date": "2023-10-20",
+    "tracks": [
+      {
+        "songId": "darkside",
+        "position": 1
+      }
+    ],
+    "mbid": "b323ac0a-6b67-4082-af06-478b5fa8cc7c"
+  },
+  {
+    "id": "united-states-of-division",
+    "title": "United States of Division",
+    "type": "single",
+    "date": "2024-04-05",
+    "tracks": [
+      {
+        "songId": "united-states-of-division",
+        "position": 1
+      }
+    ],
+    "mbid": "97357fa5-9837-43fa-a7b8-e8a36f281550"
+  },
+  {
+    "id": "magnificent",
+    "title": "Magnificent",
+    "type": "single",
+    "date": "2024-04-26",
+    "tracks": [
+      {
+        "songId": "magnificent",
+        "position": 1
+      }
+    ],
+    "mbid": "ada81716-049b-4506-9c33-a778e8ef2e66"
+  },
+  {
+    "id": "silver-tongue",
+    "title": "Silver Tongue",
+    "type": "single",
+    "date": "2024-05-24",
+    "tracks": [
+      {
+        "songId": "silver-tongue",
+        "position": 1
+      }
+    ],
+    "mbid": "17caefdd-9c20-487f-b26b-698b1ad1697a"
+  },
+  {
+    "id": "fr33-acoustic",
+    "title": "FR33 (acoustic)",
+    "type": "single",
+    "date": "2025-06-06",
+    "tracks": [
+      {
+        "songId": "fr33-acoustic",
+        "position": 1
+      }
+    ],
+    "mbid": "8bccdebc-8d17-43a8-9c8a-b32def2fa00c"
+  },
+  {
+    "id": "4-the-tears-in-your-eyes-we-are-the-world-version",
+    "title": "4 the Tears in Your Eyes (‘We Are the World’ version)",
+    "type": "single",
+    "date": "2025-10-02",
+    "tracks": [
+      {
+        "songId": "4-the-tears-in-your-eyes",
+        "position": 1
+      }
+    ],
+    "mbid": "2eb6c08e-e3dc-44db-bf09-22eeb360b050"
+  },
+  {
+    "id": "with-this-tear",
+    "title": "With This Tear",
+    "type": "single",
+    "date": "2026-04-20",
+    "tracks": [
+      {
+        "songId": "with-this-tear",
+        "position": 1
+      }
+    ],
+    "mbid": "96394580-99d6-482d-af4e-b24a64a65dc0"
+  }
+]

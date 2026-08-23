@@ -1,3 +1,5 @@
+import type { VideoTagging } from "../catalog/types";
+
 export type PlayMode = "sequential" | "shuffle" | "leastPlayed";
 
 export type Video = {
@@ -6,6 +8,8 @@ export type Video = {
   channelTitle: string;
   thumbnailUrl: string;
 };
+
+export type { VideoTagging };
 
 export type Playlist = {
   id: string;
@@ -23,6 +27,7 @@ export type AppState = {
   unplayableIds: string[];
   autoplayNext: boolean;
   starterVersion: number;
+  videoTags: Record<string, VideoTagging>;
 };
 
 export type Store = {
@@ -42,6 +47,7 @@ export function emptyState(): AppState {
     unplayableIds: [],
     autoplayNext: true,
     starterVersion: 0,
+    videoTags: {},
   };
 }
 

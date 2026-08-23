@@ -1,4 +1,6 @@
 import { applyStarterIfNeeded } from "./seed";
+import { applyAutoTags } from "../catalog/tagging";
+import type { VideoTagging } from "../catalog/types";
 import { emptyState, stripUnplayableFromPlaylists, type AppState, type PlayMode, type Playlist, type Store, type Video } from "./types";
 
 const KEY = "prince-video-player";
@@ -52,6 +54,12 @@ function parseState(raw: unknown): AppState | null {
     Array.isArray(s.unplayableIds) && s.unplayableIds.every((id) => typeof id === "string") ? s.unplayableIds : [];
   const autoplayNext = s.autoplayNext === false ? false : true;
   const starterVersion = typeof s.starterVersion === "number" && Number.isFinite(s.starterVersion) ? s.starterVersion : 0;
+  const videoTags: Record<string, VideoTagging> = {};
+  if (s.videoTags && typeof s.videoTags === "object") {
+    for (const [id, tagging] of Object.entries(s.videoTags as Record<string, unknown>)) {
+      if (isTagging(tagging)) videoTags[id] = tagging;
+    }
+  }
   return {
     videos,
     playlists: s.playlists,
@@ -62,7 +70,22 @@ function parseState(raw: unknown): AppState | null {
     unplayableIds,
     autoplayNext,
     starterVersion,
+    videoTags,
   };
+}
+
+function isTagging(value: unknown): value is VideoTagging {
+  if (!value || typeof value !== "object") return false;
+  const t = value as Record<string, unknown>;
+  return (
+    Array.isArray(t.songIds) &&
+    t.songIds.every((id) => typeof id === "string") &&
+    Array.isArray(t.releaseIds) &&
+    t.releaseIds.every((id) => typeof id === "string") &&
+    (t.source === "auto" || t.source === "manual") &&
+    (t.confidence === "high" || t.confidence === "medium" || t.confidence === "low") &&
+    (t.concertId === undefined || typeof t.concertId === "string")
+  );
 }
 
 function withPlaylist(state: AppState): AppState {
@@ -80,16 +103,20 @@ function withPlaylist(state: AppState): AppState {
   return state;
 }
 
+function withAutoTags(state: AppState): AppState {
+  return { ...state, videoTags: applyAutoTags(state.videos, state.videoTags) };
+}
+
 export const localStore: Store = {
   load() {
     try {
       const raw = localStorage.getItem(KEY);
-      if (!raw) return applyStarterIfNeeded(emptyState());
+      if (!raw) return withAutoTags(applyStarterIfNeeded(emptyState()));
       const parsed = parseState(JSON.parse(raw) as unknown);
-      if (!parsed) return applyStarterIfNeeded(emptyState());
-      return applyStarterIfNeeded(stripUnplayableFromPlaylists(withPlaylist(parsed)));
+      if (!parsed) return withAutoTags(applyStarterIfNeeded(emptyState()));
+      return withAutoTags(applyStarterIfNeeded(stripUnplayableFromPlaylists(withPlaylist(parsed))));
     } catch {
-      return applyStarterIfNeeded(emptyState());
+      return withAutoTags(applyStarterIfNeeded(emptyState()));
     }
   },
   save(state) {

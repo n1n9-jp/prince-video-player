@@ -1,0 +1,23 @@
+{
+  "Zi9nlmMA12Y": {
+    "songIds": ["i-wanna-be-your-lover"],
+    "releaseIds": ["prince"]
+  },
+  "6SFNW5F8K9Y": {
+    "songIds": ["while-my-guitar-gently-weeps"],
+    "concertId": "rock-hall-2004-03-15"
+  },
+  "NFXZNt4oLkE": {
+    "songIds": ["creep"],
+    "concertId": "coachella-2008-04-26"
+  },
+  "4fPKcqx87Yc": {
+    "concertId": "syracuse-1985-03-30",
+    "songIds": ["lets-go-crazy", "purple-rain", "little-red-corvette"]
+  },
+  "3ZGpnga25n8": {
+    "songIds": ["little-red-corvette"],
+    "releaseIds": ["1999"],
+    "concertId": "forum-2011-welcome-2-america"
+  }
+}

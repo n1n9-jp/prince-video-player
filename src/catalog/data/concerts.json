@@ -1,0 +1,281 @@
+[
+  {
+    "id": "syracuse-1985-03-30",
+    "date": "1985-03-30",
+    "venue": "Carrier Dome",
+    "city": "Syracuse, New York, USA",
+    "tour": "Purple Rain Tour",
+    "aliases": [
+      "Syracuse 1985",
+      "Live in Syracuse 1985",
+      "Live in Syracuse",
+      "Carrier Dome 1985",
+      "Prince and the Revolution Live"
+    ],
+    "setlist": [
+      {
+        "songId": "lets-go-crazy",
+        "order": 1
+      },
+      {
+        "songId": "delirious",
+        "order": 2
+      },
+      {
+        "songId": "1999",
+        "order": 3
+      },
+      {
+        "songId": "little-red-corvette",
+        "order": 4
+      },
+      {
+        "songId": "take-me-with-u",
+        "order": 5
+      },
+      {
+        "songId": "do-me-baby",
+        "order": 6
+      },
+      {
+        "songId": "irresistible-bitch",
+        "order": 7
+      },
+      {
+        "songId": "possessed",
+        "order": 8
+      },
+      {
+        "songId": "how-come-u-dont-call-me-anymore",
+        "order": 9
+      },
+      {
+        "songId": "lets-pretend-were-married",
+        "order": 10
+      },
+      {
+        "songId": "international-lover",
+        "order": 11
+      },
+      {
+        "songId": "god",
+        "order": 12
+      },
+      {
+        "songId": "computer-blue",
+        "order": 13
+      },
+      {
+        "songId": "darling-nikki",
+        "order": 14
+      },
+      {
+        "songId": "the-beautiful-ones",
+        "order": 15
+      },
+      {
+        "songId": "when-doves-cry",
+        "order": 16
+      },
+      {
+        "songId": "i-would-die-4-u",
+        "order": 17
+      },
+      {
+        "songId": "baby-im-a-star",
+        "order": 18
+      },
+      {
+        "songId": "purple-rain",
+        "order": 19
+      }
+    ],
+    "confidence": "confirmed",
+    "sourceUrl": "https://princevault.com/index.php/30_March_1985"
+  },
+  {
+    "id": "coachella-2008-04-26",
+    "date": "2008-04-26",
+    "venue": "Empire Polo Club",
+    "city": "Indio, California, USA",
+    "tour": "Coachella 2008",
+    "aliases": [
+      "Coachella 2008",
+      "Coachella Festival 2008",
+      "Indio 2008"
+    ],
+    "setlist": [
+      {
+        "songId": "the-bird",
+        "order": 1
+      },
+      {
+        "songId": "jungle-love",
+        "order": 2
+      },
+      {
+        "songId": "the-glamorous-life",
+        "order": 3
+      },
+      {
+        "songId": "1999",
+        "order": 4
+      },
+      {
+        "songId": "i-feel-for-you",
+        "order": 5
+      },
+      {
+        "songId": "controversy",
+        "order": 6
+      },
+      {
+        "songId": "little-red-corvette",
+        "order": 7
+      },
+      {
+        "songId": "musicology",
+        "order": 8
+      },
+      {
+        "songId": "cream",
+        "order": 9
+      },
+      {
+        "songId": "u-got-the-look",
+        "order": 10
+      },
+      {
+        "songId": "shhh",
+        "order": 11
+      },
+      {
+        "songId": "anotherloverholenyohead",
+        "order": 12
+      },
+      {
+        "songId": "rock-lobster",
+        "order": 13
+      },
+      {
+        "songId": "creep",
+        "order": 14
+      },
+      {
+        "songId": "7",
+        "order": 15
+      },
+      {
+        "songId": "come-together",
+        "order": 16
+      },
+      {
+        "songId": "purple-rain",
+        "order": 17
+      },
+      {
+        "songId": "lets-go-crazy",
+        "order": 18
+      }
+    ],
+    "confidence": "confirmed",
+    "sourceUrl": "https://princevault.com/index.php/26_April_2008"
+  },
+  {
+    "id": "rock-hall-2004-03-15",
+    "date": "2004-03-15",
+    "venue": "Waldorf Astoria",
+    "city": "New York, New York, USA",
+    "aliases": [
+      "Rock Hall 2004",
+      "Rock and Roll Hall of Fame 2004",
+      "Rock & Roll Hall of Fame 2004",
+      "Rock Hall Induction 2004"
+    ],
+    "setlist": [
+      {
+        "songId": "lets-go-crazy",
+        "order": 1
+      },
+      {
+        "songId": "sign-o-the-times",
+        "order": 2
+      },
+      {
+        "songId": "kiss",
+        "order": 3
+      },
+      {
+        "songId": "while-my-guitar-gently-weeps",
+        "order": 4
+      }
+    ],
+    "confidence": "confirmed",
+    "sourceUrl": "https://princevault.com/index.php/15_March_2004"
+  },
+  {
+    "id": "super-bowl-2007-02-04",
+    "date": "2007-02-04",
+    "venue": "Dolphin Stadium",
+    "city": "Miami Gardens, Florida, USA",
+    "aliases": [
+      "Super Bowl 2007",
+      "Super Bowl XLI",
+      "Super Bowl halftime 2007",
+      "Halftime Show 2007"
+    ],
+    "setlist": [
+      {
+        "songId": "we-will-rock-you",
+        "order": 1
+      },
+      {
+        "songId": "lets-go-crazy",
+        "order": 2
+      },
+      {
+        "songId": "baby-im-a-star",
+        "order": 3
+      },
+      {
+        "songId": "1999",
+        "order": 4
+      },
+      {
+        "songId": "proud-mary",
+        "order": 5
+      },
+      {
+        "songId": "all-along-the-watchtower",
+        "order": 6
+      },
+      {
+        "songId": "best-of-you",
+        "order": 7
+      },
+      {
+        "songId": "purple-rain",
+        "order": 8
+      }
+    ],
+    "confidence": "confirmed",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show"
+  },
+  {
+    "id": "forum-2011-welcome-2-america",
+    "date": "2011-04-14",
+    "venue": "The Forum",
+    "city": "Inglewood, California, USA",
+    "tour": "Welcome 2 America",
+    "aliases": [
+      "LA Forum 2011",
+      "Los Angeles Forum 2011",
+      "The Forum 2011",
+      "Inglewood Forum 2011",
+      "Welcome 2 America LA Forum"
+    ],
+    "setlist": [],
+    "confidence": "partial",
+    "sourceUrl": "https://princevault.com/index.php/14_April_2011"
+  }
+]
