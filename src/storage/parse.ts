@@ -205,3 +205,12 @@ export function pickCanonical(...states: Array<AppState | null | undefined>): Ap
   if (!first) return null;
   return rest.reduce((acc, state) => mergeStates(acc, state), first);
 }
+
+export function chooseServerLibrary(
+  remote: AppState | null,
+  cache: AppState | null,
+): { state: AppState | null; uploadCache: boolean } {
+  if (remote && !isStarterShaped(remote)) return { state: remote, uploadCache: false };
+  if (cache && !isStarterShaped(cache)) return { state: cache, uploadCache: true };
+  return { state: remote, uploadCache: false };
+}

@@ -1,7 +1,7 @@
-import { isDangerousReplace, isStarterShaped, parseState, richness } from "./parse";
+import { chooseServerLibrary, isDangerousReplace, isStarterShaped, parseState, richness } from "./parse";
 import type { AppState } from "./types";
 
-export const LIBRARY_API = "/api/library";
+export const LIBRARY_API = "https://prince-tube.tokyo-air.workers.dev/api/library";
 
 export type PushResult =
   | { ok: true }
@@ -52,4 +52,21 @@ export async function pushLibrary(state: AppState, options?: { force?: boolean }
   } catch {
     return { ok: false, kept: null, reason: "network" };
   }
+}
+
+export async function loadCanonicalLibrary(cache: AppState | null): Promise<{
+  state: AppState | null;
+  source: "server" | "migrated" | "empty";
+}> {
+  const remote = await pullLibrary();
+  const choice = chooseServerLibrary(remote, cache);
+  if (choice.uploadCache && choice.state) {
+    const pushed = await pushLibrary(choice.state);
+    if (!pushed.ok && pushed.kept && !isStarterShaped(pushed.kept)) {
+      return { state: pushed.kept, source: "server" };
+    }
+    return { state: choice.state, source: "migrated" };
+  }
+  if (choice.state) return { state: choice.state, source: "server" };
+  return { state: null, source: "empty" };
 }

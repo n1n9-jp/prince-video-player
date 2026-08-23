@@ -3,6 +3,7 @@ import { STARTER_VIDEOS } from "../src/storage/seed.ts";
 import {
   BACKUP_KEY,
   STORAGE_KEY,
+  chooseServerLibrary,
   hydrateState,
   isDangerousReplace,
   isStarterShaped,
@@ -162,4 +163,8 @@ assert.ok(isDangerousReplace(sample(20), sample(5)));
 assert.equal(isDangerousReplace(sample(3), sample(2)), false);
 assert.equal(pickCanonical(starter, rich)?.playlists[0]?.id, "p1");
 assert.equal(Object.keys(pickCanonical(starter, rich)?.videos ?? {}).length, 12);
+assert.deepEqual(chooseServerLibrary(rich, starter), { state: rich, uploadCache: false });
+assert.deepEqual(chooseServerLibrary(starter, rich), { state: rich, uploadCache: true });
+assert.deepEqual(chooseServerLibrary(null, rich), { state: rich, uploadCache: true });
+assert.deepEqual(chooseServerLibrary(rich, null), { state: rich, uploadCache: false });
 console.log("ok canonical pick ignores starter data when a real library exists");

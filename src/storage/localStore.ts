@@ -21,6 +21,7 @@ const IDB_KEY = "state";
 let restoredNotice: string | null = null;
 
 export {
+  chooseServerLibrary,
   isDangerousReplace,
   isStarterShaped,
   mergeStates,
