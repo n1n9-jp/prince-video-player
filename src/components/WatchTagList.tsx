@@ -6,6 +6,7 @@ import { concertLabel, kindClass, kindLabel } from "./TagRow";
 type Props = {
   videoIds: string[];
   videoTags: Record<string, VideoTagging>;
+  currentTagging?: VideoTagging;
 };
 
 type Chip = {
@@ -13,6 +14,7 @@ type Chip = {
   label: string;
   kind: string;
   title: string;
+  scope: "concert" | "song";
 };
 
 type Group = {
@@ -49,6 +51,7 @@ function collect(videoIds: string[], videoTags: Record<string, VideoTagging>): G
       label: song.title,
       kind: kindClass(song.kind),
       title: kindLabel(song.kind),
+      scope: "song",
     };
     if (song.kind === "unreleased") unreleased.push(chip);
     else if (song.kind === "cover") covers.push(chip);
@@ -61,6 +64,7 @@ function collect(videoIds: string[], videoTags: Record<string, VideoTagging>): G
     label: concertLabel(concert),
     kind: "live",
     title: "ライブ",
+    scope: "concert" as const,
   }));
   if (live.length > 0) groups.push({ title: "公演", chips: live.sort(byLabel) });
   if (official.length > 0) groups.push({ title: "公式", chips: official.sort(byLabel) });
@@ -69,22 +73,36 @@ function collect(videoIds: string[], videoTags: Record<string, VideoTagging>): G
   return groups;
 }
 
-export function WatchTagList({ videoIds, videoTags }: Props) {
+function isNow(chip: Chip, current?: VideoTagging): boolean {
+  if (!current) return false;
+  if (chip.scope === "concert") return current.concertId === chip.id;
+  return current.songIds.includes(chip.id);
+}
+
+export function WatchTagList({ videoIds, videoTags, currentTagging }: Props) {
   const groups = useMemo(() => collect(videoIds, videoTags), [videoIds, videoTags]);
   if (groups.length === 0) return null;
 
   return (
-    <section className="watch-tags" aria-label="タグ">
-      <h2>タグ</h2>
+    <section className="watch-tags" aria-label="このリストのタグ">
+      <p className="watch-tags-kicker">このリスト</p>
       {groups.map((group) => (
-        <div key={group.title} className="watch-tags-group">
-          <h3>{group.title}</h3>
+        <div key={group.title} className="watch-tags-line">
+          <span className="watch-tags-label">{group.title}</span>
           <div className="tag-row">
-            {group.chips.map((chip) => (
-              <span key={chip.id} className={`tag-chip ${chip.kind}`} title={chip.title}>
-                {chip.label}
-              </span>
-            ))}
+            {group.chips.map((chip) => {
+              const now = isNow(chip, currentTagging);
+              return (
+                <span
+                  key={chip.id}
+                  className={`tag-chip ${chip.kind}${now ? " now" : ""}`}
+                  title={now ? `再生中 · ${chip.title}` : chip.title}
+                  aria-current={now ? "true" : undefined}
+                >
+                  {chip.label}
+                </span>
+              );
+            })}
           </div>
         </div>
       ))}

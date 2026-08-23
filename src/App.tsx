@@ -421,8 +421,6 @@ export function App() {
           skipNotice={skipNotice}
           emptyHint="編集ページでリストに入れると、ここで再生できます。"
           onStart={() => start()}
-          onPrev={() => advance("prev")}
-          onNext={() => advance("next")}
           onEnded={() => advance("ended")}
           onError={(code) => {
             if (code === 153) return;
@@ -464,10 +462,16 @@ export function App() {
           playMode={state.playMode}
           onSelectPlaylist={(id) => patch((s) => ({ ...s, activePlaylistId: id }))}
           onPlay={(id) => start(id)}
+          onPrev={() => advance("prev")}
+          onNext={() => advance("next")}
           onAutoplayNextChange={(value) => patch((s) => ({ ...s, autoplayNext: value }))}
           onPlayModeChange={changeMode}
         />
-        <WatchTagList videoIds={playlist?.videoIds ?? []} videoTags={state.videoTags} />
+        <WatchTagList
+          videoIds={playlist?.videoIds ?? []}
+          videoTags={state.videoTags}
+          currentTagging={state.currentVideoId ? state.videoTags[state.currentVideoId] : undefined}
+        />
       </div>
 
       <div className="library-page" hidden={page !== "library"}>

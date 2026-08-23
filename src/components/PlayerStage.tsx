@@ -17,8 +17,6 @@ type Props = {
   skipNotice: string | null;
   emptyHint: string;
   onStart: () => void;
-  onPrev: () => void;
-  onNext: () => void;
   onEnded: () => void;
   onError: (code: number) => void;
   onPlaying: () => void;
@@ -34,8 +32,6 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
     skipNotice,
     emptyHint,
     onStart,
-    onPrev,
-    onNext,
     onEnded,
     onError,
     onPlaying,
@@ -189,14 +185,6 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
               <div>
                 <p className="channel-name">{video.channelTitle}</p>
                 <p className="channel-sub">PrinceTube</p>
-              </div>
-              <div className="video-owner-actions">
-                <button type="button" className="btn-ghost" onClick={onPrev} disabled={!video}>
-                  前へ
-                </button>
-                <button type="button" className="btn-ghost" onClick={onNext} disabled={!video}>
-                  次へ
-                </button>
               </div>
             </div>
           </>

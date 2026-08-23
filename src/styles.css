@@ -198,10 +198,22 @@ img {
 .watch-page {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 402px;
-  gap: 1.5rem;
+  grid-template-areas:
+    "player list"
+    "tags list";
+  column-gap: 1.5rem;
+  row-gap: 0.9rem;
   align-items: start;
   width: min(1754px, calc(100% - 3rem));
   margin: 1.5rem auto 2rem;
+}
+
+.watch-page .stage-player {
+  grid-area: player;
+}
+
+.watch-page > .playlist-dock {
+  grid-area: list;
 }
 
 .watch-page[hidden],
@@ -346,10 +358,22 @@ img {
   font-size: 0.78rem;
 }
 
-.video-owner-actions {
+.playlist-dock-tools {
   display: flex;
-  gap: 0.4rem;
-  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.45rem;
+}
+
+.playlist-skip {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.playlist-skip .btn-ghost {
+  height: 32px;
+  padding: 0 0.75rem;
+  font-size: 0.8rem;
 }
 
 .skip-notice {
@@ -857,38 +881,55 @@ button:disabled {
 }
 
 .watch-tags {
-  grid-column: 1 / -1;
-  padding: 1.1rem 1.25rem 1.25rem;
-  border: 1px solid color-mix(in oklch, var(--gold) 22%, var(--line));
-  border-radius: var(--radius);
-  background: color-mix(in oklch, var(--raised) 70%, transparent);
+  grid-area: tags;
+  min-width: 0;
+  padding: 0.15rem 0.15rem 0;
 }
 
-.watch-tags h2 {
-  margin: 0 0 0.85rem;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.watch-tags-group + .watch-tags-group {
-  margin-top: 0.85rem;
-}
-
-.watch-tags-group h3 {
-  margin: 0;
+.watch-tags-kicker {
+  margin: 0 0 0.45rem;
   color: var(--ink-soft);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.06em;
 }
 
-.watch-tags .tag-row {
+.watch-tags-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.55rem;
+}
+
+.watch-tags-line + .watch-tags-line {
   margin-top: 0.35rem;
+}
+
+.watch-tags-label {
+  flex: 0 0 3.2rem;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.watch-tags .tag-row {
+  margin-top: 0;
+  flex: 1;
+  min-width: 12rem;
+}
+
+.watch-tags .tag-chip.now {
+  border-color: var(--gold);
+  background: color-mix(in oklch, var(--gold) 16%, var(--plum));
 }
 
 @media (max-width: 1100px) {
   .watch-page {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "player"
+      "list"
+      "tags";
   }
 
   .playlist-dock {

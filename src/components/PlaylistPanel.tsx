@@ -20,6 +20,8 @@ type Props = {
   onMove?: (index: number, direction: -1 | 1) => void;
   onRemove?: (videoId: string) => void;
   onPlay: (videoId: string) => void;
+  onPrev?: () => void;
+  onNext?: () => void;
   onAutoplayNextChange?: (value: boolean) => void;
   onPlayModeChange?: (mode: PlayMode) => void;
 };
@@ -41,6 +43,8 @@ export function PlaylistPanel({
   onMove,
   onRemove,
   onPlay,
+  onPrev,
+  onNext,
   onAutoplayNextChange,
   onPlayModeChange,
 }: Props) {
@@ -64,19 +68,33 @@ export function PlaylistPanel({
           <h2>{active?.name ?? "プレイリスト"}</h2>
           <p>{total === 0 ? "0 本" : `${Math.max(position, 1)} / ${total} 本`}</p>
         </div>
-        {!editable && onAutoplayNextChange ? (
-          <button
-            type="button"
-            className={autoplayNext ? "switch on" : "switch"}
-            role="switch"
-            aria-checked={Boolean(autoplayNext)}
-            onClick={() => onAutoplayNextChange(!autoplayNext)}
-          >
-            <span className="switch-track" aria-hidden="true">
-              <span className="switch-knob" />
-            </span>
-            連続再生
-          </button>
+        {!editable ? (
+          <div className="playlist-dock-tools">
+            {onAutoplayNextChange ? (
+              <button
+                type="button"
+                className={autoplayNext ? "switch on" : "switch"}
+                role="switch"
+                aria-checked={Boolean(autoplayNext)}
+                onClick={() => onAutoplayNextChange(!autoplayNext)}
+              >
+                <span className="switch-track" aria-hidden="true">
+                  <span className="switch-knob" />
+                </span>
+                連続再生
+              </button>
+            ) : null}
+            {onPrev && onNext ? (
+              <div className="playlist-skip">
+                <button type="button" className="btn-ghost" onClick={onPrev} disabled={!currentVideoId}>
+                  前へ
+                </button>
+                <button type="button" className="btn-ghost" onClick={onNext} disabled={!currentVideoId}>
+                  次へ
+                </button>
+              </div>
+            ) : null}
+          </div>
         ) : null}
       </header>
       <PlaylistTabs
