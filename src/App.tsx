@@ -7,6 +7,7 @@ import { PlaylistPanel } from "./components/PlaylistPanel";
 import { PlaylistTabs } from "./components/PlaylistTabs";
 import { Topbar } from "./components/Topbar";
 import { goToPage, pageFromHash, type Page } from "./page";
+import { applyAutoTags, addManualSong, removeManualSong } from "./catalog/tagging";
 import { nextVideo, previousVideo, shuffledCopy, startVideo } from "./playback/nextVideo";
 import { localStore } from "./storage/localStore";
 import { activePlaylist, dropFromPlaylists, emptyState, type AppState, type PlayMode, type Video } from "./storage/types";
@@ -104,7 +105,7 @@ export function App() {
         p.id === current.id ? { ...p, videoIds: [...p.videoIds, video.id] } : p,
       );
     }
-    commit({ ...s, videos, playlists });
+    commit({ ...s, videos, playlists, videoTags: applyAutoTags(videos, s.videoTags) });
     goToPage("watch");
     start(video.id);
   }
@@ -142,7 +143,10 @@ export function App() {
   }
 
   function addToLibrary(video: Video) {
-    setState((s) => ({ ...s, videos: { ...s.videos, [video.id]: video } }));
+    setState((s) => {
+      const videos = { ...s.videos, [video.id]: video };
+      return { ...s, videos, videoTags: applyAutoTags(videos, s.videoTags) };
+    });
   }
 
   function addManyToLibrary(videos: Video[]) {
@@ -152,7 +156,7 @@ export function App() {
         if (s.unplayableIds.includes(video.id)) continue;
         next[video.id] = next[video.id] ?? video;
       }
-      return { ...s, videos: next };
+      return { ...s, videos: next, videoTags: applyAutoTags(next, s.videoTags) };
     });
   }
 
@@ -202,9 +206,12 @@ export function App() {
     setState((s) => {
       const videos = { ...s.videos };
       delete videos[videoId];
+      const videoTags = { ...s.videoTags };
+      delete videoTags[videoId];
       return {
         ...s,
         videos,
+        videoTags,
         playlists: s.playlists.map((p) => ({ ...p, videoIds: p.videoIds.filter((id) => id !== videoId) })),
         currentVideoId: s.currentVideoId === videoId ? null : s.currentVideoId,
       };
@@ -309,6 +316,7 @@ export function App() {
         <PlayerStage
           ref={playerRef}
           video={currentVideo}
+          tagging={state.currentVideoId ? state.videoTags[state.currentVideoId] : undefined}
           sessionActive={sessionActive}
           autoplayBlocked={autoplayBlocked}
           skipNotice={skipNotice}
@@ -390,9 +398,25 @@ export function App() {
           playlistIds={playlistIds}
           unplayableIds={state.unplayableIds}
           watchCounts={state.watchCounts}
+          videoTags={state.videoTags}
           onPlay={ingestAndPlay}
           onAddToPlaylist={addToPlaylist}
           onRemoveFromLibrary={removeFromLibrary}
+          onAddSongTag={(videoId, songId) => {
+            setState((s) => ({
+              ...s,
+              videoTags: { ...s.videoTags, [videoId]: addManualSong(s.videoTags[videoId], songId) },
+            }));
+          }}
+          onRemoveSongTag={(videoId, songId) => {
+            setState((s) => {
+              const next = removeManualSong(s.videoTags[videoId], songId);
+              const videoTags = { ...s.videoTags };
+              if (next) videoTags[videoId] = next;
+              else delete videoTags[videoId];
+              return { ...s, videoTags };
+            });
+          }}
         />
       </div>
     </div>

@@ -1,0 +1,5854 @@
+[
+  {
+    "id": "back-2-the-lotus",
+    "title": "…Back 2 the Lotus",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "or",
+    "title": "♥ or $",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "kiss",
+    "year": 1986,
+    "sourceUrl": "https://musicbrainz.org/release/07e35c87-5227-47e4-9b33-f3ed04c67f4e",
+    "confidence": "high"
+  },
+  {
+    "id": "no",
+    "title": "👁 No",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "1-1-1-is-3",
+    "title": "1+1+1 Is 3",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "17-days",
+    "title": "17 Days",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "17-days",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/cc4b955b-97ce-4c7f-9bec-02d02ee03925",
+    "confidence": "high"
+  },
+  {
+    "id": "17-days-the-rain-will-come-down-then-u-will-have-2-choose-if-u-believe-look-2-the-dawn-and-u-shall-never-lose",
+    "title": "17 Days (the rain will come down, then U will have 2 choose. If U believe look 2 the dawn and U shall never lose)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "when-doves-cry",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/2c264dc5-3819-4b14-8c63-bf65ca50a6e8",
+    "confidence": "high"
+  },
+  {
+    "id": "18-and-over",
+    "title": "18 & Over",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "1800-new-funk-ad",
+    "title": "1800-New-Funk Ad",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "1999",
+    "title": "1999",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "1999-a-cappella",
+    "title": "1999 (a cappella)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999-the-new-master",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/630eecef-148e-4289-9c2e-e6e6cbf1e18f",
+    "confidence": "high"
+  },
+  {
+    "id": "1999-keep-steppin",
+    "title": "1999 (Keep Steppin)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999-the-new-master",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/630eecef-148e-4289-9c2e-e6e6cbf1e18f",
+    "confidence": "high"
+  },
+  {
+    "id": "1999-rosario",
+    "title": "1999 (Rosario)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999-the-new-master",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/630eecef-148e-4289-9c2e-e6e6cbf1e18f",
+    "confidence": "high"
+  },
+  {
+    "id": "1999-rosie-and-doug-e-fresh-in-a-deep-house",
+    "title": "1999 (Rosie and Doug E Fresh in a Deep House)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999-the-new-master",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/630eecef-148e-4289-9c2e-e6e6cbf1e18f",
+    "confidence": "high"
+  },
+  {
+    "id": "1999-sample-intro",
+    "title": "1999 (sample intro)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "1999-the-new-master",
+    "title": "1999 (The New Master)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999-the-new-master",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/630eecef-148e-4289-9c2e-e6e6cbf1e18f",
+    "confidence": "high"
+  },
+  {
+    "id": "2-the-wire",
+    "title": "2 the Wire",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "2-whom-it-may-concern",
+    "title": "2 Whom It May Concern",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "damn-u",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/882bb1bb-9f46-4f04-9df4-5412ae4e1238",
+    "confidence": "high"
+  },
+  {
+    "id": "2-y-2-d",
+    "title": "2 Y. 2 D.",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "200-balloons",
+    "title": "200 Balloons",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batdance",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/2cf6e999-6024-4563-bd6d-0ddb5b0d35e8",
+    "confidence": "high"
+  },
+  {
+    "id": "2morrow",
+    "title": "2morrow",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "3-chains-o-gold",
+    "title": "3 Chains o’ Gold",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "3121",
+    "title": "3121",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "319",
+    "title": "319",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "3rd-o",
+    "title": "3rd <o>",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "3rd-eye",
+    "title": "3rd Eye",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-truth",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "4-the-tears-in-your-eyes",
+    "title": "4 the Tears in Your Eyes",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "4-the-tears-in-your-eyes-we-are-the-world-version",
+    "year": 2025,
+    "sourceUrl": "https://musicbrainz.org/release/2eb6c08e-e3dc-44db-bf09-22eeb360b050",
+    "confidence": "high"
+  },
+  {
+    "id": "4ever",
+    "title": "4Ever",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "5-women",
+    "title": "5 Women",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "7",
+    "title": "7",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "77-beverly-park",
+    "title": "77 Beverly Park",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "a-case-of-u",
+    "title": "A Case of U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "a-million-days",
+    "title": "A Million Days",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "acknowledge-me",
+    "title": "Acknowledge Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "act-of-god",
+    "title": "Act of God",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "adore",
+    "title": "Adore",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "aint-gonna-miss-u-when-ure-gone",
+    "title": "Ain’t Gonna Miss U When U’re Gone",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "aint-gonna-miss-u-when-ure-gone",
+    "year": 2013,
+    "sourceUrl": "https://musicbrainz.org/release/8e862f4e-58ec-41e9-8370-970f645c9e03",
+    "confidence": "high"
+  },
+  {
+    "id": "alexa-de-paris",
+    "title": "Alexa de Paris",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "mountains",
+    "year": 1986,
+    "sourceUrl": "https://musicbrainz.org/release/5af1741d-536a-4eeb-aeef-d1d9af4482dc",
+    "confidence": "high"
+  },
+  {
+    "id": "alice-through-the-looking-glass",
+    "title": "Alice Through the Looking Glass",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "alice-through-the-looking-glass",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/0528bf3c-4cf1-414f-99ed-fba49730ca9e",
+    "confidence": "high"
+  },
+  {
+    "id": "all-a-share-together-now",
+    "title": "All a Share Together Now",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "vault-series-vol-1",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/a03ed847-6f77-466b-847b-076db57f393f",
+    "confidence": "high"
+  },
+  {
+    "id": "all-along-the-watchtower",
+    "title": "All Along the Watchtower",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2007,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show",
+    "confidence": "high"
+  },
+  {
+    "id": "all-my-dreams",
+    "title": "All My Dreams",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1985,
+    "sourceUrl": "https://princevault.com/index.php/All_My_Dreams",
+    "confidence": "high"
+  },
+  {
+    "id": "all-the-critics-love-u-in-new-york",
+    "title": "All the Critics Love U in New York",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "all-the-midnights-in-the-world",
+    "title": "All the Midnights in the World",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/26f82ab4-d0e5-4a77-b75f-a46e7b47ee7a",
+    "confidence": "high"
+  },
+  {
+    "id": "alphabet-st",
+    "title": "Alphabet St.",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "alphabet-st-cont",
+    "title": "Alphabet St. (cont.)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "alphabet-st",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/953397fc-f626-43d7-aecd-3b1b37487a81",
+    "confidence": "high"
+  },
+  {
+    "id": "america",
+    "title": "America",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "american-woman",
+    "title": "American Woman",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "an-honest-man",
+    "title": "An Honest Man",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "and-god-created-woman",
+    "title": "And God Created Woman",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "animal-kingdom",
+    "title": "Animal Kingdom",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "anna-stesia",
+    "title": "Anna Stesia",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "annie-christian",
+    "title": "Annie Christian",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "controversy",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/171f2863-6be8-4828-bbd8-1cfbf7ab7911",
+    "confidence": "high"
+  },
+  {
+    "id": "another-lonely-christmas",
+    "title": "Another Lonely Christmas",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "i-would-die-4-u",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/45db49f3-d994-4121-9b0b-0175c9cf356f",
+    "confidence": "high"
+  },
+  {
+    "id": "anotherloverholenyohead",
+    "title": "Anotherloverholenyohead",
+    "aliases": [
+      "Another Lover Hole in Your Head",
+      "Anotherloverholenyohead"
+    ],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "arboretum",
+    "title": "Arboretum",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "around-the-world-in-a-day",
+    "title": "Around the World in a Day",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "arrogance",
+    "title": "Arrogance",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "at-last-the-lost-is-found",
+    "title": "At Last… ‘The Lost Is Found’",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "automatic",
+    "title": "Automatic",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "avalanche",
+    "title": "Avalanche",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "baby",
+    "title": "Baby",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "baby-im-a-star",
+    "title": "Baby I’m a Star",
+    "aliases": [
+      "Baby I'm A Star",
+      "Baby I Am a Star"
+    ],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "baby-knows",
+    "title": "Baby Knows",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "baltimore",
+    "title": "Baltimore",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "bambi",
+    "title": "Bambi",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "barcelona",
+    "title": "Barcelona",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "batdance",
+    "title": "Batdance",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "batdance-the-batmix",
+    "title": "Batdance (The Batmix)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batdance",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/2cf6e999-6024-4563-bd6d-0ddb5b0d35e8",
+    "confidence": "high"
+  },
+  {
+    "id": "beautiful",
+    "title": "Beautiful",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-most-beautiful-girl-in-the-world",
+    "year": 1994,
+    "sourceUrl": "https://musicbrainz.org/release/31c3b761-d5ef-41e9-909a-78de38dfc84d",
+    "confidence": "high"
+  },
+  {
+    "id": "beautiful-strange",
+    "title": "Beautiful Strange",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "anthology-1995-2010",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "beautiful-loved-and-blessed",
+    "title": "Beautiful, Loved and Blessed",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "beginning-endlessly",
+    "title": "Beginning Endlessly",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "best-of-you",
+    "title": "Best of You",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2007,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show",
+    "confidence": "high"
+  },
+  {
+    "id": "betcha-by-golly-wow",
+    "title": "Betcha by Golly Wow!",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "better-than-you-think",
+    "title": "Better Than You Think",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "big-city",
+    "title": "Big City",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "billy-jack-bitch",
+    "title": "Billy Jack Bitch",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "black-muse",
+    "title": "Black Muse",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "black-sweat",
+    "title": "Black Sweat",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "blue-light",
+    "title": "Blue Light",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "blues-medley",
+    "title": "Blues (medley)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "boom",
+    "title": "Boom",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "breakfast-can-wait",
+    "title": "Breakfast Can Wait",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "breakfast-can-wait",
+    "year": 2013,
+    "sourceUrl": "https://musicbrainz.org/release/c6219086-e6b3-4fe3-9db3-78affc78043c",
+    "confidence": "high"
+  },
+  {
+    "id": "brother-with-a-purpose",
+    "title": "Brother With a Purpose",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "new-power-generation",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/5663e55e-9e6f-4fa9-b575-c0c0aa53c6d1",
+    "confidence": "high"
+  },
+  {
+    "id": "calhoun-square",
+    "title": "Calhoun Square",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "call-my-name",
+    "title": "Call My Name",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "call-the-law",
+    "title": "Call the Law",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "money-dont-matter-2-night",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/cd6f0cf2-2610-4e2e-a2a8-c01030e55ce1",
+    "confidence": "high"
+  },
+  {
+    "id": "can-i-play-with-u",
+    "title": "Can I Play with U",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1985,
+    "sourceUrl": "https://princevault.com/index.php/Can_I_Play_With_U",
+    "confidence": "high"
+  },
+  {
+    "id": "cant-stop-this-feeling-i-got",
+    "title": "Can't Stop This Feeling I Got",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "chaos-and-disorder",
+    "title": "Chaos and Disorder",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "chelsea-rodgers",
+    "title": "Chelsea Rodgers",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "christopher-tracys-parade",
+    "title": "Christopher Tracy’s Parade",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "cinnamon-girl",
+    "title": "Cinnamon Girl",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "circle-of-amour",
+    "title": "Circle of Amour",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "cloreen-bacon-skin",
+    "title": "Cloreen Bacon Skin",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "coincidence-or-fate",
+    "title": "Coincidence or Fate?",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "colonized-mind",
+    "title": "Colonized Mind",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "come",
+    "title": "Come",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "come-together",
+    "title": "Come Together",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2008,
+    "sourceUrl": "https://princevault.com/index.php/Come_Together",
+    "confidence": "high"
+  },
+  {
+    "id": "comeback",
+    "title": "Comeback",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "compassion",
+    "title": "Compassion",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "computer-blue",
+    "title": "Computer Blue",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "condition-of-the-heart",
+    "title": "Condition of the Heart",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "controversy",
+    "title": "Controversy",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "controversy",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/171f2863-6be8-4828-bbd8-1cfbf7ab7911",
+    "confidence": "high"
+  },
+  {
+    "id": "cosmic-day",
+    "title": "Cosmic Day",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "cosmic-day",
+    "year": 2020,
+    "sourceUrl": "https://musicbrainz.org/release/dca9ce46-8497-47be-a2f0-08710f1c9540",
+    "confidence": "high"
+  },
+  {
+    "id": "count-the-days",
+    "title": "Count the Days",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "girl-6",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "courtin-time",
+    "title": "Courtin’ Time",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "crazy-you",
+    "title": "Crazy You",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "cream",
+    "title": "Cream",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "cream-without-rap-monologue",
+    "title": "Cream (without rap monologue)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/452e4d34-281e-4533-8ade-81c232d31e84",
+    "confidence": "high"
+  },
+  {
+    "id": "creep",
+    "title": "Creep",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2008,
+    "sourceUrl": "https://princevault.com/index.php/Creep",
+    "confidence": "high"
+  },
+  {
+    "id": "crucial",
+    "title": "Crucial",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "crystal-ball",
+    "title": "Crystal Ball",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "curious-child",
+    "title": "Curious Child",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "cutz",
+    "title": "Cutz",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "cybersingle",
+    "title": "Cybersingle",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "cybersingle",
+    "year": 2000,
+    "sourceUrl": "https://musicbrainz.org/release/5d567e6d-2aba-4b60-98d5-8a7d23c9400b",
+    "confidence": "high"
+  },
+  {
+    "id": "d-m-s-r",
+    "title": "D.M.S.R.",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "da-bang",
+    "title": "Da Bang",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "da-bourgeoisie",
+    "title": "Da Bourgeoisie",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "da-bourgeoisie",
+    "year": 2013,
+    "sourceUrl": "https://musicbrainz.org/release/1df77571-7bee-46be-a687-f62a3e49e390",
+    "confidence": "high"
+  },
+  {
+    "id": "da-da-da",
+    "title": "Da, Da, Da",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "daddy-pop",
+    "title": "Daddy Pop",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "damn-u",
+    "title": "Damn U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "damned-if-i-do",
+    "title": "Damned If I Do",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "dance-4-me",
+    "title": "Dance 4 Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dance-4-me",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/00cbf94e-45ea-4e48-96da-8373792c8c88",
+    "confidence": "high"
+  },
+  {
+    "id": "dance-music-sex-romance",
+    "title": "Dance Music Sex Romance",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dance-music-sex-romance",
+    "year": 1983,
+    "sourceUrl": "https://musicbrainz.org/release/2e026904-84f4-4705-bb61-fd5b37007add",
+    "confidence": "high"
+  },
+  {
+    "id": "dance-on",
+    "title": "Dance On",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "dance-to-the-music-of-the-world",
+    "title": "Dance to the Music of the World",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "dance-to-the-music-of-the-world-practice-session",
+    "title": "Dance to the Music of the World (practice session)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "dark",
+    "title": "Dark",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "darkside",
+    "title": "Darkside",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "darkside",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/b323ac0a-6b67-4082-af06-478b5fa8cc7c",
+    "confidence": "high"
+  },
+  {
+    "id": "darling-nikki",
+    "title": "Darling Nikki",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "days-of-wild-free-the-slave",
+    "title": "Days of Wild (Free the Slave)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "dear-mr-man",
+    "title": "Dear Mr. Man",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "deconstruction",
+    "title": "Deconstruction",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "delirious",
+    "title": "Delirious",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "diamonds-and-pearls",
+    "title": "Diamonds and Pearls",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "dig-u-better-dead",
+    "title": "Dig U Better Dead",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "digital-garden",
+    "title": "Digital Garden",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "dinner-with-delores",
+    "title": "Dinner With Delores",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "dionne",
+    "title": "Dionne",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "dirty-mind",
+    "title": "Dirty Mind",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dirty-mind",
+    "year": 1980,
+    "sourceUrl": "https://musicbrainz.org/release/281e42d6-389e-4224-9bc6-84220a62d50f",
+    "confidence": "high"
+  },
+  {
+    "id": "do-it-all-night",
+    "title": "Do It All Night",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dirty-mind",
+    "year": 1980,
+    "sourceUrl": "https://musicbrainz.org/release/281e42d6-389e-4224-9bc6-84220a62d50f",
+    "confidence": "high"
+  },
+  {
+    "id": "do-me-baby",
+    "title": "Do Me, Baby",
+    "aliases": [
+      "Do Me Baby"
+    ],
+    "kind": "official",
+    "firstReleaseId": "controversy",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/171f2863-6be8-4828-bbd8-1cfbf7ab7911",
+    "confidence": "high"
+  },
+  {
+    "id": "do-u-lie",
+    "title": "Do U Lie?",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "do-your-dance",
+    "title": "Do Your Dance",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "dolphin",
+    "title": "Dolphin",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "dont-let-him-fool-ya",
+    "title": "Don’t Let Him Fool Ya",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dont-let-him-fool-ya",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/3096165e-3f57-4de1-945b-7bc716d832f7",
+    "confidence": "high"
+  },
+  {
+    "id": "dont-play-me",
+    "title": "Don’t Play Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "dont-talk-2-strangers",
+    "title": "Don’t Talk 2 Strangers",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "girl-6",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "dream-factory",
+    "title": "Dream Factory",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "dreamer",
+    "title": "Dreamer",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "dreamer-welcome-2-america",
+    "title": "Dreamer / Welcome 2 America",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "welcome-2-america",
+    "year": 2021,
+    "sourceUrl": "https://musicbrainz.org/release/db32c70c-0fcf-43a2-85ef-4011f242c777",
+    "confidence": "high"
+  },
+  {
+    "id": "dreamin-about-u",
+    "title": "Dreamin’ About U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "east",
+    "title": "East",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "n-e-w-s",
+    "year": 2003,
+    "sourceUrl": "https://musicbrainz.org/release/b1508f58-4791-459b-844f-7baee7e8aef8",
+    "confidence": "high"
+  },
+  {
+    "id": "electric-chair",
+    "title": "Electric Chair",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "electric-intercourse",
+    "title": "Electric Intercourse",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1983,
+    "sourceUrl": "https://princevault.com/index.php/Electric_Intercourse",
+    "confidence": "high"
+  },
+  {
+    "id": "elephants-and-flowers",
+    "title": "Elephants & Flowers",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "emale",
+    "title": "Emale",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "emancipation",
+    "title": "Emancipation",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "empty-room",
+    "title": "Empty Room",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "anthology-1995-2010",
+    "year": 1985,
+    "sourceUrl": "https://princevault.com/index.php/Empty_Room",
+    "confidence": "high"
+  },
+  {
+    "id": "endorphinmachine",
+    "title": "Endorphinmachine",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "erotic-city",
+    "title": "Erotic City",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "girl-6",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "erotic-city-make-love-not-war-erotic-city-come-alive",
+    "title": "Erotic City (“Make Love Not War Erotic City Come Alive”)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "his-majestys-pop-life-the-purple-mix-club",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/5be99d1b-129e-403c-87a9-1d4da72cf8fe",
+    "confidence": "high"
+  },
+  {
+    "id": "escape",
+    "title": "Escape",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "glam-slam",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/43087b8a-bca9-41cb-8f1b-34734efcb922",
+    "confidence": "high"
+  },
+  {
+    "id": "etheral-mix",
+    "title": "Etheral Mix",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "everybody-loves-me",
+    "title": "Everybody Loves Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "everyday-is-a-winding-road",
+    "title": "Everyday Is a Winding Road",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "everyday-people",
+    "title": "Everyday People",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "everywhere",
+    "title": "Everywhere",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "extra-loveable",
+    "title": "Extra Loveable",
+    "aliases": [
+      "Extraloveable",
+      "Extra Lovable"
+    ],
+    "kind": "laterReleased",
+    "year": 1982,
+    "sourceUrl": "https://princevault.com/index.php/Extraloveable",
+    "confidence": "high"
+  },
+  {
+    "id": "extraloveable",
+    "title": "Extraloveable",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "extraloveable",
+    "year": 2011,
+    "sourceUrl": "https://musicbrainz.org/release/17e479be-2d22-4eb9-908e-6c6a86d7e4ee",
+    "confidence": "high"
+  },
+  {
+    "id": "extraloveable-reloaded",
+    "title": "Extraloveable Reloaded",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "extraloveable-reloaded",
+    "year": 2013,
+    "sourceUrl": "https://musicbrainz.org/release/36fc9c61-f0d3-485e-9f36-229037492255",
+    "confidence": "high"
+  },
+  {
+    "id": "extraordinary",
+    "title": "Extraordinary",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "eye-hate-u",
+    "title": "Eye Hate U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "eye-hate-u",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "eye-love-u-but-eye-dont-trust-u-anymore",
+    "title": "Eye Love U, but Eye Don't Trust U Anymore",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "f-u-n-k",
+    "title": "F.U.N.K.",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "f-u-n-k",
+    "year": 2007,
+    "sourceUrl": "https://musicbrainz.org/release/da4af9bc-5e0c-4ce5-be83-9fb2e49695cd",
+    "confidence": "high"
+  },
+  {
+    "id": "face-down",
+    "title": "Face Down",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "fallinlove2nite",
+    "title": "FALLINLOVE2NITE",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "fallinlove2nite",
+    "year": 2014,
+    "sourceUrl": "https://musicbrainz.org/release/07cfe731-58b2-4cac-8c2b-12bc5e5756fc",
+    "confidence": "high"
+  },
+  {
+    "id": "family-name",
+    "title": "Family Name",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "fascination",
+    "title": "Fascination",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "feel-good-feel-better-feel-wonderful",
+    "title": "Feel Good, Feel Better, Feel Wonderful",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "feel-u-up-short-stroke",
+    "title": "Feel U Up (Short Stroke)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "scandalous",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/1772aaec-4473-4367-a780-2f54cf6e0fa9",
+    "confidence": "high"
+  },
+  {
+    "id": "fixurlifeup",
+    "title": "Fixurlifeup",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "fixurlifeup",
+    "year": 2013,
+    "sourceUrl": "https://musicbrainz.org/release/d9f98af8-49c9-4a73-b204-565c577bf414",
+    "confidence": "high"
+  },
+  {
+    "id": "flashlight",
+    "title": "Flashlight",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "fly-away",
+    "title": "Fly Away",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "for-you",
+    "title": "For You",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "forever-in-my-life",
+    "title": "Forever in My Life",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "fr33-acoustic",
+    "title": "FR33 (acoustic)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "fr33-acoustic",
+    "year": 2025,
+    "sourceUrl": "https://musicbrainz.org/release/8bccdebc-8d17-43a8-9c8a-b32def2fa00c",
+    "confidence": "high"
+  },
+  {
+    "id": "free",
+    "title": "Free",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "free-urself",
+    "title": "Free Urself",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "free-urself",
+    "year": 2015,
+    "sourceUrl": "https://musicbrainz.org/release/60142862-bbc7-42aa-a9c6-c0d81dbb4005",
+    "confidence": "high"
+  },
+  {
+    "id": "friend-lover-sister-mother-wife",
+    "title": "Friend, Lover, Sister, Mother/Wife",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "from-the-lotus",
+    "title": "From the Lotus…",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "fury",
+    "title": "Fury",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "future-baby-mama",
+    "title": "Future Baby Mama",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/26f82ab4-d0e5-4a77-b75f-a46e7b47ee7a",
+    "confidence": "high"
+  },
+  {
+    "id": "future-soul-song",
+    "title": "Future Soul Song",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "games",
+    "title": "Games",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "gangster-glam",
+    "title": "Gangster Glam",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "get-blue",
+    "title": "Get Blue",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "get-blue",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/d719dc1a-e1ba-4603-a6db-039405c90765",
+    "confidence": "high"
+  },
+  {
+    "id": "get-loose",
+    "title": "Get Loose",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "get-off",
+    "title": "Get Off",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "new-power-generation",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/5663e55e-9e6f-4fa9-b575-c0c0aa53c6d1",
+    "confidence": "high"
+  },
+  {
+    "id": "get-on-the-boat",
+    "title": "Get on the Boat",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "get-some-solo",
+    "title": "Get Some Solo",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "get-yo-groove-on",
+    "title": "Get Yo Groove On",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "gett-off",
+    "title": "Gett Off",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "gett-off-damn-near-10-min",
+    "title": "Gett Off (Damn Near 10 Min.)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/9719af90-78d8-4db9-831b-088b96cfe3f4",
+    "confidence": "high"
+  },
+  {
+    "id": "gett-off-houstyle",
+    "title": "Gett Off (Houstyle)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "gett-off-thrust-dub",
+    "title": "Gett Off (Thrust Dub)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "thunder",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/1a2b1515-10a0-49f0-927b-b432efe97271",
+    "confidence": "high"
+  },
+  {
+    "id": "girl",
+    "title": "Girl",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "america",
+    "year": 1985,
+    "sourceUrl": "https://musicbrainz.org/release/b85d8fd1-2fb4-4dee-a7c7-c22420ce9fd2",
+    "confidence": "high"
+  },
+  {
+    "id": "girl-6",
+    "title": "Girl 6",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "girl-6",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "girls-and-boys",
+    "title": "Girls & Boys",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "glam-slam",
+    "title": "Glam Slam",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "god",
+    "title": "God",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "purple-rain-2",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/212b183d-b821-48c4-8759-4df1adddbb36",
+    "confidence": "high"
+  },
+  {
+    "id": "gold",
+    "title": "Gold",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "good-love",
+    "title": "Good Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "goodbye",
+    "title": "Goodbye",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "gotta-broken-heart-again",
+    "title": "Gotta Broken Heart Again",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dirty-mind",
+    "year": 1980,
+    "sourceUrl": "https://musicbrainz.org/release/281e42d6-389e-4224-9bc6-84220a62d50f",
+    "confidence": "high"
+  },
+  {
+    "id": "gotta-stop-messin-about",
+    "title": "Gotta Stop (Messin’ About)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gotta-stop-messin-about",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/09b9a7fa-28b5-40df-ab81-f7c88c84b318",
+    "confidence": "high"
+  },
+  {
+    "id": "graffiti-bridge",
+    "title": "Graffiti Bridge",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "groovy-potential",
+    "title": "Groovy Potential",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "guitar",
+    "title": "Guitar",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "had-u",
+    "title": "Had U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "hardrocklover",
+    "title": "Hardrocklover",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hardrocklover",
+    "year": 2015,
+    "sourceUrl": "https://musicbrainz.org/release/a4bd27cf-a2f2-4071-9704-21149069608c",
+    "confidence": "high"
+  },
+  {
+    "id": "have-a-heart",
+    "title": "Have a Heart",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "head",
+    "title": "Head",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dirty-mind",
+    "year": 1980,
+    "sourceUrl": "https://musicbrainz.org/release/281e42d6-389e-4224-9bc6-84220a62d50f",
+    "confidence": "high"
+  },
+  {
+    "id": "hello",
+    "title": "Hello",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "pop-life",
+    "year": 1985,
+    "sourceUrl": "https://musicbrainz.org/release/27aef009-74e0-46f7-9ac8-3ae54fad752d",
+    "confidence": "high"
+  },
+  {
+    "id": "here-on-earth",
+    "title": "Here on Earth",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "hide-the-bone",
+    "title": "Hide the Bone",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "holly-rock",
+    "title": "Holly Rock",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "holly-rock",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/84e6bf12-81c3-44f9-a3bc-386d1f0d6992",
+    "confidence": "high"
+  },
+  {
+    "id": "horny-pony",
+    "title": "Horny Pony",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "cream",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/8ec1c639-7b5d-4282-a991-adff287bf807",
+    "confidence": "high"
+  },
+  {
+    "id": "horny-toad",
+    "title": "Horny Toad",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "delirious",
+    "year": 1983,
+    "sourceUrl": "https://musicbrainz.org/release/61cef014-d98a-438d-9a36-fd20c799dab5",
+    "confidence": "high"
+  },
+  {
+    "id": "hot-thing",
+    "title": "Hot Thing",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "hot-wit-u",
+    "title": "Hot Wit U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "housebangers",
+    "title": "Housebangers",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "housequake",
+    "title": "Housequake",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "how-come-u-dont-call-me-anymore",
+    "title": "How Come U Don’t Call Me Anymore",
+    "aliases": [
+      "How Come You Don't Call Me Anymore",
+      "How Come U Don't Call Me Anymore?"
+    ],
+    "kind": "official",
+    "firstReleaseId": "girl-6",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "i-cant-make-u-love-me",
+    "title": "I Can’t Make U Love Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "i-could-never-take-the-place-of-your-man",
+    "title": "I Could Never Take the Place of Your Man",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "i-feel-for-you",
+    "title": "I Feel for You",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "i-hate-u",
+    "title": "I Hate U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "i-like-it-there",
+    "title": "I Like It There",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "i-love-u-in-me",
+    "title": "I Love U in Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-arms-of-orion",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/3473e4fe-c256-4be6-a4f8-2feb10a903db",
+    "confidence": "high"
+  },
+  {
+    "id": "i-love-u-but-i-dont-trust-u-anymore",
+    "title": "I Love U, but I Don't Trust U Anymore",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "i-rock-therefore-i-am",
+    "title": "I Rock, Therefore I Am",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "i-wanna-be-your-lover",
+    "title": "I Wanna Be Your Lover",
+    "aliases": [
+      "I Wanna Be Your Lover",
+      "I Want to Be Your Lover"
+    ],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "i-wanna-melt-with-u",
+    "title": "I Wanna Melt With U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "i-want-to-take-you-higher",
+    "title": "I Want to Take You Higher",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "i-will",
+    "title": "I Will",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "i-wish-u-heaven",
+    "title": "I Wish U Heaven",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "i-wish-u-heaven-part-1-2-and-3",
+    "title": "I Wish U Heaven (Part 1, 2 & 3)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "i-wish-u-heaven",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/1397a03a-7aec-4137-a278-ba669f05a36f",
+    "confidence": "high"
+  },
+  {
+    "id": "i-wonder-u",
+    "title": "I Wonder U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "i-would-die-4-u",
+    "title": "I Would Die 4 U",
+    "aliases": [
+      "I Would Die For You",
+      "I Would Die 4 You"
+    ],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "ill-always-love-you",
+    "title": "I’ll Always Love You",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "im-yours",
+    "title": "I’m Yours",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "if-eye-could-get-ur-attention",
+    "title": "If Eye Could Get Ur Attention",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "if-eye-could-get-ur-attention",
+    "year": 2015,
+    "sourceUrl": "https://musicbrainz.org/release/be2c584c-2c40-4ba6-af41-df3379a01de6",
+    "confidence": "high"
+  },
+  {
+    "id": "if-eye-was-the-man-in-ur-life",
+    "title": "If Eye Was the Man in Ur Life",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "if-i-was-your-girlfriend",
+    "title": "If I Was Your Girlfriend",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "if-we-dont",
+    "title": "If We Don’t",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "if-you-feel-like-dancin",
+    "title": "If You Feel Like Dancin’",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "if-you-see-me",
+    "title": "If You See Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "illusion-coma-pimp-and-circumstance",
+    "title": "Illusion, Coma, Pimp & Circumstance",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "in-a-large-room-with-no-light",
+    "title": "In a Large Room with No Light",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1986,
+    "sourceUrl": "https://princevault.com/index.php/In_A_Large_Room_With_No_Light",
+    "confidence": "high"
+  },
+  {
+    "id": "in-love",
+    "title": "In Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "in-this-bed-i-scream",
+    "title": "In This Bed I Scream",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "incense-and-candles",
+    "title": "Incense and Candles",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "insatiable",
+    "title": "Insatiable",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "interactive",
+    "title": "Interactive",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "international-lover",
+    "title": "International Lover",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "into-the-light",
+    "title": "Into the Light",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "irresistible-bitch",
+    "title": "Irresistible Bitch",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lets-pretend-were-married",
+    "year": 1983,
+    "sourceUrl": "https://musicbrainz.org/release/d4d9f69f-214a-46a2-8d15-5b0dcce35d99",
+    "confidence": "high"
+  },
+  {
+    "id": "it",
+    "title": "It",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "its-about-that-walk",
+    "title": "It’s About That Walk",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "its-alright",
+    "title": "It's Alright",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "its-gonna-be-a-beautiful-night",
+    "title": "It’s Gonna Be a Beautiful Night",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "its-gonna-be-lonely",
+    "title": "It’s Gonna Be Lonely",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "jack-u-off",
+    "title": "Jack U Off",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "controversy",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/171f2863-6be8-4828-bbd8-1cfbf7ab7911",
+    "confidence": "high"
+  },
+  {
+    "id": "jam-of-the-year",
+    "title": "Jam of the Year",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "joint-2-joint",
+    "title": "Joint 2 Joint",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "joy-in-repetition",
+    "title": "Joy in Repetition",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "jughead",
+    "title": "Jughead",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "jungle-love",
+    "title": "Jungle Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 1984,
+    "sourceUrl": "https://princevault.com/index.php/Jungle_Love",
+    "confidence": "high"
+  },
+  {
+    "id": "just-another-sucker",
+    "title": "Just Another Sucker",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "just-as-long-as-were-together",
+    "title": "Just as Long as We’re Together",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "kamasutra",
+    "title": "Kamasutra",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "kamasutra-eternal-embrace",
+    "title": "Kamasutra / Eternal Embrace",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "kamasutra-overture-8",
+    "title": "Kamasutra / Overture #8",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "kirk-js-b-sides-remix",
+    "title": "Kirk J's B Sides Remix",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "purple-medley",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/74326955-c062-4a61-8c29-6a365f57b4a8",
+    "confidence": "high"
+  },
+  {
+    "id": "kiss",
+    "title": "Kiss",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "la-la-la-means-i-love-u",
+    "title": "La, La, La Means I Love U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "la-la-la-he-he-hee",
+    "title": "La, La, La, He, He, Hee",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times-2",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2fe99d26-2727-42e8-8c8e-610f5e4da231",
+    "confidence": "high"
+  },
+  {
+    "id": "lady-cab-driver",
+    "title": "Lady Cab Driver",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "last-december",
+    "title": "Last December",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "last-december-reprise",
+    "title": "Last December (reprise)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "last-heart",
+    "title": "Last Heart",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "lavaux",
+    "title": "Lavaux",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "laydown",
+    "title": "Laydown",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "lemon-crush",
+    "title": "Lemon Crush",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "lets-go-crazy",
+    "title": "Let’s Go Crazy",
+    "aliases": [
+      "Lets Go Crazy"
+    ],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "lets-have-a-baby",
+    "title": "Let’s Have a Baby",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "lets-pretend-were-married",
+    "title": "Let’s Pretend We’re Married",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "lets-work",
+    "title": "Let’s Work",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "controversy",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/171f2863-6be8-4828-bbd8-1cfbf7ab7911",
+    "confidence": "high"
+  },
+  {
+    "id": "letitgo",
+    "title": "Letitgo",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "life-o-the-party",
+    "title": "Life ’o’ the Party",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "life-can-be-so-nice",
+    "title": "Life Can Be So Nice",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "lion-of-judah",
+    "title": "Lion of Judah",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/26f82ab4-d0e5-4a77-b75f-a46e7b47ee7a",
+    "confidence": "high"
+  },
+  {
+    "id": "little-red-corvette",
+    "title": "Little Red Corvette",
+    "aliases": [
+      "Little Red Corvet"
+    ],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "live-4-love",
+    "title": "Live 4 Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "lolita",
+    "title": "Lolita",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "look-at-me-look-at-u",
+    "title": "Look At Me, Look At U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "loose",
+    "title": "Loose!",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "love",
+    "title": "Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "love-2-the-9s",
+    "title": "Love 2 the 9’s",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "love-like-jazz",
+    "title": "Love Like Jazz",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "love-machine",
+    "title": "Love Machine",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "love-sign",
+    "title": "Love Sign",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "love-love-love",
+    "title": "Love, Love, Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "loveleft-loveright",
+    "title": "Loveleft, Loveright",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "new-power-generation",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/5663e55e-9e6f-4fa9-b575-c0c0aa53c6d1",
+    "confidence": "high"
+  },
+  {
+    "id": "lovesexy",
+    "title": "Lovesexy",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "lovin-cup",
+    "title": "Lovin’ Cup",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "magnificent",
+    "title": "Magnificent",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "magnificent",
+    "year": 2024,
+    "sourceUrl": "https://musicbrainz.org/release/ada81716-049b-4506-9c33-a778e8ef2e66",
+    "confidence": "high"
+  },
+  {
+    "id": "make-yo-mama-happy",
+    "title": "Make Yo Mama Happy",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "man-in-a-uniform",
+    "title": "Man in a Uniform",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "manowar",
+    "title": "Man'o'War",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "marvelous",
+    "title": "Marvelous",
+    "aliases": [
+      "Marvellous"
+    ],
+    "kind": "unreleased",
+    "year": 1986,
+    "sourceUrl": "https://princevault.com/index.php/Marvelous",
+    "confidence": "high"
+  },
+  {
+    "id": "mary-dont-you-weep",
+    "title": "Mary Don’t You Weep",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "mary-dont-you-weep",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/fd8be7d2-b79e-45e7-ba24-f7f04a8e62d7",
+    "confidence": "high"
+  },
+  {
+    "id": "medley",
+    "title": "Medley",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "mellow",
+    "title": "Mellow",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "melody-cool",
+    "title": "Melody Cool",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "money-dont-matter-2-night",
+    "title": "Money Don’t Matter 2 Night",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "money-dont-matter-2-nite",
+    "title": "Money Don’t Matter 2 Nite",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-very-best-of-prince",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/a793b658-bb7a-47e3-9959-0d1e38ab5a1b",
+    "confidence": "high"
+  },
+  {
+    "id": "moonbeam-levels",
+    "title": "Moonbeam Levels",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1982,
+    "sourceUrl": "https://princevault.com/index.php/Moonbeam_Levels",
+    "confidence": "high"
+  },
+  {
+    "id": "moral-majority",
+    "title": "Moral Majority",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1981,
+    "sourceUrl": "https://princevault.com/index.php/Moral_Majority",
+    "confidence": "high"
+  },
+  {
+    "id": "mountains",
+    "title": "Mountains",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "movie-star",
+    "title": "Movie Star",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "mr-goodnight",
+    "title": "Mr. Goodnight",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/26f82ab4-d0e5-4a77-b75f-a46e7b47ee7a",
+    "confidence": "high"
+  },
+  {
+    "id": "mr-happy",
+    "title": "Mr. Happy",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "muse-2-the-pharaoh",
+    "title": "Muse 2 the Pharaoh",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "musicology",
+    "title": "Musicology",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "my-computer",
+    "title": "My Computer",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "my-little-pill",
+    "title": "My Little Pill",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "my-love-is-forever",
+    "title": "My Love Is Forever",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "my-name-is-prince",
+    "title": "My Name Is Prince",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "my-tender-heart",
+    "title": "My Tender Heart",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1986,
+    "sourceUrl": "https://princevault.com/index.php/My_Tender_Heart",
+    "confidence": "high"
+  },
+  {
+    "id": "n-p-g",
+    "title": "N.P.G.",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "new-power-generation",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/5663e55e-9e6f-4fa9-b575-c0c0aa53c6d1",
+    "confidence": "high"
+  },
+  {
+    "id": "nasty-girl",
+    "title": "Nasty Girl",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "girl-6",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "new-position",
+    "title": "New Position",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "new-power-generation",
+    "title": "New Power Generation",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "new-power-generation-part-ii",
+    "title": "New Power Generation, Part II",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "new-world",
+    "title": "New World",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "north",
+    "title": "North",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "n-e-w-s",
+    "year": 2003,
+    "sourceUrl": "https://musicbrainz.org/release/b1508f58-4791-459b-844f-7baee7e8aef8",
+    "confidence": "high"
+  },
+  {
+    "id": "northside",
+    "title": "Northside",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "anthology-1995-2010",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "nothin-but-love",
+    "title": "Nothin' but Love",
+    "aliases": [
+      "Nothing But Love"
+    ],
+    "kind": "unreleased",
+    "year": 1988,
+    "sourceUrl": "https://princevault.com/index.php/Nothin%27_But_Love",
+    "confidence": "high"
+  },
+  {
+    "id": "nothing-compares-2-u",
+    "title": "Nothing Compares 2 U",
+    "aliases": [
+      "Nothing Compares to You",
+      "Nothing Compares 2 You"
+    ],
+    "kind": "official",
+    "firstReleaseId": "peach",
+    "year": 1993,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "nothing-compares-2-u-feat-rosie-gaines-live",
+    "title": "Nothing Compares 2 U (feat. Rosie Gaines) – Live",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-hits-1",
+    "year": 1993,
+    "sourceUrl": "https://musicbrainz.org/release/1f467d4c-ad50-41f6-8690-baedd2474c76",
+    "confidence": "high"
+  },
+  {
+    "id": "now",
+    "title": "Now",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "npg-operator",
+    "title": "NPG Operator",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "objects-in-the-mirror",
+    "title": "Objects in the Mirror",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "ol-skool-company",
+    "title": "Ol' Skool Company",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "anthology-1995-2010",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "old-friends-4-sale",
+    "title": "Old Friends 4 Sale",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "on-the-couch",
+    "title": "On the Couch",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "one-kiss-at-a-time",
+    "title": "One Kiss at a Time",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "one-man-jam",
+    "title": "One Man Jam",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "one-nite-alone",
+    "title": "One Nite Alone…",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "one-of-us",
+    "title": "One of Us",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "one-of-your-tears",
+    "title": "One of Your Tears",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "orgasm",
+    "title": "Orgasm",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "our-destiny-roadhouse-garden",
+    "title": "Our Destiny / Roadhouse Garden",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "our-destiny-roadhouse-garden",
+    "year": 2017,
+    "sourceUrl": "https://musicbrainz.org/release/0bd66173-8780-4e0b-98c0-3be632d4e993",
+    "confidence": "high"
+  },
+  {
+    "id": "p-control",
+    "title": "P Control",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "paisley-park",
+    "title": "Paisley Park",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "papa",
+    "title": "Papa",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "partyman",
+    "title": "Partyman",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "partyup",
+    "title": "Partyup",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dirty-mind",
+    "year": 1980,
+    "sourceUrl": "https://musicbrainz.org/release/281e42d6-389e-4224-9bc6-84220a62d50f",
+    "confidence": "high"
+  },
+  {
+    "id": "peach",
+    "title": "Peach",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "peach",
+    "year": 1993,
+    "sourceUrl": "https://musicbrainz.org/release/6efb7b6c-8f84-4ab0-9cb5-d0bcb5f34f81",
+    "confidence": "high"
+  },
+  {
+    "id": "pearls-b4-the-swine",
+    "title": "Pearls B4 the Swine",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "pheromone",
+    "title": "Pheromone",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "pink-cashmere",
+    "title": "Pink Cashmere",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "girl-6",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "planet-earth",
+    "title": "Planet Earth",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/26f82ab4-d0e5-4a77-b75f-a46e7b47ee7a",
+    "confidence": "high"
+  },
+  {
+    "id": "play-in-the-sunshine",
+    "title": "Play in the Sunshine",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "poom-poom",
+    "title": "Poom Poom",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "pop-life",
+    "title": "Pop Life",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "positivity",
+    "title": "Positivity",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "possessed",
+    "title": "Possessed",
+    "aliases": [],
+    "kind": "laterReleased",
+    "year": 1983,
+    "sourceUrl": "https://princevault.com/index.php/Possessed",
+    "confidence": "high"
+  },
+  {
+    "id": "prettyman",
+    "title": "Prettyman",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "pretzelbodylogic",
+    "title": "Pretzelbodylogic",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "pretzelbodylogic",
+    "year": 2014,
+    "sourceUrl": "https://musicbrainz.org/release/b3250a9a-4c56-4fc3-893f-1a0f065b0c96",
+    "confidence": "high"
+  },
+  {
+    "id": "private-joy",
+    "title": "Private Joy",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "controversy",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/171f2863-6be8-4828-bbd8-1cfbf7ab7911",
+    "confidence": "high"
+  },
+  {
+    "id": "promise-broken",
+    "title": "Promise/Broken",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "proud-mary",
+    "title": "Proud Mary",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2007,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show",
+    "confidence": "high"
+  },
+  {
+    "id": "purple-medley",
+    "title": "Purple Medley",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "purple-medley",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/74326955-c062-4a61-8c29-6a365f57b4a8",
+    "confidence": "high"
+  },
+  {
+    "id": "purple-rain",
+    "title": "Purple Rain",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "push",
+    "title": "Push",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "q-in-doubt",
+    "title": "Q in Doubt",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "race",
+    "title": "Race",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "rainbow-children",
+    "title": "Rainbow Children",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "raspberry-beret",
+    "title": "Raspberry Beret",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "rave-in2-the-joy-fantastic",
+    "title": "Rave In2 the Joy Fantastic",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "rave-un2-the-joy-fantastic",
+    "title": "Rave Un2 the Joy Fantastic",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "reflection",
+    "title": "Reflection",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "release-it",
+    "title": "Release It",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "release-urself",
+    "title": "Release Urself",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "resolution",
+    "title": "Resolution",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/26f82ab4-d0e5-4a77-b75f-a46e7b47ee7a",
+    "confidence": "high"
+  },
+  {
+    "id": "revelation",
+    "title": "Revelation",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "right-back-here-in-my-arms",
+    "title": "Right Back Here in My Arms",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "right-the-wrong",
+    "title": "Right the Wrong",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "ripopgodazippa",
+    "title": "Ripopgodazippa",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "rock-n-roll-is-alive-and-it-lives-in-minneapolis",
+    "title": "Rock 'n' Roll Is Alive (And It Lives in Minneapolis)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gold",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/b1ef77a7-83b2-4a3a-94ff-230dd705a627",
+    "confidence": "high"
+  },
+  {
+    "id": "rock-and-roll-love-affair",
+    "title": "Rock and Roll Love Affair",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rock-and-roll-love-affair",
+    "year": 2012,
+    "sourceUrl": "https://musicbrainz.org/release/4e89eba1-a81a-48d7-8827-2087348a8d2e",
+    "confidence": "high"
+  },
+  {
+    "id": "rock-lobster",
+    "title": "Rock Lobster",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2008,
+    "sourceUrl": "https://princevault.com/index.php/26_April_2008",
+    "confidence": "high"
+  },
+  {
+    "id": "rocknroll-loveaffair",
+    "title": "Rocknroll Loveaffair",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "ronnie-talk-to-russia",
+    "title": "Ronnie, Talk to Russia",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "controversy",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/171f2863-6be8-4828-bbd8-1cfbf7ab7911",
+    "confidence": "high"
+  },
+  {
+    "id": "round-and-round",
+    "title": "Round and Round",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "s-s-t",
+    "title": "S.S.T.",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "s-s-t",
+    "year": 2005,
+    "sourceUrl": "https://musicbrainz.org/release/f6e4197f-75ea-4b7f-b3da-e882e971b66b",
+    "confidence": "high"
+  },
+  {
+    "id": "sarah",
+    "title": "Sarah",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "satisfied",
+    "title": "Satisfied",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "saviour",
+    "title": "Saviour",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "scandalous",
+    "title": "Scandalous",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "scandalous-the-crime",
+    "title": "Scandalous (The Crime)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "scandalous",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/6e3dba85-1f3b-4bd8-bc3d-c75c26e838fe",
+    "confidence": "high"
+  },
+  {
+    "id": "scandalous-the-passion",
+    "title": "Scandalous (The Passion)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "scandalous",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/6e3dba85-1f3b-4bd8-bc3d-c75c26e838fe",
+    "confidence": "high"
+  },
+  {
+    "id": "scandalous-the-rapture",
+    "title": "Scandalous (The Rapture)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "scandalous",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/6e3dba85-1f3b-4bd8-bc3d-c75c26e838fe",
+    "confidence": "high"
+  },
+  {
+    "id": "scarlet-pussy",
+    "title": "Scarlet Pussy",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "i-wish-u-heaven",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/1397a03a-7aec-4137-a278-ba669f05a36f",
+    "confidence": "high"
+  },
+  {
+    "id": "screwdriver",
+    "title": "Screwdriver",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "sea-of-everything",
+    "title": "Sea of Everything",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "segue",
+    "title": "Segue",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "segue-i",
+    "title": "Segue I",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "segue-ii",
+    "title": "Segue II",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "segue-instrumental",
+    "title": "Segue Instrumental",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "serotonin",
+    "title": "Serotonin",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "sex",
+    "title": "Sex",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "scandalous",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/6e3dba85-1f3b-4bd8-bc3d-c75c26e838fe",
+    "confidence": "high"
+  },
+  {
+    "id": "sex-in-the-summer",
+    "title": "Sex in the Summer",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "sexual-suicide",
+    "title": "Sexual Suicide",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "sexuality",
+    "title": "Sexuality",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "controversy",
+    "year": 1981,
+    "sourceUrl": "https://musicbrainz.org/release/171f2863-6be8-4828-bbd8-1cfbf7ab7911",
+    "confidence": "high"
+  },
+  {
+    "id": "sexy-dancer",
+    "title": "Sexy Dancer",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "sexy-m-f",
+    "title": "Sexy M.F.",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "shake",
+    "title": "Shake!",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "she-gave-her-angels",
+    "title": "She Gave Her Angels",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "she-loves-me-4-me",
+    "title": "She Loves Me 4 Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "she-spoke-2-me",
+    "title": "She Spoke 2 Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "shes-always-in-my-hair",
+    "title": "She’s Always in My Hair",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "paisley-park",
+    "year": 1985,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "shhh",
+    "title": "Shhh",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "shhh-x-cerpt",
+    "title": "Shhh (x‐cerpt)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "my-computer-shhh",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/5936c34d-5dcd-41af-8f02-63f0355ef58b",
+    "confidence": "high"
+  },
+  {
+    "id": "shockadelica",
+    "title": "Shockadelica",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "if-i-was-your-girlfriend",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/471d23fb-fb2e-42fc-956c-976654410b2c",
+    "confidence": "high"
+  },
+  {
+    "id": "shy",
+    "title": "Shy",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "sign-o-the-times",
+    "title": "Sign “O” the Times",
+    "aliases": [
+      "Sign of the Times",
+      "Sign O the Times",
+      "Sign \"O\" the Times",
+      "Sign of the times"
+    ],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "silly-game",
+    "title": "Silly Game",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "silver-tongue",
+    "title": "Silver Tongue",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "silver-tongue",
+    "year": 2024,
+    "sourceUrl": "https://musicbrainz.org/release/17caefdd-9c20-487f-b26b-698b1ad1697a",
+    "confidence": "high"
+  },
+  {
+    "id": "sister",
+    "title": "Sister",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dirty-mind",
+    "year": 1980,
+    "sourceUrl": "https://musicbrainz.org/release/281e42d6-389e-4224-9bc6-84220a62d50f",
+    "confidence": "high"
+  },
+  {
+    "id": "slave",
+    "title": "Slave",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "sleep-around",
+    "title": "Sleep Around",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "slow-love",
+    "title": "Slow Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "so-blue",
+    "title": "So Blue",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "so-dark",
+    "title": "So Dark",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "so-far-so-pleased",
+    "title": "So Far, So Pleased",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "soft-and-wet",
+    "title": "Soft and Wet",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "for-you",
+    "year": 1978,
+    "sourceUrl": "https://musicbrainz.org/release/4860f60c-17bf-49f2-a327-8568a889dc69",
+    "confidence": "high"
+  },
+  {
+    "id": "solo",
+    "title": "Solo",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "somebodys-somebody",
+    "title": "Somebody’s Somebody",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "something-in-the-water-does-not-compute",
+    "title": "Something in the Water (Does Not Compute)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "1999",
+    "year": 1982,
+    "sourceUrl": "https://musicbrainz.org/release/ab9aa125-6f26-4145-879c-f0c05ff6ac60",
+    "confidence": "high"
+  },
+  {
+    "id": "sometimes-it-snows-in-april",
+    "title": "Sometimes It Snows in April",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "somewhere-here-on-earth",
+    "title": "Somewhere Here on Earth",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "soul-sanctuary",
+    "title": "Soul Sanctuary",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "south",
+    "title": "South",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "n-e-w-s",
+    "year": 2003,
+    "sourceUrl": "https://musicbrainz.org/release/b1508f58-4791-459b-844f-7baee7e8aef8",
+    "confidence": "high"
+  },
+  {
+    "id": "space",
+    "title": "Space",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "come",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/b18dabe4-fed0-4c62-ab27-b30bdb1655ce",
+    "confidence": "high"
+  },
+  {
+    "id": "splash",
+    "title": "Splash",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1985,
+    "sourceUrl": "https://princevault.com/index.php/Splash",
+    "confidence": "high"
+  },
+  {
+    "id": "stare",
+    "title": "Stare",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "starfish-and-coffee",
+    "title": "Starfish and Coffee",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "sticky-like-glue",
+    "title": "Sticky Like Glue",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "still-waiting",
+    "title": "Still Waiting",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "still-would-stand-all-time",
+    "title": "Still Would Stand All Time",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "strange-but-true",
+    "title": "Strange but True",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "strange-relationship",
+    "title": "Strange Relationship",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "strays-of-the-world",
+    "title": "Strays of the World",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "strollin",
+    "title": "Strollin’",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "style",
+    "title": "Style",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "supercute",
+    "title": "Supercute",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "supercute",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/fb4c7034-6933-481d-b0d3-af82d4534645",
+    "confidence": "high"
+  },
+  {
+    "id": "sweet-baby",
+    "title": "Sweet Baby",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "t-c-s-rap",
+    "title": "T.C.’s Rap",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "new-power-generation",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/5663e55e-9e6f-4fa9-b575-c0c0aa53c6d1",
+    "confidence": "high"
+  },
+  {
+    "id": "take-me-with-u",
+    "title": "Take Me With U",
+    "aliases": [
+      "Take Me With You",
+      "Take Me With U"
+    ],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "take-me-with-u-raspberry-beret",
+    "title": "Take Me With U / Raspberry Beret",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "tamborine",
+    "title": "Tamborine",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "tangerine",
+    "title": "Tangerine",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "te-amo-corazon",
+    "title": "Te Amo Corazón",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "te-amo-corazon-fury-brit-awards-2006",
+    "title": "Te amo corazón / Fury (Brit Awards 2006)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "fury",
+    "year": 2006,
+    "sourceUrl": "https://musicbrainz.org/release/c6887847-4007-4047-87a7-44446f0f908b",
+    "confidence": "high"
+  },
+  {
+    "id": "tell-me-how-u-wanna-b-done",
+    "title": "Tell Me How U Wanna B Done",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "temple-house-dub",
+    "title": "Temple House Dub",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "thieves-in-the-temple",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/a99b8a1e-0523-4188-9810-494cb864c524",
+    "confidence": "high"
+  },
+  {
+    "id": "temptation",
+    "title": "Temptation",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "the-arms-of-orion",
+    "title": "The Arms of Orion",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "the-ballad-of-dorothy-parker",
+    "title": "The Ballad of Dorothy Parker",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "the-beautiful-ones",
+    "title": "The Beautiful Ones",
+    "aliases": [
+      "Beautiful Ones"
+    ],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "the-bird",
+    "title": "The Bird",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 1984,
+    "sourceUrl": "https://princevault.com/index.php/The_Bird",
+    "confidence": "high"
+  },
+  {
+    "id": "the-breakdown",
+    "title": "The Breakdown",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-breakdown",
+    "year": 2014,
+    "sourceUrl": "https://musicbrainz.org/release/c8e73c9e-7351-49e8-8275-0b5205c26528",
+    "confidence": "high"
+  },
+  {
+    "id": "the-christ",
+    "title": "The Christ",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "the-continental",
+    "title": "The Continental",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "the-cross",
+    "title": "The Cross",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "the-dance",
+    "title": "The Dance",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "the-ever-changing-light",
+    "title": "The Ever Changing Light",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "the-everlasting-now",
+    "title": "The Everlasting Now",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "the-flow",
+    "title": "The Flow",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "the-future",
+    "title": "The Future",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "the-glamorous-life",
+    "title": "The Glamorous Life",
+    "aliases": [
+      "Glamorous Life"
+    ],
+    "kind": "official",
+    "year": 1984,
+    "sourceUrl": "https://princevault.com/index.php/The_Glamorous_Life",
+    "confidence": "high"
+  },
+  {
+    "id": "the-greatest-romance-ever-sold",
+    "title": "The Greatest Romance Ever Sold",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "the-holy-river",
+    "title": "The Holy River",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "the-human-body",
+    "title": "The Human Body",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "the-ladder",
+    "title": "The Ladder",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "around-the-world-in-a-day",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/028d4ab6-9b3d-4185-8a39-accca9fbac85",
+    "confidence": "high"
+  },
+  {
+    "id": "the-latest-fashion",
+    "title": "The Latest Fashion",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "the-love-we-make",
+    "title": "The Love We Make",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "the-lubricated-lady",
+    "title": "The Lubricated Lady",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "new-power-generation",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/5663e55e-9e6f-4fa9-b575-c0c0aa53c6d1",
+    "confidence": "high"
+  },
+  {
+    "id": "the-marrying-kind",
+    "title": "The Marrying Kind",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "the-max",
+    "title": "The Max",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "the-morning-after",
+    "title": "The Morning After",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "the-morning-papers",
+    "title": "The Morning Papers",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "the-most-beautiful-girl-in-the-world",
+    "title": "The Most Beautiful Girl in the World",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "the-one-u-wanna-c",
+    "title": "The One U Wanna C",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "planet-earth",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/26f82ab4-d0e5-4a77-b75f-a46e7b47ee7a",
+    "confidence": "high"
+  },
+  {
+    "id": "the-other-side-of-the-pillow",
+    "title": "The Other Side of the Pillow",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "the-plan",
+    "title": "The Plan",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "the-question-of-u",
+    "title": "The Question of U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "the-rest-of-my-life",
+    "title": "The Rest of My Life",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "the-ride",
+    "title": "The Ride",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "the-sacrifice-of-victor",
+    "title": "The Sacrifice of Victor",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "love-symbol",
+    "year": 1992,
+    "sourceUrl": "https://musicbrainz.org/release/76a378e6-f85b-48d4-98b6-457cd726c51b",
+    "confidence": "high"
+  },
+  {
+    "id": "the-same-december",
+    "title": "The Same December",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  },
+  {
+    "id": "the-screams-of-passion",
+    "title": "The Screams of Passion",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "girl-6",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/2a56077f-c25c-4c3f-905b-29be115f7ec8",
+    "confidence": "high"
+  },
+  {
+    "id": "the-second-coming",
+    "title": "The Second Coming",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1982,
+    "sourceUrl": "https://princevault.com/index.php/The_Second_Coming",
+    "confidence": "high"
+  },
+  {
+    "id": "the-sensual-everafter",
+    "title": "The Sensual Everafter",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "the-sun-the-moon-and-stars",
+    "title": "The Sun, the Moon and Stars",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "the-truth",
+    "title": "The Truth",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "the-undertaker-harmonica-solo",
+    "title": "The Undertaker (harmonica solo)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "the-undertaker-sax-solo",
+    "title": "The Undertaker (sax solo)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate-rave",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/c9260a27-002a-4ccc-9919-e5e35ce6e330",
+    "confidence": "high"
+  },
+  {
+    "id": "the-word",
+    "title": "The Word",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "3121",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/7b8e684a-bea1-4491-a21e-bc7ce8ad6096",
+    "confidence": "high"
+  },
+  {
+    "id": "the-work-pt-1",
+    "title": "The Work Pt. 1",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "there-is-lonely",
+    "title": "There Is Lonely",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "thieves-in-the-house-mix",
+    "title": "Thieves in the House Mix",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "thieves-in-the-temple",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/a99b8a1e-0523-4188-9810-494cb864c524",
+    "confidence": "high"
+  },
+  {
+    "id": "thieves-in-the-temple",
+    "title": "Thieves in the Temple",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "things-have-gotta-change-tony-m-rap",
+    "title": "Things Have Gotta Change (Tony M Rap)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/f86179cb-04e3-423d-b4df-9a6cc52ed4fa",
+    "confidence": "high"
+  },
+  {
+    "id": "this-could-b-us",
+    "title": "This Could B Us",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "this-could-b-us",
+    "year": 2015,
+    "sourceUrl": "https://musicbrainz.org/release/bf421343-6047-4c9b-85d2-46b9856332f9",
+    "confidence": "high"
+  },
+  {
+    "id": "thunder",
+    "title": "Thunder",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "tick-tick-bang",
+    "title": "Tick, Tick, Bang",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "trust",
+    "title": "Trust",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "u-got-the-look",
+    "title": "U Got the Look",
+    "aliases": [
+      "You Got the Look"
+    ],
+    "kind": "official",
+    "firstReleaseId": "sign-o-the-times",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/3e0c67c5-5fbe-45cf-be8f-774bbe4139c0",
+    "confidence": "high"
+  },
+  {
+    "id": "u-got-the-look-long-look",
+    "title": "U Got the Look (Long Look)",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "ultimate",
+    "year": 2008,
+    "sourceUrl": "https://musicbrainz.org/release/0d25df9f-048d-4ecc-af78-7c80d52e31b9",
+    "confidence": "high"
+  },
+  {
+    "id": "u-make-my-sun-shine",
+    "title": "U Make My Sun Shine",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "u-make-my-sun-shine",
+    "year": 2000,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "ure-gonna-c-me",
+    "title": "U're Gonna C Me",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "under-the-cherry-moon",
+    "title": "Under the Cherry Moon",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "underneath-the-cream",
+    "title": "Underneath the Cream",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "supercute",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/fb4c7034-6933-481d-b0d3-af82d4534645",
+    "confidence": "high"
+  },
+  {
+    "id": "undisputed",
+    "title": "Undisputed",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "united-states-of-division",
+    "title": "United States of Division",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "united-states-of-division",
+    "year": 2024,
+    "sourceUrl": "https://musicbrainz.org/release/97357fa5-9837-43fa-a7b8-e8a36f281550",
+    "confidence": "high"
+  },
+  {
+    "id": "uptown",
+    "title": "Uptown",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dirty-mind",
+    "year": 1980,
+    "sourceUrl": "https://musicbrainz.org/release/281e42d6-389e-4224-9bc6-84220a62d50f",
+    "confidence": "high"
+  },
+  {
+    "id": "velvet-kitty-cat",
+    "title": "Velvet Kitty Cat",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1983,
+    "sourceUrl": "https://princevault.com/index.php/Velvet_Kitty_Cat",
+    "confidence": "high"
+  },
+  {
+    "id": "venus-de-milo",
+    "title": "Venus de Milo",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "parade",
+    "year": 1987,
+    "sourceUrl": "https://musicbrainz.org/release/2b8dacc9-0404-4c40-a21d-9c7ad49657d9",
+    "confidence": "high"
+  },
+  {
+    "id": "vicki-waiting",
+    "title": "Vicki Waiting",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "batman",
+    "year": 1989,
+    "sourceUrl": "https://musicbrainz.org/release/62f651a7-f99f-470b-b005-b88966cff2ea",
+    "confidence": "high"
+  },
+  {
+    "id": "violet-the-organ-grinder",
+    "title": "Violet The Organ Grinder",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "gett-off-remix-ep",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/1a2b1515-10a0-49f0-927b-b432efe97271",
+    "confidence": "high"
+  },
+  {
+    "id": "walk-dont-walk",
+    "title": "Walk Don’t Walk",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "walk-in-sand",
+    "title": "Walk in Sand",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "20ten",
+    "year": 2010,
+    "sourceUrl": "https://musicbrainz.org/release/af937421-7417-43a5-9737-613a971bd7b0",
+    "confidence": "high"
+  },
+  {
+    "id": "wall-of-berlin",
+    "title": "Wall of Berlin",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lotusflow3r",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/30227c12-c95a-4ca8-8a7f-f2e0fbfb595f",
+    "confidence": "high"
+  },
+  {
+    "id": "wally",
+    "title": "Wally",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1986,
+    "sourceUrl": "https://princevault.com/index.php/Wally",
+    "confidence": "high"
+  },
+  {
+    "id": "we-can-funk",
+    "title": "We Can Funk",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "graffiti-bridge",
+    "year": 1990,
+    "sourceUrl": "https://musicbrainz.org/release/7632a372-24fb-41ac-8af1-c8c9e3850f5b",
+    "confidence": "high"
+  },
+  {
+    "id": "we-gets-up",
+    "title": "We Gets Up",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "we-march",
+    "title": "We March",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-gold-experience",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/1a79dbb9-727b-45c1-8c3a-24dcea0eb23b",
+    "confidence": "high"
+  },
+  {
+    "id": "we-will-rock-you",
+    "title": "We Will Rock You",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2007,
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show",
+    "confidence": "high"
+  },
+  {
+    "id": "wedding-feast",
+    "title": "Wedding Feast",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-rainbow-children",
+    "year": 2001,
+    "sourceUrl": "https://musicbrainz.org/release/2a65c056-8e62-4d76-8703-4a8dffe18e40",
+    "confidence": "high"
+  },
+  {
+    "id": "welcome-2-america",
+    "title": "Welcome 2 America",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "welcome-2-america",
+    "year": 2021,
+    "sourceUrl": "https://musicbrainz.org/release/db32c70c-0fcf-43a2-85ef-4011f242c777",
+    "confidence": "high"
+  },
+  {
+    "id": "welcome-2-the-dawn",
+    "title": "Welcome 2 the Dawn",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "west",
+    "title": "West",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "n-e-w-s",
+    "year": 2003,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "what-do-u-want-me-2-do",
+    "title": "What Do U Want Me 2 Do?",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "musicology",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/a52c7352-2ed3-4d9c-864e-ae82a144b8a3",
+    "confidence": "high"
+  },
+  {
+    "id": "whats-my-name",
+    "title": "What’s My Name?",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "crystal-ball",
+    "year": 1998,
+    "sourceUrl": "https://musicbrainz.org/release/2b5ff740-1c41-4836-8bdc-47b6491a8f9d",
+    "confidence": "high"
+  },
+  {
+    "id": "when-2-r-in-love",
+    "title": "When 2 R in Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "lovesexy",
+    "year": 1988,
+    "sourceUrl": "https://musicbrainz.org/release/78464603-11bf-41f6-8335-694121582aac",
+    "confidence": "high"
+  },
+  {
+    "id": "when-doves-cry",
+    "title": "When Doves Cry",
+    "aliases": [
+      "When Dove Cry"
+    ],
+    "kind": "official",
+    "firstReleaseId": "purple-rain",
+    "year": 1984,
+    "sourceUrl": "https://musicbrainz.org/release/3b55bf62-83b6-41bc-90d9-6421cdd0c67e",
+    "confidence": "high"
+  },
+  {
+    "id": "when-eye-lay-my-hands-on-u",
+    "title": "When Eye Lay My Hands on U",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "anthology-1995-2010",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "when-she-comes",
+    "title": "When She Comes",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "when-the-lights-go-down",
+    "title": "When the Lights Go Down",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "the-vault-old-friends-4-sale",
+    "year": 1999,
+    "sourceUrl": "https://musicbrainz.org/release/a1132459-bae6-49a1-b0fd-75692a5c59bd",
+    "confidence": "high"
+  },
+  {
+    "id": "when-were-dancing-close-and-slow",
+    "title": "When We’re Dancing Close and Slow",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "when-will-we-b-paid",
+    "title": "When Will We B Paid?",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "u-make-my-sun-shine",
+    "year": 2000,
+    "sourceUrl": "https://musicbrainz.org/release/fa283e4f-d3b4-47c2-8c75-6e78a6cdfb4c",
+    "confidence": "high"
+  },
+  {
+    "id": "when-you-were-mine",
+    "title": "When You Were Mine",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "dirty-mind",
+    "year": 1980,
+    "sourceUrl": "https://musicbrainz.org/release/281e42d6-389e-4224-9bc6-84220a62d50f",
+    "confidence": "high"
+  },
+  {
+    "id": "wherever-u-go-whatever-u-do",
+    "title": "Wherever U Go, Whatever U Do",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "rave-un2-the-joy-fantastic",
+    "year": 2019,
+    "sourceUrl": "https://musicbrainz.org/release/66443df4-9781-4a06-8f9f-085d9da5c1e9",
+    "confidence": "high"
+  },
+  {
+    "id": "while-my-guitar-gently-weeps",
+    "title": "While My Guitar Gently Weeps",
+    "aliases": [],
+    "kind": "cover",
+    "year": 2004,
+    "sourceUrl": "https://princevault.com/index.php/While_My_Guitar_Gently_Weeps",
+    "confidence": "high"
+  },
+  {
+    "id": "white-mansion",
+    "title": "White Mansion",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "emancipation",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/517a1c5b-e3ba-4e4b-991a-fe107702e6c9",
+    "confidence": "high"
+  },
+  {
+    "id": "why-you-wanna-treat-me-so-bad",
+    "title": "Why You Wanna Treat Me So Bad?",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "willing-and-able",
+    "title": "Willing and Able",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls",
+    "year": 2009,
+    "sourceUrl": "https://musicbrainz.org/release/1d318c3b-01e4-46ae-9aac-840c6970b38b",
+    "confidence": "high"
+  },
+  {
+    "id": "with-this-tear",
+    "title": "With This Tear",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "with-this-tear",
+    "year": 2026,
+    "sourceUrl": "https://musicbrainz.org/release/96394580-99d6-482d-af4e-b24a64a65dc0",
+    "confidence": "high"
+  },
+  {
+    "id": "with-you",
+    "title": "With You",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "prince",
+    "year": 1979,
+    "sourceUrl": "https://musicbrainz.org/release/2a3315ce-1c7a-409a-90f6-21524beac74b",
+    "confidence": "high"
+  },
+  {
+    "id": "witness-4-the-prosecution",
+    "title": "Witness 4 the Prosecution",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "witness-4-the-prosecution",
+    "year": 2020,
+    "sourceUrl": "https://musicbrainz.org/release/ff8d5776-60ad-4d82-8b97-de22bbdb6e97",
+    "confidence": "high"
+  },
+  {
+    "id": "wonderful-ass",
+    "title": "Wonderful Ass",
+    "aliases": [],
+    "kind": "unreleased",
+    "year": 1983,
+    "sourceUrl": "https://princevault.com/index.php/Wonderful_Ass",
+    "confidence": "high"
+  },
+  {
+    "id": "x-cerpts-from-the-songs-thunder-daddy-pop-strollin-jughead-money-dont-matter-2-night-push-live-4-love",
+    "title": "X‐Cerpts From the Songs: Thunder, Daddy Pop, Strollin’, Jughead, Money Don’t Matter 2 Night, Push, Live 4 Love",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "diamonds-and-pearls-2",
+    "year": 1991,
+    "sourceUrl": "https://musicbrainz.org/release/62494ef1-85e8-4e50-a88f-6e7a0b17ab51",
+    "confidence": "high"
+  },
+  {
+    "id": "xpedition",
+    "title": "Xpedition",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "anthology-1995-2010",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/0b159090-400b-49fe-8388-ba87dfa54e2e",
+    "confidence": "high"
+  },
+  {
+    "id": "xtralovable",
+    "title": "Xtralovable",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "hitnrun-phase-two",
+    "year": 2018,
+    "sourceUrl": "https://musicbrainz.org/release/44163017-6159-4868-af4d-d7c19cb94347",
+    "confidence": "high"
+  },
+  {
+    "id": "you-can-be-my-teacher",
+    "title": "You Can Be My Teacher",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "symbolic-beginning",
+    "year": 1995,
+    "sourceUrl": "https://musicbrainz.org/release/273be592-25bb-436d-a092-7a4af51590bc",
+    "confidence": "high"
+  },
+  {
+    "id": "young-and-beautiful",
+    "title": "Young and Beautiful",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "one-nite-alone",
+    "year": 2023,
+    "sourceUrl": "https://musicbrainz.org/release/479e9604-a141-4cf2-b097-518e9e778ce4",
+    "confidence": "high"
+  },
+  {
+    "id": "zannalee",
+    "title": "Zannalee",
+    "aliases": [],
+    "kind": "official",
+    "firstReleaseId": "chaos-and-disorder",
+    "year": 1996,
+    "sourceUrl": "https://musicbrainz.org/release/89252a07-6b72-4d54-b7b6-ae5dfb603279",
+    "confidence": "high"
+  }
+]

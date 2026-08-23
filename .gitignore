@@ -3,3 +3,6 @@ dist
 .env.local
 .DS_Store
 *.log
+scripts/.cache
+.wrangler
+.dev.vars*

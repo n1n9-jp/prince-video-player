@@ -1,0 +1,125 @@
+[
+  {
+    "id": "syracuse-1985-03-30",
+    "date": "1985-03-30",
+    "venue": "Carrier Dome",
+    "city": "Syracuse, New York, USA",
+    "tour": "Purple Rain Tour",
+    "aliases": [
+      "Syracuse 1985",
+      "Live in Syracuse 1985",
+      "Live in Syracuse",
+      "Carrier Dome 1985",
+      "Prince and the Revolution Live"
+    ],
+    "songs": [
+      "Let's Go Crazy",
+      "Delirious",
+      "1999",
+      "Little Red Corvette",
+      "Take Me With U",
+      "Do Me, Baby",
+      "Irresistible Bitch",
+      "Possessed",
+      "How Come U Don't Call Me Anymore?",
+      "Let's Pretend We're Married",
+      "International Lover",
+      "God",
+      "Computer Blue",
+      "Darling Nikki",
+      "The Beautiful Ones",
+      "When Doves Cry",
+      "I Would Die 4 U",
+      "Baby I'm a Star",
+      "Purple Rain"
+    ],
+    "confidence": "confirmed",
+    "sourceUrl": "https://princevault.com/index.php/30_March_1985"
+  },
+  {
+    "id": "coachella-2008-04-26",
+    "date": "2008-04-26",
+    "venue": "Empire Polo Club",
+    "city": "Indio, California, USA",
+    "tour": "Coachella 2008",
+    "aliases": ["Coachella 2008", "Coachella Festival 2008", "Indio 2008"],
+    "songs": [
+      "The Bird",
+      "Jungle Love",
+      "The Glamorous Life",
+      "1999",
+      "I Feel for You",
+      "Controversy",
+      "Little Red Corvette",
+      "Musicology",
+      "Cream",
+      "U Got the Look",
+      "Shhh",
+      "Anotherloverholenyohead",
+      "Rock Lobster",
+      "Creep",
+      "7",
+      "Come Together",
+      "Purple Rain",
+      "Let's Go Crazy"
+    ],
+    "confidence": "confirmed",
+    "sourceUrl": "https://princevault.com/index.php/26_April_2008"
+  },
+  {
+    "id": "rock-hall-2004-03-15",
+    "date": "2004-03-15",
+    "venue": "Waldorf Astoria",
+    "city": "New York, New York, USA",
+    "aliases": [
+      "Rock Hall 2004",
+      "Rock and Roll Hall of Fame 2004",
+      "Rock & Roll Hall of Fame 2004",
+      "Rock Hall Induction 2004"
+    ],
+    "songs": ["Let's Go Crazy", "Sign o' the Times", "Kiss", "While My Guitar Gently Weeps"],
+    "confidence": "confirmed",
+    "sourceUrl": "https://princevault.com/index.php/15_March_2004"
+  },
+  {
+    "id": "super-bowl-2007-02-04",
+    "date": "2007-02-04",
+    "venue": "Dolphin Stadium",
+    "city": "Miami Gardens, Florida, USA",
+    "aliases": [
+      "Super Bowl 2007",
+      "Super Bowl XLI",
+      "Super Bowl halftime 2007",
+      "Halftime Show 2007"
+    ],
+    "songs": [
+      "We Will Rock You",
+      "Let's Go Crazy",
+      "Baby I'm a Star",
+      "1999",
+      "Proud Mary",
+      "All Along the Watchtower",
+      "Best of You",
+      "Purple Rain"
+    ],
+    "confidence": "confirmed",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Super_Bowl_XLI_halftime_show"
+  },
+  {
+    "id": "forum-2011-welcome-2-america",
+    "date": "2011-04-14",
+    "venue": "The Forum",
+    "city": "Inglewood, California, USA",
+    "tour": "Welcome 2 America",
+    "aliases": [
+      "LA Forum 2011",
+      "Los Angeles Forum 2011",
+      "The Forum 2011",
+      "Inglewood Forum 2011",
+      "Welcome 2 America LA Forum"
+    ],
+    "songs": [],
+    "confidence": "partial",
+    "sourceUrl": "https://princevault.com/index.php/14_April_2011"
+  }
+]
