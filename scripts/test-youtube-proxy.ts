@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { googleYoutubeUrl, parseYoutubeRoute, youtubeKeyConfigured } from "../worker/youtube.ts";
+import { googleYoutubeUrl, parseYoutubeRoute, SITE_REFERER, youtubeKeyConfigured } from "../worker/youtube.ts";
 
 const dropped = parseYoutubeRoute(
   "/api/youtube/search",
@@ -35,6 +35,9 @@ assert.equal(parseYoutubeRoute("/api/youtube/search/extra", new URLSearchParams(
 const videos = parseYoutubeRoute("/api/youtube/videos", new URLSearchParams({ part: "status", id: "abcdefghijk" }));
 assert.equal(videos.kind, "proxy");
 if (videos.kind === "proxy") assert.equal(videos.resource, "videos");
+
+assert.equal(new URL(SITE_REFERER).origin, "https://prince-tube.tokyo-air.workers.dev");
+assert.match(new URL(SITE_REFERER).pathname, /^\/.+/);
 
 assert.equal(youtubeKeyConfigured({}), false);
 assert.equal(youtubeKeyConfigured({ YOUTUBE_API_KEY: "   " }), false);
