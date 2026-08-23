@@ -38,6 +38,7 @@ function sample(n: number): AppState {
     autoplayNext: true,
     starterVersion: 1,
     videoTags: {},
+    dataRev: 0,
   };
 }
 

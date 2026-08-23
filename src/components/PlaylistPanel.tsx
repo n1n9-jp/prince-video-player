@@ -63,9 +63,6 @@ export function PlaylistPanel({
         <div>
           <h2>{active?.name ?? "プレイリスト"}</h2>
           <p>{total === 0 ? "0 本" : `${Math.max(position, 1)} / ${total} 本`}</p>
-          {!editable && playMode && onPlayModeChange ? (
-            <ModeToggle value={playMode} onChange={onPlayModeChange} />
-          ) : null}
         </div>
         {!editable && onAutoplayNextChange ? (
           <button
@@ -90,6 +87,9 @@ export function PlaylistPanel({
         onMove={onMovePlaylist}
         editable={editable}
       />
+      {!editable && playMode && onPlayModeChange ? (
+        <ModeToggle value={playMode} onChange={onPlayModeChange} />
+      ) : null}
       {editable && active && onRenamePlaylist && onDeletePlaylist ? (
         <form className="row-form quiet" onSubmit={handleRename}>
           <input name="name" defaultValue={active.name} key={active.id} aria-label="プレイリスト名" />

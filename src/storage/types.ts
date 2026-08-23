@@ -28,6 +28,7 @@ export type AppState = {
   autoplayNext: boolean;
   starterVersion: number;
   videoTags: Record<string, VideoTagging>;
+  dataRev: number;
 };
 
 export type Store = {
@@ -48,6 +49,7 @@ export function emptyState(): AppState {
     autoplayNext: true,
     starterVersion: 0,
     videoTags: {},
+    dataRev: 0,
   };
 }
 

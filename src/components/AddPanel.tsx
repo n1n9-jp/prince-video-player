@@ -8,6 +8,8 @@ type Props = {
   results: Video[];
   searched: boolean;
   searchError: string | null;
+  searchBusy: boolean;
+  onSearch: (query: string) => Promise<void>;
   onAddByInput: (input: string) => Promise<void>;
   onAddChannel: (input: string) => Promise<string>;
   onAddToLibrary: (video: Video) => void;
@@ -19,11 +21,14 @@ export function AddPanel({
   results,
   searched,
   searchError,
+  searchBusy,
+  onSearch,
   onAddByInput,
   onAddChannel,
   onAddToLibrary,
   onPlay,
 }: Props) {
+  const [query, setQuery] = useState("Prince live");
   const [idInput, setIdInput] = useState("");
   const [channelInput, setChannelInput] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -34,6 +39,11 @@ export function AddPanel({
   useEffect(() => {
     void youtubeConfigured().then(setYoutubeReady);
   }, []);
+
+  async function handleSearch(event: FormEvent) {
+    event.preventDefault();
+    await onSearch(query);
+  }
 
   async function handleAddId(event: FormEvent) {
     event.preventDefault();
@@ -69,11 +79,22 @@ export function AddPanel({
   return (
     <section className="shelf">
       <header className="shelf-head">
-        <h2>{results.length > 0 || searched ? "検索結果" : "追加"}</h2>
+        <h2>YouTube から探す</h2>
         {youtubeReady === false && (
           <p className="warn">YouTube検索キー未設定。ID追加は使えます。</p>
         )}
       </header>
+      <form className="yt-search in-panel" onSubmit={handleSearch}>
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="検索"
+          aria-label="YouTube 検索"
+        />
+        <button type="submit" disabled={searchBusy} aria-label="検索">
+          {searchBusy ? "…" : "検索"}
+        </button>
+      </form>
       <div className="add-row">
         <form className="row-form" onSubmit={handleAddId}>
           <input

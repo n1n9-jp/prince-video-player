@@ -38,6 +38,8 @@ function matchesQuery(video: Video, tagging: VideoTagging | undefined, query: st
   const hay = foldTitle(
     [
       video.title,
+      video.channelTitle,
+      video.id,
       ...(tagging?.songIds ?? []).map((id) => catalogIndex.songsById.get(id)?.title ?? ""),
       tagging?.concertId ? catalogIndex.concertsById.get(tagging.concertId)?.aliases.join(" ") ?? "" : "",
     ].join(" "),
@@ -60,15 +62,21 @@ export function LibraryPanel({
   const blocked = new Set(unplayableIds);
   const [kind, setKind] = useState<KindFilter>("all");
   const [query, setQuery] = useState("");
+  const [showListed, setShowListed] = useState(true);
+  const [showUnplayable, setShowUnplayable] = useState(true);
   const foldedQuery = foldTitle(query);
 
   const visible = useMemo(
     () =>
       videos.filter((video) => {
         const tagging = videoTags[video.id];
+        const listed = playlistIds.has(video.id);
+        const unplayable = blocked.has(video.id);
+        if (!showListed && listed) return false;
+        if (!showUnplayable && unplayable) return false;
         return matchesFilter(tagging, kind) && matchesQuery(video, tagging, foldedQuery);
       }),
-    [videos, videoTags, kind, foldedQuery],
+    [videos, videoTags, kind, foldedQuery, playlistIds, blocked, showListed, showUnplayable],
   );
 
   return (
@@ -84,8 +92,8 @@ export function LibraryPanel({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="曲名・公演で絞る"
-          aria-label="ライブラリ内の曲名検索"
+          placeholder="曲名・公演・チャンネルで絞る"
+          aria-label="ライブラリ内の検索"
         />
         <select value={kind} onChange={(event) => setKind(event.target.value as KindFilter)} aria-label="タグ種別">
           <option value="all">すべて</option>
@@ -94,6 +102,22 @@ export function LibraryPanel({
           <option value="unreleased">未発表</option>
           <option value="cover">カバー</option>
         </select>
+        <button
+          type="button"
+          className={showListed ? "chip on" : "chip"}
+          aria-pressed={showListed}
+          onClick={() => setShowListed((value) => !value)}
+        >
+          リスト済
+        </button>
+        <button
+          type="button"
+          className={showUnplayable ? "chip on" : "chip"}
+          aria-pressed={showUnplayable}
+          onClick={() => setShowUnplayable((value) => !value)}
+        >
+          埋込不可
+        </button>
       </div>
       <datalist id="catalog-songs">
         {catalogIndex.catalog.songs.map((song) => (

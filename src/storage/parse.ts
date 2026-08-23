@@ -113,6 +113,7 @@ export function parseState(raw: unknown): AppState | null {
     autoplayNext: s.autoplayNext === false ? false : true,
     starterVersion: typeof s.starterVersion === "number" && Number.isFinite(s.starterVersion) ? s.starterVersion : 0,
     videoTags,
+    dataRev: typeof s.dataRev === "number" && Number.isFinite(s.dataRev) && s.dataRev >= 0 ? Math.floor(s.dataRev) : 0,
   };
 }
 
@@ -168,6 +169,7 @@ export function mergeStates(base: AppState, incoming: AppState): AppState {
     autoplayNext: incoming.autoplayNext,
     starterVersion: Math.max(base.starterVersion, incoming.starterVersion),
     videoTags,
+    dataRev: Math.max(base.dataRev, incoming.dataRev),
   };
 }
 

@@ -52,6 +52,8 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
 
   const handlersRef = useRef({ onEnded, onError, onPlaying, onAutoplayBlocked });
   handlersRef.current = { onEnded, onError, onPlaying, onAutoplayBlocked };
+  const sessionActiveRef = useRef(sessionActive);
+  sessionActiveRef.current = sessionActive;
 
   useEffect(() => {
     void loadYoutubeApi();
@@ -77,6 +79,10 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
           }
         },
         onPlaying: () => handlersRef.current.onPlaying(),
+        onPaused: () => {
+          if (document.visibilityState !== "hidden" || !sessionActiveRef.current) return;
+          localPlayer?.playVideo();
+        },
         onEnded: () => handlersRef.current.onEnded(),
         onError: (code) => handlersRef.current.onError(code),
         onAutoplayBlocked: () => handlersRef.current.onAutoplayBlocked(),
@@ -98,6 +104,22 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
     if (current === videoId) return;
     if (!sessionActive) playerRef.current.cueVideoById(videoId);
   }, [videoId, playerReady, sessionActive]);
+
+  useEffect(() => {
+    function keepPlaying() {
+      if (document.visibilityState !== "hidden" || !sessionActiveRef.current) return;
+      const player = playerRef.current;
+      if (!player) return;
+      const playerState = player.getPlayerState?.();
+      if (playerState === YT.PlayerState.PAUSED || playerState === YT.PlayerState.CUED) player.playVideo();
+    }
+    document.addEventListener("visibilitychange", keepPlaying);
+    window.addEventListener("pagehide", keepPlaying);
+    return () => {
+      document.removeEventListener("visibilitychange", keepPlaying);
+      window.removeEventListener("pagehide", keepPlaying);
+    };
+  }, [playerReady]);
 
   function playNow(id?: string) {
     const player = playerRef.current;

@@ -82,10 +82,21 @@ export default {
     } catch {
       return json(request, { error: "invalid json" }, 400);
     }
-    const incoming = parseState(incomingRaw);
+    let incoming = parseState(incomingRaw);
     if (!incoming) return json(request, { error: "invalid library" }, 400);
 
     const existing = await readLibrary(env);
+    if (existing && incoming.dataRev < existing.dataRev) {
+      incoming = {
+        ...incoming,
+        videos: existing.videos,
+        playlists: existing.playlists,
+        activePlaylistId: existing.activePlaylistId,
+        unplayableIds: existing.unplayableIds,
+        videoTags: existing.videoTags,
+        dataRev: existing.dataRev,
+      };
+    }
     const force = url.searchParams.get("force") === "1";
     if (existing && isStarterShaped(incoming) && !isStarterShaped(existing)) {
       return json(request, { error: "refusing to reset library", kept: existing }, 409);

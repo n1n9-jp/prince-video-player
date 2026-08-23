@@ -7,7 +7,8 @@ import { Topbar } from "./components/Topbar";
 import { goToPage, pageFromHash, type Page } from "./page";
 import { applyAutoTags, addManualSong, removeManualSong } from "./catalog/tagging";
 import { nextVideo, previousVideo, shuffledCopy, startVideo } from "./playback/nextVideo";
-import { hydrateState, localStore } from "./storage/localStore";
+import { hydrateState } from "./storage/localStore";
+import { isStarterShaped } from "./storage/parse";
 import { loadCanonicalLibrary, pullLibrary, pushLibrary } from "./storage/remoteStore";
 import { activePlaylist, dropFromPlaylists, emptyState, type AppState, type PlayMode, type Video } from "./storage/types";
 import { fetchChannelUploads, fetchVideoById, parseVideoId, searchVideos } from "./youtube/dataApi";
@@ -25,7 +26,6 @@ export function App() {
   const [searchBusy, setSearchBusy] = useState(false);
   const [page, setPage] = useState<Page>(pageFromHash);
   const [ready, setReady] = useState(false);
-  const [libraryNotice, setLibraryNotice] = useState<string | null>(null);
 
   const stateRef = useRef(state);
   const shuffleRef = useRef(shuffleOrder);
@@ -35,9 +35,37 @@ export function App() {
   stateRef.current = state;
   shuffleRef.current = shuffleOrder;
 
-  function commit(next: AppState) {
+  function catalogChanged(prev: AppState, next: AppState): boolean {
+    return (
+      next.videos !== prev.videos ||
+      next.playlists !== prev.playlists ||
+      next.unplayableIds !== prev.unplayableIds ||
+      next.videoTags !== prev.videoTags
+    );
+  }
+
+  function withRev(prev: AppState, next: AppState): AppState {
+    if (next === prev) return prev;
+    return catalogChanged(prev, next) ? { ...next, dataRev: (prev.dataRev ?? 0) + 1 } : next;
+  }
+
+  function replace(next: AppState) {
     stateRef.current = next;
     setState(next);
+  }
+
+  function commit(next: AppState) {
+    replace(withRev(stateRef.current, next));
+  }
+
+  function patch(fn: (s: AppState) => AppState) {
+    setState((s) => {
+      const next = fn(s);
+      if (next === s) return s;
+      const bumped = withRev(s, next);
+      stateRef.current = bumped;
+      return bumped;
+    });
   }
 
   useEffect(() => {
@@ -52,41 +80,55 @@ export function App() {
 
   useEffect(() => {
     if (!ready) return;
-    localStore.save(state);
-    if (localStore.isStarterShaped(state)) return;
+    if (isStarterShaped(state)) return;
     const timer = window.setTimeout(() => {
-      void pushLibrary(state).then((result) => {
+      void pushLibrary(stateRef.current).then((result) => {
         if (result.ok || !result.kept) return;
-        commit(hydrateState(result.kept));
+        replace(hydrateState(result.kept));
       });
     }, 400);
     return () => window.clearTimeout(timer);
   }, [ready, state]);
 
   useEffect(() => {
+    if (!ready) return;
+    function flush() {
+      const current = stateRef.current;
+      if (isStarterShaped(current)) return;
+      void pushLibrary(current);
+    }
+    function onHide() {
+      if (document.visibilityState === "hidden") flush();
+    }
+    window.addEventListener("pagehide", flush);
+    window.addEventListener("hashchange", flush);
+    document.addEventListener("visibilitychange", onHide);
+    return () => {
+      window.removeEventListener("pagehide", flush);
+      window.removeEventListener("hashchange", flush);
+      document.removeEventListener("visibilitychange", onHide);
+    };
+  }, [ready]);
+
+  useEffect(() => {
     let cancelled = false;
 
     async function readServer() {
-      const loaded = await loadCanonicalLibrary(localStore.load());
+      const loaded = await loadCanonicalLibrary(null);
       if (cancelled) return;
-      const next = loaded.state
-        ? hydrateState(loaded.state)
-        : localStore.seedEmptyLibrary(emptyState());
-      commit(next);
+      const next = loaded.state ? hydrateState(loaded.state) : hydrateState(emptyState());
+      replace(next);
       readyRef.current = true;
       setReady(true);
-      if (loaded.source === "migrated") {
-        setLibraryNotice("ブラウザに残っていたライブラリをサーバーへ移しました。以降はサーバーのコピーだけを使います。");
-      }
     }
 
     async function refreshFromServer() {
       if (!readyRef.current) return;
       const current = stateRef.current;
-      if (!localStore.isStarterShaped(current)) await pushLibrary(current);
+      if (!isStarterShaped(current)) await pushLibrary(current);
       const remote = await pullLibrary();
       if (cancelled || !remote) return;
-      commit(hydrateState(remote));
+      replace(hydrateState(remote));
     }
 
     void readServer();
@@ -107,7 +149,7 @@ export function App() {
     const list = activePlaylist(state);
     const first = list?.videoIds[0];
     if (state.currentVideoId || !first) return;
-    setState((s) => (s.currentVideoId ? s : { ...s, currentVideoId: first }));
+    patch((s) => (s.currentVideoId ? s : { ...s, currentVideoId: first }));
   }, [state.currentVideoId, state.playlists, state.activePlaylistId]);
 
   const playlist = activePlaylist(state);
@@ -194,14 +236,14 @@ export function App() {
   }
 
   function addToLibrary(video: Video) {
-    setState((s) => {
+    patch((s) => {
       const videos = { ...s.videos, [video.id]: video };
       return { ...s, videos, videoTags: applyAutoTags(videos, s.videoTags) };
     });
   }
 
   function addManyToLibrary(videos: Video[]) {
-    setState((s) => {
+    patch((s) => {
       const next = { ...s.videos };
       for (const video of videos) {
         if (s.unplayableIds.includes(video.id)) continue;
@@ -242,7 +284,7 @@ export function App() {
   }
 
   function addToPlaylist(videoId: string) {
-    setState((s) => {
+    patch((s) => {
       const current = activePlaylist(s);
       if (!current || current.videoIds.includes(videoId) || s.unplayableIds.includes(videoId)) return s;
       return {
@@ -254,7 +296,7 @@ export function App() {
 
   function removeFromLibrary(videoId: string) {
     if (stateRef.current.currentVideoId === videoId) setSessionActive(false);
-    setState((s) => {
+    patch((s) => {
       const videos = { ...s.videos };
       delete videos[videoId];
       const videoTags = { ...s.videoTags };
@@ -270,7 +312,7 @@ export function App() {
   }
 
   function moveInPlaylist(index: number, direction: -1 | 1) {
-    setState((s) => {
+    patch((s) => {
       const current = activePlaylist(s);
       if (!current) return s;
       const nextIndex = index + direction;
@@ -290,7 +332,7 @@ export function App() {
 
   function removeFromPlaylist(videoId: string) {
     if (stateRef.current.currentVideoId === videoId) setSessionActive(false);
-    setState((s) => {
+    patch((s) => {
       const current = activePlaylist(s);
       if (!current) return s;
       return {
@@ -304,7 +346,7 @@ export function App() {
   }
 
   function movePlaylist(direction: -1 | 1) {
-    setState((s) => {
+    patch((s) => {
       const index = s.playlists.findIndex((p) => p.id === s.activePlaylistId);
       const nextIndex = index + direction;
       if (index < 0 || nextIndex < 0 || nextIndex >= s.playlists.length) return s;
@@ -320,7 +362,7 @@ export function App() {
 
   function createPlaylist() {
     const id = crypto.randomUUID();
-    setState((s) => ({
+    patch((s) => ({
       ...s,
       playlists: [...s.playlists, { id, name: `List ${s.playlists.length + 1}`, videoIds: [] }],
       activePlaylistId: id,
@@ -330,14 +372,14 @@ export function App() {
   function renamePlaylist(name: string) {
     const trimmed = name.trim();
     if (!trimmed) return;
-    setState((s) => ({
+    patch((s) => ({
       ...s,
       playlists: s.playlists.map((p) => (p.id === s.activePlaylistId ? { ...p, name: trimmed } : p)),
     }));
   }
 
   function deletePlaylist() {
-    setState((s) => {
+    patch((s) => {
       const remaining = s.playlists.filter((p) => p.id !== s.activePlaylistId);
       if (remaining.length === 0) {
         const fresh = emptyState();
@@ -365,17 +407,10 @@ export function App() {
         </p>
       ) : null}
       <div hidden={!ready}>
-      {libraryNotice ? (
-        <div className="restore-banner" role="status">
-          <p>{libraryNotice}</p>
-          <button type="button" className="btn-text" onClick={() => setLibraryNotice(null)}>
-            閉じる
-          </button>
-        </div>
-      ) : null}
-      <Topbar page={page} busy={searchBusy} onSearch={runSearch} />
+      <Topbar page={page} />
 
       <div className="watch-page" hidden={page !== "watch"}>
+        {page === "watch" ? (
         <PlayerStage
           ref={playerRef}
           video={currentVideo}
@@ -402,7 +437,7 @@ export function App() {
               stateRef.current = next;
               patchShuffle(shuffleRef.current.filter((videoId) => videoId !== id));
               setSkipNotice("埋め込みできない動画をプレイリストから削除しました。");
-              setState(next);
+              commit(next);
               errorStreakRef.current = 0;
               if (nextId) playerRef.current?.loadAndPlay(nextId);
               else setSessionActive(false);
@@ -416,6 +451,7 @@ export function App() {
           }}
           onAutoplayBlocked={() => setAutoplayBlocked(true)}
         />
+        ) : null}
         <PlaylistPanel
           variant="watch"
           playlists={state.playlists}
@@ -425,9 +461,9 @@ export function App() {
           currentVideoId={state.currentVideoId}
           autoplayNext={state.autoplayNext}
           playMode={state.playMode}
-          onSelectPlaylist={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
+          onSelectPlaylist={(id) => patch((s) => ({ ...s, activePlaylistId: id }))}
           onPlay={(id) => start(id)}
-          onAutoplayNextChange={(value) => setState((s) => ({ ...s, autoplayNext: value }))}
+          onAutoplayNextChange={(value) => patch((s) => ({ ...s, autoplayNext: value }))}
           onPlayModeChange={changeMode}
         />
       </div>
@@ -440,7 +476,7 @@ export function App() {
           videos={state.videos}
           watchCounts={state.watchCounts}
           currentVideoId={state.currentVideoId}
-          onSelectPlaylist={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
+          onSelectPlaylist={(id) => patch((s) => ({ ...s, activePlaylistId: id }))}
           onCreatePlaylist={createPlaylist}
           onMovePlaylist={movePlaylist}
           onRenamePlaylist={renamePlaylist}
@@ -457,6 +493,8 @@ export function App() {
           results={searchResults}
           searched={searched}
           searchError={searchError}
+          searchBusy={searchBusy}
+          onSearch={runSearch}
           onAddByInput={addByInput}
           onAddChannel={addChannel}
           onAddToLibrary={addToLibrary}
@@ -472,13 +510,13 @@ export function App() {
           onAddToPlaylist={addToPlaylist}
           onRemoveFromLibrary={removeFromLibrary}
           onAddSongTag={(videoId, songId) => {
-            setState((s) => ({
+            patch((s) => ({
               ...s,
               videoTags: { ...s.videoTags, [videoId]: addManualSong(s.videoTags[videoId], songId) },
             }));
           }}
           onRemoveSongTag={(videoId, songId) => {
-            setState((s) => {
+            patch((s) => {
               const next = removeManualSong(s.videoTags[videoId], songId);
               const videoTags = { ...s.videoTags };
               if (next) videoTags[videoId] = next;

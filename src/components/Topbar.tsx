@@ -1,20 +1,10 @@
-import { useState, type FormEvent } from "react";
 import type { Page } from "../page";
 
 type Props = {
   page: Page;
-  busy: boolean;
-  onSearch: (query: string) => Promise<void>;
 };
 
-export function Topbar({ page, busy, onSearch }: Props) {
-  const [query, setQuery] = useState("Prince live");
-
-  async function handleSearch(event: FormEvent) {
-    event.preventDefault();
-    await onSearch(query);
-  }
-
+export function Topbar({ page }: Props) {
   return (
     <header className="topbar">
       <a className="wordmark" href="#/" aria-label="PrinceTube">
@@ -29,33 +19,9 @@ export function Topbar({ page, busy, onSearch }: Props) {
         </span>
       </a>
       {page === "library" ? (
-        <form className="yt-search" onSubmit={handleSearch}>
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="検索"
-            aria-label="YouTube 検索"
-          />
-          <button type="submit" disabled={busy} aria-label="検索">
-            {busy ? (
-              "…"
-            ) : (
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-                <path
-                  fill="currentColor"
-                  d="M17.7 16.3 21 19.6l-1.4 1.4-3.3-3.3A7.9 7.9 0 1 1 18 10a7.9 7.9 0 0 1-.3 6.3ZM10 16.5A6.5 6.5 0 1 0 10 3.5a6.5 6.5 0 0 0 0 13Z"
-                />
-              </svg>
-            )}
-          </button>
-        </form>
-      ) : (
-        <span />
-      )}
-      {page === "watch" ? (
-        <a className="edit-link" href="#/library">
-          編集
-        </a>
+        <nav className="page-nav" aria-label="ページ">
+          <a href="#/">閲覧</a>
+        </nav>
       ) : (
         <span className="topbar-end" aria-hidden="true" />
       )}

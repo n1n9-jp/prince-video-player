@@ -204,6 +204,26 @@ img {
   margin: 1.5rem auto 0;
 }
 
+.watch-page[hidden],
+.library-page[hidden] {
+  display: none !important;
+}
+
+.page-nav {
+  justify-self: end;
+}
+
+.page-nav a {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.yt-search.in-panel {
+  max-width: none;
+  margin: 0 0 1rem;
+}
+
 .stage-player {
   min-width: 0;
 }

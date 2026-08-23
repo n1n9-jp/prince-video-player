@@ -27,6 +27,7 @@ export function loadYoutubeApi(): Promise<void> {
 export type PlayerHandlers = {
   onReady?: () => void;
   onPlaying?: () => void;
+  onPaused?: () => void;
   onEnded: () => void;
   onError: (code: number) => void;
   onAutoplayBlocked: () => void;
@@ -165,6 +166,7 @@ export function createPlayer(host: HTMLElement, videoId: string, handlers: Playe
       },
       onStateChange(event) {
         if (event.data === YT.PlayerState.PLAYING) handlers.onPlaying?.();
+        if (event.data === YT.PlayerState.PAUSED) handlers.onPaused?.();
         if (event.data === YT.PlayerState.ENDED) handlers.onEnded();
       },
       onError(event) {
