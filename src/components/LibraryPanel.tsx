@@ -1,74 +1,60 @@
 import { useMemo, useState } from "react";
 import { catalogIndex } from "../catalog";
-import { foldTitle } from "../catalog/normalize";
 import type { VideoTagging } from "../catalog/types";
-import type { Video } from "../storage/types";
+import { visibleLibraryVideos, type KindFilter } from "../library/visible";
+import type { Playlist, Video } from "../storage/types";
 import { VideoCard } from "./VideoCard";
-
-type KindFilter = "all" | "official" | "live" | "unreleased" | "cover";
 
 type Props = {
   videos: Video[];
-  playlistIds: Set<string>;
+  playlists: Playlist[];
+  targetPlaylistId: string | null;
   unplayableIds: string[];
   watchCounts: Record<string, number>;
   videoTags: Record<string, VideoTagging>;
   onPlay: (video: Video) => void;
-  onAddToPlaylist: (videoId: string) => void;
+  onTargetPlaylist: (playlistId: string) => void;
+  onAddToPlaylist: (videoId: string, playlistId: string) => void;
   onRemoveFromLibrary: (videoId: string) => void;
   onAddSongTag: (videoId: string, songId: string) => void;
   onRemoveSongTag: (videoId: string, songId: string) => void;
 };
 
-function matchesFilter(tagging: VideoTagging | undefined, kind: KindFilter): boolean {
-  if (kind === "all") return true;
-  if (!tagging) return false;
-  if (kind === "live") return Boolean(tagging.concertId);
-  return tagging.songIds.some((id) => {
-    const song = catalogIndex.songsById.get(id);
-    if (!song) return false;
-    if (kind === "unreleased") return song.kind === "unreleased";
-    if (kind === "cover") return song.kind === "cover";
-    return song.kind === "official" || song.kind === "laterReleased";
-  });
-}
-
-function matchesQuery(video: Video, tagging: VideoTagging | undefined, query: string): boolean {
-  if (!query) return true;
-  const hay = foldTitle(
-    [
-      video.title,
-      ...(tagging?.songIds ?? []).map((id) => catalogIndex.songsById.get(id)?.title ?? ""),
-      tagging?.concertId ? catalogIndex.concertsById.get(tagging.concertId)?.aliases.join(" ") ?? "" : "",
-    ].join(" "),
-  );
-  return hay.includes(query);
-}
-
 export function LibraryPanel({
   videos,
-  playlistIds,
+  playlists,
+  targetPlaylistId,
   unplayableIds,
   watchCounts,
   videoTags,
   onPlay,
+  onTargetPlaylist,
   onAddToPlaylist,
   onRemoveFromLibrary,
   onAddSongTag,
   onRemoveSongTag,
 }: Props) {
   const blocked = new Set(unplayableIds);
+  const target = playlists.find((playlist) => playlist.id === targetPlaylistId) ?? playlists[0] ?? null;
+  const targetIds = target?.videoIds ?? [];
+  const playlistIds = new Set(targetIds);
   const [kind, setKind] = useState<KindFilter>("all");
   const [query, setQuery] = useState("");
-  const foldedQuery = foldTitle(query);
+  const [hideUnplayable, setHideUnplayable] = useState(true);
+  const [hideInPlaylist, setHideInPlaylist] = useState(true);
 
   const visible = useMemo(
     () =>
-      videos.filter((video) => {
-        const tagging = videoTags[video.id];
-        return matchesFilter(tagging, kind) && matchesQuery(video, tagging, foldedQuery);
+      visibleLibraryVideos(videos, {
+        videoTags,
+        unplayableIds,
+        playlistIds,
+        kind,
+        query,
+        hideUnplayable,
+        hideInPlaylist,
       }),
-    [videos, videoTags, kind, foldedQuery],
+    [videos, videoTags, unplayableIds, targetIds, kind, query, hideUnplayable, hideInPlaylist],
   );
 
   return (
@@ -81,6 +67,21 @@ export function LibraryPanel({
         </p>
       </header>
       <div className="library-filters">
+        <label className="library-target">
+          <span>追加先</span>
+          <select
+            value={target?.id ?? ""}
+            disabled={playlists.length === 0}
+            aria-label="追加先プレイリスト"
+            onChange={(event) => onTargetPlaylist(event.target.value)}
+          >
+            {playlists.map((playlist) => (
+              <option key={playlist.id} value={playlist.id}>
+                {playlist.name}
+              </option>
+            ))}
+          </select>
+        </label>
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
@@ -95,6 +96,24 @@ export function LibraryPanel({
           <option value="cover">カバー</option>
         </select>
       </div>
+      <div className="library-filters">
+        <button
+          type="button"
+          className={hideUnplayable ? "chip on" : "chip"}
+          aria-pressed={hideUnplayable}
+          onClick={() => setHideUnplayable((value) => !value)}
+        >
+          埋込不能を隠す
+        </button>
+        <button
+          type="button"
+          className={hideInPlaylist ? "chip on" : "chip"}
+          aria-pressed={hideInPlaylist}
+          onClick={() => setHideInPlaylist((value) => !value)}
+        >
+          リスト済を隠す
+        </button>
+      </div>
       <datalist id="catalog-songs">
         {catalogIndex.catalog.songs.map((song) => (
           <option key={song.id} value={song.title} />
@@ -103,7 +122,7 @@ export function LibraryPanel({
       {videos.length === 0 ? (
         <p className="empty">検索、動画ID、またはチャンネルから入れると、ここに並びます。</p>
       ) : visible.length === 0 ? (
-        <p className="empty">条件に合う動画がありません。</p>
+        <p className="empty">条件に合う動画がありません。フィルタを外すと埋込不能やリスト済も表示します。</p>
       ) : (
         <div className="video-grid">
           {visible.map((video) => {
@@ -116,7 +135,7 @@ export function LibraryPanel({
                 video={video}
                 tagging={videoTags[video.id]}
                 editableTags
-                meta={unplayable ? "埋込不可" : count > 0 ? `視聴 ${count} 回` : undefined}
+                meta={unplayable ? "埋込不能" : count > 0 ? `視聴 ${count} 回` : undefined}
                 onOpen={() => {
                   if (!unplayable) onPlay(video);
                 }}
@@ -127,10 +146,12 @@ export function LibraryPanel({
                     <button
                       type="button"
                       className="btn-text"
-                      disabled={inPlaylist || unplayable}
-                      onClick={() => onAddToPlaylist(video.id)}
+                      disabled={inPlaylist || unplayable || !target}
+                      onClick={() => {
+                        if (target) onAddToPlaylist(video.id, target.id);
+                      }}
                     >
-                      {unplayable ? "埋込不可" : inPlaylist ? "リスト済" : "リストへ"}
+                      {unplayable ? "埋込不能" : inPlaylist ? "リスト済" : `${target?.name ?? "リスト"}へ`}
                     </button>
                     <button type="button" className="btn-text" onClick={() => onRemoveFromLibrary(video.id)}>
                       削除
