@@ -26,6 +26,8 @@ jobs:
       - run: npm run typecheck
       - run: npm run test
       - run: npm run build
+      # wrangler-action secrets: はデプロイ前に載せて 10215 で落ちる。if: に secrets を書くと workflow が無効。
+      # 手順は docs/operations.md
       - name: Deploy
         uses: cloudflare/wrangler-action@v4
         with:
@@ -44,3 +46,6 @@ jobs:
             exit 0
           fi
           jq -n --arg k "$YOUTUBE_API_KEY" '{YOUTUBE_API_KEY:$k}' | npx wrangler secret bulk
+      - name: Smoke production
+        if: github.event_name != 'pull_request'
+        run: npx tsx scripts/smoke-production.ts

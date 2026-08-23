@@ -1,5 +1,7 @@
 const GOOGLE = "https://www.googleapis.com/youtube/v3";
-const SITE_REFERER = "https://prince-tube.tokyo-air.workers.dev/";
+/** Path form matches Google's `https://host/*` referrer rule; bare `https://host/` often does not. */
+export const SITE_REFERER = "https://prince-tube.tokyo-air.workers.dev/index.html";
+export const SITE_ORIGIN = "https://prince-tube.tokyo-air.workers.dev";
 
 const RESOURCES = {
   search: new Set(["part", "type", "videoEmbeddable", "videoSyndicated", "maxResults", "q", "pageToken"]),
@@ -93,6 +95,7 @@ export async function handleYoutube(
   const googleRes = await fetch(googleUrl, {
     headers: {
       accept: "application/json",
+      origin: SITE_ORIGIN,
       referer: SITE_REFERER,
     },
   });

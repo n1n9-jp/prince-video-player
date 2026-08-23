@@ -1,5 +1,6 @@
 node_modules
 dist
+# Local secrets. Git clones and Cloud Agents never have this file; that is not deletion.
 .env.local
 .DS_Store
 *.log

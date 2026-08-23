@@ -7,8 +7,8 @@ Prince の YouTube 動画を、このページ側のプレイリスト・視聴�
 1. [Google Cloud Console](https://console.cloud.google.com/) でプロジェクトを作り、**YouTube Data API v3** を有効にする。
 2. 認証情報から API キーを発行する。
 3. キーの制限:
-    - API の制限: YouTube Data API v3 のみ
-    - ウェブサイトの制限: `http://127.0.0.1:5173/*` と `https://prince-tube.tokyo-air.workers.dev/*`
+    - 本番（Worker の `YOUTUBE_API_KEY`）: **アプリケーションの制限はなし**。API の制限だけ YouTube Data API v3。キーはもうブラウザに出ないので、ウェブサイト制限は不要で、あると Worker からの呼び出しが弾かれる。
+    - ローカル（`.env.local` の `VITE_YOUTUBE_API_KEY`）だけウェブサイト制限するなら `http://127.0.0.1:5173/*`
 4. ローカル検索だけなら、リポジトリ直下に `.env.local` を作り、`.env.example` を参考にキーを書く。このファイルは git に入らないし、本番の JS にも入らない。
 
 ```
@@ -17,7 +17,7 @@ VITE_YOUTUBE_API_KEY=your_key_here
 
 本番の検索はフロントにキーを埋め込まない。Worker が `/api/youtube/*` で YouTube Data API を代理し、秘密変数 `YOUTUBE_API_KEY` を付ける。GitHub Secrets に同じ名前で `.env.local` のキーを入れれば、`main` へのデプロイ時に Cloudflare へ載る。手元から出す場合は `npx wrangler secret put YOUTUBE_API_KEY`。`wrangler dev` なら `.dev.vars`（`.dev.vars.example` 参照）。
 
-Worker は Google へ `Referer: https://prince-tube.tokyo-air.workers.dev/` を付ける。キーのウェブサイト制限にこの URL が入っていること。
+Worker は Google へ `Referer: https://prince-tube.tokyo-air.workers.dev/index.html` を付ける。本番キーにウェブサイト制限が残っていると `Requests from referer … are blocked` になる。制限を外すか、Console に `https://prince-tube.tokyo-air.workers.dev/` と `https://prince-tube.tokyo-air.workers.dev/*` の両方を入れる。
 
 検索は 1 日 100 回までです。同じ検索語はブラウザにキャッシュし、リロードでは再検索しません。
 
@@ -68,6 +68,8 @@ npm run catalog:build
 npm test
 ```
 
+再発防止・秘密変数・KV・デプロイ後の確認は [`docs/operations.md`](docs/operations.md)。
+
 ## Cloudflare
 
 本番は Cloudflare Workers です。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。静的アセットに加え、ライブラリ用の KV を `/api/library` で読み書きし、YouTube 検索は `/api/youtube/*` がキーを付けて代理します。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。
@@ -87,5 +89,11 @@ npm test
 
 ```
 npm run deploy
+```
+
+デプロイ後の本番確認:
+
+```
+npm run smoke
 ```
 
