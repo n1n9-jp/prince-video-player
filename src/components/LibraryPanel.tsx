@@ -33,18 +33,23 @@ function matchesFilter(tagging: VideoTagging | undefined, kind: KindFilter): boo
   });
 }
 
-function matchesQuery(video: Video, tagging: VideoTagging | undefined, query: string): boolean {
-  if (!query) return true;
-  const hay = foldTitle(
-    [
-      video.title,
-      video.channelTitle,
-      video.id,
-      ...(tagging?.songIds ?? []).map((id) => catalogIndex.songsById.get(id)?.title ?? ""),
-      tagging?.concertId ? catalogIndex.concertsById.get(tagging.concertId)?.aliases.join(" ") ?? "" : "",
-    ].join(" "),
-  );
-  return hay.includes(query);
+function matchesQuery(video: Video, tagging: VideoTagging | undefined, raw: string): boolean {
+  const tokens = raw.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (tokens.length === 0) return true;
+  const fields = [
+    video.title,
+    video.channelTitle,
+    video.id,
+    ...(tagging?.songIds ?? []).map((id) => catalogIndex.songsById.get(id)?.title ?? ""),
+    tagging?.concertId ? catalogIndex.concertsById.get(tagging.concertId)?.aliases.join(" ") ?? "" : "",
+  ].join(" ");
+  const hay = fields.toLowerCase();
+  const foldedHay = foldTitle(fields);
+  return tokens.every((token) => {
+    if (hay.includes(token)) return true;
+    const folded = foldTitle(token);
+    return folded.length > 0 && foldedHay.includes(folded);
+  });
 }
 
 export function LibraryPanel({
@@ -64,7 +69,6 @@ export function LibraryPanel({
   const [query, setQuery] = useState("");
   const [showListed, setShowListed] = useState(true);
   const [showUnplayable, setShowUnplayable] = useState(true);
-  const foldedQuery = foldTitle(query);
 
   const visible = useMemo(
     () =>
@@ -74,9 +78,9 @@ export function LibraryPanel({
         const unplayable = blocked.has(video.id);
         if (!showListed && listed) return false;
         if (!showUnplayable && unplayable) return false;
-        return matchesFilter(tagging, kind) && matchesQuery(video, tagging, foldedQuery);
+        return matchesFilter(tagging, kind) && matchesQuery(video, tagging, query);
       }),
-    [videos, videoTags, kind, foldedQuery, playlistIds, blocked, showListed, showUnplayable],
+    [videos, videoTags, kind, query, playlistIds, blocked, showListed, showUnplayable],
   );
 
   return (
@@ -92,8 +96,8 @@ export function LibraryPanel({
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="曲名・公演・チャンネルで絞る"
-          aria-label="ライブラリ内の検索"
+          placeholder="タイトル、チャンネル、ID、曲名"
+          aria-label="ライブラリ内を探す"
         />
         <select value={kind} onChange={(event) => setKind(event.target.value as KindFilter)} aria-label="タグ種別">
           <option value="all">すべて</option>
