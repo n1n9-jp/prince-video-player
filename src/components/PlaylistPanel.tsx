@@ -1,5 +1,6 @@
 import type { FormEvent } from "react";
-import type { Playlist, Video } from "../storage/types";
+import type { PlayMode, Playlist, Video } from "../storage/types";
+import { ModeToggle } from "./ModeToggle";
 import { PlaylistTabs } from "./PlaylistTabs";
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
   watchCounts: Record<string, number>;
   currentVideoId: string | null;
   autoplayNext: boolean;
+  playMode: PlayMode;
   onSelectPlaylist: (id: string) => void;
   onCreatePlaylist: () => void;
   onMovePlaylist: (direction: -1 | 1) => void;
@@ -18,6 +20,7 @@ type Props = {
   onRemove: (videoId: string) => void;
   onPlay: (videoId: string) => void;
   onAutoplayNextChange: (value: boolean) => void;
+  onPlayModeChange: (mode: PlayMode) => void;
 };
 
 export function PlaylistPanel({
@@ -27,6 +30,7 @@ export function PlaylistPanel({
   watchCounts,
   currentVideoId,
   autoplayNext,
+  playMode,
   onSelectPlaylist,
   onCreatePlaylist,
   onMovePlaylist,
@@ -36,6 +40,7 @@ export function PlaylistPanel({
   onRemove,
   onPlay,
   onAutoplayNextChange,
+  onPlayModeChange,
 }: Props) {
   const active = playlists.find((p) => p.id === activePlaylistId) ?? null;
   const total = active?.videoIds.length ?? 0;
@@ -57,6 +62,7 @@ export function PlaylistPanel({
           <p>
             {total === 0 ? "0 本" : `${Math.max(position, 1)} / ${total} 本`}
           </p>
+          <ModeToggle value={playMode} onChange={onPlayModeChange} />
         </div>
         <button
           type="button"

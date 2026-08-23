@@ -1,14 +1,11 @@
-import { useState, type FormEvent, type ReactNode } from "react";
-import type { Page } from "../page";
+import { useState, type FormEvent } from "react";
 
 type Props = {
-  page: Page;
   busy: boolean;
   onSearch: (query: string) => Promise<void>;
-  children?: ReactNode;
 };
 
-export function Topbar({ page, busy, onSearch, children }: Props) {
+export function Topbar({ busy, onSearch }: Props) {
   const [query, setQuery] = useState("Prince live");
 
   async function handleSearch(event: FormEvent) {
@@ -49,17 +46,7 @@ export function Topbar({ page, busy, onSearch, children }: Props) {
           )}
         </button>
       </form>
-      <div className="topbar-end">
-        <nav className="page-nav" aria-label="ページ">
-          <a href="#/" aria-current={page === "watch" ? "page" : undefined}>
-            閲覧
-          </a>
-          <a href="#/library" aria-current={page === "library" ? "page" : undefined}>
-            追加
-          </a>
-        </nav>
-        {children}
-      </div>
+      <span className="topbar-end" aria-hidden="true" />
     </header>
   );
 }
