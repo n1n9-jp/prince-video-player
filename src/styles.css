@@ -158,29 +158,6 @@ img {
   min-width: 9.5rem;
 }
 
-.page-nav {
-  display: flex;
-  gap: 0.1rem;
-}
-
-.page-nav a {
-  color: var(--ink-soft);
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 500;
-  padding: 0.38rem 0.7rem;
-  border-radius: 18px;
-}
-
-.page-nav a:hover {
-  color: var(--ink);
-}
-
-.page-nav a[aria-current="page"] {
-  background: var(--plum);
-  color: var(--gold);
-}
-
 .mode-toggle {
   display: flex;
   overflow: hidden;
@@ -373,6 +350,10 @@ img {
   margin: 0.2rem 0 0;
   color: var(--ink-soft);
   font-size: 0.8rem;
+}
+
+.playlist-dock-head .mode-toggle {
+  margin-top: 0.55rem;
 }
 
 .playlist-dock .playlist-switch,

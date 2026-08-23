@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AddPanel } from "./components/AddPanel";
 import { LibraryPanel } from "./components/LibraryPanel";
-import { ModeToggle } from "./components/ModeToggle";
 import { PlayerStage, type PlayerHandle } from "./components/PlayerStage";
 import { PlaylistPanel } from "./components/PlaylistPanel";
 import { PlaylistTabs } from "./components/PlaylistTabs";
@@ -375,9 +374,7 @@ export function App() {
           </button>
         </div>
       ) : null}
-      <Topbar page={page} busy={searchBusy} onSearch={runSearch}>
-        {page === "watch" ? <ModeToggle value={state.playMode} onChange={changeMode} /> : null}
-      </Topbar>
+      <Topbar busy={searchBusy} onSearch={runSearch} />
 
       <div className="watch-page" hidden={page !== "watch"}>
         <PlayerStage
@@ -427,6 +424,7 @@ export function App() {
           watchCounts={state.watchCounts}
           currentVideoId={state.currentVideoId}
           autoplayNext={state.autoplayNext}
+          playMode={state.playMode}
           onSelectPlaylist={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
           onCreatePlaylist={createPlaylist}
           onMovePlaylist={movePlaylist}
@@ -436,6 +434,7 @@ export function App() {
           onRemove={removeFromPlaylist}
           onPlay={(id) => start(id)}
           onAutoplayNextChange={(value) => setState((s) => ({ ...s, autoplayNext: value }))}
+          onPlayModeChange={changeMode}
         />
       </div>
 
