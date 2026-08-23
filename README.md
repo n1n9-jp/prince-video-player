@@ -68,6 +68,8 @@ npm run catalog:build
 npm test
 ```
 
+再発防止・秘密変数・KV・デプロイ後の確認は [`docs/operations.md`](docs/operations.md)。
+
 ## Cloudflare
 
 本番は Cloudflare Workers です。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。静的アセットに加え、ライブラリ用の KV を `/api/library` で読み書きし、YouTube 検索は `/api/youtube/*` がキーを付けて代理します。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。
@@ -87,5 +89,11 @@ npm test
 
 ```
 npm run deploy
+```
+
+デプロイ後の本番確認:
+
+```
+npm run smoke
 ```
 

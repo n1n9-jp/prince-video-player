@@ -1,3 +1,4 @@
-# wrangler dev / 手元の wrangler deploy 用。git に入れない。
-# 本番は GitHub Secrets の YOUTUBE_API_KEY を wrangler-action が Worker secret に載せる。
+# wrangler dev 用。git に入れない。
+# 本番は main デプロイ後の `wrangler secret bulk`（GitHub Secrets の YOUTUBE_API_KEY）。
+# wrangler-action の secrets: 入力は使わない（デプロイ前に載せて Cloudflare 10215 になる）。
 YOUTUBE_API_KEY=
