@@ -44,7 +44,7 @@ npm run dev
 
 ## 楽曲カタログ
 
-動画タグはリポジトリ内の静的カタログ（`src/catalog/data/`）を使います。実行時に外部 API は呼びません。
+動画タグはリポジトリ内の静的カタログ（`src/catalog/data/`）を使う。実行時に外部 API は呼ばない。収集手順・overlays・再生成は [`docs/catalog-collection.md`](docs/catalog-collection.md)。
 
 - 公式アルバム / シングルの収録曲: [MusicBrainz](https://musicbrainz.org/artist/070d193a-845c-479f-980e-bef15710653e)（[CC BY-NC-SA 3.0](https://musicbrainz.org/doc/MusicBrainz_Database/FAQ)）
 - 未発表曲・公演の日付や会場: [Prince Vault](https://princevault.com/) などの公開事実。記事本文は収録していない
