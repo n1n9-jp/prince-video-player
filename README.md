@@ -64,7 +64,19 @@ npm test
 
 ## Cloudflare
 
-本番は Cloudflare Workers の静的アセットとして出しています。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。`main` への push で Workers Builds がビルドしてデプロイします。
+本番は Cloudflare Workers の静的アセットです。Worker 名は `prince-tube`、公開 URL は [https://prince-tube.tokyo-air.workers.dev/](https://prince-tube.tokyo-air.workers.dev/) です。設定は [`wrangler.jsonc`](wrangler.jsonc) にあります。
+
+`main` への push は GitHub Actions（[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)）がビルドしてデプロイします。PR ではプレビュー版を upload します。
+
+必要な GitHub Secrets:
+
+1. Cloudflare で [API トークン](https://dash.cloudflare.com/profile/api-tokens) を作る（テンプレート **Edit Cloudflare Workers**）
+2. リポジトリ **Settings → Secrets and variables → Actions** に入れる
+    - `CLOUDFLARE_API_TOKEN`（必須）
+    - `CLOUDFLARE_ACCOUNT_ID`（ダッシュボード右サイドバーの Account ID）
+    - `VITE_YOUTUBE_API_KEY`（任意。検索を本番でも使う場合）
+
+手元から出す場合:
 
 ```
 npm run deploy
