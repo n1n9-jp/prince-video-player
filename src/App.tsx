@@ -110,7 +110,6 @@ export function App() {
     setState((s) => (s.currentVideoId ? s : { ...s, currentVideoId: first }));
   }, [state.currentVideoId, state.playlists, state.activePlaylistId]);
 
-  const playlist = activePlaylist(state);
   const currentVideo = state.currentVideoId ? (state.videos[state.currentVideoId] ?? null) : null;
 
   function patchShuffle(order: string[]) {
@@ -241,13 +240,14 @@ export function App() {
     }
   }
 
-  function addToPlaylist(videoId: string) {
+  function addToPlaylist(videoId: string, playlistId: string) {
     setState((s) => {
-      const current = activePlaylist(s);
-      if (!current || current.videoIds.includes(videoId) || s.unplayableIds.includes(videoId)) return s;
+      const target = s.playlists.find((playlist) => playlist.id === playlistId) ?? null;
+      if (!target || target.videoIds.includes(videoId) || s.unplayableIds.includes(videoId)) return s;
       return {
         ...s,
-        playlists: s.playlists.map((p) => (p.id === current.id ? { ...p, videoIds: [...p.videoIds, videoId] } : p)),
+        activePlaylistId: target.id,
+        playlists: s.playlists.map((p) => (p.id === target.id ? { ...p, videoIds: [...p.videoIds, videoId] } : p)),
       };
     });
   }
@@ -355,7 +355,6 @@ export function App() {
   }
 
   const libraryVideos = Object.values(state.videos);
-  const playlistIds = new Set(playlist?.videoIds ?? []);
 
   return (
     <div className="app">
@@ -464,11 +463,13 @@ export function App() {
         />
         <LibraryPanel
           videos={libraryVideos}
-          playlistIds={playlistIds}
+          playlists={state.playlists}
+          targetPlaylistId={state.activePlaylistId}
           unplayableIds={state.unplayableIds}
           watchCounts={state.watchCounts}
           videoTags={state.videoTags}
           onPlay={ingestAndPlay}
+          onTargetPlaylist={(id) => setState((s) => ({ ...s, activePlaylistId: id }))}
           onAddToPlaylist={addToPlaylist}
           onRemoveFromLibrary={removeFromLibrary}
           onAddSongTag={(videoId, songId) => {

@@ -104,7 +104,7 @@ export function PlaylistPanel({
       {!active || active.videoIds.length === 0 ? (
         <p className="empty">
           {editable
-            ? "ライブラリから「リストへ」を押すと、このプレイリストに入ります。"
+            ? "追加先のプレイリストを選び、ライブラリで「リストへ」を押します。"
             : "編集ページでリストに入れると、ここで再生できます。"}
         </p>
       ) : (

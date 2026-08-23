@@ -756,8 +756,19 @@ button:disabled {
 
 .library-filters {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.6rem;
   margin: -0.35rem 0 1rem;
+  align-items: center;
+}
+
+.library-target {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 .library-filters input,
