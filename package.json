@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "catalog:import": "node scripts/import-musicbrainz.mjs && node scripts/build-catalog.mjs",
     "catalog:build": "node scripts/build-catalog.mjs",
-    "test": "npx --yes tsx scripts/test-match.ts"
+    "test": "npx --yes tsx scripts/test-match.ts && npx --yes tsx scripts/test-storage.ts"
   },
   "license": "ISC",
   "dependencies": {

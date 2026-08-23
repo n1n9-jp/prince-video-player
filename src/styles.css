@@ -626,6 +626,7 @@ button:disabled {
 
 .shelf-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
@@ -636,6 +637,40 @@ button:disabled {
   margin: 0;
   font-size: 1.15rem;
   font-weight: 700;
+}
+
+.library-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-left: auto;
+}
+
+.restore-banner {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: min(1754px, calc(100% - 3rem));
+  margin: 0.85rem auto 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid color-mix(in oklch, var(--gold) 45%, var(--line));
+  border-radius: var(--radius);
+  background: color-mix(in oklch, var(--plum) 28%, var(--raised));
+}
+
+.restore-banner p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.restore-banner code {
+  font-size: 0.85em;
+}
+
+.restore-banner-hint {
+  border-color: var(--line);
+  background: var(--raised);
 }
 
 .add-row {
