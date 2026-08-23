@@ -158,6 +158,21 @@ img {
   min-width: 9.5rem;
 }
 
+.edit-link {
+  justify-self: end;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.38rem 0.85rem;
+  border-radius: 18px;
+}
+
+.edit-link:hover {
+  color: var(--ink);
+  background: var(--hover);
+}
+
 .mode-toggle {
   display: flex;
   overflow: hidden;
@@ -363,6 +378,13 @@ img {
 
 .playlist-dock .empty {
   padding: 0.5rem 1rem 1rem;
+}
+
+.playlist-editor {
+  position: static;
+  max-height: none;
+  width: min(1754px, calc(100% - 3rem));
+  margin: 2rem auto 0;
 }
 
 .switch {
