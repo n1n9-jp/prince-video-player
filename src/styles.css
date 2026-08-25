@@ -871,6 +871,10 @@ button:disabled {
   align-items: center;
 }
 
+.tag-add-combo {
+  position: relative;
+}
+
 .tag-add input {
   width: 8.5rem;
   border: 0;
@@ -878,6 +882,38 @@ button:disabled {
   background: transparent;
   padding: 0.1rem 0.2rem;
   font-size: 0.75rem;
+}
+
+.tag-add-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.2rem);
+  z-index: 8;
+  min-width: 14rem;
+  max-height: 12rem;
+  overflow: auto;
+  margin: 0;
+  padding: 0.2rem 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--raised);
+  box-shadow: 0 0.6rem 1.2rem color-mix(in oklch, var(--bg-deep) 70%, transparent);
+}
+
+.tag-add-menu button {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0.35rem 0.65rem;
+  color: inherit;
+  font-size: 0.75rem;
+}
+
+.tag-add-menu button:hover {
+  background: var(--hover);
 }
 
 .watch-tags {

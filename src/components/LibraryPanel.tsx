@@ -123,11 +123,6 @@ export function LibraryPanel({
           埋込不可
         </button>
       </div>
-      <datalist id="catalog-songs">
-        {catalogIndex.catalog.songs.map((song) => (
-          <option key={song.id} value={song.title} />
-        ))}
-      </datalist>
       {videos.length === 0 ? (
         <p className="empty">検索、動画ID、またはチャンネルから入れると、ここに並びます。</p>
       ) : visible.length === 0 ? (
