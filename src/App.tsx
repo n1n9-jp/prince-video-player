@@ -1,17 +1,17 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AddPanel } from "./components/AddPanel";
 import { LibraryPanel } from "./components/LibraryPanel";
 import { PlayerStage, type PlayerHandle } from "./components/PlayerStage";
 import { PlaylistPanel } from "./components/PlaylistPanel";
 import { Topbar } from "./components/Topbar";
-import { YearExplore } from "./components/YearExplore";
+import { YearExplore, parseYearPlaylistId, yearPlaylistId } from "./components/YearExplore";
 import { goToPage, pageFromHash, type Page } from "./page";
 import { applyAutoTags, addManualSong, removeManualSong } from "./catalog/tagging";
 import { nextVideo, previousVideo, shuffledCopy, startVideo } from "./playback/nextVideo";
 import { hydrateState } from "./storage/localStore";
 import { isStarterShaped } from "./storage/parse";
 import { loadCanonicalLibrary, pullLibrary, pushLibrary } from "./storage/remoteStore";
-import { activePlaylist, dropFromPlaylists, emptyState, type AppState, type PlayMode, type Video } from "./storage/types";
+import { activePlaylist, dropFromPlaylists, emptyState, type AppState, type PlayMode, type Playlist, type Video } from "./storage/types";
 import { fetchChannelUploads, fetchVideoById, parseVideoId, searchVideos } from "./youtube/dataApi";
 import { loadYoutubeApi } from "./youtube/iframePlayer";
 
@@ -27,14 +27,21 @@ export function App() {
   const [searchBusy, setSearchBusy] = useState(false);
   const [page, setPage] = useState<Page>(pageFromHash);
   const [ready, setReady] = useState(false);
+  const [yearQueue, setYearQueue] = useState<{ year: number; videoIds: string[] } | null>(null);
+  const [usingYearQueue, setUsingYearQueue] = useState(true);
 
   const stateRef = useRef(state);
   const shuffleRef = useRef(shuffleOrder);
   const errorStreakRef = useRef(0);
+  const oneShotRef = useRef(false);
+  const yearQueueRef = useRef(yearQueue);
+  const usingYearQueueRef = useRef(usingYearQueue);
   const playerRef = useRef<PlayerHandle>(null);
   const readyRef = useRef(false);
   stateRef.current = state;
   shuffleRef.current = shuffleOrder;
+  yearQueueRef.current = yearQueue;
+  usingYearQueueRef.current = usingYearQueue;
 
   function catalogChanged(prev: AppState, next: AppState): boolean {
     return (
@@ -162,30 +169,35 @@ export function App() {
   }
 
   function playbackInput(s: AppState) {
+    const year = usingYearQueueRef.current ? yearQueueRef.current : null;
+    const videoIds = (year ? year.videoIds : (activePlaylist(s)?.videoIds ?? [])).filter(
+      (id) => !s.unplayableIds.includes(id),
+    );
     return {
       mode: s.playMode,
-      videoIds: (activePlaylist(s)?.videoIds ?? []).filter((id) => !s.unplayableIds.includes(id)),
+      videoIds,
       currentVideoId: s.currentVideoId,
       watchCounts: s.watchCounts,
       shuffleOrder: shuffleRef.current,
     };
   }
 
-  function start(videoId?: string) {
+  function start(videoId?: string, options?: { once?: boolean }) {
+    oneShotRef.current = Boolean(options?.once);
     const s = stateRef.current;
-    const list = activePlaylist(s);
+    const input = playbackInput(s);
     const requested = videoId ?? s.currentVideoId;
-    if (requested && s.videos[requested] && !list?.videoIds.includes(requested)) {
+    if (requested && s.videos[requested] && !input.videoIds.includes(requested)) {
       commit({ ...s, currentVideoId: requested });
       setAutoplayBlocked(false);
       setSessionActive(true);
       playerRef.current?.loadAndPlay(requested);
       return;
     }
-    const current = requested && list?.videoIds.includes(requested) ? requested : null;
-    const order = s.playMode === "shuffle" ? shuffledCopy(list?.videoIds ?? []) : shuffleRef.current;
+    const current = requested && input.videoIds.includes(requested) ? requested : null;
+    const order = s.playMode === "shuffle" ? shuffledCopy(input.videoIds) : shuffleRef.current;
     const result = startVideo({
-      ...playbackInput(s),
+      ...input,
       currentVideoId: current,
       shuffleOrder: order,
     });
@@ -207,21 +219,35 @@ export function App() {
       );
     }
     commit({ ...s, videos, playlists, videoTags: applyAutoTags(videos, s.videoTags) });
+    usingYearQueueRef.current = false;
+    setUsingYearQueue(false);
     goToPage("watch");
     start(video.id);
   }
 
   function advance(kind: "next" | "prev" | "ended" | "error") {
     const s = stateRef.current;
-    const list = activePlaylist(s);
-    if (!list || list.videoIds.length === 0) {
+    if (kind === "next" || kind === "prev") oneShotRef.current = false;
+    if (oneShotRef.current && (kind === "ended" || kind === "error")) {
+      oneShotRef.current = false;
+      if (kind === "ended" && s.currentVideoId) {
+        commit({
+          ...s,
+          watchCounts: { ...s.watchCounts, [s.currentVideoId]: (s.watchCounts[s.currentVideoId] ?? 0) + 1 },
+        });
+      }
+      setSessionActive(false);
+      return;
+    }
+    const queue = playbackInput(s);
+    if (queue.videoIds.length === 0) {
       setSessionActive(false);
       return;
     }
     if (kind === "ended") errorStreakRef.current = 0;
     if (kind === "error") {
       errorStreakRef.current += 1;
-      if (errorStreakRef.current >= list.videoIds.length) {
+      if (errorStreakRef.current >= queue.videoIds.length) {
         setSessionActive(false);
         return;
       }
@@ -235,7 +261,7 @@ export function App() {
       setSessionActive(false);
       return;
     }
-    const input = { ...playbackInput(s), watchCounts };
+    const input = { ...queue, watchCounts };
     const result = kind === "prev" ? previousVideo(input) : nextVideo(input);
     patchShuffle(result.shuffleOrder);
     commit({ ...s, watchCounts, currentVideoId: result.videoId });
@@ -399,13 +425,75 @@ export function App() {
   }
 
   function changeMode(mode: PlayMode) {
-    const list = activePlaylist(state);
-    if (mode === "shuffle" && list) patchShuffle(shuffledCopy(list.videoIds));
+    const input = playbackInput(state);
+    if (mode === "shuffle") patchShuffle(shuffledCopy(input.videoIds));
     setState({ ...state, playMode: mode });
   }
 
   const libraryVideos = useMemo(() => Object.values(state.videos), [state.videos]);
   const playlistIds = useMemo(() => new Set(playlist?.videoIds ?? []), [playlist]);
+  const yearPlaylist: Playlist | null = yearQueue
+    ? { id: yearPlaylistId(yearQueue.year), name: `${yearQueue.year}年`, videoIds: yearQueue.videoIds }
+    : null;
+  const watchPlaylists = yearPlaylist ? [yearPlaylist, ...state.playlists] : state.playlists;
+  const watchActiveId = usingYearQueue && yearPlaylist ? yearPlaylist.id : state.activePlaylistId;
+
+  const handleYearQueue = useCallback((queue: { year: number; videoIds: string[] } | null) => {
+    yearQueueRef.current = queue;
+    setYearQueue(queue);
+  }, []);
+
+  function preferYearQueue() {
+    usingYearQueueRef.current = true;
+    setUsingYearQueue(true);
+  }
+
+  function playFromYearCard(video: Video) {
+    usingYearQueueRef.current = true;
+    setUsingYearQueue(true);
+    start(video.id);
+    goToPage("watch");
+  }
+
+  function playYearPlaylist(year: number, videoIds: string[]) {
+    const queue = { year, videoIds };
+    yearQueueRef.current = queue;
+    usingYearQueueRef.current = true;
+    setYearQueue(queue);
+    setUsingYearQueue(true);
+    const first = videoIds[0];
+    goToPage("watch");
+    start(first);
+  }
+
+  function playSavedPlaylist(id: string) {
+    usingYearQueueRef.current = false;
+    setUsingYearQueue(false);
+    const s = stateRef.current;
+    const next = s.activePlaylistId === id ? s : { ...s, activePlaylistId: id };
+    if (next !== s) commit(next);
+    const list = next.playlists.find((playlist) => playlist.id === id);
+    const first = list?.videoIds.find((videoId) => next.videos[videoId] && !next.unplayableIds.includes(videoId));
+    if (!first) return;
+    goToPage("watch");
+    start(first);
+  }
+
+  function playFromWatchQueue(id: string) {
+    start(id);
+    goToPage("watch");
+  }
+
+  function selectWatchPlaylist(id: string) {
+    if (parseYearPlaylistId(id) != null) {
+      usingYearQueueRef.current = true;
+      setUsingYearQueue(true);
+      return;
+    }
+    usingYearQueueRef.current = false;
+    setUsingYearQueue(false);
+    patch((s) => ({ ...s, activePlaylistId: id }));
+  }
 
   return (
     <div className="app">
@@ -423,10 +511,29 @@ export function App() {
           videoTags={state.videoTags}
           unplayableIds={state.unplayableIds}
           watchCounts={state.watchCounts}
-          onPlay={(video) => {
-            start(video.id);
-            goToPage("watch");
-          }}
+          savedPlaylists={state.playlists}
+          activePlaylistId={watchActiveId}
+          onPlay={playFromYearCard}
+          onOpenYearPlaylist={playYearPlaylist}
+          onOpenSavedPlaylist={playSavedPlaylist}
+          onYearQueue={handleYearQueue}
+          onSelectYear={preferYearQueue}
+        />
+        <PlaylistPanel
+          variant="watch"
+          playlists={watchPlaylists}
+          activePlaylistId={watchActiveId}
+          videos={state.videos}
+          watchCounts={state.watchCounts}
+          currentVideoId={state.currentVideoId}
+          autoplayNext={state.autoplayNext}
+          playMode={state.playMode}
+          onSelectPlaylist={selectWatchPlaylist}
+          onPlay={playFromWatchQueue}
+          onPrev={() => advance("prev")}
+          onNext={() => advance("next")}
+          onAutoplayNextChange={(value) => patch((s) => ({ ...s, autoplayNext: value }))}
+          onPlayModeChange={changeMode}
         />
       </div>
 
@@ -444,10 +551,16 @@ export function App() {
           onEnded={() => advance("ended")}
           onError={(code) => {
             if (code === 153) return;
+            if (oneShotRef.current) {
+              oneShotRef.current = false;
+              if (code === 101 || code === 150) setSkipNotice("この動画は埋め込みできません。");
+              setSessionActive(false);
+              return;
+            }
             const s = stateRef.current;
             const id = s.currentVideoId;
-            const list = activePlaylist(s);
-            const inList = Boolean(id && list?.videoIds.includes(id));
+            const ids = playbackInput(s).videoIds;
+            const inList = Boolean(id && ids.includes(id));
             if (!inList) {
               if (code === 101 || code === 150) {
                 setSkipNotice("この動画は埋め込みできません。");
@@ -455,8 +568,17 @@ export function App() {
               setSessionActive(false);
               return;
             }
+            if ((code === 101 || code === 150) && id && usingYearQueueRef.current) {
+              const unplayableIds = s.unplayableIds.includes(id) ? s.unplayableIds : [...s.unplayableIds, id];
+              commit({ ...s, unplayableIds });
+              setSkipNotice("この動画は埋め込みできません。");
+              errorStreakRef.current = 0;
+              advance("error");
+              return;
+            }
             if ((code === 101 || code === 150) && id) {
-              const index = list?.videoIds.indexOf(id) ?? -1;
+              const current = activePlaylist(s);
+              const index = current?.videoIds.indexOf(id) ?? -1;
               const dropped = dropFromPlaylists(s, id);
               const remaining = activePlaylist(dropped)?.videoIds ?? [];
               const nextId = index >= 0 ? (remaining[index] ?? remaining[0] ?? null) : (remaining[0] ?? null);
@@ -481,14 +603,14 @@ export function App() {
         ) : null}
         <PlaylistPanel
           variant="watch"
-          playlists={state.playlists}
-          activePlaylistId={state.activePlaylistId}
+          playlists={watchPlaylists}
+          activePlaylistId={watchActiveId}
           videos={state.videos}
           watchCounts={state.watchCounts}
           currentVideoId={state.currentVideoId}
           autoplayNext={state.autoplayNext}
           playMode={state.playMode}
-          onSelectPlaylist={(id) => patch((s) => ({ ...s, activePlaylistId: id }))}
+          onSelectPlaylist={selectWatchPlaylist}
           onPlay={(id) => start(id)}
           onPrev={() => advance("prev")}
           onNext={() => advance("next")}
@@ -513,6 +635,8 @@ export function App() {
           onMove={moveInPlaylist}
           onRemove={removeFromPlaylist}
           onPlay={(id) => {
+            usingYearQueueRef.current = false;
+            setUsingYearQueue(false);
             goToPage("watch");
             start(id);
           }}
