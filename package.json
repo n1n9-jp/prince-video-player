@@ -12,10 +12,11 @@
     "typecheck": "tsc --noEmit && wrangler types && tsc --noEmit -p worker/tsconfig.json",
     "catalog:import": "node scripts/import-musicbrainz.mjs && node scripts/build-catalog.mjs",
     "catalog:build": "node scripts/build-catalog.mjs",
-    "test": "npx --yes tsx scripts/test-match.ts && npx --yes tsx scripts/test-storage.ts && npx --yes tsx scripts/test-youtube-proxy.ts"
+    "test": "npx --yes tsx scripts/test-match.ts && npx --yes tsx scripts/test-storage.ts && npx --yes tsx scripts/test-youtube-proxy.ts && npx --yes tsx scripts/test-year-explore.ts"
   },
   "license": "ISC",
   "dependencies": {
+    "@observablehq/plot": "^0.6.17",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
