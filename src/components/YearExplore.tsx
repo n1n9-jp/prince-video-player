@@ -207,8 +207,9 @@ export function YearExplore({ videos, videoTags, currentVideoId, onPlay }: Props
 
   function selectSong(entry: PlayableSong) {
     setSelectedSongId(entry.song.id);
-    if (entry.videoIds.length === 1) {
-      const id = entry.videoIds[0];
+    const playableIds = entry.videoIds.filter((id) => videos[id]);
+    if (playableIds.length === 1) {
+      const id = playableIds[0];
       if (id) onPlay(id);
     }
   }
