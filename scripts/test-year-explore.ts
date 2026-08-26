@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { catalogIndex } from "../src/catalog/index.ts";
-import { buildYearIndex, pickRandomSelection, songYear } from "../src/components/YearExplore.tsx";
+import { buildYearIndex, parseYearPlaylistId, pickRandomSelection, songYear, videosForYear, yearPlaylistId, yearPlaylists } from "../src/components/YearExplore.tsx";
 import type { Video } from "../src/storage/types.ts";
 import type { VideoTagging } from "../src/catalog/types.ts";
 
@@ -44,6 +44,19 @@ assert.ok(songs);
 assert.equal(songs.length, 1);
 assert.equal(songs[0]?.song.id, "when-doves-cry");
 assert.deepEqual(songs[0]?.videoIds, ["a", "b"]);
+
+assert.deepEqual(videosForYear(index, 1984), ["a", "b"]);
+assert.deepEqual(videosForYear(index, 1985), []);
+assert.equal(yearPlaylistId(1984), "year-1984");
+assert.equal(parseYearPlaylistId("year-1984"), 1984);
+assert.equal(parseYearPlaylistId("live"), null);
+
+const auto = yearPlaylists(index, videos, []);
+assert.equal(auto.length, 1);
+assert.equal(auto[0]?.id, "year-1984");
+assert.equal(auto[0]?.name, "1984年");
+assert.deepEqual(auto[0]?.videoIds, ["a", "b"]);
+assert.equal(yearPlaylists(index, videos, ["a", "b"]).length, 0);
 
 assert.equal(buildYearIndex({}, { a: tagging("when-doves-cry") }).bars.length, 0);
 

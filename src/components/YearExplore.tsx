@@ -2,7 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import * as Plot from "@observablehq/plot";
 import { catalogIndex } from "../catalog";
 import type { Song, VideoTagging } from "../catalog/types";
-import type { Video } from "../storage/types";
+import type { Playlist, Video } from "../storage/types";
+import { PlaylistCard, playlistCoverUrl } from "./PlaylistCard";
 import { kindClass, kindLabel } from "./TagRow";
 import { VideoCard } from "./VideoCard";
 
@@ -27,7 +28,13 @@ type Props = {
   videoTags: Record<string, VideoTagging>;
   unplayableIds: string[];
   watchCounts: Record<string, number>;
+  savedPlaylists: Playlist[];
+  activePlaylistId: string | null;
   onPlay: (video: Video) => void;
+  onOpenYearPlaylist: (year: number, videoIds: string[]) => void;
+  onOpenSavedPlaylist: (id: string) => void;
+  onYearQueue?: (queue: { year: number; videoIds: string[] } | null) => void;
+  onSelectYear?: () => void;
 };
 
 export function songYear(song: Song): number | undefined {
@@ -81,6 +88,48 @@ export function pickRandomSelection(index: YearIndex): { year: number; songId: s
   const entry = songs[Math.floor(Math.random() * songs.length)];
   if (!entry) return null;
   return { year: bar.year, songId: entry.song.id };
+}
+
+export function videosForYear(index: YearIndex, year: number): string[] {
+  const songs = index.songsByYear.get(year) ?? [];
+  const ids: string[] = [];
+  const seen = new Set<string>();
+  for (const entry of songs) {
+    for (const id of entry.videoIds) {
+      if (seen.has(id)) continue;
+      seen.add(id);
+      ids.push(id);
+    }
+  }
+  return ids;
+}
+
+export function yearPlaylistId(year: number): string {
+  return `year-${year}`;
+}
+
+export function parseYearPlaylistId(id: string): number | null {
+  const match = /^year-(\d+)$/.exec(id);
+  if (!match) return null;
+  const year = Number(match[1]);
+  return Number.isFinite(year) ? year : null;
+}
+
+export function yearPlaylists(
+  index: YearIndex,
+  videos: Record<string, Video>,
+  unplayableIds: string[],
+): Playlist[] {
+  const blocked = new Set(unplayableIds);
+  const lists: Playlist[] = [];
+  for (let i = index.bars.length - 1; i >= 0; i--) {
+    const bar = index.bars[i];
+    if (!bar) continue;
+    const videoIds = videosForYear(index, bar.year).filter((id) => videos[id] && !blocked.has(id));
+    if (videoIds.length === 0) continue;
+    lists.push({ id: yearPlaylistId(bar.year), name: `${bar.year}年`, videoIds });
+  }
+  return lists;
 }
 
 function token(node: HTMLElement, name: string, fallback: string): string {
@@ -201,10 +250,25 @@ function YearBars({
   return <div ref={containerRef} className="year-explore-plot" role="img" aria-label="発表年ごとの再生可能曲数" />;
 }
 
-export function YearExplore({ videos, videoTags, unplayableIds, watchCounts, onPlay }: Props) {
+export function YearExplore({
+  videos,
+  videoTags,
+  unplayableIds,
+  watchCounts,
+  savedPlaylists,
+  activePlaylistId,
+  onPlay,
+  onOpenYearPlaylist,
+  onOpenSavedPlaylist,
+  onYearQueue,
+  onSelectYear,
+}: Props) {
   const index = useMemo(() => buildYearIndex(videos, videoTags), [videos, videoTags]);
   const blocked = useMemo(() => new Set(unplayableIds), [unplayableIds]);
+  const autoPlaylists = useMemo(() => yearPlaylists(index, videos, unplayableIds), [index, videos, unplayableIds]);
   const seeded = useRef(false);
+  const onYearQueueRef = useRef(onYearQueue);
+  onYearQueueRef.current = onYearQueue;
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [selectedSongId, setSelectedSongId] = useState<string | null>(null);
 
@@ -223,43 +287,111 @@ export function YearExplore({ videos, videoTags, unplayableIds, watchCounts, onP
     .map((id) => videos[id])
     .filter((video): video is Video => Boolean(video));
 
-  if (index.bars.length === 0) return null;
+  useEffect(() => {
+    if (selectedYear == null) {
+      onYearQueueRef.current?.(null);
+      return;
+    }
+    const videoIds = videosForYear(index, selectedYear).filter((id) => videos[id] && !blocked.has(id));
+    onYearQueueRef.current?.({ year: selectedYear, videoIds });
+  }, [blocked, index, selectedYear, videos]);
+
+  if (index.bars.length === 0 && savedPlaylists.length === 0) return null;
 
   function selectYear(year: number) {
     setSelectedYear(year);
     setSelectedSongId(null);
+    onSelectYear?.();
+  }
+
+  function openYearPlaylist(list: Playlist) {
+    const year = parseYearPlaylistId(list.id);
+    if (year == null) return;
+    if (year !== selectedYear) selectYear(year);
+    onOpenYearPlaylist(year, list.videoIds);
   }
 
   return (
     <section className="year-explore" aria-label="年で探す">
-      <p className="year-explore-kicker">年で探す</p>
-      <YearBars rows={index.bars} selectedYear={selectedYear} onSelectYear={selectYear} />
-      {selectedYear != null ? (
-        <div className="year-explore-year">
-          <p className="year-explore-caption">
-            {selectedYear} · {yearSongs.length}曲
-          </p>
-          <div className="year-explore-songs">
-            {yearSongs.map((entry) => {
-              const on = entry.song.id === selectedSongId;
-              return (
-                <button
-                  key={entry.song.id}
-                  type="button"
-                  className={`tag-chip ${kindClass(entry.song.kind)}${on ? " now" : ""}`}
-                  title={kindLabel(entry.song.kind)}
-                  aria-pressed={on}
-                  onClick={() => setSelectedSongId(entry.song.id)}
-                >
-                  {entry.song.title}
-                </button>
-              );
-            })}
+      {index.bars.length > 0 ? (
+        <>
+          <p className="year-explore-kicker">年で探す</p>
+          <YearBars rows={index.bars} selectedYear={selectedYear} onSelectYear={selectYear} />
+        </>
+      ) : null}
+      <div className="browse-playlists">
+        <p className="year-explore-kicker">プレイリスト</p>
+        {autoPlaylists.length > 0 ? (
+          <div className="browse-playlists-group">
+            <header className="shelf-head">
+              <h2>年</h2>
+              <p>自動 · {autoPlaylists.length}</p>
+            </header>
+            <div className="video-grid">
+              {autoPlaylists.map((list) => (
+                <PlaylistCard
+                  key={list.id}
+                  title={list.name}
+                  meta={`自動プレイリスト · ${list.videoIds.length} 本`}
+                  thumbnailUrl={playlistCoverUrl(list.videoIds, videos)}
+                  active={list.id === activePlaylistId}
+                  onOpen={() => openYearPlaylist(list)}
+                />
+              ))}
+            </div>
           </div>
+        ) : null}
+        <div className="browse-playlists-group">
+          <header className="shelf-head">
+            <h2>リスト</h2>
+            <p>手動 · {savedPlaylists.length}</p>
+          </header>
+          {savedPlaylists.length === 0 ? (
+            <p className="empty">編集ページでリストを作ると、ここに並びます。</p>
+          ) : (
+            <div className="video-grid">
+              {savedPlaylists.map((list) => (
+                <PlaylistCard
+                  key={list.id}
+                  title={list.name}
+                  meta={`リスト · ${list.videoIds.length} 本`}
+                  thumbnailUrl={playlistCoverUrl(list.videoIds, videos)}
+                  active={list.id === activePlaylistId}
+                  onOpen={() => onOpenSavedPlaylist(list.id)}
+                />
+              ))}
+            </div>
+          )}
         </div>
-      ) : (
-        <p className="year-explore-hint">棒をクリックして年を選ぶと、その年の曲が並びます。</p>
-      )}
+      </div>
+      {index.bars.length > 0 ? (
+        selectedYear != null ? (
+          <div className="year-explore-year">
+            <p className="year-explore-caption">
+              {selectedYear} · {yearSongs.length}曲
+            </p>
+            <div className="year-explore-songs">
+              {yearSongs.map((entry) => {
+                const on = entry.song.id === selectedSongId;
+                return (
+                  <button
+                    key={entry.song.id}
+                    type="button"
+                    className={`tag-chip ${kindClass(entry.song.kind)}${on ? " now" : ""}`}
+                    title={kindLabel(entry.song.kind)}
+                    aria-pressed={on}
+                    onClick={() => setSelectedSongId(entry.song.id)}
+                  >
+                    {entry.song.title}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+          <p className="year-explore-hint">棒をクリックして年を選ぶと、その年の曲が並びます。</p>
+        )
+      ) : null}
       {selectedSong ? (
         <div className="year-explore-library">
           <header className="shelf-head">
