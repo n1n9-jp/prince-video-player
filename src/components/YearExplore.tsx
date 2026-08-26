@@ -321,26 +321,6 @@ export function YearExplore({
       ) : null}
       <div className="browse-playlists">
         <p className="year-explore-kicker">プレイリスト</p>
-        {autoPlaylists.length > 0 ? (
-          <div className="browse-playlists-group">
-            <header className="shelf-head">
-              <h2>年</h2>
-              <p>自動 · {autoPlaylists.length}</p>
-            </header>
-            <div className="video-grid">
-              {autoPlaylists.map((list) => (
-                <PlaylistCard
-                  key={list.id}
-                  title={list.name}
-                  meta={`自動プレイリスト · ${list.videoIds.length} 本`}
-                  thumbnailUrl={playlistCoverUrl(list.videoIds, videos)}
-                  active={list.id === activePlaylistId}
-                  onOpen={() => openYearPlaylist(list)}
-                />
-              ))}
-            </div>
-          </div>
-        ) : null}
         <div className="browse-playlists-group">
           <header className="shelf-head">
             <h2>リスト</h2>
@@ -363,6 +343,26 @@ export function YearExplore({
             </div>
           )}
         </div>
+        {autoPlaylists.length > 0 ? (
+          <div className="browse-playlists-group">
+            <header className="shelf-head">
+              <h2>年</h2>
+              <p>自動 · {autoPlaylists.length}</p>
+            </header>
+            <div className="video-grid">
+              {autoPlaylists.map((list) => (
+                <PlaylistCard
+                  key={list.id}
+                  title={list.name}
+                  meta={`自動プレイリスト · ${list.videoIds.length} 本`}
+                  thumbnailUrl={playlistCoverUrl(list.videoIds, videos)}
+                  active={list.id === activePlaylistId}
+                  onOpen={() => openYearPlaylist(list)}
+                />
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
       {index.bars.length > 0 ? (
         selectedYear != null ? (
