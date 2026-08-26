@@ -434,8 +434,16 @@ export function App() {
             if (code === 153) return;
             const s = stateRef.current;
             const id = s.currentVideoId;
+            const list = activePlaylist(s);
+            const inList = Boolean(id && list?.videoIds.includes(id));
+            if (!inList) {
+              if (code === 101 || code === 150) {
+                setSkipNotice("この動画は埋め込みできません。");
+              }
+              setSessionActive(false);
+              return;
+            }
             if ((code === 101 || code === 150) && id) {
-              const list = activePlaylist(s);
               const index = list?.videoIds.indexOf(id) ?? -1;
               const dropped = dropFromPlaylists(s, id);
               const remaining = activePlaylist(dropped)?.videoIds ?? [];
