@@ -5,6 +5,7 @@ import { PlayerStage, type PlayerHandle } from "./components/PlayerStage";
 import { PlaylistPanel } from "./components/PlaylistPanel";
 import { Topbar } from "./components/Topbar";
 import { WatchTagList } from "./components/WatchTagList";
+import { YearExplore } from "./components/YearExplore";
 import { goToPage, pageFromHash, type Page } from "./page";
 import { applyAutoTags, addManualSong, removeManualSong } from "./catalog/tagging";
 import { nextVideo, previousVideo, shuffledCopy, startVideo } from "./playback/nextVideo";
@@ -175,6 +176,13 @@ export function App() {
     const s = stateRef.current;
     const list = activePlaylist(s);
     const requested = videoId ?? s.currentVideoId;
+    if (requested && s.videos[requested] && !list?.videoIds.includes(requested)) {
+      commit({ ...s, currentVideoId: requested });
+      setAutoplayBlocked(false);
+      setSessionActive(true);
+      playerRef.current?.loadAndPlay(requested);
+      return;
+    }
     const current = requested && list?.videoIds.includes(requested) ? requested : null;
     const order = s.playMode === "shuffle" ? shuffledCopy(list?.videoIds ?? []) : shuffleRef.current;
     const result = startVideo({
@@ -426,8 +434,16 @@ export function App() {
             if (code === 153) return;
             const s = stateRef.current;
             const id = s.currentVideoId;
+            const list = activePlaylist(s);
+            const inList = Boolean(id && list?.videoIds.includes(id));
+            if (!inList) {
+              if (code === 101 || code === 150) {
+                setSkipNotice("この動画は埋め込みできません。");
+              }
+              setSessionActive(false);
+              return;
+            }
             if ((code === 101 || code === 150) && id) {
-              const list = activePlaylist(s);
               const index = list?.videoIds.indexOf(id) ?? -1;
               const dropped = dropFromPlaylists(s, id);
               const remaining = activePlaylist(dropped)?.videoIds ?? [];
@@ -471,6 +487,12 @@ export function App() {
           videoIds={playlist?.videoIds ?? []}
           videoTags={state.videoTags}
           currentTagging={state.currentVideoId ? state.videoTags[state.currentVideoId] : undefined}
+        />
+        <YearExplore
+          videos={state.videos}
+          videoTags={state.videoTags}
+          currentVideoId={state.currentVideoId}
+          onPlay={(id) => start(id)}
         />
       </div>
 
