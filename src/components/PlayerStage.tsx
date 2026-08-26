@@ -50,6 +50,7 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
   handlersRef.current = { onEnded, onError, onPlaying, onAutoplayBlocked };
   const sessionActiveRef = useRef(sessionActive);
   sessionActiveRef.current = sessionActive;
+  const wantPlayRef = useRef(false);
 
   useEffect(() => {
     void loadYoutubeApi();
@@ -74,9 +75,18 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
             localPlayer?.playVideo();
           }
         },
-        onPlaying: () => handlersRef.current.onPlaying(),
+        onPlaying: () => {
+          wantPlayRef.current = true;
+          handlersRef.current.onPlaying();
+        },
         onPaused: () => {
-          if (document.visibilityState !== "hidden" || !sessionActiveRef.current) return;
+          if (document.visibilityState === "visible") {
+            window.setTimeout(() => {
+              if (document.visibilityState === "visible") wantPlayRef.current = false;
+            }, 0);
+            return;
+          }
+          if (!sessionActiveRef.current || !wantPlayRef.current) return;
           localPlayer?.playVideo();
         },
         onEnded: () => handlersRef.current.onEnded(),
@@ -103,7 +113,7 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
 
   useEffect(() => {
     function keepPlaying() {
-      if (document.visibilityState !== "hidden" || !sessionActiveRef.current) return;
+      if (document.visibilityState !== "hidden" || !sessionActiveRef.current || !wantPlayRef.current) return;
       const player = playerRef.current;
       if (!player) return;
       const playerState = player.getPlayerState?.();
@@ -118,6 +128,7 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
   }, [playerReady]);
 
   function playNow(id?: string) {
+    wantPlayRef.current = true;
     const player = playerRef.current;
     const targetId = id ?? videoId;
     if (!player || !playerReady || !targetId) {
