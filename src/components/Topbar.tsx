@@ -1,8 +1,14 @@
-import type { Page } from "../page";
+import { hashForPage, type Page } from "../page";
 
 type Props = {
   page: Page;
 };
+
+const links: { page: Page; label: string }[] = [
+  { page: "browse", label: "一覧" },
+  { page: "watch", label: "詳細" },
+  { page: "library", label: "編集" },
+];
 
 export function Topbar({ page }: Props) {
   return (
@@ -18,13 +24,13 @@ export function Topbar({ page }: Props) {
           Prince<span>Tube</span>
         </span>
       </a>
-      {page === "library" ? (
-        <nav className="page-nav" aria-label="ページ">
-          <a href="#/">閲覧</a>
-        </nav>
-      ) : (
-        <span className="topbar-end" aria-hidden="true" />
-      )}
+      <nav className="page-nav" aria-label="ページ">
+        {links.map((link) => (
+          <a key={link.page} href={hashForPage(link.page)} aria-current={page === link.page ? "page" : undefined}>
+            {link.label}
+          </a>
+        ))}
+      </nav>
     </header>
   );
 }

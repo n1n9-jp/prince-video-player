@@ -67,7 +67,7 @@ img {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: auto minmax(0, 640px) auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -199,9 +199,7 @@ img {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 402px;
   grid-template-areas:
-    "player list"
-    "tags list"
-    "year list";
+    "player list";
   column-gap: 1.5rem;
   row-gap: 0.9rem;
   align-items: start;
@@ -218,18 +216,32 @@ img {
 }
 
 .watch-page[hidden],
+.browse-page[hidden],
 .library-page[hidden] {
   display: none !important;
 }
 
+.browse-page {
+  width: min(1754px, calc(100% - 3rem));
+  margin: 1.5rem auto 2rem;
+}
+
 .page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.1rem;
   justify-self: end;
 }
 
 .page-nav a {
+  color: var(--ink-soft);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.page-nav a[aria-current="page"] {
   color: var(--gold);
   font-weight: 600;
-  text-decoration: none;
 }
 
 .yt-search.in-panel {
@@ -961,27 +973,31 @@ button:disabled {
 }
 
 .year-explore {
-  grid-area: year;
   min-width: 0;
-  padding: 0.35rem 0.15rem 0;
 }
 
 .year-explore-kicker {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.45rem;
   color: var(--ink-soft);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .year-explore-plot {
   min-height: 176px;
   overflow: visible;
+  cursor: pointer;
 }
 
 .year-explore-plot svg {
   display: block;
   max-width: 100%;
+  cursor: pointer;
+}
+
+.year-explore-plot svg rect {
+  cursor: pointer;
 }
 
 .year-explore-year {
@@ -994,12 +1010,16 @@ button:disabled {
   font-size: 0.72rem;
 }
 
+.year-explore-hint {
+  margin: 0.7rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+}
+
 .year-explore-songs {
   display: flex;
   flex-wrap: wrap;
   gap: 0.28rem 0.35rem;
-  max-height: 12rem;
-  overflow: auto;
 }
 
 .year-explore-songs .tag-chip {
@@ -1011,33 +1031,8 @@ button:disabled {
   background: color-mix(in oklch, var(--gold) 16%, var(--plum));
 }
 
-.year-explore-videos {
-  margin: 0.55rem 0 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.year-explore-videos button {
-  display: block;
-  width: 100%;
-  border: 0;
-  border-radius: 8px;
-  background: transparent;
-  padding: 0.4rem 0.5rem;
-  text-align: left;
-  color: inherit;
-  font-size: 0.8rem;
-}
-
-.year-explore-videos button:hover {
-  background: var(--hover);
-}
-
-.year-explore-videos button.now {
-  color: var(--gold);
+.year-explore-library {
+  margin-top: 1.1rem;
 }
 
 @media (max-width: 1100px) {
@@ -1045,9 +1040,7 @@ button:disabled {
     grid-template-columns: 1fr;
     grid-template-areas:
       "player"
-      "list"
-      "tags"
-      "year";
+      "list";
   }
 
   .playlist-dock {
@@ -1081,6 +1074,7 @@ button:disabled {
   }
 
   .watch-page,
+  .browse-page,
   .shelf {
     width: calc(100% - 1.5rem);
   }

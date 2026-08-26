@@ -70,8 +70,9 @@ export const PlayerStage = forwardRef<PlayerHandle, Props>(function PlayerStage(
           if (cancelled) return;
           playerRef.current = localPlayer;
           setPlayerReady(true);
-          if (pendingPlayRef.current) {
+          if (pendingPlayRef.current || sessionActiveRef.current) {
             pendingPlayRef.current = false;
+            wantPlayRef.current = true;
             localPlayer?.playVideo();
           }
         },
