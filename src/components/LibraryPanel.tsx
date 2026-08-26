@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { catalogIndex } from "../catalog";
 import { foldTitle } from "../catalog/normalize";
 import type { VideoTagging } from "../catalog/types";
@@ -33,22 +33,13 @@ function matchesFilter(tagging: VideoTagging | undefined, kind: KindFilter): boo
   });
 }
 
-function matchesQuery(video: Video, tagging: VideoTagging | undefined, raw: string): boolean {
+function matchesHay(hay: string, folded: string, raw: string): boolean {
   const tokens = raw.trim().toLowerCase().split(/\s+/).filter(Boolean);
   if (tokens.length === 0) return true;
-  const fields = [
-    video.title,
-    video.channelTitle,
-    video.id,
-    ...(tagging?.songIds ?? []).map((id) => catalogIndex.songsById.get(id)?.title ?? ""),
-    tagging?.concertId ? catalogIndex.concertsById.get(tagging.concertId)?.aliases.join(" ") ?? "" : "",
-  ].join(" ");
-  const hay = fields.toLowerCase();
-  const foldedHay = foldTitle(fields);
   return tokens.every((token) => {
     if (hay.includes(token)) return true;
-    const folded = foldTitle(token);
-    return folded.length > 0 && foldedHay.includes(folded);
+    const foldedToken = foldTitle(token);
+    return foldedToken.length > 0 && folded.includes(foldedToken);
   });
 }
 
@@ -64,23 +55,42 @@ export function LibraryPanel({
   onAddSongTag,
   onRemoveSongTag,
 }: Props) {
-  const blocked = new Set(unplayableIds);
+  const blocked = useMemo(() => new Set(unplayableIds), [unplayableIds]);
   const [kind, setKind] = useState<KindFilter>("all");
   const [query, setQuery] = useState("");
+  const [applied, setApplied] = useState("");
   const [showListed, setShowListed] = useState(true);
   const [showUnplayable, setShowUnplayable] = useState(true);
 
+  useEffect(() => {
+    const timer = window.setTimeout(() => setApplied(query), 150);
+    return () => window.clearTimeout(timer);
+  }, [query]);
+
+  const searchIndex = useMemo(
+    () =>
+      videos.map((video) => {
+        const tagging = videoTags[video.id];
+        const concert = tagging?.concertId ? catalogIndex.concertsById.get(tagging.concertId) : undefined;
+        const songTitles = (tagging?.songIds ?? []).map((id) => catalogIndex.songsById.get(id)?.title ?? "");
+        const fields = [video.title, video.channelTitle, video.id, ...songTitles, ...(concert?.aliases ?? [])].join(" ");
+        return { video, tagging, hay: fields.toLowerCase(), folded: foldTitle(fields) };
+      }),
+    [videos, videoTags],
+  );
+
   const visible = useMemo(
     () =>
-      videos.filter((video) => {
-        const tagging = videoTags[video.id];
-        const listed = playlistIds.has(video.id);
-        const unplayable = blocked.has(video.id);
-        if (!showListed && listed) return false;
-        if (!showUnplayable && unplayable) return false;
-        return matchesFilter(tagging, kind) && matchesQuery(video, tagging, query);
-      }),
-    [videos, videoTags, kind, query, playlistIds, blocked, showListed, showUnplayable],
+      searchIndex
+        .filter(({ video, tagging, hay, folded }) => {
+          const listed = playlistIds.has(video.id);
+          const unplayable = blocked.has(video.id);
+          if (!showListed && listed) return false;
+          if (!showUnplayable && unplayable) return false;
+          return matchesFilter(tagging, kind) && matchesHay(hay, folded, applied);
+        })
+        .map(({ video }) => video),
+    [searchIndex, playlistIds, blocked, showListed, showUnplayable, kind, applied],
   );
 
   return (
@@ -95,6 +105,8 @@ export function LibraryPanel({
       <div className="library-filters">
         <input
           value={query}
+          autoComplete="off"
+          spellCheck={false}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="タイトル、チャンネル、ID、曲名"
           aria-label="ライブラリ内を探す"

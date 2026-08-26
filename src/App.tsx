@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { AddPanel } from "./components/AddPanel";
 import { LibraryPanel } from "./components/LibraryPanel";
 import { PlayerStage, type PlayerHandle } from "./components/PlayerStage";
@@ -397,8 +397,8 @@ export function App() {
     setState({ ...state, playMode: mode });
   }
 
-  const libraryVideos = Object.values(state.videos);
-  const playlistIds = new Set(playlist?.videoIds ?? []);
+  const libraryVideos = useMemo(() => Object.values(state.videos), [state.videos]);
+  const playlistIds = useMemo(() => new Set(playlist?.videoIds ?? []), [playlist]);
 
   return (
     <div className="app">
