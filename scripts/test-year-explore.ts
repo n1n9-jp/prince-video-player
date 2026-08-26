@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { catalogIndex } from "../src/catalog/index.ts";
-import { buildYearIndex, songYear } from "../src/components/YearExplore.tsx";
+import { buildYearIndex, pickRandomSelection, songYear } from "../src/components/YearExplore.tsx";
 import type { Video } from "../src/storage/types.ts";
 import type { VideoTagging } from "../src/catalog/types.ts";
 
@@ -46,5 +46,9 @@ assert.equal(songs[0]?.song.id, "when-doves-cry");
 assert.deepEqual(songs[0]?.videoIds, ["a", "b"]);
 
 assert.equal(buildYearIndex({}, { a: tagging("when-doves-cry") }).bars.length, 0);
+
+assert.equal(pickRandomSelection({ bars: [], songsByYear: new Map() }), null);
+const only = pickRandomSelection(index);
+assert.deepEqual(only, { year: 1984, songId: "when-doves-cry" });
 
 console.log("ok year explore index");

@@ -72,6 +72,17 @@ export function buildYearIndex(videos: Record<string, Video>, videoTags: Record<
   return { bars, songsByYear };
 }
 
+export function pickRandomSelection(index: YearIndex): { year: number; songId: string } | null {
+  if (index.bars.length === 0) return null;
+  const bar = index.bars[Math.floor(Math.random() * index.bars.length)];
+  if (!bar) return null;
+  const songs = index.songsByYear.get(bar.year) ?? [];
+  if (songs.length === 0) return null;
+  const entry = songs[Math.floor(Math.random() * songs.length)];
+  if (!entry) return null;
+  return { year: bar.year, songId: entry.song.id };
+}
+
 function token(node: HTMLElement, name: string, fallback: string): string {
   const value = getComputedStyle(node).getPropertyValue(name).trim();
   return value || fallback;
@@ -193,8 +204,18 @@ function YearBars({
 export function YearExplore({ videos, videoTags, unplayableIds, watchCounts, onPlay }: Props) {
   const index = useMemo(() => buildYearIndex(videos, videoTags), [videos, videoTags]);
   const blocked = useMemo(() => new Set(unplayableIds), [unplayableIds]);
+  const seeded = useRef(false);
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [selectedSongId, setSelectedSongId] = useState<string | null>(null);
+
+  if (!seeded.current && index.bars.length > 0) {
+    const pick = pickRandomSelection(index);
+    if (pick) {
+      seeded.current = true;
+      setSelectedYear(pick.year);
+      setSelectedSongId(pick.songId);
+    }
+  }
 
   const yearSongs = selectedYear == null ? [] : (index.songsByYear.get(selectedYear) ?? []);
   const selectedSong = yearSongs.find((entry) => entry.song.id === selectedSongId);
