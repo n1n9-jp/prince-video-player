@@ -4,6 +4,7 @@ import { catalogIndex } from "../catalog";
 import type { Song, VideoTagging } from "../catalog/types";
 import type { Video } from "../storage/types";
 import { kindClass, kindLabel } from "./TagRow";
+import { VideoCard } from "./VideoCard";
 
 export type YearBar = {
   year: number;
@@ -24,8 +25,9 @@ export type YearIndex = {
 type Props = {
   videos: Record<string, Video>;
   videoTags: Record<string, VideoTagging>;
-  currentVideoId: string | null;
-  onPlay: (videoId: string) => void;
+  unplayableIds: string[];
+  watchCounts: Record<string, number>;
+  onPlay: (video: Video) => void;
 };
 
 export function songYear(song: Song): number | undefined {
@@ -127,6 +129,7 @@ function YearBars({
           color: ink,
           fontSize: "10px",
           overflow: "visible",
+          cursor: "pointer",
         },
         x: {
           type: "band",
@@ -187,8 +190,9 @@ function YearBars({
   return <div ref={containerRef} className="year-explore-plot" role="img" aria-label="発表年ごとの再生可能曲数" />;
 }
 
-export function YearExplore({ videos, videoTags, currentVideoId, onPlay }: Props) {
+export function YearExplore({ videos, videoTags, unplayableIds, watchCounts, onPlay }: Props) {
   const index = useMemo(() => buildYearIndex(videos, videoTags), [videos, videoTags]);
+  const blocked = useMemo(() => new Set(unplayableIds), [unplayableIds]);
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const [selectedSongId, setSelectedSongId] = useState<string | null>(null);
 
@@ -205,15 +209,6 @@ export function YearExplore({ videos, videoTags, currentVideoId, onPlay }: Props
     setSelectedSongId(null);
   }
 
-  function selectSong(entry: PlayableSong) {
-    setSelectedSongId(entry.song.id);
-    const playableIds = entry.videoIds.filter((id) => videos[id]);
-    if (playableIds.length === 1) {
-      const id = playableIds[0];
-      if (id) onPlay(id);
-    }
-  }
-
   return (
     <section className="year-explore" aria-label="年で探す">
       <p className="year-explore-kicker">年で探す</p>
@@ -225,16 +220,15 @@ export function YearExplore({ videos, videoTags, currentVideoId, onPlay }: Props
           </p>
           <div className="year-explore-songs">
             {yearSongs.map((entry) => {
-              const playing = entry.videoIds.includes(currentVideoId ?? "");
               const on = entry.song.id === selectedSongId;
               return (
                 <button
                   key={entry.song.id}
                   type="button"
-                  className={`tag-chip ${kindClass(entry.song.kind)}${on || playing ? " now" : ""}`}
+                  className={`tag-chip ${kindClass(entry.song.kind)}${on ? " now" : ""}`}
                   title={kindLabel(entry.song.kind)}
                   aria-pressed={on}
-                  onClick={() => selectSong(entry)}
+                  onClick={() => setSelectedSongId(entry.song.id)}
                 >
                   {entry.song.title}
                 </button>
@@ -242,20 +236,39 @@ export function YearExplore({ videos, videoTags, currentVideoId, onPlay }: Props
             })}
           </div>
         </div>
-      ) : null}
-      {selectedSong && selectedVideos.length > 1 ? (
-        <ul className="year-explore-videos">
-          {selectedVideos.map((video) => {
-            const now = video.id === currentVideoId;
-            return (
-              <li key={video.id}>
-                <button type="button" className={now ? "now" : undefined} onClick={() => onPlay(video.id)}>
-                  {video.title}
-                </button>
-              </li>
-            );
-          })}
-        </ul>
+      ) : (
+        <p className="year-explore-hint">棒をクリックして年を選ぶと、その年の曲が並びます。</p>
+      )}
+      {selectedSong ? (
+        <div className="year-explore-library">
+          <header className="shelf-head">
+            <h2>{selectedSong.song.title}</h2>
+            <p>{selectedVideos.length} 本</p>
+          </header>
+          {selectedVideos.length === 0 ? (
+            <p className="empty">この曲の動画はライブラリにありません。</p>
+          ) : (
+            <div className="video-grid">
+              {selectedVideos.map((video) => {
+                const unplayable = blocked.has(video.id);
+                const count = watchCounts[video.id] ?? 0;
+                return (
+                  <VideoCard
+                    key={video.id}
+                    video={video}
+                    tagging={videoTags[video.id]}
+                    meta={unplayable ? "埋込不可" : count > 0 ? `視聴 ${count} 回` : undefined}
+                    onOpen={() => {
+                      if (!unplayable) onPlay(video);
+                    }}
+                  />
+                );
+              })}
+            </div>
+          )}
+        </div>
+      ) : selectedYear != null ? (
+        <p className="year-explore-hint">曲をクリックすると、ライブラリの動画がカードで並びます。</p>
       ) : null}
     </section>
   );

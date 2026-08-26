@@ -4,7 +4,6 @@ import { LibraryPanel } from "./components/LibraryPanel";
 import { PlayerStage, type PlayerHandle } from "./components/PlayerStage";
 import { PlaylistPanel } from "./components/PlaylistPanel";
 import { Topbar } from "./components/Topbar";
-import { WatchTagList } from "./components/WatchTagList";
 import { YearExplore } from "./components/YearExplore";
 import { goToPage, pageFromHash, type Page } from "./page";
 import { applyAutoTags, addManualSong, removeManualSong } from "./catalog/tagging";
@@ -418,6 +417,19 @@ export function App() {
       <div hidden={!ready}>
       <Topbar page={page} />
 
+      <div className="browse-page" hidden={page !== "browse"}>
+        <YearExplore
+          videos={state.videos}
+          videoTags={state.videoTags}
+          unplayableIds={state.unplayableIds}
+          watchCounts={state.watchCounts}
+          onPlay={(video) => {
+            start(video.id);
+            goToPage("watch");
+          }}
+        />
+      </div>
+
       <div className="watch-page" hidden={page !== "watch"}>
         {page === "watch" ? (
         <PlayerStage
@@ -427,7 +439,7 @@ export function App() {
           sessionActive={sessionActive}
           autoplayBlocked={autoplayBlocked}
           skipNotice={skipNotice}
-          emptyHint="編集ページでリストに入れると、ここで再生できます。"
+          emptyHint="一覧で動画を選ぶと、ここで再生できます。"
           onStart={() => start()}
           onEnded={() => advance("ended")}
           onError={(code) => {
@@ -482,17 +494,6 @@ export function App() {
           onNext={() => advance("next")}
           onAutoplayNextChange={(value) => patch((s) => ({ ...s, autoplayNext: value }))}
           onPlayModeChange={changeMode}
-        />
-        <WatchTagList
-          videoIds={playlist?.videoIds ?? []}
-          videoTags={state.videoTags}
-          currentTagging={state.currentVideoId ? state.videoTags[state.currentVideoId] : undefined}
-        />
-        <YearExplore
-          videos={state.videos}
-          videoTags={state.videoTags}
-          currentVideoId={state.currentVideoId}
-          onPlay={(id) => start(id)}
         />
       </div>
 
