@@ -207,23 +207,36 @@ img {
   margin: 1.5rem auto 2rem;
 }
 
+.browse-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 402px;
+  grid-template-areas:
+    "explore list";
+  column-gap: 1.5rem;
+  row-gap: 0.9rem;
+  align-items: start;
+  width: min(1754px, calc(100% - 3rem));
+  margin: 1.5rem auto 2rem;
+}
+
 .watch-page .stage-player {
   grid-area: player;
 }
 
-.watch-page > .playlist-dock {
+.watch-page > .playlist-dock,
+.browse-page > .playlist-dock {
   grid-area: list;
+}
+
+.browse-page .year-explore {
+  grid-area: explore;
+  min-width: 0;
 }
 
 .watch-page[hidden],
 .browse-page[hidden],
 .library-page[hidden] {
   display: none !important;
-}
-
-.browse-page {
-  width: min(1754px, calc(100% - 3rem));
-  margin: 1.5rem auto 2rem;
 }
 
 .page-nav {
@@ -1040,6 +1053,13 @@ button:disabled {
     grid-template-columns: 1fr;
     grid-template-areas:
       "player"
+      "list";
+  }
+
+  .browse-page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "explore"
       "list";
   }
 

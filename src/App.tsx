@@ -31,6 +31,7 @@ export function App() {
   const stateRef = useRef(state);
   const shuffleRef = useRef(shuffleOrder);
   const errorStreakRef = useRef(0);
+  const oneShotRef = useRef(false);
   const playerRef = useRef<PlayerHandle>(null);
   const readyRef = useRef(false);
   stateRef.current = state;
@@ -171,7 +172,8 @@ export function App() {
     };
   }
 
-  function start(videoId?: string) {
+  function start(videoId?: string, options?: { once?: boolean }) {
+    oneShotRef.current = Boolean(options?.once);
     const s = stateRef.current;
     const list = activePlaylist(s);
     const requested = videoId ?? s.currentVideoId;
@@ -213,6 +215,18 @@ export function App() {
 
   function advance(kind: "next" | "prev" | "ended" | "error") {
     const s = stateRef.current;
+    if (kind === "next" || kind === "prev") oneShotRef.current = false;
+    if (oneShotRef.current && (kind === "ended" || kind === "error")) {
+      oneShotRef.current = false;
+      if (kind === "ended" && s.currentVideoId) {
+        commit({
+          ...s,
+          watchCounts: { ...s.watchCounts, [s.currentVideoId]: (s.watchCounts[s.currentVideoId] ?? 0) + 1 },
+        });
+      }
+      setSessionActive(false);
+      return;
+    }
     const list = activePlaylist(s);
     if (!list || list.videoIds.length === 0) {
       setSessionActive(false);
@@ -424,9 +438,28 @@ export function App() {
           unplayableIds={state.unplayableIds}
           watchCounts={state.watchCounts}
           onPlay={(video) => {
-            start(video.id);
+            start(video.id, { once: true });
             goToPage("watch");
           }}
+        />
+        <PlaylistPanel
+          variant="watch"
+          playlists={state.playlists}
+          activePlaylistId={state.activePlaylistId}
+          videos={state.videos}
+          watchCounts={state.watchCounts}
+          currentVideoId={state.currentVideoId}
+          autoplayNext={state.autoplayNext}
+          playMode={state.playMode}
+          onSelectPlaylist={(id) => patch((s) => ({ ...s, activePlaylistId: id }))}
+          onPlay={(id) => {
+            start(id);
+            goToPage("watch");
+          }}
+          onPrev={() => advance("prev")}
+          onNext={() => advance("next")}
+          onAutoplayNextChange={(value) => patch((s) => ({ ...s, autoplayNext: value }))}
+          onPlayModeChange={changeMode}
         />
       </div>
 
@@ -444,6 +477,12 @@ export function App() {
           onEnded={() => advance("ended")}
           onError={(code) => {
             if (code === 153) return;
+            if (oneShotRef.current) {
+              oneShotRef.current = false;
+              if (code === 101 || code === 150) setSkipNotice("この動画は埋め込みできません。");
+              setSessionActive(false);
+              return;
+            }
             const s = stateRef.current;
             const id = s.currentVideoId;
             const list = activePlaylist(s);
