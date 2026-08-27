@@ -479,11 +479,6 @@ export function App() {
     start(first);
   }
 
-  function playFromWatchQueue(id: string) {
-    start(id);
-    goToPage("watch");
-  }
-
   function selectWatchPlaylist(id: string) {
     if (parseYearPlaylistId(id) != null) {
       usingYearQueueRef.current = true;
@@ -518,22 +513,6 @@ export function App() {
           onOpenSavedPlaylist={playSavedPlaylist}
           onYearQueue={handleYearQueue}
           onSelectYear={preferYearQueue}
-        />
-        <PlaylistPanel
-          variant="watch"
-          playlists={watchPlaylists}
-          activePlaylistId={watchActiveId}
-          videos={state.videos}
-          watchCounts={state.watchCounts}
-          currentVideoId={state.currentVideoId}
-          autoplayNext={state.autoplayNext}
-          playMode={state.playMode}
-          onSelectPlaylist={selectWatchPlaylist}
-          onPlay={playFromWatchQueue}
-          onPrev={() => advance("prev")}
-          onNext={() => advance("next")}
-          onAutoplayNextChange={(value) => patch((s) => ({ ...s, autoplayNext: value }))}
-          onPlayModeChange={changeMode}
         />
       </div>
 

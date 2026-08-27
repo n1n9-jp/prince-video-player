@@ -208,13 +208,6 @@ img {
 }
 
 .browse-page {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 402px;
-  grid-template-areas:
-    "explore list";
-  column-gap: 1.5rem;
-  row-gap: 0.9rem;
-  align-items: start;
   width: min(1754px, calc(100% - 3rem));
   margin: 1.5rem auto 2rem;
 }
@@ -223,13 +216,11 @@ img {
   grid-area: player;
 }
 
-.watch-page > .playlist-dock,
-.browse-page > .playlist-dock {
+.watch-page > .playlist-dock {
   grid-area: list;
 }
 
 .browse-page .year-explore {
-  grid-area: explore;
   min-width: 0;
 }
 
@@ -1083,13 +1074,6 @@ button:disabled {
     grid-template-columns: 1fr;
     grid-template-areas:
       "player"
-      "list";
-  }
-
-  .browse-page {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "explore"
       "list";
   }
 
